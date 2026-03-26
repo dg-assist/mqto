@@ -23,7 +23,7 @@
                         bibo:status <http://purl.org/ontology/bibo/status/draft> ;
                         owl:imports <http://rds.posccaesar.org/ontology/lis14/ont/ido-ssn/0.1> ;
                         dcterms:title "Manufacturing Quality Troubleshooting Ontology"@en ;
-                        dcterms:description "A generalised ontology for manufacturing quality troubleshooting, abstracting from the die-casting domain. Covers both the specified (schema-level) and actual (instance-level) layers of a manufacturing process. This ontology generalizes the patterns established in the die-casting ontologies (dg.ttl and dga.ttl) to be applicable across different manufacturing domains, with a focus on root cause analysis, failure diagnosis, and countermeasure recommendation."@en ;
+                        dcterms:description "A generalised ontology for manufacturing quality troubleshooting, applicable across different manufacturing domains. Covers both the specified (schema-level) and actual (instance-level) layers of a manufacturing process, with a focus on root cause analysis, failure diagnosis, and countermeasure recommendation."@en ;
                         dcterms:abstract "The Manufacturing Quality Troubleshooting Ontology (MQTO) provides a domain-independent semantic framework for modeling manufacturing quality inspection, failure diagnosis, and countermeasure recommendation. Building on the LIS (Lifecycle Information System) specified/actual pattern and integrating SOSA/SSN observation semantics, MQTO enables structured representation of Ishikawa (fishbone) root cause analysis across Machine, Material, and Method categories. The ontology supports both schema-level knowledge (failure types, metrics, countermeasure procedures) and instance-level data (actual observations, failure occurrences, executed remediation steps), making it applicable across diverse manufacturing domains including die-casting, injection molding, machining, and assembly processes."@en ;
                         dcterms:creator <https://orcid.org/0000-0001-9521-8907> ;
                         dcterms:contributor <https://orcid.org/0000-0003-2661-5575> ;
@@ -48,7 +48,6 @@
                         rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
                         schema:codeRepository <https://github.com/dg-assist/mqto> ;
                         schema:funding <https://projekte.ffg.at/projekt/4641766> ;
-                        rdfs:comment "Relationship to die-casting ontologies: This ontology (mqto) is a domain-independent generalization of the die-casting quality inspection ontologies. The die-casting Base Model (dg.ttl, namespace https://w3id.org/dgassist#) represents the specified layer for die-casting with domain-specific classes such as Aggregate, Process, Material, and Product. The die-casting Actual Ontology (dga.ttl, namespace https://w3id.org/dgassist/actual#) extends this to the actual/instance layer with observation data and process executions. Both mqto and the die-casting ontologies build upon the LIS (Lifecycle Information System) upper ontology and integrate SOSA/SSN for observations."@en ;
                         rdfs:comment "Relationship to Procedural Knowledge Ontology (PKO): mqto countermeasure classes align with PKO procedure modeling patterns. mqto:Countermeasure is a subclass of pko:Procedure, representing remediation procedures in the specified layer. mqto:CountermeasureStep aligns with p-plan:Step for individual actions. In the actual layer, mqto:CountermeasureExecution extends pko:ProcedureExecution and mqto:CountermeasureStepExecution extends pko:StepExecution. Both ontologies follow a specification/execution (plan/actual) pattern, though mqto uses LIS (lis:Specified/lis:Actual with lis:implements) while PKO uses P-PLAN/PROV (with pko:executesProcedure/pko:executesStep). Key architectural difference: mqto externalizes step ordering via mqto:List containers for step reusability across procedures, while PKO embeds ordering directly in steps via pko:nextStep properties."@en ;
                         rdfs:seeAlso <https://w3id.org/pko/1.0.0> ,
                                      <http://purl.org/net/p-plan> .
@@ -57,7 +56,7 @@
 #    Ontology Architecture and Relationships
 #################################################################
 
-# This ontology (mqto) occupies a middle position in a three-layer architecture:
+# This ontology (mqto) builds upon established domain-independent ontologies:
 #
 # UPPER LAYER - Domain-independent ontologies:
 #   • LIS (Lifecycle Information System) - http://rds.posccaesar.org/ontology/lis14/rdl/
@@ -69,21 +68,11 @@
 #     Provides the observation pattern: Observation, Sensor, ObservableProperty,
 #     FeatureOfInterest, Result. Imported via the ido-ssn integration module.
 #
-# MIDDLE LAYER - Manufacturing quality troubleshooting (this ontology):
+# MQTO LAYER - Manufacturing quality troubleshooting (this ontology):
 #   • mqto (Manufacturing Quality Troubleshooting Ontology) - https://w3id.org/mqto#
 #     Provides domain-independent patterns for manufacturing quality troubleshooting:
 #     IshikawaItem, Failure, Metric, Signal, Countermeasure, etc.
 #     Covers both specified and actual layers in a unified ontology.
-#
-# LOWER LAYER - Domain-specific ontologies (die-casting example):
-#   • dg (Die-casting Base Model) - https://w3id.org/dgassist#
-#     Specified layer for die-casting: Aggregate, Process, Material, Product
-#     with die-casting specific failures, metrics, and countermeasures.
-#
-#   • dga (Die-casting Actual Ontology) - https://w3id.org/dgassist/actual#
-#     Actual/instance layer for die-casting: concrete observations, process
-#     executions, failure occurrences, and countermeasure executions from
-#     real die-casting operations.
 #
 # KEY ARCHITECTURAL PRINCIPLES:
 #   1. Specified/Actual pattern from LIS: mqto defines both schema (Metric, Failure)
@@ -103,15 +92,6 @@
 #      layer (Metric reads from Signal) and actual layer (Observation measures
 #      ObservableProperty).
 #
-# GENERALIZATION FROM DIE-CASTING:
-#   The die-casting ontologies (dg/dga) were developed first for a specific
-#   industrial use case. mqto extracts the domain-independent patterns, making
-#   them reusable across other manufacturing domains (e.g., injection molding,
-#   machining, assembly). Domain-specific ontologies can extend mqto classes:
-#   - dg:Process subClassOf mqto:Method
-#   - dg:Aggregate subClassOf mqto:Machine
-#   - dg:Material subClassOf mqto:Material
-#   - dg:Product (no direct equivalent in mqto, represents manufactured output)
 
 # UNITS OF MEASUREMENT:
 #   This ontology intentionally does not prescribe a specific unit modeling
@@ -297,7 +277,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
                 rdfs:domain :Metric ;
                 rdfs:range rdf:Property ;
                 rdfs:label "result property"@en ;
-                rdfs:comment "Meta-property that specifies which data property of sosa:Result instances should be extracted and used as input for this Metric's calculation. For example, if a Metric's resultProperty points to dga:measValue, the metric calculation will extract the measValue field from each Result instance within the specified time window. If it points to dga:diameter, it extracts the diameter values instead. This enables multiple metrics to derive different calculations from the same observation results by selecting different result attributes. Note: This is a meta-level construct (an object property pointing to data properties), which while not ideal OWL modeling practice, provides a simple declarative mechanism for metrics to specify their input data field without requiring complex extraction rules or SPARQL property paths."@en .
+                rdfs:comment "Meta-property that specifies which data property of sosa:Result instances should be extracted and used as input for this Metric's calculation. For example, a Metric's resultProperty can point to a specific data property of the Result to extract that field from each Result instance within the specified time window. This enables multiple metrics to derive different calculations from the same observation results by selecting different result attributes. Note: This is a meta-level construct (an object property pointing to data properties), which while not ideal OWL modeling practice, provides a simple declarative mechanism for metrics to specify their input data field without requiring complex extraction rules or SPARQL property paths."@en .
 
 ###  https://w3id.org/mqto#signalProvidedBy
 :signalProvidedBy rdf:type owl:ObjectProperty ;
@@ -563,7 +543,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
                                 owl:allValuesFrom :Signal
                               ] ;
               rdfs:label "Ishikawa Item"@en ;
-              rdfs:comment "Abstract superclass for the three categories of root causes in an Ishikawa (fishbone) diagram: Machine, Material, and Method. In die-casting ontologies (dg.ttl), this pattern is instantiated with dg:Aggregate (equivalent to Machine), dg:Material, and dg:Process (equivalent to Method), plus dg:Product (output of manufacturing, no direct mqto equivalent)."@en .
+              rdfs:comment "Abstract superclass for the three categories of root causes in an Ishikawa (fishbone) diagram: Machine, Material, and Method. Domain-specific ontologies can specialize these concepts for their manufacturing domain."@en .
 
 
 ###  https://w3id.org/mqto#Method
@@ -587,7 +567,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
                                             ]
                         ] ;
         rdfs:label "Method"@en ;
-        rdfs:comment "A manufacturing process or procedure (the 'M' in Ishikawa's Method). Represents the specified activities and steps in manufacturing. In die-casting (dg:Process), this includes operations like melting, injection, cooling, and demolding. Methods can be decomposed into sub-methods and have Machines and Materials as participants."@en .
+        rdfs:comment "A manufacturing process or procedure (the 'M' in Ishikawa's Method). Represents the specified activities and steps in manufacturing. This includes operations and procedures specific to the manufacturing domain. Methods can be decomposed into sub-methods and have Machines and Materials as participants."@en .
 
 
 ###  https://w3id.org/mqto#Machine
@@ -599,7 +579,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
                            owl:allValuesFrom :Method
                          ] ;
          rdfs:label "Machine"@en ;
-         rdfs:comment "Manufacturing equipment, tools, and devices (the 'M' in Ishikawa's Machine). Represents specified physical resources that participate in Methods. In die-casting, dg:Aggregate represents machines like die-casting cells, furnaces, and robots. Machines provide Signals (sensor readings, control channels) and can have associated Failures and Metrics."@en .
+         rdfs:comment "Manufacturing equipment, tools, and devices (the 'M' in Ishikawa's Machine). Represents specified physical resources that participate in Methods. Domain-specific ontologies can define specific machine types such as cells, furnaces, and robots. Machines provide Signals (sensor readings, control channels) and can have associated Failures and Metrics."@en .
 
 
 ###  https://w3id.org/mqto#Material
@@ -612,7 +592,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
                             owl:allValuesFrom :Method
                           ] ;
           rdfs:label "Material"@en ;
-          rdfs:comment "Raw materials, consumables, and inputs to manufacturing (the 'M' in Ishikawa's Material). Represents specified material types that participate in Methods. In die-casting (dg:Material), this includes aluminum alloys, die lubricants, release agents, and other consumables. Materials can have properties monitored via Signals and associated quality Metrics."@en .
+          rdfs:comment "Raw materials, consumables, and inputs to manufacturing (the 'M' in Ishikawa's Material). Represents specified material types that participate in Methods. Domain-specific ontologies can define specific material types such as alloys, lubricants, and consumables. Materials can have properties monitored via Signals and associated quality Metrics."@en .
 
 
 ###  https://w3id.org/mqto#Failure
@@ -735,7 +715,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
                                       owl:allValuesFrom :ObservableProperty
                                     ] ;
                     rdfs:label "Actual Ishikawa Item"@en ;
-                    rdfs:comment "Abstract superclass for actual/instance layer counterparts of IshikawaItem. Integrates SOSA: each ActualIshikawaItem is a FeatureOfInterest that can be observed, has ObservableProperties, and can have FailureOccurrences. In die-casting (dga ontology), concrete instances include specific die-casting cells, material batches, and production runs."@en .
+                    rdfs:comment "Abstract superclass for actual/instance layer counterparts of IshikawaItem. Integrates SOSA: each ActualIshikawaItem is a FeatureOfInterest that can be observed, has ObservableProperties, and can have FailureOccurrences. Concrete instances include specific machines, material batches, and production runs."@en .
 
 
 ###  https://w3id.org/mqto#ProcessExecution
@@ -754,7 +734,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
                                     owl:someValuesFrom :Method
                                   ] ;
                   rdfs:label "Process Execution"@en ;
-                  rdfs:comment "Actual execution of a Method, the instance-layer counterpart of Method. Links to concrete PhysicalMachines and MaterialChunks as participants. In die-casting (dga ontology), this represents actual production shots with specific machines, material batches, timestamps, and observation data. Note: ProcessExecution does not directly subclass lis:Activity (which is lis:Specified), but instead subclasses ActualIshikawaItem (lis:Actual) and implements Method (which is lis:Activity). This maintains the LIS distinction between specified and actual layers."@en .
+                  rdfs:comment "Actual execution of a Method, the instance-layer counterpart of Method. Links to concrete PhysicalMachines and MaterialChunks as participants. This represents actual production operations with specific machines, material batches, timestamps, and observation data. Note: ProcessExecution does not directly subclass lis:Activity (which is lis:Specified), but instead subclasses ActualIshikawaItem (lis:Actual) and implements Method (which is lis:Activity). This maintains the LIS distinction between specified and actual layers."@en .
 
 
 ###  https://w3id.org/mqto#PhysicalMachine
@@ -766,7 +746,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
                                    owl:allValuesFrom :ProcessExecution
                                  ] ;
                  rdfs:label "Physical Machine"@en ;
-                 rdfs:comment "Actual machine instance, the instance-layer counterpart of Machine. Represents specific physical equipment with serial numbers, operational history, and sensor data. In die-casting (dga ontology), examples include specific die-casting cells (e.g., 'Cell_TCG_200'), furnaces, and robots with concrete observation data."@en .
+                 rdfs:comment "Actual machine instance, the instance-layer counterpart of Machine. Represents specific physical equipment with serial numbers, operational history, and sensor data. Examples include specific manufacturing equipment with serial numbers, furnaces, and robots with concrete observation data."@en .
 
 
 ###  https://w3id.org/mqto#MaterialChunk
@@ -779,7 +759,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
                                  owl:allValuesFrom :ProcessExecution
                                ] ;
                rdfs:label "Material Chunk"@en ;
-               rdfs:comment "Actual material instance, the instance-layer counterpart of Material. Represents specific batches, lots, or quantities of material with identifiers, composition data, and quality measurements. In die-casting (dga ontology), examples include specific aluminum alloy batches with batch numbers, chemical composition, and temperature observations."@en .
+               rdfs:comment "Actual material instance, the instance-layer counterpart of Material. Represents specific batches, lots, or quantities of material with identifiers, composition data, and quality measurements. Examples include specific material batches with batch numbers, chemical composition, and quality measurements."@en .
 
 
 ###  https://w3id.org/mqto#FailureOccurrence
@@ -922,7 +902,7 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 :Observation rdf:type owl:Class ;
              rdfs:subClassOf sosa:Observation ;
              rdfs:label "Observation"@en ;
-             rdfs:comment "Subclass of sosa:Observation, representing a single sensor reading or measurement event. Links to an ActualIshikawaItem (feature of interest), an ObservableProperty (what is being measured), and a Result (the measured value). In die-casting (dga ontology), observations capture time-series data from PLCs, sensors, and SCADA systems - e.g., furnace temperature readings, die pressure measurements, cycle times."@en .
+             rdfs:comment "Subclass of sosa:Observation, representing a single sensor reading or measurement event. Links to an ActualIshikawaItem (feature of interest), an ObservableProperty (what is being measured), and a Result (the measured value). Observations capture time-series data from PLCs, sensors, and SCADA systems including temperature readings, pressure measurements, and cycle times."@en .
 
 
 ###  https://w3id.org/mqto#Result
