@@ -26,9 +26,9 @@
                         dcterms:description "A generalised ontology for manufacturing quality troubleshooting, abstracting from the die-casting domain. Covers both the specified (schema-level) and actual (instance-level) layers of a manufacturing process. This ontology generalizes the patterns established in the die-casting ontologies (dg.ttl and dga.ttl) to be applicable across different manufacturing domains, with a focus on root cause analysis, failure diagnosis, and countermeasure recommendation."@en ;
                         dcterms:abstract "The Manufacturing Quality Troubleshooting Ontology (MQTO) provides a domain-independent semantic framework for modeling manufacturing quality inspection, failure diagnosis, and countermeasure recommendation. Building on the LIS (Lifecycle Information System) specified/actual pattern and integrating SOSA/SSN observation semantics, MQTO enables structured representation of Ishikawa (fishbone) root cause analysis across Machine, Material, and Method categories. The ontology supports both schema-level knowledge (failure types, metrics, countermeasure procedures) and instance-level data (actual observations, failure occurrences, executed remediation steps), making it applicable across diverse manufacturing domains including die-casting, injection molding, machining, and assembly processes."@en ;
                         dcterms:creator <https://orcid.org/0000-0001-9521-8907> ;
-                        dcterms:contributor [ rdf:type foaf:Person ;
-                                              foaf:name "Florian Rötzer"
-                                            ] ;
+                        dcterms:contributor <https://orcid.org/0000-0003-2661-5575> ;
+                        rdfs:label "Manufacturing Quality Troubleshooting Ontology"@en ;
+                        schema:logo <https://dg-assist.github.io/mqto/logo.png> ;
                         dcterms:publisher [ rdf:type foaf:Organization ;
                                             foaf:name "DG Assist" ;
                                             foaf:homepage <https://github.com/dg-assist>
@@ -955,6 +955,11 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 <https://orcid.org/0000-0001-9521-8907> rdf:type owl:NamedIndividual ,
                                                  foaf:Person ;
                                         foaf:name "Stefan Bischof" .
+
+###  https://orcid.org/0000-0003-2661-5575
+<https://orcid.org/0000-0003-2661-5575> rdf:type owl:NamedIndividual ,
+                                                 foaf:Person ;
+                                        foaf:name "Florian Rötzer" .
 
 ###  https://w3id.org/mqto#nil
 :nil rdf:type owl:NamedIndividual ,
