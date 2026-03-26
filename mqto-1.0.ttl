@@ -14,7 +14,7 @@
 @base <https://w3id.org/mqto#> .
 
 <https://w3id.org/mqto> rdf:type owl:Ontology ;
-                        owl:versionIRI <https://w3id.org/mqto/0.1> ;
+                        owl:versionIRI <https://w3id.org/mqto/1.0> ;
                         owl:imports <http://rds.posccaesar.org/ontology/lis14/ont/ido-ssn/0.1> ;
                         dcterms:created "2026-03-17"^^xsd:date ;
                         dcterms:description "A generalised ontology for manufacturing quality troubleshooting, abstracting from the die-casting domain. Covers both the specified (schema-level) and actual (instance-level) layers of a manufacturing process. This ontology generalizes the patterns established in the die-casting ontologies (dg.ttl and dga.ttl) to be applicable across different manufacturing domains, with a focus on root cause analysis, failure diagnosis, and countermeasure recommendation."@en ;
@@ -27,7 +27,7 @@
                                      <https://w3id.org/dgassist/actual> ,
                                      <https://w3id.org/pko/1.0.0> ,
                                      <http://purl.org/net/p-plan> ;
-                        owl:versionInfo "0.1.0" .
+                        owl:versionInfo "1.0.0" .
 
 #################################################################
 #    Ontology Architecture and Relationships
