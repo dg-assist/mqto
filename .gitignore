@@ -1,0 +1,39 @@
+# Editor temp files
+*~
+*.swp
+*.swo
+.#*
+\#*\#
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+*.iml
+
+# Protégé
+catalog-v001.xml
+
+# Generated documentation (uncomment if you want to regenerate)
+# docs/
+# OnToology/
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
