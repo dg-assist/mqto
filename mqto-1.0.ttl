@@ -29,10 +29,7 @@
                         dcterms:contributor <https://orcid.org/0000-0003-2661-5575> ;
                         rdfs:label "Manufacturing Quality Troubleshooting Ontology"@en ;
                         schema:logo <https://dg-assist.github.io/mqto/logo.png> ;
-                        dcterms:publisher [ rdf:type foaf:Organization ;
-                                            foaf:name "DG Assist" ;
-                                            foaf:homepage <https://github.com/dg-assist>
-                                          ] ;
+                        dcterms:publisher <https://github.com/dg-assist> ;
                         dcterms:created "2026-03-17"^^xsd:date ;
                         dcterms:license <http://www.apache.org/licenses/LICENSE-2.0> ;
                         dcterms:rights "Copyright 2026 DG Assist. Licensed under the Apache License, Version 2.0."@en ;
@@ -50,17 +47,7 @@
                         foaf:homepage <https://dg-assist.github.io/mqto/> ;
                         rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
                         schema:codeRepository <https://github.com/dg-assist/mqto> ;
-                        schema:funding [ rdf:type schema:Grant ;
-                                         schema:name "Agile & nachhaltige Produktion im diskontinuierlichen Druckgussprozess durch ein menschzentriertes Assistenzsystem"@de ;
-                                         schema:identifier "4641766" ;
-                                         schema:funder [ rdf:type schema:Organization ;
-                                                         schema:name "FFG - Österreichische Forschungsförderungsgesellschaft"@de ,
-                                                                     "Austrian Research Promotion Agency"@en ;
-                                                         schema:url <https://www.ffg.at/>
-                                                       ] ;
-                                         schema:startDate "2023-05-01"^^xsd:date ;
-                                         schema:endDate "2026-10-31"^^xsd:date
-                                       ] ;
+                        schema:funding <https://www.ffg.at/en/project/4641766> ;
                         rdfs:comment "Relationship to die-casting ontologies: This ontology (mqto) is a domain-independent generalization of the die-casting quality inspection ontologies. The die-casting Base Model (dg.ttl, namespace https://w3id.org/dgassist#) represents the specified layer for die-casting with domain-specific classes such as Aggregate, Process, Material, and Product. The die-casting Actual Ontology (dga.ttl, namespace https://w3id.org/dgassist/actual#) extends this to the actual/instance layer with observation data and process executions. Both mqto and the die-casting ontologies build upon the LIS (Lifecycle Information System) upper ontology and integrate SOSA/SSN for observations."@en ;
                         rdfs:comment "Relationship to Procedural Knowledge Ontology (PKO): mqto countermeasure classes align with PKO procedure modeling patterns. mqto:Countermeasure is a subclass of pko:Procedure, representing remediation procedures in the specified layer. mqto:CountermeasureStep aligns with p-plan:Step for individual actions. In the actual layer, mqto:CountermeasureExecution extends pko:ProcedureExecution and mqto:CountermeasureStepExecution extends pko:StepExecution. Both ontologies follow a specification/execution (plan/actual) pattern, though mqto uses LIS (lis:Specified/lis:Actual with lis:implements) while PKO uses P-PLAN/PROV (with pko:executesProcedure/pko:executesStep). Key architectural difference: mqto externalizes step ordering via mqto:List containers for step reusability across procedures, while PKO embeds ordering directly in steps via pko:nextStep properties."@en ;
                         rdfs:seeAlso <https://w3id.org/dgassist> ,
