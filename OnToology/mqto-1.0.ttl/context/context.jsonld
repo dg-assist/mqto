@@ -1,0 +1,437 @@
+{
+  "@context" : {
+    "signalProvidedBy" : {
+      "@id" : "https://w3id.org/mqto#signalProvidedBy",
+      "@type" : "@id"
+    },
+    "implements" : {
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/implements",
+      "@type" : "@id"
+    },
+    "abstract" : {
+      "@id" : "http://purl.org/dc/terms/abstract"
+    },
+    "ActuableProperty" : {
+      "@id" : "https://w3id.org/mqto#ActuableProperty"
+    },
+    "role" : {
+      "@id" : "https://w3id.org/mqto#role",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "score" : {
+      "@id" : "https://w3id.org/mqto#score",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "causedBy" : {
+      "@id" : "https://w3id.org/mqto#causedBy",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
+    },
+    "causesWeakly" : {
+      "@id" : "https://w3id.org/mqto#causesWeakly",
+      "@type" : "@id"
+    },
+    "lowerBound" : {
+      "@id" : "https://w3id.org/mqto#lowerBound",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "mitigates" : {
+      "@id" : "https://w3id.org/mqto#mitigates",
+      "@type" : "@id"
+    },
+    "license" : {
+      "@id" : "http://purl.org/dc/terms/license"
+    },
+    "CountermeasureStepExecution" : {
+      "@id" : "https://w3id.org/mqto#CountermeasureStepExecution"
+    },
+    "Procedure" : {
+      "@id" : "https://w3id.org/pko#Procedure"
+    },
+    "hasActivityPart" : {
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart",
+      "@type" : "@id"
+    },
+    "steps" : {
+      "@id" : "https://w3id.org/mqto#steps",
+      "@type" : "@id"
+    },
+    "Material" : {
+      "@id" : "https://w3id.org/mqto#Material"
+    },
+    "abortedReason" : {
+      "@id" : "https://w3id.org/mqto#abortedReason",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "metricReferredBy" : {
+      "@id" : "https://w3id.org/mqto#metricReferredBy",
+      "@type" : "@id"
+    },
+    "StepExecution" : {
+      "@id" : "https://w3id.org/pko#StepExecution"
+    },
+    "basedOn" : {
+      "@id" : "https://w3id.org/mqto#basedOn",
+      "@type" : "@id"
+    },
+    "calculatedTime" : {
+      "@id" : "https://w3id.org/mqto#calculatedTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "hasMetric" : {
+      "@id" : "https://w3id.org/mqto#hasMetric",
+      "@type" : "@id"
+    },
+    "codeRepository" : {
+      "@id" : "http://schema.org/codeRepository"
+    },
+    "Specified" : {
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Specified"
+    },
+    "measValue" : {
+      "@id" : "https://w3id.org/mqto#measValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+    },
+    "FeatureOfInterest" : {
+      "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
+    },
+    "refersToMetric" : {
+      "@id" : "https://w3id.org/mqto#refersToMetric",
+      "@type" : "@id"
+    },
+    "ProcessExecution" : {
+      "@id" : "https://w3id.org/mqto#ProcessExecution"
+    },
+    "resultProperty" : {
+      "@id" : "https://w3id.org/mqto#resultProperty",
+      "@type" : "@id"
+    },
+    "suggestedBy" : {
+      "@id" : "https://w3id.org/mqto#suggestedBy",
+      "@type" : "@id"
+    },
+    "CountermeasureExecution" : {
+      "@id" : "https://w3id.org/mqto#CountermeasureExecution"
+    },
+    "FailureOccurrence" : {
+      "@id" : "https://w3id.org/mqto#FailureOccurrence"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "method" : {
+      "@id" : "https://w3id.org/mqto#method"
+    },
+    "calculatedFor" : {
+      "@id" : "https://w3id.org/mqto#calculatedFor",
+      "@type" : "@id"
+    },
+    "reasoningLine" : {
+      "@id" : "https://w3id.org/mqto#reasoningLine",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "failureBelongsTo" : {
+      "@id" : "https://w3id.org/mqto#failureBelongsTo",
+      "@type" : "@id"
+    },
+    "Result" : {
+      "@id" : "http://www.w3.org/ns/sosa/Result"
+    },
+    "Signal" : {
+      "@id" : "https://w3id.org/mqto#Signal"
+    },
+    "Activity" : {
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
+    },
+    "hasStep" : {
+      "@id" : "https://w3id.org/mqto#hasStep",
+      "@type" : "@id"
+    },
+    "causedByModerately" : {
+      "@id" : "https://w3id.org/mqto#causedByModerately",
+      "@type" : "@id"
+    },
+    "IshikawaItem" : {
+      "@id" : "https://w3id.org/mqto#IshikawaItem"
+    },
+    "suggested" : {
+      "@id" : "https://w3id.org/mqto#suggested",
+      "@type" : "@id"
+    },
+    "homepage" : {
+      "@id" : "http://xmlns.com/foaf/0.1/homepage"
+    },
+    "causedByStrongly" : {
+      "@id" : "https://w3id.org/mqto#causedByStrongly",
+      "@type" : "@id"
+    },
+    "hasProperty" : {
+      "@id" : "http://www.w3.org/ns/ssn/hasProperty",
+      "@type" : "@id"
+    },
+    "rest" : {
+      "@id" : "https://w3id.org/mqto#rest",
+      "@type" : "@id"
+    },
+    "Person" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Person"
+    },
+    "assessmentValue" : {
+      "@id" : "https://w3id.org/mqto#assessmentValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
+    },
+    "Compound" : {
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Compound"
+    },
+    "abortedTime" : {
+      "@id" : "https://w3id.org/mqto#abortedTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Step" : {
+      "@id" : "http://purl.org/net/p-plan#Step"
+    },
+    "evaluatedBy" : {
+      "@id" : "https://w3id.org/mqto#evaluatedBy",
+      "@type" : "@id"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "participantIn" : {
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/participantIn",
+      "@type" : "@id"
+    },
+    "MetricAssessment" : {
+      "@id" : "https://w3id.org/mqto#MetricAssessment"
+    },
+    "ProcedureExecution" : {
+      "@id" : "https://w3id.org/pko#ProcedureExecution"
+    },
+    "hasFailure" : {
+      "@id" : "https://w3id.org/mqto#hasFailure",
+      "@type" : "@id"
+    },
+    "hasNextStep" : {
+      "@id" : "https://w3id.org/mqto#hasNextStep",
+      "@type" : "@id"
+    },
+    "causes" : {
+      "@id" : "https://w3id.org/mqto#causes",
+      "@type" : "@id"
+    },
+    "startTime" : {
+      "@id" : "https://w3id.org/mqto#startTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "Actual" : {
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Actual"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/terms/rights"
+    },
+    "completionTime" : {
+      "@id" : "https://w3id.org/mqto#completionTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "status" : {
+      "@id" : "http://purl.org/ontology/bibo/status"
+    },
+    "Method" : {
+      "@id" : "https://w3id.org/mqto#Method"
+    },
+    "identifier" : {
+      "@id" : "https://w3id.org/mqto#identifier"
+    },
+    "PhysicalMachine" : {
+      "@id" : "https://w3id.org/mqto#PhysicalMachine"
+    },
+    "Failure" : {
+      "@id" : "https://w3id.org/mqto#Failure"
+    },
+    "subject" : {
+      "@id" : "http://purl.org/dc/terms/subject"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "readBy" : {
+      "@id" : "https://w3id.org/mqto#readBy",
+      "@type" : "@id"
+    },
+    "causesStrongly" : {
+      "@id" : "https://w3id.org/mqto#causesStrongly",
+      "@type" : "@id"
+    },
+    "activityPartOf" : {
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf",
+      "@type" : "@id"
+    },
+    "isDefinedBy" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#isDefinedBy"
+    },
+    "Countermeasure" : {
+      "@id" : "https://w3id.org/mqto#Countermeasure"
+    },
+    "MaterialChunk" : {
+      "@id" : "https://w3id.org/mqto#MaterialChunk"
+    },
+    "mitigatedBy" : {
+      "@id" : "https://w3id.org/mqto#mitigatedBy",
+      "@type" : "@id"
+    },
+    "Property" : {
+      "@id" : "http://www.w3.org/ns/ssn/Property"
+    },
+    "Metric" : {
+      "@id" : "https://w3id.org/mqto#Metric"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "hasParticipant" : {
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant",
+      "@type" : "@id"
+    },
+    "baseFor" : {
+      "@id" : "https://w3id.org/mqto#baseFor",
+      "@type" : "@id"
+    },
+    "publisher" : {
+      "@id" : "http://purl.org/dc/terms/publisher"
+    },
+    "raised" : {
+      "@id" : "https://w3id.org/mqto#raised",
+      "@type" : "@id"
+    },
+    "metricBelongsTo" : {
+      "@id" : "https://w3id.org/mqto#metricBelongsTo",
+      "@type" : "@id"
+    },
+    "List" : {
+      "@id" : "https://w3id.org/mqto#List"
+    },
+    "upperBound" : {
+      "@id" : "https://w3id.org/mqto#upperBound",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "raisedBy" : {
+      "@id" : "https://w3id.org/mqto#raisedBy",
+      "@type" : "@id"
+    },
+    "mitigated" : {
+      "@id" : "https://w3id.org/mqto#mitigated",
+      "@type" : "@id"
+    },
+    "logo" : {
+      "@id" : "http://schema.org/logo"
+    },
+    "isPropertyOf" : {
+      "@id" : "http://www.w3.org/ns/ssn/isPropertyOf",
+      "@type" : "@id"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "markdownContent" : {
+      "@id" : "https://w3id.org/mqto#markdownContent",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "evaluatesProperty" : {
+      "@id" : "https://w3id.org/mqto#evaluatesProperty",
+      "@type" : "@id"
+    },
+    "causedByWeakly" : {
+      "@id" : "https://w3id.org/mqto#causedByWeakly",
+      "@type" : "@id"
+    },
+    "endTime" : {
+      "@id" : "https://w3id.org/mqto#endTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "ObservableProperty" : {
+      "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
+    },
+    "viewTime" : {
+      "@id" : "https://w3id.org/mqto#viewTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    },
+    "causesModerately" : {
+      "@id" : "https://w3id.org/mqto#causesModerately",
+      "@type" : "@id"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor"
+    },
+    "Machine" : {
+      "@id" : "https://w3id.org/mqto#Machine"
+    },
+    "appearedOn" : {
+      "@id" : "https://w3id.org/mqto#appearedOn",
+      "@type" : "@id"
+    },
+    "funding" : {
+      "@id" : "http://schema.org/funding"
+    },
+    "PhysicalArtefact" : {
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact"
+    },
+    "readsFrom" : {
+      "@id" : "https://w3id.org/mqto#readsFrom",
+      "@type" : "@id"
+    },
+    "hasFirstStep" : {
+      "@id" : "https://w3id.org/mqto#hasFirstStep",
+      "@type" : "@id"
+    },
+    "timeWindowSize" : {
+      "@id" : "https://w3id.org/mqto#timeWindowSize",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "weight" : {
+      "@id" : "https://w3id.org/mqto#weight",
+      "@type" : "http://www.w3.org/2001/XMLSchema#int"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "CountermeasureStep" : {
+      "@id" : "https://w3id.org/mqto#CountermeasureStep"
+    },
+    "ActualIshikawaItem" : {
+      "@id" : "https://w3id.org/mqto#ActualIshikawaItem"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "calculatedValue" : {
+      "@id" : "https://w3id.org/mqto#calculatedValue",
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
+    },
+    "first" : {
+      "@id" : "https://w3id.org/mqto#first",
+      "@type" : "@id"
+    },
+    "providesSignal" : {
+      "@id" : "https://w3id.org/mqto#providesSignal",
+      "@type" : "@id"
+    },
+    "Observation" : {
+      "@id" : "https://w3id.org/mqto#Observation"
+    },
+    "isFeatureOfInterestOf" : {
+      "@id" : "http://www.w3.org/ns/sosa/isFeatureOfInterestOf",
+      "@type" : "@id"
+    }
+  }
+}

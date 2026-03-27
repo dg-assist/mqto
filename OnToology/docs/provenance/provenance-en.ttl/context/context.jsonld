@@ -1,0 +1,22 @@
+{
+  "@context" : {
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "contributor" : {
+      "@id" : "http://purl.org/dc/terms/contributor"
+    },
+    "wasAttributedTo" : {
+      "@id" : "http://www.w3.org/ns/prov#wasAttributedTo"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "wasGeneratedAt" : {
+      "@id" : "http://www.w3.org/ns/prov#wasGeneratedAt"
+    },
+    "Entity" : {
+      "@id" : "http://www.w3.org/ns/prov#Entity"
+    }
+  }
+}

@@ -1,0 +1,2506 @@
+<h2 id="crossreference" class="list">Cross-reference for Manufacturing Quality Troubleshooting Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Manufacturing Quality Troubleshooting Ontology.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#ActuableProperty" title="https://w3id.org/mqto#ActuableProperty">Actuable Property</a>
+      </li>
+      <li>
+         <a href="#ActualIshikawaItem" title="https://w3id.org/mqto#ActualIshikawaItem">Actual Ishikawa Item</a>
+      </li>
+      <li>
+         <a href="#Countermeasure" title="https://w3id.org/mqto#Countermeasure">Countermeasure</a>
+      </li>
+      <li>
+         <a href="#CountermeasureExecution" title="https://w3id.org/mqto#CountermeasureExecution">Countermeasure Execution</a>
+      </li>
+      <li>
+         <a href="#CountermeasureStep" title="https://w3id.org/mqto#CountermeasureStep">Countermeasure Step</a>
+      </li>
+      <li>
+         <a href="#CountermeasureStepExecution"
+            title="https://w3id.org/mqto#CountermeasureStepExecution">Countermeasure Step Execution</a>
+      </li>
+      <li>
+         <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+      </li>
+      <li>
+         <a href="#FailureOccurrence" title="https://w3id.org/mqto#FailureOccurrence">Failure Occurrence</a>
+      </li>
+      <li>
+         <a href="#IshikawaItem" title="https://w3id.org/mqto#IshikawaItem">Ishikawa Item</a>
+      </li>
+      <li>
+         <a href="#List" title="https://w3id.org/mqto#List">List</a>
+      </li>
+      <li>
+         <a href="#Machine" title="https://w3id.org/mqto#Machine">Machine</a>
+      </li>
+      <li>
+         <a href="#Material" title="https://w3id.org/mqto#Material">Material</a>
+      </li>
+      <li>
+         <a href="#MaterialChunk" title="https://w3id.org/mqto#MaterialChunk">Material Chunk</a>
+      </li>
+      <li>
+         <a href="#Method" title="https://w3id.org/mqto#Method">Method</a>
+      </li>
+      <li>
+         <a href="#Metric" title="https://w3id.org/mqto#Metric">Metric</a>
+      </li>
+      <li>
+         <a href="#MetricAssessment" title="https://w3id.org/mqto#MetricAssessment">Metric Assessment</a>
+      </li>
+      <li>
+         <a href="#ObservableProperty" title="https://w3id.org/mqto#ObservableProperty">Observable Property</a>
+      </li>
+      <li>
+         <a href="#Observation" title="https://w3id.org/mqto#Observation">Observation</a>
+      </li>
+      <li>
+         <a href="#PhysicalMachine" title="https://w3id.org/mqto#PhysicalMachine">Physical Machine</a>
+      </li>
+      <li>
+         <a href="#ProcessExecution" title="https://w3id.org/mqto#ProcessExecution">Process Execution</a>
+      </li>
+      <li>
+         <a href="#Property" title="https://w3id.org/mqto#Property">Property</a>
+      </li>
+      <li>
+         <a href="#Result" title="https://w3id.org/mqto#Result">Result</a>
+      </li>
+      <li>
+         <a href="#Signal" title="https://w3id.org/mqto#Signal">Signal</a>
+      </li>
+   </ul>
+   <div class="entity" id="ActuableProperty">
+      <h3>Actuable Property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#ActuableProperty</p>
+      <div class="comment">
+         <span class="markdown">An actuable property of an ActualIshikawaItem that can be controlled or modified via Actuations. As a subclass of mqto:Property, it implements a Signal specification from the specified layer. Represents properties that can be set or modified, such as setpoints, valve positions, motor speeds, or control commands. The Signal in the specified layer defines the control channel metadata, while ActuableProperty represents the actual controllable quality of a specific feature of interest.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Property" title="https://w3id.org/mqto#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/ActuableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ActuableProperty">actuable property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ActualIshikawaItem">
+      <h3>Actual Ishikawa Item<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#ActualIshikawaItem</p>
+      <div class="comment">
+         <span class="markdown">Abstract superclass for actual/instance layer counterparts of IshikawaItem. Integrates SOSA: each ActualIshikawaItem is a FeatureOfInterest that can be observed, has ObservableProperties, and can have FailureOccurrences. Concrete instances include specific machines, material batches, and production runs.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Actual"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Actual">actual</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/FeatureOfInterest"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/FeatureOfInterest">feature of interest</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#MaterialChunk" title="https://w3id.org/mqto#MaterialChunk">Material Chunk</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PhysicalMachine" title="https://w3id.org/mqto#PhysicalMachine">Physical Machine</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ProcessExecution" title="https://w3id.org/mqto#ProcessExecution">Process Execution</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#appearedOn" title="https://w3id.org/mqto#appearedOn">appeared on</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#calculatedFor" title="https://w3id.org/mqto#calculatedFor">calculated for</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Countermeasure">
+      <h3>Countermeasure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#Countermeasure</p>
+      <div class="comment">
+         <span class="markdown">A remediation procedure that mitigates one or more Failures. Countermeasures are structured as ordered sequences of CountermeasureSteps, represented via the mqto:List pattern for reusability. As a subclass of pko:Procedure, countermeasures align with the Procedural Knowledge Ontology's procedure modeling patterns while maintaining integration with the LIS specified/actual architecture.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Activity">activity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/pko#Procedure"
+               target="_blank"
+               title="https://w3id.org/pko#Procedure">procedure</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Specified"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Specified">specified</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#mitigates" title="https://w3id.org/mqto#mitigates">mitigates</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#steps" title="https://w3id.org/mqto#steps">steps</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#mitigatedBy" title="https://w3id.org/mqto#mitigatedBy">mitigated by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CountermeasureExecution">
+      <h3>Countermeasure Execution<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#CountermeasureExecution</p>
+      <div class="comment">
+         <span class="markdown">The actual execution of a Countermeasure procedure, performed to mitigate one or more FailureOccurrences. Links to the Countermeasure specification via lis:implements (LIS pattern) and tracks which specific failures were addressed. As a subclass of pko:ProcedureExecution, countermeasure executions align with PKO's procedure execution model while maintaining LIS actual/specified semantics. Note: Does not directly subclass lis:Activity (which is lis:Specified), but implements Countermeasure (which is lis:Activity), maintaining the LIS distinction between specified and actual layers.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Actual"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Actual">actual</a>
+            <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/pko#ProcedureExecution"
+               target="_blank"
+               title="https://w3id.org/pko#ProcedureExecution">procedure execution</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasFirstStep" title="https://w3id.org/mqto#hasFirstStep">has first step</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasStep" title="https://w3id.org/mqto#hasStep">has step</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#mitigated" title="https://w3id.org/mqto#mitigated">mitigated</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#reasoningLine" title="https://w3id.org/mqto#reasoningLine">reasoning line</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#score" title="https://w3id.org/mqto#score">score</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#suggestedBy" title="https://w3id.org/mqto#suggestedBy">suggested by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#suggested" title="https://w3id.org/mqto#suggested">suggested</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CountermeasureStep">
+      <h3>Countermeasure Step<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#CountermeasureStep</p>
+      <div class="comment">
+         <span class="markdown">A reusable specification of a single step within a Countermeasure procedure. Because the same step (e.g. 'clean the mould') may occur in multiple Countermeasures, ordering is not encoded in the step itself but in the mqto:List that references it. As a subclass of p-plan:Step, countermeasure steps align with the P-PLAN ontology for plan-based activity modeling.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Activity">activity</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Specified"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Specified">specified</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://purl.org/net/p-plan#Step"
+               target="_blank"
+               title="http://purl.org/net/p-plan#Step">step</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#role" title="https://w3id.org/mqto#role">role</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#first" title="https://w3id.org/mqto#first">first</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CountermeasureStepExecution">
+      <h3>Countermeasure Step Execution<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#CountermeasureStepExecution</p>
+      <div class="comment">
+         <span class="markdown">The actual, single execution of one CountermeasureStep. Each execution implements a specific CountermeasureStep from the specified layer via lis:implements, performed in a concrete, non-reused linear order encoded via mqto:hasFirstStep / mqto:hasNextStep, contrasting with the specified layer where mqto:List enables step reuse across procedures. As a subclass of pko:StepExecution, countermeasure step executions align with PKO's step execution model. Note: Does not directly subclass lis:Activity (which is lis:Specified), but implements CountermeasureStep (which is lis:Activity), maintaining the LIS distinction between specified and actual layers.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Actual"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Actual">actual</a>
+            <sup class="type-c" title="class">c</sup>, <a href="https://w3id.org/pko#StepExecution"
+               target="_blank"
+               title="https://w3id.org/pko#StepExecution">step execution</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#completionTime" title="https://w3id.org/mqto#completionTime">completion time</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#hasNextStep" title="https://w3id.org/mqto#hasNextStep">has next step</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasFirstStep" title="https://w3id.org/mqto#hasFirstStep">has first step</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasNextStep" title="https://w3id.org/mqto#hasNextStep">has next step</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasStep" title="https://w3id.org/mqto#hasStep">has step</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Failure">
+      <h3>Failure<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#Failure</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Specified"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Specified">specified</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#causedBy" title="https://w3id.org/mqto#causedBy">caused by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#causes" title="https://w3id.org/mqto#causes">causes</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#failureBelongsTo" title="https://w3id.org/mqto#failureBelongsTo">failure belongs to</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#mitigatedBy" title="https://w3id.org/mqto#mitigatedBy">mitigated by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#refersToMetric" title="https://w3id.org/mqto#refersToMetric">refers to metric</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#causedBy" title="https://w3id.org/mqto#causedBy">caused by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#causes" title="https://w3id.org/mqto#causes">causes</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasFailure" title="https://w3id.org/mqto#hasFailure">has failure</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#metricReferredBy" title="https://w3id.org/mqto#metricReferredBy">metric referred by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#mitigates" title="https://w3id.org/mqto#mitigates">mitigates</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="FailureOccurrence">
+      <h3>Failure Occurrence<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#FailureOccurrence</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Actual"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Actual">actual</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#appearedOn" title="https://w3id.org/mqto#appearedOn">appeared on</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#raisedBy" title="https://w3id.org/mqto#raisedBy">raised by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#suggested" title="https://w3id.org/mqto#suggested">suggested</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#viewTime" title="https://w3id.org/mqto#viewTime">view time</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#mitigated" title="https://w3id.org/mqto#mitigated">mitigated</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#raised" title="https://w3id.org/mqto#raised">raised</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#suggestedBy" title="https://w3id.org/mqto#suggestedBy">suggested by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="IshikawaItem">
+      <h3>Ishikawa Item<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#IshikawaItem</p>
+      <div class="comment">
+         <span class="markdown">Abstract superclass for the three categories of root causes in an Ishikawa (fishbone) diagram: Machine, Material, and Method. Domain-specific ontologies can specialize these concepts for their manufacturing domain.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Specified"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Specified">specified</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Machine" title="https://w3id.org/mqto#Machine">Machine</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Material" title="https://w3id.org/mqto#Material">Material</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Method" title="https://w3id.org/mqto#Method">Method</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#hasFailure" title="https://w3id.org/mqto#hasFailure">has failure</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#hasMetric" title="https://w3id.org/mqto#hasMetric">has metric</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#providesSignal" title="https://w3id.org/mqto#providesSignal">provides signal</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#failureBelongsTo" title="https://w3id.org/mqto#failureBelongsTo">failure belongs to</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#metricBelongsTo" title="https://w3id.org/mqto#metricBelongsTo">metric belongs to</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#signalProvidedBy" title="https://w3id.org/mqto#signalProvidedBy">signal provided by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="List">
+      <h3>List<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#List</p>
+      <div class="comment">
+         <span class="markdown">An ordered, reusable container of CountermeasureSteps within the specified layer. Modelled as a linked list (mqto:first / mqto:rest) so that step order is external to the step instances, allowing steps to be shared across different Countermeasure procedures. The list is terminated by mqto:nil.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#first" title="https://w3id.org/mqto#first">first</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#rest" title="https://w3id.org/mqto#rest">rest</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#rest" title="https://w3id.org/mqto#rest">rest</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#steps" title="https://w3id.org/mqto#steps">steps</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#nil" title="https://w3id.org/mqto#nil">nil</a>
+            <sup class="type-ni" title="named individual">ni</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Machine">
+      <h3>Machine<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#Machine</p>
+      <div class="comment">
+         <span class="markdown">Manufacturing equipment, tools, and devices (the 'M' in Ishikawa's Machine). Represents specified physical resources that participate in Methods. Domain-specific ontologies can define specific machine types such as cells, furnaces, and robots. Machines provide Signals (sensor readings, control channels) and can have associated Failures and Metrics.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#IshikawaItem" title="https://w3id.org/mqto#IshikawaItem">Ishikawa Item</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact">physical artefact</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Material">
+      <h3>Material<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#Material</p>
+      <div class="comment">
+         <span class="markdown">Raw materials, consumables, and inputs to manufacturing (the 'M' in Ishikawa's Material). Represents specified material types that participate in Methods. Domain-specific ontologies can define specific material types such as alloys, lubricants, and consumables. Materials can have properties monitored via Signals and associated quality Metrics.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#IshikawaItem" title="https://w3id.org/mqto#IshikawaItem">Ishikawa Item</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Compound"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Compound">compound</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact">physical artefact</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MaterialChunk">
+      <h3>Material Chunk<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#MaterialChunk</p>
+      <div class="comment">
+         <span class="markdown">Actual material instance, the instance-layer counterpart of Material. Represents specific batches, lots, or quantities of material with identifiers, composition data, and quality measurements. Examples include specific material batches with batch numbers, chemical composition, and quality measurements.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ActualIshikawaItem" title="https://w3id.org/mqto#ActualIshikawaItem">Actual Ishikawa Item</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Compound"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Compound">compound</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact">physical artefact</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Method">
+      <h3>Method<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#Method</p>
+      <div class="comment">
+         <span class="markdown">A manufacturing process or procedure (the 'M' in Ishikawa's Method). Represents the specified activities and steps in manufacturing. This includes operations and procedures specific to the manufacturing domain. Methods can be decomposed into sub-methods and have Machines and Materials as participants.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#IshikawaItem" title="https://w3id.org/mqto#IshikawaItem">Ishikawa Item</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Activity">activity</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Metric">
+      <h3>Metric<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#Metric</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Specified"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Specified">specified</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#lowerBound" title="https://w3id.org/mqto#lowerBound">lower bound</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#method" title="https://w3id.org/mqto#method">method</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#metricBelongsTo" title="https://w3id.org/mqto#metricBelongsTo">metric belongs to</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#metricReferredBy" title="https://w3id.org/mqto#metricReferredBy">metric referred by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#readsFrom" title="https://w3id.org/mqto#readsFrom">reads from</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#resultProperty" title="https://w3id.org/mqto#resultProperty">result property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#timeWindowSize" title="https://w3id.org/mqto#timeWindowSize">time window size</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#upperBound" title="https://w3id.org/mqto#upperBound">upper bound</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasMetric" title="https://w3id.org/mqto#hasMetric">has metric</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#readBy" title="https://w3id.org/mqto#readBy">read by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#refersToMetric" title="https://w3id.org/mqto#refersToMetric">refers to metric</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MetricAssessment">
+      <h3>Metric Assessment<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#MetricAssessment</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Actual"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Actual">actual</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#assessmentValue" title="https://w3id.org/mqto#assessmentValue">assessment value</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#basedOn" title="https://w3id.org/mqto#basedOn">based on</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#calculatedFor" title="https://w3id.org/mqto#calculatedFor">calculated for</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#calculatedTime" title="https://w3id.org/mqto#calculatedTime">calculated time</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#calculatedValue" title="https://w3id.org/mqto#calculatedValue">calculated value</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#evaluatesProperty" title="https://w3id.org/mqto#evaluatesProperty">evaluates property</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#raised" title="https://w3id.org/mqto#raised">raised</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#evaluatedBy" title="https://w3id.org/mqto#evaluatedBy">evaluated by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#raisedBy" title="https://w3id.org/mqto#raisedBy">raised by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ObservableProperty">
+      <h3>Observable Property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#ObservableProperty</p>
+      <div class="comment">
+         <span class="markdown">An observable property of an ActualIshikawaItem that can be measured via Observations. As a subclass of mqto:Property, it implements a Signal specification from the specified layer, establishing traceability from actual observations back to the specified data channel definition. Note: subclassing both sosa:ObservableProperty (an abstract quality type) and lis:Actual (via mqto:Property, a concrete instance) reflects the modelling choice that each mqto:ObservableProperty individual represents a specific, concrete observable quality tied to a particular actual item — not a reusable abstract type. This parallels how sosa:ObservableProperty instances are used in practice (e.g. 'the temperature of this specific machine part') rather than as universal property types.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Property" title="https://w3id.org/mqto#Property">Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/ObservableProperty"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/ObservableProperty">observable property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#evaluatedBy" title="https://w3id.org/mqto#evaluatedBy">evaluated by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#evaluatesProperty" title="https://w3id.org/mqto#evaluatesProperty">evaluates property</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Observation">
+      <h3>Observation<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#Observation</p>
+      <div class="comment">
+         <span class="markdown">Subclass of sosa:Observation, representing a single sensor reading or measurement event. Links to an ActualIshikawaItem (feature of interest), an ObservableProperty (what is being measured), and a Result (the measured value). Observations capture time-series data from PLCs, sensors, and SCADA systems including temperature readings, pressure measurements, and cycle times.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Observation"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Observation">observation</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#basedOn" title="https://w3id.org/mqto#basedOn">based on</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="PhysicalMachine">
+      <h3>Physical Machine<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#PhysicalMachine</p>
+      <div class="comment">
+         <span class="markdown">Actual machine instance, the instance-layer counterpart of Machine. Represents specific physical equipment with serial numbers, operational history, and sensor data. Examples include specific manufacturing equipment with serial numbers, furnaces, and robots with concrete observation data.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ActualIshikawaItem" title="https://w3id.org/mqto#ActualIshikawaItem">Actual Ishikawa Item</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact">physical artefact</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="ProcessExecution">
+      <h3>Process Execution<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#ProcessExecution</p>
+      <div class="comment">
+         <span class="markdown">Actual execution of a Method, the instance-layer counterpart of Method. Links to concrete PhysicalMachines and MaterialChunks as participants. This represents actual production operations with specific machines, material batches, timestamps, and observation data. Note: ProcessExecution does not directly subclass lis:Activity (which is lis:Specified), but instead subclasses ActualIshikawaItem (lis:Actual) and implements Method (which is lis:Activity). This maintains the LIS distinction between specified and actual layers.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ActualIshikawaItem" title="https://w3id.org/mqto#ActualIshikawaItem">Actual Ishikawa Item</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Property">
+      <h3>Property<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#Property</p>
+      <div class="comment">
+         <span class="markdown">Actual-layer counterpart of Signal. Represents a property (observable or actuable) of an ActualIshikawaItem that implements a Signal specification from the specified layer. While Signal defines the data channel metadata (identifier, unit, sampling rate, direction), Property represents the actual measured or actuated quality of a specific feature of interest. This class serves as the abstract superclass for both ObservableProperty (for sensing/measurement) and ActuableProperty (for actuation/control).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Actual"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Actual">actual</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/ssn/Property"
+               target="_blank"
+               title="http://www.w3.org/ns/ssn/Property">property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#ActuableProperty" title="https://w3id.org/mqto#ActuableProperty">Actuable Property</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#ObservableProperty" title="https://w3id.org/mqto#ObservableProperty">Observable Property</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Result">
+      <h3>Result<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#Result</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://www.w3.org/ns/sosa/Result"
+               target="_blank"
+               title="http://www.w3.org/ns/sosa/Result">result</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#measValue" title="https://w3id.org/mqto#measValue">measurement value</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Signal">
+      <h3>Signal<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#Signal</p>
+      <div class="comment">
+         <span class="markdown">A specified data channel in the electrical-engineering sense: a named, typed signal such as a PLC variable, an analog voltage line, a fieldbus message, or a time-series data stream. A Signal may carry measurement data (sensor/output signals), control data (actuator/input signals), or both simultaneously — a setpoint, for instance, is written as a command to an actuator and can equally be read back as an observable value. It describes the metadata of the channel (identifier, unit, sampling rate, direction, etc.) rather than any particular observation or sensor device. It sits in the specified layer as the concrete data-source or data-sink binding for an abstract Metric, and is thereby distinct from sosa:ObservableProperty (which characterises an observable quality of a feature of interest in the actual layer) and from sosa:Sensor (which is the physical observing device).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Specified"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Specified">specified</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#readBy" title="https://w3id.org/mqto#readBy">read by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#signalProvidedBy" title="https://w3id.org/mqto#signalProvidedBy">signal provided by</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#providesSignal" title="https://w3id.org/mqto#providesSignal">provides signal</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#readsFrom" title="https://w3id.org/mqto#readsFrom">reads from</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="objectproperties">
+   <h3 id="properties" class="list">Object Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#appearedOn" title="https://w3id.org/mqto#appearedOn">appeared on</a>
+      </li>
+      <li>
+         <a href="#baseFor" title="https://w3id.org/mqto#baseFor">base for</a>
+      </li>
+      <li>
+         <a href="#basedOn" title="https://w3id.org/mqto#basedOn">based on</a>
+      </li>
+      <li>
+         <a href="#calculatedFor" title="https://w3id.org/mqto#calculatedFor">calculated for</a>
+      </li>
+      <li>
+         <a href="#causedBy" title="https://w3id.org/mqto#causedBy">caused by</a>
+      </li>
+      <li>
+         <a href="#causedByModerately" title="https://w3id.org/mqto#causedByModerately">
+            <span>caused by moderately</span>
+         </a>
+      </li>
+      <li>
+         <a href="#causedByStrongly" title="https://w3id.org/mqto#causedByStrongly">
+            <span>caused by strongly</span>
+         </a>
+      </li>
+      <li>
+         <a href="#causedByWeakly" title="https://w3id.org/mqto#causedByWeakly">
+            <span>caused by weakly</span>
+         </a>
+      </li>
+      <li>
+         <a href="#causes" title="https://w3id.org/mqto#causes">causes</a>
+      </li>
+      <li>
+         <a href="#causesModerately" title="https://w3id.org/mqto#causesModerately">
+            <span>causes moderately</span>
+         </a>
+      </li>
+      <li>
+         <a href="#causesStrongly" title="https://w3id.org/mqto#causesStrongly">
+            <span>causes strongly</span>
+         </a>
+      </li>
+      <li>
+         <a href="#causesWeakly" title="https://w3id.org/mqto#causesWeakly">
+            <span>causes weakly</span>
+         </a>
+      </li>
+      <li>
+         <a href="#evaluatedBy" title="https://w3id.org/mqto#evaluatedBy">evaluated by</a>
+      </li>
+      <li>
+         <a href="#evaluatesProperty" title="https://w3id.org/mqto#evaluatesProperty">evaluates property</a>
+      </li>
+      <li>
+         <a href="#failureBelongsTo" title="https://w3id.org/mqto#failureBelongsTo">failure belongs to</a>
+      </li>
+      <li>
+         <a href="#first" title="https://w3id.org/mqto#first">
+            <span>first</span>
+         </a>
+      </li>
+      <li>
+         <a href="#hasFailure" title="https://w3id.org/mqto#hasFailure">has failure</a>
+      </li>
+      <li>
+         <a href="#hasFirstStep" title="https://w3id.org/mqto#hasFirstStep">has first step</a>
+      </li>
+      <li>
+         <a href="#hasMetric" title="https://w3id.org/mqto#hasMetric">has metric</a>
+      </li>
+      <li>
+         <a href="#hasNextStep" title="https://w3id.org/mqto#hasNextStep">has next step</a>
+      </li>
+      <li>
+         <a href="#hasStep" title="https://w3id.org/mqto#hasStep">has step</a>
+      </li>
+      <li>
+         <a href="#metricBelongsTo" title="https://w3id.org/mqto#metricBelongsTo">metric belongs to</a>
+      </li>
+      <li>
+         <a href="#metricReferredBy" title="https://w3id.org/mqto#metricReferredBy">metric referred by</a>
+      </li>
+      <li>
+         <a href="#mitigated" title="https://w3id.org/mqto#mitigated">mitigated</a>
+      </li>
+      <li>
+         <a href="#mitigatedBy" title="https://w3id.org/mqto#mitigatedBy">mitigated by</a>
+      </li>
+      <li>
+         <a href="#mitigates" title="https://w3id.org/mqto#mitigates">mitigates</a>
+      </li>
+      <li>
+         <a href="#providesSignal" title="https://w3id.org/mqto#providesSignal">provides signal</a>
+      </li>
+      <li>
+         <a href="#raised" title="https://w3id.org/mqto#raised">raised</a>
+      </li>
+      <li>
+         <a href="#raisedBy" title="https://w3id.org/mqto#raisedBy">raised by</a>
+      </li>
+      <li>
+         <a href="#readBy" title="https://w3id.org/mqto#readBy">read by</a>
+      </li>
+      <li>
+         <a href="#readsFrom" title="https://w3id.org/mqto#readsFrom">reads from</a>
+      </li>
+      <li>
+         <a href="#refersToMetric" title="https://w3id.org/mqto#refersToMetric">refers to metric</a>
+      </li>
+      <li>
+         <a href="#rest" title="https://w3id.org/mqto#rest">
+            <span>rest</span>
+         </a>
+      </li>
+      <li>
+         <a href="#resultProperty" title="https://w3id.org/mqto#resultProperty">result property</a>
+      </li>
+      <li>
+         <a href="#signalProvidedBy" title="https://w3id.org/mqto#signalProvidedBy">signal provided by</a>
+      </li>
+      <li>
+         <a href="#steps" title="https://w3id.org/mqto#steps">steps</a>
+      </li>
+      <li>
+         <a href="#suggested" title="https://w3id.org/mqto#suggested">suggested</a>
+      </li>
+      <li>
+         <a href="#suggestedBy" title="https://w3id.org/mqto#suggestedBy">suggested by</a>
+      </li>
+   </ul>
+   <div class="entity" id="appearedOn">
+      <h3>appeared on<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#appearedOn</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FailureOccurrence" title="https://w3id.org/mqto#FailureOccurrence">Failure Occurrence</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ActualIshikawaItem" title="https://w3id.org/mqto#ActualIshikawaItem">Actual Ishikawa Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="baseFor">
+      <h3>base for<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#baseFor</p>
+      <div class="description">
+         <dl>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#basedOn" title="https://w3id.org/mqto#basedOn">based on</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="basedOn">
+      <h3>based on<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#basedOn</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#MetricAssessment" title="https://w3id.org/mqto#MetricAssessment">Metric Assessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Observation" title="https://w3id.org/mqto#Observation">Observation</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#baseFor" title="https://w3id.org/mqto#baseFor">base for</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="calculatedFor">
+      <h3>calculated for<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#calculatedFor</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#MetricAssessment" title="https://w3id.org/mqto#MetricAssessment">Metric Assessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ActualIshikawaItem" title="https://w3id.org/mqto#ActualIshikawaItem">Actual Ishikawa Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="causedBy">
+      <h3>caused by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#causedBy</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#causedByModerately" title="https://w3id.org/mqto#causedByModerately">caused by moderately</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#causedByStrongly" title="https://w3id.org/mqto#causedByStrongly">caused by strongly</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#causedByWeakly" title="https://w3id.org/mqto#causedByWeakly">caused by weakly</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#causes" title="https://w3id.org/mqto#causes">causes</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="causedByModerately">
+      <h3>caused by moderately<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#causedByModerately</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#causedBy" title="https://w3id.org/mqto#causedBy">caused by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#causesModerately" title="https://w3id.org/mqto#causesModerately">causes moderately</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="causedByStrongly">
+      <h3>caused by strongly<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#causedByStrongly</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#causedBy" title="https://w3id.org/mqto#causedBy">caused by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#causesStrongly" title="https://w3id.org/mqto#causesStrongly">causes strongly</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="causedByWeakly">
+      <h3>caused by weakly<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#causedByWeakly</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#causedBy" title="https://w3id.org/mqto#causedBy">caused by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#causesWeakly" title="https://w3id.org/mqto#causesWeakly">causes weakly</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="causes">
+      <h3>causes<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#causes</p>
+      <div class="description">
+         <dl>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#causesModerately" title="https://w3id.org/mqto#causesModerately">causes moderately</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#causesStrongly" title="https://w3id.org/mqto#causesStrongly">causes strongly</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#causesWeakly" title="https://w3id.org/mqto#causesWeakly">causes weakly</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#causedBy" title="https://w3id.org/mqto#causedBy">caused by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="causesModerately">
+      <h3>causes moderately<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#causesModerately</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#causes" title="https://w3id.org/mqto#causes">causes</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#causedByModerately" title="https://w3id.org/mqto#causedByModerately">caused by moderately</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="causesStrongly">
+      <h3>causes strongly<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#causesStrongly</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#causes" title="https://w3id.org/mqto#causes">causes</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#causedByStrongly" title="https://w3id.org/mqto#causedByStrongly">caused by strongly</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="causesWeakly">
+      <h3>causes weakly<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#causesWeakly</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#causes" title="https://w3id.org/mqto#causes">causes</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#causedByWeakly" title="https://w3id.org/mqto#causedByWeakly">caused by weakly</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="evaluatedBy">
+      <h3>evaluated by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#evaluatedBy</p>
+      <div class="comment">
+         <span class="markdown">Relates an ObservableProperty to the MetricAssessment that evaluated it (actual layer). Inverse of mqto:evaluatesProperty. Counterpart to mqto:readBy in the specified layer.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ObservableProperty" title="https://w3id.org/mqto#ObservableProperty">Observable Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#MetricAssessment" title="https://w3id.org/mqto#MetricAssessment">Metric Assessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#evaluatesProperty" title="https://w3id.org/mqto#evaluatesProperty">evaluates property</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="evaluatesProperty">
+      <h3>evaluates property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#evaluatesProperty</p>
+      <div class="comment">
+         <span class="markdown">Relates a MetricAssessment to the ObservableProperty it evaluated (actual layer). Counterpart to mqto:readsFrom, which relates a Metric to a Signal in the specified layer.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#MetricAssessment" title="https://w3id.org/mqto#MetricAssessment">Metric Assessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ObservableProperty" title="https://w3id.org/mqto#ObservableProperty">Observable Property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#evaluatedBy" title="https://w3id.org/mqto#evaluatedBy">evaluated by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="failureBelongsTo">
+      <h3>failure belongs to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#failureBelongsTo</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#IshikawaItem" title="https://w3id.org/mqto#IshikawaItem">Ishikawa Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasFailure" title="https://w3id.org/mqto#hasFailure">has failure</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="first">
+      <h3>first<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#first</p>
+      <div class="comment">
+         <span class="markdown">Points to the first CountermeasureStep in a reusable ordered list. The list structure (rather than a direct step-to-step chain) allows the same CountermeasureStep instance to appear in multiple Countermeasure procedures without embedding order into the step itself.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#List" title="https://w3id.org/mqto#List">List</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#CountermeasureStep" title="https://w3id.org/mqto#CountermeasureStep">Countermeasure Step</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasFailure">
+      <h3>has failure<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#hasFailure</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#IshikawaItem" title="https://w3id.org/mqto#IshikawaItem">Ishikawa Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#failureBelongsTo" title="https://w3id.org/mqto#failureBelongsTo">failure belongs to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasFirstStep">
+      <h3>has first step<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#hasFirstStep</p>
+      <div class="comment">
+         <span class="markdown">Points to the first CountermeasureStepExecution in the concrete execution chain. In the actual layer, steps are performed in a fixed linear order and are not reused, so the order is encoded directly in the chain via mqto:hasNextStep.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasStep" title="https://w3id.org/mqto#hasStep">has step</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CountermeasureExecution" title="https://w3id.org/mqto#CountermeasureExecution">Countermeasure Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#CountermeasureStepExecution"
+                  title="https://w3id.org/mqto#CountermeasureStepExecution">Countermeasure Step Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasMetric">
+      <h3>has metric<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#hasMetric</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#IshikawaItem" title="https://w3id.org/mqto#IshikawaItem">Ishikawa Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Metric" title="https://w3id.org/mqto#Metric">Metric</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#metricBelongsTo" title="https://w3id.org/mqto#metricBelongsTo">metric belongs to</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasNextStep">
+      <h3>has next step<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#hasNextStep</p>
+      <div class="comment">
+         <span class="markdown">Links one CountermeasureStepExecution to the next in the concrete execution sequence. Unlike the specified layer (which uses mqto:List for reusability), the actual execution occurs once in a specific order, so step-to-step chaining is appropriate here.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasStep" title="https://w3id.org/mqto#hasStep">has step</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CountermeasureStepExecution"
+                  title="https://w3id.org/mqto#CountermeasureStepExecution">Countermeasure Step Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#CountermeasureStepExecution"
+                  title="https://w3id.org/mqto#CountermeasureStepExecution">Countermeasure Step Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasStep">
+      <h3>has step<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#hasStep</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart"
+                  target="_blank"
+                  title="http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart">has activity part</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasFirstStep" title="https://w3id.org/mqto#hasFirstStep">has first step</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#hasNextStep" title="https://w3id.org/mqto#hasNextStep">has next step</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CountermeasureExecution" title="https://w3id.org/mqto#CountermeasureExecution">Countermeasure Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#CountermeasureStepExecution"
+                  title="https://w3id.org/mqto#CountermeasureStepExecution">Countermeasure Step Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="metricBelongsTo">
+      <h3>metric belongs to<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#metricBelongsTo</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Metric" title="https://w3id.org/mqto#Metric">Metric</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#IshikawaItem" title="https://w3id.org/mqto#IshikawaItem">Ishikawa Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#hasMetric" title="https://w3id.org/mqto#hasMetric">has metric</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="metricReferredBy">
+      <h3>metric referred by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#metricReferredBy</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Metric" title="https://w3id.org/mqto#Metric">Metric</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#refersToMetric" title="https://w3id.org/mqto#refersToMetric">refers to metric</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="mitigated">
+      <h3>mitigated<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#mitigated</p>
+      <div class="comment">
+         <span class="markdown">A countermeasure execution mitigated a failure occurrence. Note: this is the actual-layer forward property (past participle). The specified-layer equivalent uses mqto:mitigates (active voice). The naming difference is intentional: 'mitigated' records a completed fact at instance level, while 'mitigates' expresses a general capability at schema level.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CountermeasureExecution" title="https://w3id.org/mqto#CountermeasureExecution">Countermeasure Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FailureOccurrence" title="https://w3id.org/mqto#FailureOccurrence">Failure Occurrence</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="mitigatedBy">
+      <h3>mitigated by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#mitigatedBy</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Countermeasure" title="https://w3id.org/mqto#Countermeasure">Countermeasure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#mitigates" title="https://w3id.org/mqto#mitigates">mitigates</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="mitigates">
+      <h3>mitigates<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#mitigates</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Countermeasure" title="https://w3id.org/mqto#Countermeasure">Countermeasure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#mitigatedBy" title="https://w3id.org/mqto#mitigatedBy">mitigated by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="providesSignal">
+      <h3>provides signal<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#providesSignal</p>
+      <div class="comment">
+         <span class="markdown">Relates an IshikawaItem (Machine, Material, or Method) to the data channels (Signals) associated with it. A Signal may be an output channel carrying measurement data from the item (e.g. a temperature sensor reading) or an input channel carrying control data to the item (e.g. a setpoint or actuator command). The Signal is a specified channel descriptor; actual observations are made via sosa:Observation on the corresponding ActualIshikawaItem.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#IshikawaItem" title="https://w3id.org/mqto#IshikawaItem">Ishikawa Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Signal" title="https://w3id.org/mqto#Signal">Signal</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#signalProvidedBy" title="https://w3id.org/mqto#signalProvidedBy">signal provided by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="raised">
+      <h3>raised<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#raised</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#MetricAssessment" title="https://w3id.org/mqto#MetricAssessment">Metric Assessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FailureOccurrence" title="https://w3id.org/mqto#FailureOccurrence">Failure Occurrence</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#raisedBy" title="https://w3id.org/mqto#raisedBy">raised by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="raisedBy">
+      <h3>raised by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#raisedBy</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FailureOccurrence" title="https://w3id.org/mqto#FailureOccurrence">Failure Occurrence</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#MetricAssessment" title="https://w3id.org/mqto#MetricAssessment">Metric Assessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#raised" title="https://w3id.org/mqto#raised">raised</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="readBy">
+      <h3>read by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#readBy</p>
+      <div class="comment">
+         <span class="markdown">Relates a Signal (data channel) to the Metric that is computed from it (specified layer). Inverse of mqto:readsFrom. For the actual-layer counterpart see mqto:evaluatedBy.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Signal" title="https://w3id.org/mqto#Signal">Signal</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Metric" title="https://w3id.org/mqto#Metric">Metric</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#readsFrom" title="https://w3id.org/mqto#readsFrom">reads from</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="readsFrom">
+      <h3>reads from<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#readsFrom</p>
+      <div class="comment">
+         <span class="markdown">Relates a Metric to the Signal (data channel) it is computed from (specified layer). Inverse of mqto:readBy. For the actual-layer counterpart see mqto:evaluatesProperty.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Metric" title="https://w3id.org/mqto#Metric">Metric</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Signal" title="https://w3id.org/mqto#Signal">Signal</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#readBy" title="https://w3id.org/mqto#readBy">read by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="refersToMetric">
+      <h3>refers to metric<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#refersToMetric</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Metric" title="https://w3id.org/mqto#Metric">Metric</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#metricReferredBy" title="https://w3id.org/mqto#metricReferredBy">metric referred by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="rest">
+      <h3>rest<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#rest</p>
+      <div class="comment">
+         <span class="markdown">Points to the remainder of the ordered step list. Together with mqto:first, this implements a reusable linked-list container so that step order is encoded in the list, not in the steps themselves. The list must terminate at mqto:nil; circular references are not permitted, though OWL cannot formally enforce acyclicity.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#List" title="https://w3id.org/mqto#List">List</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#List" title="https://w3id.org/mqto#List">List</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="resultProperty">
+      <h3>result property<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#resultProperty</p>
+      <div class="comment">
+         <span class="markdown">Meta-property that specifies which data property of sosa:Result instances should be extracted and used as input for this Metric's calculation. For example, a Metric's resultProperty can point to a specific data property of the Result to extract that field from each Result instance within the specified time window. This enables multiple metrics to derive different calculations from the same observation results by selecting different result attributes. Note: This is a meta-level construct (an object property pointing to data properties), which while not ideal OWL modeling practice, provides a simple declarative mechanism for metrics to specify their input data field without requiring complex extraction rules or SPARQL property paths.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Metric" title="https://w3id.org/mqto#Metric">Metric</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"
+                  target="_blank"
+                  title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property">property</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="signalProvidedBy">
+      <h3>signal provided by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#signalProvidedBy</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Signal" title="https://w3id.org/mqto#Signal">Signal</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#IshikawaItem" title="https://w3id.org/mqto#IshikawaItem">Ishikawa Item</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#providesSignal" title="https://w3id.org/mqto#providesSignal">provides signal</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="steps">
+      <h3>steps<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#steps</p>
+      <div class="comment">
+         <span class="markdown">Links a Countermeasure to its ordered list of steps. The indirection via mqto:List enables the same CountermeasureStep to be referenced in multiple Countermeasure definitions (reuse across procedures).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Countermeasure" title="https://w3id.org/mqto#Countermeasure">Countermeasure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#List" title="https://w3id.org/mqto#List">List</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="suggested">
+      <h3>suggested<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#suggested</p>
+      <div class="comment">
+         <span class="markdown">A failure occurrence suggested a countermeasure execution.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FailureOccurrence" title="https://w3id.org/mqto#FailureOccurrence">Failure Occurrence</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#CountermeasureExecution" title="https://w3id.org/mqto#CountermeasureExecution">Countermeasure Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#suggestedBy" title="https://w3id.org/mqto#suggestedBy">suggested by</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="suggestedBy">
+      <h3>suggested by<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#suggestedBy</p>
+      <div class="comment">
+         <span class="markdown">A countermeasure execution was suggested by a failure occurrence.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CountermeasureExecution" title="https://w3id.org/mqto#CountermeasureExecution">Countermeasure Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FailureOccurrence" title="https://w3id.org/mqto#FailureOccurrence">Failure Occurrence</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#suggested" title="https://w3id.org/mqto#suggested">suggested</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="dataproperties">
+   <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#abortedReason" title="https://w3id.org/mqto#abortedReason">aborted reason</a>
+      </li>
+      <li>
+         <a href="#abortedTime" title="https://w3id.org/mqto#abortedTime">aborted time</a>
+      </li>
+      <li>
+         <a href="#assessmentValue" title="https://w3id.org/mqto#assessmentValue">assessment value</a>
+      </li>
+      <li>
+         <a href="#calculatedTime" title="https://w3id.org/mqto#calculatedTime">calculated time</a>
+      </li>
+      <li>
+         <a href="#calculatedValue" title="https://w3id.org/mqto#calculatedValue">calculated value</a>
+      </li>
+      <li>
+         <a href="#completionTime" title="https://w3id.org/mqto#completionTime">completion time</a>
+      </li>
+      <li>
+         <a href="#endTime" title="https://w3id.org/mqto#endTime">end time</a>
+      </li>
+      <li>
+         <a href="#identifier" title="https://w3id.org/mqto#identifier">identifier</a>
+      </li>
+      <li>
+         <a href="#lowerBound" title="https://w3id.org/mqto#lowerBound">lower bound</a>
+      </li>
+      <li>
+         <a href="#markdownContent" title="https://w3id.org/mqto#markdownContent">markdown content</a>
+      </li>
+      <li>
+         <a href="#measValue" title="https://w3id.org/mqto#measValue">measurement value</a>
+      </li>
+      <li>
+         <a href="#method" title="https://w3id.org/mqto#method">method</a>
+      </li>
+      <li>
+         <a href="#reasoningLine" title="https://w3id.org/mqto#reasoningLine">reasoning line</a>
+      </li>
+      <li>
+         <a href="#role" title="https://w3id.org/mqto#role">role</a>
+      </li>
+      <li>
+         <a href="#score" title="https://w3id.org/mqto#score">score</a>
+      </li>
+      <li>
+         <a href="#startTime" title="https://w3id.org/mqto#startTime">start time</a>
+      </li>
+      <li>
+         <a href="#timeWindowSize" title="https://w3id.org/mqto#timeWindowSize">time window size</a>
+      </li>
+      <li>
+         <a href="#upperBound" title="https://w3id.org/mqto#upperBound">upper bound</a>
+      </li>
+      <li>
+         <a href="#viewTime" title="https://w3id.org/mqto#viewTime">view time</a>
+      </li>
+      <li>
+         <a href="#weight" title="https://w3id.org/mqto#weight">weight</a>
+      </li>
+   </ul>
+   <div class="entity" id="abortedReason">
+      <h3>aborted reason<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#abortedReason</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="abortedTime">
+      <h3>aborted time<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#abortedTime</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="assessmentValue">
+      <h3>assessment value<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#assessmentValue</p>
+      <div class="comment">
+         <span class="markdown">Boolean pass/fail decision resulting from comparing the calculatedValue against the Metric's threshold bounds (lowerBound/upperBound). True indicates a threshold violation (failure condition detected), false indicates normal operation within bounds.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#MetricAssessment" title="https://w3id.org/mqto#MetricAssessment">Metric Assessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#boolean"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#boolean">boolean</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="calculatedTime">
+      <h3>calculated time<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#calculatedTime</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#MetricAssessment" title="https://w3id.org/mqto#MetricAssessment">Metric Assessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="calculatedValue">
+      <h3>calculated value<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#calculatedValue</p>
+      <div class="comment">
+         <span class="markdown">The actual computed numeric value of the metric assessment. This preserves the quantitative result before threshold comparison, enabling trend analysis, statistical modeling, and root cause correlation. For example, if a temperature metric calculates 85.7°C and the upperBound is 80°C, calculatedValue is 85.7 while assessmentValue would be true (indicating a violation). The unit of measurement is inherited from the implemented Metric specification.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#MetricAssessment" title="https://w3id.org/mqto#MetricAssessment">Metric Assessment</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#double"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#double">double</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="completionTime">
+      <h3>completion time<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#completionTime</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CountermeasureStepExecution"
+                  title="https://w3id.org/mqto#CountermeasureStepExecution">Countermeasure Step Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="endTime">
+      <h3>end time<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#endTime</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="identifier">
+      <h3>identifier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#identifier</p>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="http://purl.org/dc/terms/identifier"
+                  target="_blank"
+                  title="http://purl.org/dc/terms/identifier">identifier</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="lowerBound">
+      <h3>lower bound<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#lowerBound</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Metric" title="https://w3id.org/mqto#Metric">Metric</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="markdownContent">
+      <h3>markdown content<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#markdownContent</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Countermeasure" title="https://w3id.org/mqto#Countermeasure">Countermeasure</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#CountermeasureStep" title="https://w3id.org/mqto#CountermeasureStep">Countermeasure Step</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="measValue">
+      <h3>measurement value<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#measValue</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Result" title="https://w3id.org/mqto#Result">Result</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#float"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#float">float</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="method">
+      <h3>method<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#method</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Metric" title="https://w3id.org/mqto#Metric">Metric</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="reasoningLine">
+      <h3>reasoning line<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#reasoningLine</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CountermeasureExecution" title="https://w3id.org/mqto#CountermeasureExecution">Countermeasure Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="role">
+      <h3>role<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#role</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CountermeasureStep" title="https://w3id.org/mqto#CountermeasureStep">Countermeasure Step</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="score">
+      <h3>score<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#score</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CountermeasureExecution" title="https://w3id.org/mqto#CountermeasureExecution">Countermeasure Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#double"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#double">double</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="startTime">
+      <h3>start time<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#startTime</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="timeWindowSize">
+      <h3>time window size<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#timeWindowSize</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Metric" title="https://w3id.org/mqto#Metric">Metric</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="upperBound">
+      <h3>upper bound<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#upperBound</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Metric" title="https://w3id.org/mqto#Metric">Metric</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+                  target="_blank"
+                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="viewTime">
+      <h3>view time<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#viewTime</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FailureOccurrence" title="https://w3id.org/mqto#FailureOccurrence">Failure Occurrence</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="weight">
+      <h3>weight<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#weight</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Countermeasure" title="https://w3id.org/mqto#Countermeasure">Countermeasure</a>
+               <sup class="type-c" title="class">c</sup> 
+               <span class="logic">or</span> 
+               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#int"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#int">int</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="namedindividuals">
+   <h3 id="namedindividuals" class="list">Named Individuals</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#https://orcid.org/0000-0001-9521-8907" title="https://orcid.org/0000-0001-9521-8907">
+            <span>0000 0001 9521 8907</span>
+         </a>
+      </li>
+      <li>
+         <a href="#https://orcid.org/0000-0003-2661-5575" title="https://orcid.org/0000-0003-2661-5575">
+            <span>0000 0003 2661 5575</span>
+         </a>
+      </li>
+      <li>
+         <a href="#nil" title="https://w3id.org/mqto#nil">nil</a>
+      </li>
+   </ul>
+   <div class="entity" id="https://orcid.org/0000-0001-9521-8907">
+      <h3>0000 0001 9521 8907<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://orcid.org/0000-0001-9521-8907</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://xmlns.com/foaf/0.1/Person"
+               target="_blank"
+               title="http://xmlns.com/foaf/0.1/Person">person</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="https://orcid.org/0000-0003-2661-5575">
+      <h3>0000 0003 2661 5575<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://orcid.org/0000-0003-2661-5575</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="http://xmlns.com/foaf/0.1/Person"
+               target="_blank"
+               title="http://xmlns.com/foaf/0.1/Person">person</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="nil">
+      <h3>nil<sup class="type-ni" title="named individual">ni</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#nil</p>
+      <dl class="description">
+         <dt>belongs to</dt>
+         <dd>
+            <a href="#List" title="https://w3id.org/mqto#List">List</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     id="rules">
+   <h3 class="list" id="rule">Rules</h3>
+   <ul class="hlist"/>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals
+</div>
+</div>

@@ -1,0 +1,13 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://w3id.org/mqto/1.0> a prov:Entity;
+	 dc:title "Manufacturing Quality Troubleshooting Ontology";
+	 prov:wasAttributedTo <https://orcid.org/0000-0001-9521-8907>;
+	 dc:creator <https://orcid.org/0000-0001-9521-8907>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0003-2661-5575>;
+	 dc:contributor <https://orcid.org/0000-0003-2661-5575>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:wasGeneratedAt "2026-03-17";
+.
