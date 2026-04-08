@@ -1,16 +1,21 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/mqto#"
      xml:base="https://w3id.org/mqto"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:pav="http://purl.org/pav/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdl="http://rds.posccaesar.org/ontology/lis14/rdl/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:bibo="http://purl.org/ontology/bibo/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:schema="http://schema.org/">
+     xmlns:schema="http://schema.org/"
+     xmlns:AnnotationVocabulary="https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/">
     <owl:Ontology rdf:about="https://w3id.org/mqto">
         <owl:versionIRI rdf:resource="https://w3id.org/mqto/1.0"/>
         <owl:imports rdf:resource="http://rds.posccaesar.org/ontology/lis14/ont/ido-ssn/0.1"/>
@@ -68,13 +73,6 @@
     
 
 
-    <!-- http://purl.org/dc/terms/contributor -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
-    
-
-
     <!-- http://purl.org/dc/terms/created -->
 
 
@@ -82,52 +80,10 @@
     
 
 
-    <!-- http://purl.org/dc/terms/creator -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/description -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/license -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/publisher -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/rights -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rights"/>
-    
-
-
     <!-- http://purl.org/dc/terms/subject -->
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/subject"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/title -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
     
 
 
@@ -180,32 +136,6 @@
     
 
 
-    <!-- http://xmlns.com/foaf/0.1/name -->
-
-
-    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Datatypes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-
-    
-
-
-    <!-- http://www.w3.org/2001/XMLSchema#date -->
-
-
-    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -215,62 +145,6 @@
      -->
 
 
-    
-
-
-    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf -->
-
-
-    <owl:ObjectProperty rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf"/>
-    
-
-
-    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart -->
-
-
-    <owl:ObjectProperty rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart"/>
-    
-
-
-    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant -->
-
-
-    <owl:ObjectProperty rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"/>
-    
-
-
-    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/implements -->
-
-
-    <owl:ObjectProperty rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/implements"/>
-    
-
-
-    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/participantIn -->
-
-
-    <owl:ObjectProperty rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/participantIn"/>
-    
-
-
-    <!-- http://www.w3.org/ns/sosa/isFeatureOfInterestOf -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
-    
-
-
-    <!-- http://www.w3.org/ns/ssn/hasProperty -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasProperty"/>
-    
-
-
-    <!-- http://www.w3.org/ns/ssn/isPropertyOf -->
-
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/isPropertyOf"/>
     
 
 
@@ -440,7 +314,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/mqto#first">
         <rdfs:domain rdf:resource="https://w3id.org/mqto#List"/>
         <rdfs:range rdf:resource="https://w3id.org/mqto#CountermeasureStep"/>
-        <rdfs:comment xml:lang="en">Points to the first CountermeasureStep in a reusable ordered list. The list structure (rather than a direct step-to-step chain) allows the same CountermeasureStep instance to appear in multiple Countermeasure procedures without embedding order into the step itself.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Points to the first CountermeasureStep in a reusable ordered list. Analogous to rdf:first but defined as an explicit OWL object property with proper domain/range constraints. The list structure (rather than a direct step-to-step chain) allows the same CountermeasureStep instance to appear in multiple Countermeasure procedures without embedding order into the step itself.</rdfs:comment>
+        <rdfs:label xml:lang="en">first</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -642,7 +517,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/mqto#rest">
         <rdfs:domain rdf:resource="https://w3id.org/mqto#List"/>
         <rdfs:range rdf:resource="https://w3id.org/mqto#List"/>
-        <rdfs:comment xml:lang="en">Points to the remainder of the ordered step list. Together with mqto:first, this implements a reusable linked-list container so that step order is encoded in the list, not in the steps themselves. The list must terminate at mqto:nil; circular references are not permitted, though OWL cannot formally enforce acyclicity.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Points to the remainder of the ordered step list. Analogous to rdf:rest but defined as an explicit OWL object property with proper domain/range constraints for better reasoner compatibility. Together with mqto:first, this implements a reusable linked-list container so that step order is encoded in the list, not in the steps themselves. The list must terminate at mqto:nil; circular references are not permitted, though OWL cannot formally enforce acyclicity.</rdfs:comment>
+        <rdfs:label xml:lang="en">rest</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -975,41 +851,6 @@
     
 
 
-    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/Activity -->
-
-
-    <owl:Class rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
-    
-
-
-    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/Actual -->
-
-
-    <owl:Class rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/Actual"/>
-    
-
-
-    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/Compound -->
-
-
-    <owl:Class rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/Compound"/>
-    
-
-
-    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact -->
-
-
-    <owl:Class rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact"/>
-    
-
-
-    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/Specified -->
-
-
-    <owl:Class rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/Specified"/>
-    
-
-
     <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Property -->
 
 
@@ -1021,41 +862,6 @@
 
 
     <owl:Class rdf:about="http://www.w3.org/ns/sosa/ActuableProperty"/>
-    
-
-
-    <!-- http://www.w3.org/ns/sosa/FeatureOfInterest -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
-    
-
-
-    <!-- http://www.w3.org/ns/sosa/ObservableProperty -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/sosa/ObservableProperty"/>
-    
-
-
-    <!-- http://www.w3.org/ns/sosa/Observation -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Observation"/>
-    
-
-
-    <!-- http://www.w3.org/ns/sosa/Result -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/sosa/Result"/>
-    
-
-
-    <!-- http://www.w3.org/ns/ssn/Property -->
-
-
-    <owl:Class rdf:about="http://www.w3.org/ns/ssn/Property"/>
     
 
 
@@ -1339,8 +1145,9 @@
 
 
     <owl:Class rdf:about="https://w3id.org/mqto#List">
-        <rdfs:comment xml:lang="en">An ordered, reusable container of CountermeasureSteps within the specified layer. Modelled as a linked list (mqto:first / mqto:rest) so that step order is external to the step instances, allowing steps to be shared across different Countermeasure procedures. The list is terminated by mqto:nil.</rdfs:comment>
+        <rdfs:comment xml:lang="en">An ordered, reusable container of CountermeasureSteps within the specified layer. Implements an OWL-native linked list pattern (mqto:first / mqto:rest) inspired by RDF Collections, but using explicit OWL class and property definitions for better reasoner compatibility. Standard rdf:List creates known issues with OWL reasoners due to blank node handling and recursive structure reasoning. This approach ensures compatibility with standard reasoners such as HermiT and Pellet while maintaining the core benefit: step order is external to the step instances, allowing steps to be shared across different Countermeasure procedures without embedding ordering information in the steps themselves. The list is terminated by mqto:nil. See OWL 2 Primer Section 4.2 on structural specification limitations with blank nodes.</rdfs:comment>
         <rdfs:label xml:lang="en">List</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/owl2-primer/"/>
     </owl:Class>
     
 

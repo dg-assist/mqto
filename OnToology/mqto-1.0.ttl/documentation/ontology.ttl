@@ -49,40 +49,12 @@
 <http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/terms/contributor
-<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/terms/creator
-<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/description
-<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/license
-<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/publisher
-<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/rights
-<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/terms/subject
 <http://purl.org/dc/terms/subject> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/ontology/bibo/status
@@ -113,53 +85,9 @@
 <http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .
 
 
-###  http://xmlns.com/foaf/0.1/name
-<http://xmlns.com/foaf/0.1/name> rdf:type owl:AnnotationProperty .
-
-
-#################################################################
-#    Datatypes
-#################################################################
-
-###  http://www.w3.org/2001/XMLSchema#date
-xsd:date rdf:type rdfs:Datatype .
-
-
 #################################################################
 #    Object Properties
 #################################################################
-
-###  http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf
-<http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf> rdf:type owl:ObjectProperty .
-
-
-###  http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart
-<http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart> rdf:type owl:ObjectProperty .
-
-
-###  http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant
-<http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> rdf:type owl:ObjectProperty .
-
-
-###  http://rds.posccaesar.org/ontology/lis14/rdl/implements
-<http://rds.posccaesar.org/ontology/lis14/rdl/implements> rdf:type owl:ObjectProperty .
-
-
-###  http://rds.posccaesar.org/ontology/lis14/rdl/participantIn
-<http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> rdf:type owl:ObjectProperty .
-
-
-###  http://www.w3.org/ns/sosa/isFeatureOfInterestOf
-<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> rdf:type owl:ObjectProperty .
-
-
-###  http://www.w3.org/ns/ssn/hasProperty
-<http://www.w3.org/ns/ssn/hasProperty> rdf:type owl:ObjectProperty .
-
-
-###  http://www.w3.org/ns/ssn/isPropertyOf
-<http://www.w3.org/ns/ssn/isPropertyOf> rdf:type owl:ObjectProperty .
-
 
 ###  https://w3id.org/mqto#appearedOn
 :appearedOn rdf:type owl:ObjectProperty ;
@@ -265,7 +193,8 @@ xsd:date rdf:type rdfs:Datatype .
 :first rdf:type owl:ObjectProperty ;
        rdfs:domain :List ;
        rdfs:range :CountermeasureStep ;
-       rdfs:comment "Points to the first CountermeasureStep in a reusable ordered list. The list structure (rather than a direct step-to-step chain) allows the same CountermeasureStep instance to appear in multiple Countermeasure procedures without embedding order into the step itself."@en .
+       rdfs:comment "Points to the first CountermeasureStep in a reusable ordered list. Analogous to rdf:first but defined as an explicit OWL object property with proper domain/range constraints. The list structure (rather than a direct step-to-step chain) allows the same CountermeasureStep instance to appear in multiple Countermeasure procedures without embedding order into the step itself."@en ;
+       rdfs:label "first"@en .
 
 
 ###  https://w3id.org/mqto#hasFailure
@@ -399,7 +328,8 @@ xsd:date rdf:type rdfs:Datatype .
 :rest rdf:type owl:ObjectProperty ;
       rdfs:domain :List ;
       rdfs:range :List ;
-      rdfs:comment "Points to the remainder of the ordered step list. Together with mqto:first, this implements a reusable linked-list container so that step order is encoded in the list, not in the steps themselves. The list must terminate at mqto:nil; circular references are not permitted, though OWL cannot formally enforce acyclicity."@en .
+      rdfs:comment "Points to the remainder of the ordered step list. Analogous to rdf:rest but defined as an explicit OWL object property with proper domain/range constraints for better reasoner compatibility. Together with mqto:first, this implements a reusable linked-list container so that step order is encoded in the list, not in the steps themselves. The list must terminate at mqto:nil; circular references are not permitted, though OWL cannot formally enforce acyclicity."@en ;
+      rdfs:label "rest"@en .
 
 
 ###  https://w3id.org/mqto#resultProperty
@@ -602,52 +532,12 @@ xsd:date rdf:type rdfs:Datatype .
 <http://purl.org/net/p-plan#Step> rdf:type owl:Class .
 
 
-###  http://rds.posccaesar.org/ontology/lis14/rdl/Activity
-<http://rds.posccaesar.org/ontology/lis14/rdl/Activity> rdf:type owl:Class .
-
-
-###  http://rds.posccaesar.org/ontology/lis14/rdl/Actual
-<http://rds.posccaesar.org/ontology/lis14/rdl/Actual> rdf:type owl:Class .
-
-
-###  http://rds.posccaesar.org/ontology/lis14/rdl/Compound
-<http://rds.posccaesar.org/ontology/lis14/rdl/Compound> rdf:type owl:Class .
-
-
-###  http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact
-<http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact> rdf:type owl:Class .
-
-
-###  http://rds.posccaesar.org/ontology/lis14/rdl/Specified
-<http://rds.posccaesar.org/ontology/lis14/rdl/Specified> rdf:type owl:Class .
-
-
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
 rdf:Property rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/sosa/ActuableProperty
 <http://www.w3.org/ns/sosa/ActuableProperty> rdf:type owl:Class .
-
-
-###  http://www.w3.org/ns/sosa/FeatureOfInterest
-<http://www.w3.org/ns/sosa/FeatureOfInterest> rdf:type owl:Class .
-
-
-###  http://www.w3.org/ns/sosa/ObservableProperty
-<http://www.w3.org/ns/sosa/ObservableProperty> rdf:type owl:Class .
-
-
-###  http://www.w3.org/ns/sosa/Observation
-<http://www.w3.org/ns/sosa/Observation> rdf:type owl:Class .
-
-
-###  http://www.w3.org/ns/sosa/Result
-<http://www.w3.org/ns/sosa/Result> rdf:type owl:Class .
-
-
-###  http://www.w3.org/ns/ssn/Property
-<http://www.w3.org/ns/ssn/Property> rdf:type owl:Class .
 
 
 ###  http://xmlns.com/foaf/0.1/Person
@@ -833,8 +723,9 @@ rdf:Property rdf:type owl:Class .
 
 ###  https://w3id.org/mqto#List
 :List rdf:type owl:Class ;
-      rdfs:comment "An ordered, reusable container of CountermeasureSteps within the specified layer. Modelled as a linked list (mqto:first / mqto:rest) so that step order is external to the step instances, allowing steps to be shared across different Countermeasure procedures. The list is terminated by mqto:nil."@en ;
-      rdfs:label "List"@en .
+      rdfs:comment "An ordered, reusable container of CountermeasureSteps within the specified layer. Implements an OWL-native linked list pattern (mqto:first / mqto:rest) inspired by RDF Collections, but using explicit OWL class and property definitions for better reasoner compatibility. Standard rdf:List creates known issues with OWL reasoners due to blank node handling and recursive structure reasoning. This approach ensures compatibility with standard reasoners such as HermiT and Pellet while maintaining the core benefit: step order is external to the step instances, allowing steps to be shared across different Countermeasure procedures without embedding ordering information in the steps themselves. The list is terminated by mqto:nil. See OWL 2 Primer Section 4.2 on structural specification limitations with blank nodes."@en ;
+      rdfs:label "List"@en ;
+      rdfs:seeAlso <http://www.w3.org/TR/owl2-primer/> .
 
 
 ###  https://w3id.org/mqto#Machine
