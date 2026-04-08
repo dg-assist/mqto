@@ -25,7 +25,7 @@ This section provides details for each class and property defined by Manufacturi
             title="https://w3id.org/mqto#CountermeasureStepExecution">Countermeasure Step Execution</a>
       </li>
       <li>
-         <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+         <a href="#FailureMode" title="https://w3id.org/mqto#FailureMode">Failure Mode</a>
       </li>
       <li>
          <a href="#FailureOccurrence" title="https://w3id.org/mqto#FailureOccurrence">Failure Occurrence</a>
@@ -139,7 +139,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#Countermeasure</p>
       <div class="comment">
-         <span class="markdown">A remediation procedure that mitigates one or more Failures. Countermeasures are structured as ordered sequences of CountermeasureSteps, represented via the mqto:List pattern for reusability. As a subclass of pko:Procedure, countermeasures align with the Procedural Knowledge Ontology's procedure modeling patterns while maintaining integration with the LIS specified/actual architecture.</span>
+         <span class="markdown">A remediation procedure that mitigates one or more Failure Modes. Countermeasures are structured as ordered sequences of CountermeasureSteps, represented via the mqto:List pattern for reusability. As a subclass of pko:Procedure, countermeasures align with the Procedural Knowledge Ontology's procedure modeling patterns while maintaining integration with the LIS specified/actual architecture.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -148,8 +148,7 @@ This section provides details for each class and property defined by Manufacturi
                target="_blank"
                title="http://rds.posccaesar.org/ontology/lis14/rdl/Activity">activity</a>, <a href="https://w3id.org/pko#Procedure"
                target="_blank"
-               title="https://w3id.org/pko#Procedure">procedure</a>
-            <sup class="type-c" title="class">c</sup>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Specified"
+               title="https://w3id.org/pko#Procedure">procedure</a>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Specified"
                target="_blank"
                title="http://rds.posccaesar.org/ontology/lis14/rdl/Specified">specified</a>
          </dd>
@@ -184,7 +183,6 @@ This section provides details for each class and property defined by Manufacturi
                title="http://rds.posccaesar.org/ontology/lis14/rdl/Actual">actual</a>, <a href="https://w3id.org/pko#ProcedureExecution"
                target="_blank"
                title="https://w3id.org/pko#ProcedureExecution">procedure execution</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
@@ -223,7 +221,6 @@ This section provides details for each class and property defined by Manufacturi
                title="http://rds.posccaesar.org/ontology/lis14/rdl/Specified">specified</a>, <a href="http://purl.org/net/p-plan#Step"
                target="_blank"
                title="http://purl.org/net/p-plan#Step">step</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
@@ -255,7 +252,6 @@ This section provides details for each class and property defined by Manufacturi
                title="http://rds.posccaesar.org/ontology/lis14/rdl/Actual">actual</a>, <a href="https://w3id.org/pko#StepExecution"
                target="_blank"
                title="https://w3id.org/pko#StepExecution">step execution</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in domain of</dt>
          <dd>
@@ -272,15 +268,15 @@ This section provides details for each class and property defined by Manufacturi
          </dd>
       </dl>
    </div>
-   <div class="entity" id="Failure">
-      <h3>Failure<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="FailureMode">
+      <h3>Failure Mode<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/mqto#Failure</p>
+         <strong>IRI:</strong> https://w3id.org/mqto#FailureMode</p>
       <div class="comment">
-         <span class="markdown">A type of quality defect or operational problem in the specified layer. Belongs to an IshikawaItem (Machine, Material, or Method category), refers to diagnostic Metrics, and can be mitigated by Countermeasures. Failures can have causal relationships with other Failures (causes/causedBy) to model root cause chains. The actual-layer counterpart is FailureOccurrence.</span>
+         <span class="markdown">A manner in which a manufacturing component, system, or process could potentially fail to meet its intended function or quality requirements (specified layer). Aligns with FMEA terminology per IEC 60812:2018. Belongs to an IshikawaItem (Machine, Material, or Method category), refers to diagnostic Metrics, and can be mitigated by Countermeasures. Failure Modes can have causal relationships with other Failure Modes (causes/causedBy) to model root cause chains. The actual-layer counterpart is FailureOccurrence.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -317,7 +313,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#FailureOccurrence</p>
       <div class="comment">
-         <span class="markdown">An instance-layer event representing a specific quality defect or operational problem detected during production. Implements a Failure specification, appears on an ActualIshikawaItem, and is raised by one or more MetricAssessments that detected threshold violations. Can be mitigated by CountermeasureExecutions. Captures the actual occurrence with timestamps and context, as opposed to the schema-level Failure definition.</span>
+         <span class="markdown">An instance-layer event representing a specific quality defect or operational problem detected during production. Implements a Failure Mode specification, appears on an ActualIshikawaItem, and is raised by one or more MetricAssessments that detected threshold violations. Can be mitigated by CountermeasureExecutions. Captures the actual occurrence with timestamps and context, as opposed to the schema-level Failure Mode definition.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -421,7 +417,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#Machine</p>
       <div class="comment">
-         <span class="markdown">Manufacturing equipment, tools, and devices (the 'M' in Ishikawa's Machine). Represents specified physical resources that participate in Methods. Domain-specific ontologies can define specific machine types such as cells, furnaces, and robots. Machines provide Signals (sensor readings, control channels) and can have associated Failures and Metrics.</span>
+         <span class="markdown">Manufacturing equipment, tools, and devices (the 'M' in Ishikawa's Machine). Represents specified physical resources that participate in Methods. Domain-specific ontologies can define specific machine types such as cells, furnaces, and robots. Machines provide Signals (sensor readings, control channels) and can have associated Failure Modes and Metrics.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -505,7 +501,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#Metric</p>
       <div class="comment">
-         <span class="markdown">A specified calculation or key performance indicator (KPI) that bridges quantitative sensor data and qualitative failure detection. Reads from one or more Signals, applies an assessment method over a time window, and compares results against threshold bounds to detect anomalies. Belongs to an IshikawaItem and is referred to by Failures. The actual-layer counterpart is MetricAssessment.</span>
+         <span class="markdown">A specified calculation or key performance indicator (KPI) that bridges quantitative sensor data and qualitative failure detection. Reads from one or more Signals, applies an assessment method over a time window, and compares results against threshold bounds to detect anomalies. Belongs to an IshikawaItem and is referred to by Failure Modes. The actual-layer counterpart is MetricAssessment.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -973,7 +969,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#causedBy</p>
       <div class="comment">
-         <span class="markdown">Links a Failure to another Failure that causes it, forming a causal chain in root cause analysis. This general property has three sub-properties (causedByWeakly, causedByModerately, causedByStrongly) to express different causal strengths. Inverse of causes.</span>
+         <span class="markdown">Links a Failure Mode to another Failure Mode that causes it, forming a causal chain in root cause analysis. This general property has three sub-properties (causedByWeakly, causedByModerately, causedByStrongly) to express different causal strengths. Inverse of causes.</span>
       </div>
       <div class="description">
          <dl>
@@ -986,12 +982,12 @@ This section provides details for each class and property defined by Manufacturi
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <a href="#FailureMode" title="https://w3id.org/mqto#FailureMode">Failure Mode</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <a href="#FailureMode" title="https://w3id.org/mqto#FailureMode">Failure Mode</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -1010,7 +1006,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#causedByModerately</p>
       <div class="comment">
-         <span class="markdown">Indicates a moderate-strength causal relationship where one Failure is caused by another with medium probability or influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causedBy.</span>
+         <span class="markdown">Indicates a moderate-strength causal relationship where one Failure Mode is caused by another with medium probability or influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causedBy.</span>
       </div>
       <div class="description">
          <dl>
@@ -1035,7 +1031,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#causedByStrongly</p>
       <div class="comment">
-         <span class="markdown">Indicates a strong causal relationship where one Failure is caused by another with high probability or significant influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causedBy.</span>
+         <span class="markdown">Indicates a strong causal relationship where one Failure Mode is caused by another with high probability or significant influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causedBy.</span>
       </div>
       <div class="description">
          <dl>
@@ -1060,7 +1056,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#causedByWeakly</p>
       <div class="comment">
-         <span class="markdown">Indicates a weak causal relationship where one Failure is caused by another with low probability or minor influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causedBy.</span>
+         <span class="markdown">Indicates a weak causal relationship where one Failure Mode is caused by another with low probability or minor influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causedBy.</span>
       </div>
       <div class="description">
          <dl>
@@ -1085,7 +1081,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#causes</p>
       <div class="comment">
-         <span class="markdown">Links a Failure to another Failure that it causes, forming a causal chain in root cause analysis. This general property has three sub-properties (causesWeakly, causesModerately, causesStrongly) to express different causal strengths. Inverse of causedBy.</span>
+         <span class="markdown">Links a Failure Mode to another Failure Mode that it causes, forming a causal chain in root cause analysis. This general property has three sub-properties (causesWeakly, causesModerately, causesStrongly) to express different causal strengths. Inverse of causedBy.</span>
       </div>
       <div class="description">
          <dl>
@@ -1098,12 +1094,12 @@ This section provides details for each class and property defined by Manufacturi
             </dd>
             <dt>has domain</dt>
             <dd>
-               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <a href="#FailureMode" title="https://w3id.org/mqto#FailureMode">Failure Mode</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <a href="#FailureMode" title="https://w3id.org/mqto#FailureMode">Failure Mode</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -1122,7 +1118,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#causesModerately</p>
       <div class="comment">
-         <span class="markdown">Indicates a moderate-strength causal relationship where one Failure causes another with medium probability or influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causes.</span>
+         <span class="markdown">Indicates a moderate-strength causal relationship where one Failure Mode causes another with medium probability or influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causes.</span>
       </div>
       <div class="description">
          <dl>
@@ -1147,7 +1143,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#causesStrongly</p>
       <div class="comment">
-         <span class="markdown">Indicates a strong causal relationship where one Failure causes another with high probability or significant influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causes.</span>
+         <span class="markdown">Indicates a strong causal relationship where one Failure Mode causes another with high probability or significant influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causes.</span>
       </div>
       <div class="description">
          <dl>
@@ -1172,7 +1168,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#causesWeakly</p>
       <div class="comment">
-         <span class="markdown">Indicates a weak causal relationship where one Failure causes another with low probability or minor influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causes.</span>
+         <span class="markdown">Indicates a weak causal relationship where one Failure Mode causes another with low probability or minor influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causes.</span>
       </div>
       <div class="description">
          <dl>
@@ -1257,13 +1253,13 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#failureBelongsTo</p>
       <div class="comment">
-         <span class="markdown">Associates a Failure with the IshikawaItem (Machine, Material, or Method) category it belongs to in the fishbone diagram structure. Establishes which root cause category the failure is classified under. Inverse of hasFailure.</span>
+         <span class="markdown">Associates a Failure Mode with the IshikawaItem (Machine, Material, or Method) category it belongs to in the fishbone diagram structure. Establishes which root cause category the failure is classified under. Inverse of hasFailure.</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <a href="#FailureMode" title="https://w3id.org/mqto#FailureMode">Failure Mode</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1312,7 +1308,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#hasFailure</p>
       <div class="comment">
-         <span class="markdown">Associates an IshikawaItem (Machine, Material, or Method) with a Failure that can occur in that category. Establishes which failures belong to each root cause category in the fishbone diagram structure. Inverse of failureBelongsTo.</span>
+         <span class="markdown">Associates an IshikawaItem (Machine, Material, or Method) with a Failure Mode that can occur in that category. Establishes which failures belong to each root cause category in the fishbone diagram structure. Inverse of failureBelongsTo.</span>
       </div>
       <div class="description">
          <dl>
@@ -1323,7 +1319,7 @@ This section provides details for each class and property defined by Manufacturi
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <a href="#FailureMode" title="https://w3id.org/mqto#FailureMode">Failure Mode</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -1503,7 +1499,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#metricReferredBy</p>
       <div class="comment">
-         <span class="markdown">Indicates that a Metric is referred to by a Failure for diagnostic purposes. Establishes which failures use which metrics for detection or characterization. Inverse of refersToMetric.</span>
+         <span class="markdown">Indicates that a Metric is referred to by a Failure Mode for diagnostic purposes. Establishes which failures use which metrics for detection or characterization. Inverse of refersToMetric.</span>
       </div>
       <div class="description">
          <dl>
@@ -1514,7 +1510,7 @@ This section provides details for each class and property defined by Manufacturi
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <a href="#FailureMode" title="https://w3id.org/mqto#FailureMode">Failure Mode</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -1558,13 +1554,13 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#mitigatedBy</p>
       <div class="comment">
-         <span class="markdown">Links a Failure to a Countermeasure that can remediate or reduce it (specified layer). Establishes which remediation procedures are applicable for addressing specific failure types. Inverse of mitigates. The actual-layer equivalent links FailureOccurrence to CountermeasureExecution.</span>
+         <span class="markdown">Links a Failure Mode to a Countermeasure that can remediate or reduce it (specified layer). Establishes which remediation procedures are applicable for addressing specific failure types. Inverse of mitigates. The actual-layer equivalent links FailureOccurrence to CountermeasureExecution.</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <a href="#FailureMode" title="https://w3id.org/mqto#FailureMode">Failure Mode</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1588,7 +1584,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#mitigates</p>
       <div class="comment">
-         <span class="markdown">Links a Countermeasure to the Failure(s) it can remediate or reduce (specified layer). Establishes which failure types a remediation procedure addresses. Inverse of mitigatedBy. The actual-layer equivalent links CountermeasureExecution to FailureOccurrence.</span>
+         <span class="markdown">Links a Countermeasure to the Failure Mode(s) it can remediate or reduce (specified layer). Establishes which failure types a remediation procedure addresses. Inverse of mitigatedBy. The actual-layer equivalent links CountermeasureExecution to FailureOccurrence.</span>
       </div>
       <div class="description">
          <dl>
@@ -1599,7 +1595,7 @@ This section provides details for each class and property defined by Manufacturi
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <a href="#FailureMode" title="https://w3id.org/mqto#FailureMode">Failure Mode</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>is inverse of</dt>
@@ -1768,13 +1764,13 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#refersToMetric</p>
       <div class="comment">
-         <span class="markdown">Links a Failure to the Metric(s) used for its detection or characterization. Establishes which quantitative assessments are diagnostic indicators for specific failure types. Inverse of metricReferredBy.</span>
+         <span class="markdown">Links a Failure Mode to the Metric(s) used for its detection or characterization. Establishes which quantitative assessments are diagnostic indicators for specific failure types. Inverse of metricReferredBy.</span>
       </div>
       <div class="description">
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <a href="#FailureMode" title="https://w3id.org/mqto#FailureMode">Failure Mode</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -2208,7 +2204,6 @@ This section provides details for each class and property defined by Manufacturi
                <a href="http://purl.org/dc/terms/identifier"
                   target="_blank"
                   title="http://purl.org/dc/terms/identifier">identifier</a>
-               <sup class="type-dp" title="data property">dp</sup>
             </dd>
          </dl>
       </div>
@@ -2499,7 +2494,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#weight</p>
       <div class="comment">
-         <span class="markdown">A relative ranking weight assigned to a Failure or Countermeasure. For Failures, indicates severity or priority. For Countermeasures, indicates effectiveness or preference. Provides anchor points for external ranking logic; the ontology does not prescribe the ranking algorithm itself.</span>
+         <span class="markdown">A relative ranking weight assigned to a Failure Mode or Countermeasure. For Failure Modes, indicates severity or priority. For Countermeasures, indicates effectiveness or preference. Provides anchor points for external ranking logic; the ontology does not prescribe the ranking algorithm itself.</span>
       </div>
       <div class="description">
          <dl>
@@ -2508,7 +2503,7 @@ This section provides details for each class and property defined by Manufacturi
                <a href="#Countermeasure" title="https://w3id.org/mqto#Countermeasure">Countermeasure</a>
                <sup class="type-c" title="class">c</sup> 
                <span class="logic">or</span> 
-               <a href="#Failure" title="https://w3id.org/mqto#Failure">Failure</a>
+               <a href="#FailureMode" title="https://w3id.org/mqto#FailureMode">Failure Mode</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -2552,7 +2547,6 @@ This section provides details for each class and property defined by Manufacturi
             <a href="http://xmlns.com/foaf/0.1/Person"
                target="_blank"
                title="http://xmlns.com/foaf/0.1/Person">person</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -2569,7 +2563,6 @@ This section provides details for each class and property defined by Manufacturi
             <a href="http://xmlns.com/foaf/0.1/Person"
                target="_blank"
                title="http://xmlns.com/foaf/0.1/Person">person</a>
-            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
