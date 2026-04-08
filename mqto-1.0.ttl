@@ -124,6 +124,17 @@
 #
 #   Without units, numeric values are scientifically meaningless and cannot be
 #   correctly interpreted, compared, or aggregated across observations.
+#
+#   RATIONALE FOR FLEXIBILITY:
+#   MQTO is positioned as a middle-layer connector ontology that bridges upper
+#   ontologies (LIS, SOSA/SSN, PKO) with domain-specific implementations. Mandating
+#   a specific unit ontology (e.g., QUDT) would create an unnecessary dependency
+#   and reduce adoption in communities with existing unit standards (OM, UCUM,
+#   domain-specific systems). Organizations using MQTO are free to add:
+#   - QUDT integration: rdfs:subClassOf qudt:Quantity on mqto:Signal
+#   - OM integration: rdfs:subClassOf om:Measure
+#   - UCUM codes: Custom data properties for unit strings
+#   - Domain-specific: Industry-standard unit vocabularies
 
 
 #################################################################
@@ -195,7 +206,8 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 :first rdf:type owl:ObjectProperty ;
        rdfs:domain :List ;
        rdfs:range :CountermeasureStep ;
-       rdfs:comment "Points to the first CountermeasureStep in a reusable ordered list. The list structure (rather than a direct step-to-step chain) allows the same CountermeasureStep instance to appear in multiple Countermeasure procedures without embedding order into the step itself."@en .
+       rdfs:label "first"@en ;
+       rdfs:comment "Points to the first CountermeasureStep in a reusable ordered list. Analogous to rdf:first but defined as an explicit OWL object property with proper domain/range constraints. The list structure (rather than a direct step-to-step chain) allows the same CountermeasureStep instance to appear in multiple Countermeasure procedures without embedding order into the step itself."@en .
 
 ###  https://w3id.org/mqto#hasFailure
 :hasFailure rdf:type owl:ObjectProperty ;
@@ -270,7 +282,8 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 :rest rdf:type owl:ObjectProperty ;
       rdfs:domain :List ;
       rdfs:range :List ;
-      rdfs:comment "Points to the remainder of the ordered step list. Together with mqto:first, this implements a reusable linked-list container so that step order is encoded in the list, not in the steps themselves. The list must terminate at mqto:nil; circular references are not permitted, though OWL cannot formally enforce acyclicity."@en .
+      rdfs:label "rest"@en ;
+      rdfs:comment "Points to the remainder of the ordered step list. Analogous to rdf:rest but defined as an explicit OWL object property with proper domain/range constraints for better reasoner compatibility. Together with mqto:first, this implements a reusable linked-list container so that step order is encoded in the list, not in the steps themselves. The list must terminate at mqto:nil; circular references are not permitted, though OWL cannot formally enforce acyclicity."@en .
 
 ###  https://w3id.org/mqto#resultProperty
 :resultProperty rdf:type owl:ObjectProperty ;
@@ -680,7 +693,8 @@ vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
 ###  https://w3id.org/mqto#List
 :List rdf:type owl:Class ;
       rdfs:label "List"@en ;
-      rdfs:comment "An ordered, reusable container of CountermeasureSteps within the specified layer. Modelled as a linked list (mqto:first / mqto:rest) so that step order is external to the step instances, allowing steps to be shared across different Countermeasure procedures. The list is terminated by mqto:nil."@en .
+      rdfs:comment """An ordered, reusable container of CountermeasureSteps within the specified layer. Implements an OWL-native linked list pattern (mqto:first / mqto:rest) inspired by RDF Collections, but using explicit OWL class and property definitions for better reasoner compatibility. Standard rdf:List creates known issues with OWL reasoners due to blank node handling and recursive structure reasoning. This approach ensures compatibility with standard reasoners such as HermiT and Pellet while maintaining the core benefit: step order is external to the step instances, allowing steps to be shared across different Countermeasure procedures without embedding ordering information in the steps themselves. The list is terminated by mqto:nil. See OWL 2 Primer Section 4.2 on structural specification limitations with blank nodes."""@en ;
+      rdfs:seeAlso <http://www.w3.org/TR/owl2-primer/> .
 
 
 ###  https://w3id.org/mqto#Signal
