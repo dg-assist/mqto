@@ -8,7 +8,8 @@
 
 <https://w3id.org/mqto> rdf:type owl:Ontology ;
                          owl:versionIRI <https://w3id.org/mqto/1.0> ;
-                         owl:imports <http://rds.posccaesar.org/ontology/lis14/ont/ido-ssn/0.1> ;
+                         owl:imports <http://rds.posccaesar.org/ontology/lis14/ont/ido-ssn/0.1> ,
+                                     <https://w3id.org/pko/1.0.0> ;
                          <http://purl.org/dc/terms/abstract> "The Manufacturing Quality Troubleshooting Ontology (MQTO) provides a domain-independent semantic framework for modeling manufacturing quality inspection, failure diagnosis, and countermeasure recommendation. Building on the LIS (Lifecycle Information System) specified/actual pattern and integrating SOSA/SSN observation semantics, MQTO enables structured representation of Ishikawa (fishbone) root cause analysis across Machine, Material, and Method categories. The ontology supports both schema-level knowledge (failure types, metrics, countermeasure procedures) and instance-level data (actual observations, failure occurrences, executed remediation steps), making it applicable across diverse manufacturing domains including die-casting, injection molding, machining, and assembly processes."@en ;
                          <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0003-2661-5575> ;
                          <http://purl.org/dc/terms/created> "2026-03-17"^^xsd:date ;
@@ -36,8 +37,6 @@
                          rdfs:comment "Relationship to Procedural Knowledge Ontology (PKO): mqto countermeasure classes align with PKO procedure modeling patterns. mqto:Countermeasure is a subclass of pko:Procedure, representing remediation procedures in the specified layer. mqto:CountermeasureStep aligns with p-plan:Step for individual actions. In the actual layer, mqto:CountermeasureExecution extends pko:ProcedureExecution and mqto:CountermeasureStepExecution extends pko:StepExecution. Both ontologies follow a specification/execution (plan/actual) pattern, though mqto uses LIS (lis:Specified/lis:Actual with lis:implements) while PKO uses P-PLAN/PROV (with pko:executesProcedure/pko:executesStep). Key architectural difference: mqto externalizes step ordering via mqto:List containers for step reusability across procedures, while PKO embeds ordering directly in steps via pko:nextStep properties."@en ;
                          rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
                          rdfs:label "Manufacturing Quality Troubleshooting Ontology"@en ;
-                         rdfs:seeAlso <http://purl.org/net/p-plan> ,
-                                      <https://w3id.org/pko/1.0.0> ;
                          owl:versionInfo "1.0.0" ;
                          <http://xmlns.com/foaf/0.1/homepage> <https://dg-assist.github.io/mqto/> .
 
@@ -55,10 +54,6 @@
 
 ###  http://purl.org/dc/terms/subject
 <http://purl.org/dc/terms/subject> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/ontology/bibo/status
-<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/vocab/vann/preferredNamespacePrefix
@@ -123,9 +118,9 @@
 ###  https://w3id.org/mqto#causedBy
 :causedBy rdf:type owl:ObjectProperty ;
           owl:inverseOf :causes ;
-          rdfs:domain :Failure ;
-          rdfs:range :Failure ;
-          rdfs:comment "Links a Failure to another Failure that causes it, forming a causal chain in root cause analysis. This general property has three sub-properties (causedByWeakly, causedByModerately, causedByStrongly) to express different causal strengths. Inverse of causes."@en ;
+          rdfs:domain :FailureMode ;
+          rdfs:range :FailureMode ;
+          rdfs:comment "Links a Failure Mode to another Failure Mode that causes it, forming a causal chain in root cause analysis. This general property has three sub-properties (causedByWeakly, causedByModerately, causedByStrongly) to express different causal strengths. Inverse of causes."@en ;
           rdfs:label "caused by"@en .
 
 
@@ -133,7 +128,7 @@
 :causedByModerately rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :causedBy ;
                     owl:inverseOf :causesModerately ;
-                    rdfs:comment "Indicates a moderate-strength causal relationship where one Failure is caused by another with medium probability or influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causedBy."@en ;
+                    rdfs:comment "Indicates a moderate-strength causal relationship where one Failure Mode is caused by another with medium probability or influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causedBy."@en ;
                     rdfs:label "caused by moderately"@en .
 
 
@@ -141,7 +136,7 @@
 :causedByStrongly rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :causedBy ;
                   owl:inverseOf :causesStrongly ;
-                  rdfs:comment "Indicates a strong causal relationship where one Failure is caused by another with high probability or significant influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causedBy."@en ;
+                  rdfs:comment "Indicates a strong causal relationship where one Failure Mode is caused by another with high probability or significant influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causedBy."@en ;
                   rdfs:label "caused by strongly"@en .
 
 
@@ -149,36 +144,36 @@
 :causedByWeakly rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :causedBy ;
                 owl:inverseOf :causesWeakly ;
-                rdfs:comment "Indicates a weak causal relationship where one Failure is caused by another with low probability or minor influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causedBy."@en ;
+                rdfs:comment "Indicates a weak causal relationship where one Failure Mode is caused by another with low probability or minor influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causedBy."@en ;
                 rdfs:label "caused by weakly"@en .
 
 
 ###  https://w3id.org/mqto#causes
 :causes rdf:type owl:ObjectProperty ;
-        rdfs:domain :Failure ;
-        rdfs:range :Failure ;
-        rdfs:comment "Links a Failure to another Failure that it causes, forming a causal chain in root cause analysis. This general property has three sub-properties (causesWeakly, causesModerately, causesStrongly) to express different causal strengths. Inverse of causedBy."@en ;
+        rdfs:domain :FailureMode ;
+        rdfs:range :FailureMode ;
+        rdfs:comment "Links a Failure Mode to another Failure Mode that it causes, forming a causal chain in root cause analysis. This general property has three sub-properties (causesWeakly, causesModerately, causesStrongly) to express different causal strengths. Inverse of causedBy."@en ;
         rdfs:label "causes"@en .
 
 
 ###  https://w3id.org/mqto#causesModerately
 :causesModerately rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :causes ;
-                  rdfs:comment "Indicates a moderate-strength causal relationship where one Failure causes another with medium probability or influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causes."@en ;
+                  rdfs:comment "Indicates a moderate-strength causal relationship where one Failure Mode causes another with medium probability or influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causes."@en ;
                   rdfs:label "causes moderately"@en .
 
 
 ###  https://w3id.org/mqto#causesStrongly
 :causesStrongly rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :causes ;
-                rdfs:comment "Indicates a strong causal relationship where one Failure causes another with high probability or significant influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causes."@en ;
+                rdfs:comment "Indicates a strong causal relationship where one Failure Mode causes another with high probability or significant influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causes."@en ;
                 rdfs:label "causes strongly"@en .
 
 
 ###  https://w3id.org/mqto#causesWeakly
 :causesWeakly rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :causes ;
-              rdfs:comment "Indicates a weak causal relationship where one Failure causes another with low probability or minor influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causes."@en ;
+              rdfs:comment "Indicates a weak causal relationship where one Failure Mode causes another with low probability or minor influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causes."@en ;
               rdfs:label "causes weakly"@en .
 
 
@@ -202,9 +197,9 @@
 ###  https://w3id.org/mqto#failureBelongsTo
 :failureBelongsTo rdf:type owl:ObjectProperty ;
                   owl:inverseOf :hasFailure ;
-                  rdfs:domain :Failure ;
+                  rdfs:domain :FailureMode ;
                   rdfs:range :IshikawaItem ;
-                  rdfs:comment "Associates a Failure with the IshikawaItem (Machine, Material, or Method) category it belongs to in the fishbone diagram structure. Establishes which root cause category the failure is classified under. Inverse of hasFailure."@en ;
+                  rdfs:comment "Associates a Failure Mode with the IshikawaItem (Machine, Material, or Method) category it belongs to in the fishbone diagram structure. Establishes which root cause category the failure is classified under. Inverse of hasFailure."@en ;
                   rdfs:label "failure belongs to"@en .
 
 
@@ -219,8 +214,8 @@
 ###  https://w3id.org/mqto#hasFailure
 :hasFailure rdf:type owl:ObjectProperty ;
             rdfs:domain :IshikawaItem ;
-            rdfs:range :Failure ;
-            rdfs:comment "Associates an IshikawaItem (Machine, Material, or Method) with a Failure that can occur in that category. Establishes which failures belong to each root cause category in the fishbone diagram structure. Inverse of failureBelongsTo."@en ;
+            rdfs:range :FailureMode ;
+            rdfs:comment "Associates an IshikawaItem (Machine, Material, or Method) with a Failure Mode that can occur in that category. Establishes which failures belong to each root cause category in the fishbone diagram structure. Inverse of failureBelongsTo."@en ;
             rdfs:label "has failure"@en .
 
 
@@ -272,8 +267,8 @@
 :metricReferredBy rdf:type owl:ObjectProperty ;
                   owl:inverseOf :refersToMetric ;
                   rdfs:domain :Metric ;
-                  rdfs:range :Failure ;
-                  rdfs:comment "Indicates that a Metric is referred to by a Failure for diagnostic purposes. Establishes which failures use which metrics for detection or characterization. Inverse of refersToMetric."@en ;
+                  rdfs:range :FailureMode ;
+                  rdfs:comment "Indicates that a Metric is referred to by a Failure Mode for diagnostic purposes. Establishes which failures use which metrics for detection or characterization. Inverse of refersToMetric."@en ;
                   rdfs:label "metric referred by"@en .
 
 
@@ -287,9 +282,9 @@
 
 ###  https://w3id.org/mqto#mitigatedBy
 :mitigatedBy rdf:type owl:ObjectProperty ;
-             rdfs:domain :Failure ;
+             rdfs:domain :FailureMode ;
              rdfs:range :Countermeasure ;
-             rdfs:comment "Links a Failure to a Countermeasure that can remediate or reduce it (specified layer). Establishes which remediation procedures are applicable for addressing specific failure types. Inverse of mitigates. The actual-layer equivalent links FailureOccurrence to CountermeasureExecution."@en ;
+             rdfs:comment "Links a Failure Mode to a Countermeasure that can remediate or reduce it (specified layer). Establishes which remediation procedures are applicable for addressing specific failure types. Inverse of mitigates. The actual-layer equivalent links FailureOccurrence to CountermeasureExecution."@en ;
              rdfs:label "mitigated by"@en .
 
 
@@ -297,8 +292,8 @@
 :mitigates rdf:type owl:ObjectProperty ;
            owl:inverseOf :mitigatedBy ;
            rdfs:domain :Countermeasure ;
-           rdfs:range :Failure ;
-           rdfs:comment "Links a Countermeasure to the Failure(s) it can remediate or reduce (specified layer). Establishes which failure types a remediation procedure addresses. Inverse of mitigatedBy. The actual-layer equivalent links CountermeasureExecution to FailureOccurrence."@en ;
+           rdfs:range :FailureMode ;
+           rdfs:comment "Links a Countermeasure to the Failure Mode(s) it can remediate or reduce (specified layer). Establishes which failure types a remediation procedure addresses. Inverse of mitigatedBy. The actual-layer equivalent links CountermeasureExecution to FailureOccurrence."@en ;
            rdfs:label "mitigates"@en .
 
 
@@ -347,9 +342,9 @@
 
 ###  https://w3id.org/mqto#refersToMetric
 :refersToMetric rdf:type owl:ObjectProperty ;
-                rdfs:domain :Failure ;
+                rdfs:domain :FailureMode ;
                 rdfs:range :Metric ;
-                rdfs:comment "Links a Failure to the Metric(s) used for its detection or characterization. Establishes which quantitative assessments are diagnostic indicators for specific failure types. Inverse of metricReferredBy."@en ;
+                rdfs:comment "Links a Failure Mode to the Metric(s) used for its detection or characterization. Establishes which quantitative assessments are diagnostic indicators for specific failure types. Inverse of metricReferredBy."@en ;
                 rdfs:label "refers to metric"@en .
 
 
@@ -405,10 +400,6 @@
 #################################################################
 #    Data properties
 #################################################################
-
-###  http://purl.org/dc/terms/identifier
-<http://purl.org/dc/terms/identifier> rdf:type owl:DatatypeProperty .
-
 
 ###  https://w3id.org/mqto#abortedReason
 :abortedReason rdf:type owl:DatatypeProperty ;
@@ -564,11 +555,11 @@
 :weight rdf:type owl:DatatypeProperty ;
         rdfs:domain [ rdf:type owl:Class ;
                       owl:unionOf ( :Countermeasure
-                                    :Failure
+                                    :FailureMode
                                   )
                     ] ;
         rdfs:range xsd:int ;
-        rdfs:comment "A relative ranking weight assigned to a Failure or Countermeasure. For Failures, indicates severity or priority. For Countermeasures, indicates effectiveness or preference. Provides anchor points for external ranking logic; the ontology does not prescribe the ranking algorithm itself."@en ;
+        rdfs:comment "A relative ranking weight assigned to a Failure Mode or Countermeasure. For Failure Modes, indicates severity or priority. For Countermeasures, indicates effectiveness or preference. Provides anchor points for external ranking logic; the ontology does not prescribe the ranking algorithm itself."@en ;
         rdfs:label "weight"@en .
 
 
@@ -576,20 +567,12 @@
 #    Classes
 #################################################################
 
-###  http://purl.org/net/p-plan#Step
-<http://purl.org/net/p-plan#Step> rdf:type owl:Class .
-
-
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
 rdf:Property rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/sosa/ActuableProperty
 <http://www.w3.org/ns/sosa/ActuableProperty> rdf:type owl:Class .
-
-
-###  http://xmlns.com/foaf/0.1/Person
-<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
 
 
 ###  https://w3id.org/mqto#ActuableProperty
@@ -639,9 +622,9 @@ rdf:Property rdf:type owl:Class .
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :mitigates ;
-                                  owl:allValuesFrom :Failure
+                                  owl:allValuesFrom :FailureMode
                                 ] ;
-                rdfs:comment "A remediation procedure that mitigates one or more Failures. Countermeasures are structured as ordered sequences of CountermeasureSteps, represented via the mqto:List pattern for reusability. As a subclass of pko:Procedure, countermeasures align with the Procedural Knowledge Ontology's procedure modeling patterns while maintaining integration with the LIS specified/actual architecture."@en ;
+                rdfs:comment "A remediation procedure that mitigates one or more Failure Modes. Countermeasures are structured as ordered sequences of CountermeasureSteps, represented via the mqto:List pattern for reusability. As a subclass of pko:Procedure, countermeasures align with the Procedural Knowledge Ontology's procedure modeling patterns while maintaining integration with the LIS specified/actual architecture."@en ;
                 rdfs:label "Countermeasure"@en .
 
 
@@ -698,35 +681,35 @@ rdf:Property rdf:type owl:Class .
                              rdfs:label "Countermeasure Step Execution"@en .
 
 
-###  https://w3id.org/mqto#Failure
-:Failure rdf:type owl:Class ;
-         rdfs:subClassOf <http://rds.posccaesar.org/ontology/lis14/rdl/Specified> ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :failureBelongsTo ;
-                           owl:someValuesFrom :IshikawaItem
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :causedBy ;
-                           owl:allValuesFrom :Failure
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :causes ;
-                           owl:allValuesFrom :Failure
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :failureBelongsTo ;
-                           owl:allValuesFrom :IshikawaItem
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :mitigatedBy ;
-                           owl:allValuesFrom :Countermeasure
-                         ] ,
-                         [ rdf:type owl:Restriction ;
-                           owl:onProperty :refersToMetric ;
-                           owl:allValuesFrom :Metric
-                         ] ;
-         rdfs:comment "A type of quality defect or operational problem in the specified layer. Belongs to an IshikawaItem (Machine, Material, or Method category), refers to diagnostic Metrics, and can be mitigated by Countermeasures. Failures can have causal relationships with other Failures (causes/causedBy) to model root cause chains. The actual-layer counterpart is FailureOccurrence."@en ;
-         rdfs:label "Failure"@en .
+###  https://w3id.org/mqto#FailureMode
+:FailureMode rdf:type owl:Class ;
+             rdfs:subClassOf <http://rds.posccaesar.org/ontology/lis14/rdl/Specified> ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :failureBelongsTo ;
+                               owl:someValuesFrom :IshikawaItem
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :causedBy ;
+                               owl:allValuesFrom :FailureMode
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :causes ;
+                               owl:allValuesFrom :FailureMode
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :failureBelongsTo ;
+                               owl:allValuesFrom :IshikawaItem
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :mitigatedBy ;
+                               owl:allValuesFrom :Countermeasure
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :refersToMetric ;
+                               owl:allValuesFrom :Metric
+                             ] ;
+             rdfs:comment "A manner in which a manufacturing component, system, or process could potentially fail to meet its intended function or quality requirements (specified layer). Aligns with FMEA terminology per IEC 60812:2018. Belongs to an IshikawaItem (Machine, Material, or Method category), refers to diagnostic Metrics, and can be mitigated by Countermeasures. Failure Modes can have causal relationships with other Failure Modes (causes/causedBy) to model root cause chains. The actual-layer counterpart is FailureOccurrence."@en ;
+             rdfs:label "Failure Mode"@en .
 
 
 ###  https://w3id.org/mqto#FailureOccurrence
@@ -734,7 +717,7 @@ rdf:Property rdf:type owl:Class .
                    rdfs:subClassOf <http://rds.posccaesar.org/ontology/lis14/rdl/Actual> ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty <http://rds.posccaesar.org/ontology/lis14/rdl/implements> ;
-                                     owl:someValuesFrom :Failure
+                                     owl:someValuesFrom :FailureMode
                                    ] ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :appearedOn ;
@@ -748,7 +731,7 @@ rdf:Property rdf:type owl:Class .
                                      owl:onProperty :raisedBy ;
                                      owl:allValuesFrom :MetricAssessment
                                    ] ;
-                   rdfs:comment "An instance-layer event representing a specific quality defect or operational problem detected during production. Implements a Failure specification, appears on an ActualIshikawaItem, and is raised by one or more MetricAssessments that detected threshold violations. Can be mitigated by CountermeasureExecutions. Captures the actual occurrence with timestamps and context, as opposed to the schema-level Failure definition."@en ;
+                   rdfs:comment "An instance-layer event representing a specific quality defect or operational problem detected during production. Implements a Failure Mode specification, appears on an ActualIshikawaItem, and is raised by one or more MetricAssessments that detected threshold violations. Can be mitigated by CountermeasureExecutions. Captures the actual occurrence with timestamps and context, as opposed to the schema-level Failure Mode definition."@en ;
                    rdfs:label "Failure Occurrence"@en .
 
 
@@ -757,7 +740,7 @@ rdf:Property rdf:type owl:Class .
               rdfs:subClassOf <http://rds.posccaesar.org/ontology/lis14/rdl/Specified> ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasFailure ;
-                                owl:allValuesFrom :Failure
+                                owl:allValuesFrom :FailureMode
                               ] ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasMetric ;
@@ -786,7 +769,7 @@ rdf:Property rdf:type owl:Class .
                            owl:onProperty <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> ;
                            owl:allValuesFrom :Method
                          ] ;
-         rdfs:comment "Manufacturing equipment, tools, and devices (the 'M' in Ishikawa's Machine). Represents specified physical resources that participate in Methods. Domain-specific ontologies can define specific machine types such as cells, furnaces, and robots. Machines provide Signals (sensor readings, control channels) and can have associated Failures and Metrics."@en ;
+         rdfs:comment "Manufacturing equipment, tools, and devices (the 'M' in Ishikawa's Machine). Represents specified physical resources that participate in Methods. Domain-specific ontologies can define specific machine types such as cells, furnaces, and robots. Machines provide Signals (sensor readings, control channels) and can have associated Failure Modes and Metrics."@en ;
          rdfs:label "Machine"@en .
 
 
@@ -849,13 +832,13 @@ rdf:Property rdf:type owl:Class .
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :metricReferredBy ;
-                          owl:allValuesFrom :Failure
+                          owl:allValuesFrom :FailureMode
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :readsFrom ;
                           owl:allValuesFrom :Signal
                         ] ;
-        rdfs:comment "A specified calculation or key performance indicator (KPI) that bridges quantitative sensor data and qualitative failure detection. Reads from one or more Signals, applies an assessment method over a time window, and compares results against threshold bounds to detect anomalies. Belongs to an IshikawaItem and is referred to by Failures. The actual-layer counterpart is MetricAssessment."@en ;
+        rdfs:comment "A specified calculation or key performance indicator (KPI) that bridges quantitative sensor data and qualitative failure detection. Reads from one or more Signals, applies an assessment method over a time window, and compares results against threshold bounds to detect anomalies. Belongs to an IshikawaItem and is referred to by Failure Modes. The actual-layer counterpart is MetricAssessment."@en ;
         rdfs:label "Metric"@en .
 
 
@@ -976,18 +959,6 @@ rdf:Property rdf:type owl:Class .
                         ] ;
         rdfs:comment "A specified data channel in the electrical-engineering sense: a named, typed signal such as a PLC variable, an analog voltage line, a fieldbus message, or a time-series data stream. A Signal may carry measurement data (sensor/output signals), control data (actuator/input signals), or both simultaneously — a setpoint, for instance, is written as a command to an actuator and can equally be read back as an observable value. It describes the metadata of the channel (identifier, unit, sampling rate, direction, etc.) rather than any particular observation or sensor device. It sits in the specified layer as the concrete data-source or data-sink binding for an abstract Metric, and is thereby distinct from sosa:ObservableProperty (which characterises an observable quality of a feature of interest in the actual layer) and from sosa:Sensor (which is the physical observing device)."@en ;
         rdfs:label "Signal"@en .
-
-
-###  https://w3id.org/pko#Procedure
-<https://w3id.org/pko#Procedure> rdf:type owl:Class .
-
-
-###  https://w3id.org/pko#ProcedureExecution
-<https://w3id.org/pko#ProcedureExecution> rdf:type owl:Class .
-
-
-###  https://w3id.org/pko#StepExecution
-<https://w3id.org/pko#StepExecution> rdf:type owl:Class .
 
 
 #################################################################

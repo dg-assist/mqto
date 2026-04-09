@@ -18,6 +18,9 @@
       "@id" : "https://w3id.org/mqto#role",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
+    "FailureMode" : {
+      "@id" : "https://w3id.org/mqto#FailureMode"
+    },
     "score" : {
       "@id" : "https://w3id.org/mqto#score",
       "@type" : "http://www.w3.org/2001/XMLSchema#double"
@@ -252,9 +255,6 @@
     },
     "PhysicalMachine" : {
       "@id" : "https://w3id.org/mqto#PhysicalMachine"
-    },
-    "Failure" : {
-      "@id" : "https://w3id.org/mqto#Failure"
     },
     "subject" : {
       "@id" : "http://purl.org/dc/terms/subject"

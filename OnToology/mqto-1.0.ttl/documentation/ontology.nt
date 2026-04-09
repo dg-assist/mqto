@@ -1,6 +1,7 @@
 <https://w3id.org/mqto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/mqto> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/mqto/1.0> .
 <https://w3id.org/mqto> <http://www.w3.org/2002/07/owl#imports> <http://rds.posccaesar.org/ontology/lis14/ont/ido-ssn/0.1> .
+<https://w3id.org/mqto> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/pko/1.0.0> .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/abstract> "The Manufacturing Quality Troubleshooting Ontology (MQTO) provides a domain-independent semantic framework for modeling manufacturing quality inspection, failure diagnosis, and countermeasure recommendation. Building on the LIS (Lifecycle Information System) specified/actual pattern and integrating SOSA/SSN observation semantics, MQTO enables structured representation of Ishikawa (fishbone) root cause analysis across Machine, Material, and Method categories. The ontology supports both schema-level knowledge (failure types, metrics, countermeasure procedures) and instance-level data (actual observations, failure occurrences, executed remediation steps), making it applicable across diverse manufacturing domains including die-casting, injection molding, machining, and assembly processes."@en .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0003-2661-5575> .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/created> "2026-03-17"^^<http://www.w3.org/2001/XMLSchema#date> .
@@ -28,8 +29,6 @@
 <https://w3id.org/mqto> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship to Procedural Knowledge Ontology (PKO): mqto countermeasure classes align with PKO procedure modeling patterns. mqto:Countermeasure is a subclass of pko:Procedure, representing remediation procedures in the specified layer. mqto:CountermeasureStep aligns with p-plan:Step for individual actions. In the actual layer, mqto:CountermeasureExecution extends pko:ProcedureExecution and mqto:CountermeasureStepExecution extends pko:StepExecution. Both ontologies follow a specification/execution (plan/actual) pattern, though mqto uses LIS (lis:Specified/lis:Actual with lis:implements) while PKO uses P-PLAN/PROV (with pko:executesProcedure/pko:executesStep). Key architectural difference: mqto externalizes step ordering via mqto:List containers for step reusability across procedures, while PKO embeds ordering directly in steps via pko:nextStep properties."@en .
 <https://w3id.org/mqto> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/mqto/1.0> .
 <https://w3id.org/mqto> <http://www.w3.org/2000/01/rdf-schema#label> "Manufacturing Quality Troubleshooting Ontology"@en .
-<https://w3id.org/mqto> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/net/p-plan> .
-<https://w3id.org/mqto> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/pko/1.0.0> .
 <https://w3id.org/mqto> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
 <https://w3id.org/mqto> <http://xmlns.com/foaf/0.1/homepage> <https://dg-assist.github.io/mqto/> .
 # 
@@ -49,9 +48,6 @@
 # 
 # http://purl.org/dc/terms/subject
 <http://purl.org/dc/terms/subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://purl.org/ontology/bibo/status
-<http://purl.org/ontology/bibo/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/vocab/vann/preferredNamespacePrefix
 <http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -110,55 +106,55 @@
 # https://w3id.org/mqto#causedBy
 <https://w3id.org/mqto#causedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/mqto#causedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/mqto#causes> .
-<https://w3id.org/mqto#causedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#Failure> .
-<https://w3id.org/mqto#causedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#Failure> .
-<https://w3id.org/mqto#causedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Failure to another Failure that causes it, forming a causal chain in root cause analysis. This general property has three sub-properties (causedByWeakly, causedByModerately, causedByStrongly) to express different causal strengths. Inverse of causes."@en .
+<https://w3id.org/mqto#causedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#FailureMode> .
+<https://w3id.org/mqto#causedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#FailureMode> .
+<https://w3id.org/mqto#causedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Failure Mode to another Failure Mode that causes it, forming a causal chain in root cause analysis. This general property has three sub-properties (causedByWeakly, causedByModerately, causedByStrongly) to express different causal strengths. Inverse of causes."@en .
 <https://w3id.org/mqto#causedBy> <http://www.w3.org/2000/01/rdf-schema#label> "caused by"@en .
 # 
 # https://w3id.org/mqto#causedByModerately
 <https://w3id.org/mqto#causedByModerately> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/mqto#causedByModerately> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/mqto#causedBy> .
 <https://w3id.org/mqto#causedByModerately> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/mqto#causesModerately> .
-<https://w3id.org/mqto#causedByModerately> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a moderate-strength causal relationship where one Failure is caused by another with medium probability or influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causedBy."@en .
+<https://w3id.org/mqto#causedByModerately> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a moderate-strength causal relationship where one Failure Mode is caused by another with medium probability or influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causedBy."@en .
 <https://w3id.org/mqto#causedByModerately> <http://www.w3.org/2000/01/rdf-schema#label> "caused by moderately"@en .
 # 
 # https://w3id.org/mqto#causedByStrongly
 <https://w3id.org/mqto#causedByStrongly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/mqto#causedByStrongly> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/mqto#causedBy> .
 <https://w3id.org/mqto#causedByStrongly> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/mqto#causesStrongly> .
-<https://w3id.org/mqto#causedByStrongly> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a strong causal relationship where one Failure is caused by another with high probability or significant influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causedBy."@en .
+<https://w3id.org/mqto#causedByStrongly> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a strong causal relationship where one Failure Mode is caused by another with high probability or significant influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causedBy."@en .
 <https://w3id.org/mqto#causedByStrongly> <http://www.w3.org/2000/01/rdf-schema#label> "caused by strongly"@en .
 # 
 # https://w3id.org/mqto#causedByWeakly
 <https://w3id.org/mqto#causedByWeakly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/mqto#causedByWeakly> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/mqto#causedBy> .
 <https://w3id.org/mqto#causedByWeakly> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/mqto#causesWeakly> .
-<https://w3id.org/mqto#causedByWeakly> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a weak causal relationship where one Failure is caused by another with low probability or minor influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causedBy."@en .
+<https://w3id.org/mqto#causedByWeakly> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a weak causal relationship where one Failure Mode is caused by another with low probability or minor influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causedBy."@en .
 <https://w3id.org/mqto#causedByWeakly> <http://www.w3.org/2000/01/rdf-schema#label> "caused by weakly"@en .
 # 
 # https://w3id.org/mqto#causes
 <https://w3id.org/mqto#causes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/mqto#causes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#Failure> .
-<https://w3id.org/mqto#causes> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#Failure> .
-<https://w3id.org/mqto#causes> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Failure to another Failure that it causes, forming a causal chain in root cause analysis. This general property has three sub-properties (causesWeakly, causesModerately, causesStrongly) to express different causal strengths. Inverse of causedBy."@en .
+<https://w3id.org/mqto#causes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#FailureMode> .
+<https://w3id.org/mqto#causes> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#FailureMode> .
+<https://w3id.org/mqto#causes> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Failure Mode to another Failure Mode that it causes, forming a causal chain in root cause analysis. This general property has three sub-properties (causesWeakly, causesModerately, causesStrongly) to express different causal strengths. Inverse of causedBy."@en .
 <https://w3id.org/mqto#causes> <http://www.w3.org/2000/01/rdf-schema#label> "causes"@en .
 # 
 # https://w3id.org/mqto#causesModerately
 <https://w3id.org/mqto#causesModerately> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/mqto#causesModerately> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/mqto#causes> .
-<https://w3id.org/mqto#causesModerately> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a moderate-strength causal relationship where one Failure causes another with medium probability or influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causes."@en .
+<https://w3id.org/mqto#causesModerately> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a moderate-strength causal relationship where one Failure Mode causes another with medium probability or influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causes."@en .
 <https://w3id.org/mqto#causesModerately> <http://www.w3.org/2000/01/rdf-schema#label> "causes moderately"@en .
 # 
 # https://w3id.org/mqto#causesStrongly
 <https://w3id.org/mqto#causesStrongly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/mqto#causesStrongly> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/mqto#causes> .
-<https://w3id.org/mqto#causesStrongly> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a strong causal relationship where one Failure causes another with high probability or significant influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causes."@en .
+<https://w3id.org/mqto#causesStrongly> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a strong causal relationship where one Failure Mode causes another with high probability or significant influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causes."@en .
 <https://w3id.org/mqto#causesStrongly> <http://www.w3.org/2000/01/rdf-schema#label> "causes strongly"@en .
 # 
 # https://w3id.org/mqto#causesWeakly
 <https://w3id.org/mqto#causesWeakly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/mqto#causesWeakly> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/mqto#causes> .
-<https://w3id.org/mqto#causesWeakly> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a weak causal relationship where one Failure causes another with low probability or minor influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causes."@en .
+<https://w3id.org/mqto#causesWeakly> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a weak causal relationship where one Failure Mode causes another with low probability or minor influence. Enables ordinal ranking of causal strengths without requiring precise numeric probabilities. Subproperty of causes."@en .
 <https://w3id.org/mqto#causesWeakly> <http://www.w3.org/2000/01/rdf-schema#label> "causes weakly"@en .
 # 
 # https://w3id.org/mqto#evaluatedBy
@@ -179,9 +175,9 @@
 # https://w3id.org/mqto#failureBelongsTo
 <https://w3id.org/mqto#failureBelongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/mqto#failureBelongsTo> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/mqto#hasFailure> .
-<https://w3id.org/mqto#failureBelongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#Failure> .
+<https://w3id.org/mqto#failureBelongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#FailureMode> .
 <https://w3id.org/mqto#failureBelongsTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#IshikawaItem> .
-<https://w3id.org/mqto#failureBelongsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a Failure with the IshikawaItem (Machine, Material, or Method) category it belongs to in the fishbone diagram structure. Establishes which root cause category the failure is classified under. Inverse of hasFailure."@en .
+<https://w3id.org/mqto#failureBelongsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a Failure Mode with the IshikawaItem (Machine, Material, or Method) category it belongs to in the fishbone diagram structure. Establishes which root cause category the failure is classified under. Inverse of hasFailure."@en .
 <https://w3id.org/mqto#failureBelongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "failure belongs to"@en .
 # 
 # https://w3id.org/mqto#first
@@ -194,8 +190,8 @@
 # https://w3id.org/mqto#hasFailure
 <https://w3id.org/mqto#hasFailure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/mqto#hasFailure> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#IshikawaItem> .
-<https://w3id.org/mqto#hasFailure> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#Failure> .
-<https://w3id.org/mqto#hasFailure> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates an IshikawaItem (Machine, Material, or Method) with a Failure that can occur in that category. Establishes which failures belong to each root cause category in the fishbone diagram structure. Inverse of failureBelongsTo."@en .
+<https://w3id.org/mqto#hasFailure> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#FailureMode> .
+<https://w3id.org/mqto#hasFailure> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates an IshikawaItem (Machine, Material, or Method) with a Failure Mode that can occur in that category. Establishes which failures belong to each root cause category in the fishbone diagram structure. Inverse of failureBelongsTo."@en .
 <https://w3id.org/mqto#hasFailure> <http://www.w3.org/2000/01/rdf-schema#label> "has failure"@en .
 # 
 # https://w3id.org/mqto#hasFirstStep
@@ -241,8 +237,8 @@
 <https://w3id.org/mqto#metricReferredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/mqto#metricReferredBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/mqto#refersToMetric> .
 <https://w3id.org/mqto#metricReferredBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#Metric> .
-<https://w3id.org/mqto#metricReferredBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#Failure> .
-<https://w3id.org/mqto#metricReferredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a Metric is referred to by a Failure for diagnostic purposes. Establishes which failures use which metrics for detection or characterization. Inverse of refersToMetric."@en .
+<https://w3id.org/mqto#metricReferredBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#FailureMode> .
+<https://w3id.org/mqto#metricReferredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a Metric is referred to by a Failure Mode for diagnostic purposes. Establishes which failures use which metrics for detection or characterization. Inverse of refersToMetric."@en .
 <https://w3id.org/mqto#metricReferredBy> <http://www.w3.org/2000/01/rdf-schema#label> "metric referred by"@en .
 # 
 # https://w3id.org/mqto#mitigated
@@ -254,17 +250,17 @@
 # 
 # https://w3id.org/mqto#mitigatedBy
 <https://w3id.org/mqto#mitigatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/mqto#mitigatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#Failure> .
+<https://w3id.org/mqto#mitigatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#FailureMode> .
 <https://w3id.org/mqto#mitigatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#Countermeasure> .
-<https://w3id.org/mqto#mitigatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Failure to a Countermeasure that can remediate or reduce it (specified layer). Establishes which remediation procedures are applicable for addressing specific failure types. Inverse of mitigates. The actual-layer equivalent links FailureOccurrence to CountermeasureExecution."@en .
+<https://w3id.org/mqto#mitigatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Failure Mode to a Countermeasure that can remediate or reduce it (specified layer). Establishes which remediation procedures are applicable for addressing specific failure types. Inverse of mitigates. The actual-layer equivalent links FailureOccurrence to CountermeasureExecution."@en .
 <https://w3id.org/mqto#mitigatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "mitigated by"@en .
 # 
 # https://w3id.org/mqto#mitigates
 <https://w3id.org/mqto#mitigates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/mqto#mitigates> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/mqto#mitigatedBy> .
 <https://w3id.org/mqto#mitigates> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#Countermeasure> .
-<https://w3id.org/mqto#mitigates> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#Failure> .
-<https://w3id.org/mqto#mitigates> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Countermeasure to the Failure(s) it can remediate or reduce (specified layer). Establishes which failure types a remediation procedure addresses. Inverse of mitigatedBy. The actual-layer equivalent links CountermeasureExecution to FailureOccurrence."@en .
+<https://w3id.org/mqto#mitigates> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#FailureMode> .
+<https://w3id.org/mqto#mitigates> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Countermeasure to the Failure Mode(s) it can remediate or reduce (specified layer). Establishes which failure types a remediation procedure addresses. Inverse of mitigatedBy. The actual-layer equivalent links CountermeasureExecution to FailureOccurrence."@en .
 <https://w3id.org/mqto#mitigates> <http://www.w3.org/2000/01/rdf-schema#label> "mitigates"@en .
 # 
 # https://w3id.org/mqto#providesSignal
@@ -307,9 +303,9 @@
 # 
 # https://w3id.org/mqto#refersToMetric
 <https://w3id.org/mqto#refersToMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/mqto#refersToMetric> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#Failure> .
+<https://w3id.org/mqto#refersToMetric> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#FailureMode> .
 <https://w3id.org/mqto#refersToMetric> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#Metric> .
-<https://w3id.org/mqto#refersToMetric> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Failure to the Metric(s) used for its detection or characterization. Establishes which quantitative assessments are diagnostic indicators for specific failure types. Inverse of metricReferredBy."@en .
+<https://w3id.org/mqto#refersToMetric> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Failure Mode to the Metric(s) used for its detection or characterization. Establishes which quantitative assessments are diagnostic indicators for specific failure types. Inverse of metricReferredBy."@en .
 <https://w3id.org/mqto#refersToMetric> <http://www.w3.org/2000/01/rdf-schema#label> "refers to metric"@en .
 # 
 # https://w3id.org/mqto#rest
@@ -364,9 +360,6 @@
 # #
 # #################################################################
 # 
-# 
-# http://purl.org/dc/terms/identifier
-<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 # 
 # https://w3id.org/mqto#abortedReason
 <https://w3id.org/mqto#abortedReason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -509,13 +502,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 _:genid4 <http://www.w3.org/2002/07/owl#unionOf> _:genid6 .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mqto#Failure> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mqto#FailureMode> .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mqto#Countermeasure> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/mqto#weight> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> .
-<https://w3id.org/mqto#weight> <http://www.w3.org/2000/01/rdf-schema#comment> "A relative ranking weight assigned to a Failure or Countermeasure. For Failures, indicates severity or priority. For Countermeasures, indicates effectiveness or preference. Provides anchor points for external ranking logic; the ontology does not prescribe the ranking algorithm itself."@en .
+<https://w3id.org/mqto#weight> <http://www.w3.org/2000/01/rdf-schema#comment> "A relative ranking weight assigned to a Failure Mode or Countermeasure. For Failure Modes, indicates severity or priority. For Countermeasures, indicates effectiveness or preference. Provides anchor points for external ranking logic; the ontology does not prescribe the ranking algorithm itself."@en .
 <https://w3id.org/mqto#weight> <http://www.w3.org/2000/01/rdf-schema#label> "weight"@en .
 # 
 # 
@@ -527,16 +520,10 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # #################################################################
 # 
 # 
-# http://purl.org/net/p-plan#Step
-<http://purl.org/net/p-plan#Step> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
 # http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
 # 
 # http://www.w3.org/ns/sosa/ActuableProperty
 <http://www.w3.org/ns/sosa/ActuableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
-# http://xmlns.com/foaf/0.1/Person
-<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/mqto#ActuableProperty
 <https://w3id.org/mqto#ActuableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -569,7 +556,6 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/mqto#Countermeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Activity> .
 <https://w3id.org/mqto#Countermeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Specified> .
 <https://w3id.org/mqto#Countermeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pko#Procedure> .
-<https://w3id.org/pko#Procedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/mqto#Countermeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
 _:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#List> .
 _:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#steps> .
@@ -587,17 +573,16 @@ _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> .
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#Countermeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
-_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#Failure> .
+_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#FailureMode> .
 _:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#mitigates> .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mqto#Countermeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "A remediation procedure that mitigates one or more Failures. Countermeasures are structured as ordered sequences of CountermeasureSteps, represented via the mqto:List pattern for reusability. As a subclass of pko:Procedure, countermeasures align with the Procedural Knowledge Ontology's procedure modeling patterns while maintaining integration with the LIS specified/actual architecture."@en .
+<https://w3id.org/mqto#Countermeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "A remediation procedure that mitigates one or more Failure Modes. Countermeasures are structured as ordered sequences of CountermeasureSteps, represented via the mqto:List pattern for reusability. As a subclass of pko:Procedure, countermeasures align with the Procedural Knowledge Ontology's procedure modeling patterns while maintaining integration with the LIS specified/actual architecture."@en .
 <https://w3id.org/mqto#Countermeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Countermeasure"@en .
 # 
 # https://w3id.org/mqto#CountermeasureExecution
 <https://w3id.org/mqto#CountermeasureExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/mqto#CountermeasureExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Actual> .
 <https://w3id.org/mqto#CountermeasureExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pko#ProcedureExecution> .
-<https://w3id.org/pko#ProcedureExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/mqto#CountermeasureExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
 _:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#Countermeasure> .
 _:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> .
@@ -641,7 +626,6 @@ _:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/mqto#CountermeasureStepExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/mqto#CountermeasureStepExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Actual> .
 <https://w3id.org/mqto#CountermeasureStepExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pko#StepExecution> .
-<https://w3id.org/pko#StepExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/mqto#CountermeasureStepExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
 _:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#CountermeasureStep> .
 _:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> .
@@ -649,41 +633,41 @@ _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/mqto#CountermeasureStepExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "The actual, single execution of one CountermeasureStep. Each execution implements a specific CountermeasureStep from the specified layer via lis:implements, performed in a concrete, non-reused linear order encoded via mqto:hasFirstStep / mqto:hasNextStep, contrasting with the specified layer where mqto:List enables step reuse across procedures. As a subclass of pko:StepExecution, countermeasure step executions align with PKO's step execution model. Note: Does not directly subclass lis:Activity (which is lis:Specified), but implements CountermeasureStep (which is lis:Activity), maintaining the LIS distinction between specified and actual layers."@en .
 <https://w3id.org/mqto#CountermeasureStepExecution> <http://www.w3.org/2000/01/rdf-schema#label> "Countermeasure Step Execution"@en .
 # 
-# https://w3id.org/mqto#Failure
-<https://w3id.org/mqto#Failure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/mqto#Failure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Specified> .
-<https://w3id.org/mqto#Failure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+# https://w3id.org/mqto#FailureMode
+<https://w3id.org/mqto#FailureMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mqto#FailureMode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Specified> .
+<https://w3id.org/mqto#FailureMode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
 _:genid25 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#IshikawaItem> .
 _:genid25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#failureBelongsTo> .
 _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mqto#Failure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
-_:genid26 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#Failure> .
+<https://w3id.org/mqto#FailureMode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#FailureMode> .
 _:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#causedBy> .
 _:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mqto#Failure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
-_:genid27 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#Failure> .
+<https://w3id.org/mqto#FailureMode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#FailureMode> .
 _:genid27 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#causes> .
 _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mqto#Failure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+<https://w3id.org/mqto#FailureMode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
 _:genid28 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#IshikawaItem> .
 _:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#failureBelongsTo> .
 _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mqto#Failure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+<https://w3id.org/mqto#FailureMode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
 _:genid29 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#Countermeasure> .
 _:genid29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#mitigatedBy> .
 _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mqto#Failure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+<https://w3id.org/mqto#FailureMode> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
 _:genid30 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#Metric> .
 _:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#refersToMetric> .
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mqto#Failure> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of quality defect or operational problem in the specified layer. Belongs to an IshikawaItem (Machine, Material, or Method category), refers to diagnostic Metrics, and can be mitigated by Countermeasures. Failures can have causal relationships with other Failures (causes/causedBy) to model root cause chains. The actual-layer counterpart is FailureOccurrence."@en .
-<https://w3id.org/mqto#Failure> <http://www.w3.org/2000/01/rdf-schema#label> "Failure"@en .
+<https://w3id.org/mqto#FailureMode> <http://www.w3.org/2000/01/rdf-schema#comment> "A manner in which a manufacturing component, system, or process could potentially fail to meet its intended function or quality requirements (specified layer). Aligns with FMEA terminology per IEC 60812:2018. Belongs to an IshikawaItem (Machine, Material, or Method category), refers to diagnostic Metrics, and can be mitigated by Countermeasures. Failure Modes can have causal relationships with other Failure Modes (causes/causedBy) to model root cause chains. The actual-layer counterpart is FailureOccurrence."@en .
+<https://w3id.org/mqto#FailureMode> <http://www.w3.org/2000/01/rdf-schema#label> "Failure Mode"@en .
 # 
 # https://w3id.org/mqto#FailureOccurrence
 <https://w3id.org/mqto#FailureOccurrence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/mqto#FailureOccurrence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Actual> .
 <https://w3id.org/mqto#FailureOccurrence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
-_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#Failure> .
+_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#FailureMode> .
 _:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> .
 _:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#FailureOccurrence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
@@ -698,14 +682,14 @@ _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid34 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#MetricAssessment> .
 _:genid34 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#raisedBy> .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mqto#FailureOccurrence> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance-layer event representing a specific quality defect or operational problem detected during production. Implements a Failure specification, appears on an ActualIshikawaItem, and is raised by one or more MetricAssessments that detected threshold violations. Can be mitigated by CountermeasureExecutions. Captures the actual occurrence with timestamps and context, as opposed to the schema-level Failure definition."@en .
+<https://w3id.org/mqto#FailureOccurrence> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance-layer event representing a specific quality defect or operational problem detected during production. Implements a Failure Mode specification, appears on an ActualIshikawaItem, and is raised by one or more MetricAssessments that detected threshold violations. Can be mitigated by CountermeasureExecutions. Captures the actual occurrence with timestamps and context, as opposed to the schema-level Failure Mode definition."@en .
 <https://w3id.org/mqto#FailureOccurrence> <http://www.w3.org/2000/01/rdf-schema#label> "Failure Occurrence"@en .
 # 
 # https://w3id.org/mqto#IshikawaItem
 <https://w3id.org/mqto#IshikawaItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/mqto#IshikawaItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Specified> .
 <https://w3id.org/mqto#IshikawaItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid35 .
-_:genid35 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#Failure> .
+_:genid35 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#FailureMode> .
 _:genid35 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#hasFailure> .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#IshikawaItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid36 .
@@ -733,7 +717,7 @@ _:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#Method> .
 _:genid38 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mqto#Machine> <http://www.w3.org/2000/01/rdf-schema#comment> "Manufacturing equipment, tools, and devices (the 'M' in Ishikawa's Machine). Represents specified physical resources that participate in Methods. Domain-specific ontologies can define specific machine types such as cells, furnaces, and robots. Machines provide Signals (sensor readings, control channels) and can have associated Failures and Metrics."@en .
+<https://w3id.org/mqto#Machine> <http://www.w3.org/2000/01/rdf-schema#comment> "Manufacturing equipment, tools, and devices (the 'M' in Ishikawa's Machine). Represents specified physical resources that participate in Methods. Domain-specific ontologies can define specific machine types such as cells, furnaces, and robots. Machines provide Signals (sensor readings, control channels) and can have associated Failure Modes and Metrics."@en .
 <https://w3id.org/mqto#Machine> <http://www.w3.org/2000/01/rdf-schema#label> "Machine"@en .
 # 
 # https://w3id.org/mqto#Material
@@ -795,14 +779,14 @@ _:genid47 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#I
 _:genid47 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#metricBelongsTo> .
 _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#Metric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
-_:genid48 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#Failure> .
+_:genid48 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#FailureMode> .
 _:genid48 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#metricReferredBy> .
 _:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#Metric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
 _:genid49 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#Signal> .
 _:genid49 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#readsFrom> .
 _:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mqto#Metric> <http://www.w3.org/2000/01/rdf-schema#comment> "A specified calculation or key performance indicator (KPI) that bridges quantitative sensor data and qualitative failure detection. Reads from one or more Signals, applies an assessment method over a time window, and compares results against threshold bounds to detect anomalies. Belongs to an IshikawaItem and is referred to by Failures. The actual-layer counterpart is MetricAssessment."@en .
+<https://w3id.org/mqto#Metric> <http://www.w3.org/2000/01/rdf-schema#comment> "A specified calculation or key performance indicator (KPI) that bridges quantitative sensor data and qualitative failure detection. Reads from one or more Signals, applies an assessment method over a time window, and compares results against threshold bounds to detect anomalies. Belongs to an IshikawaItem and is referred to by Failure Modes. The actual-layer counterpart is MetricAssessment."@en .
 <https://w3id.org/mqto#Metric> <http://www.w3.org/2000/01/rdf-schema#label> "Metric"@en .
 # 
 # https://w3id.org/mqto#MetricAssessment
@@ -919,12 +903,6 @@ _:genid66 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#sign
 _:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#Signal> <http://www.w3.org/2000/01/rdf-schema#comment> "A specified data channel in the electrical-engineering sense: a named, typed signal such as a PLC variable, an analog voltage line, a fieldbus message, or a time-series data stream. A Signal may carry measurement data (sensor/output signals), control data (actuator/input signals), or both simultaneously — a setpoint, for instance, is written as a command to an actuator and can equally be read back as an observable value. It describes the metadata of the channel (identifier, unit, sampling rate, direction, etc.) rather than any particular observation or sensor device. It sits in the specified layer as the concrete data-source or data-sink binding for an abstract Metric, and is thereby distinct from sosa:ObservableProperty (which characterises an observable quality of a feature of interest in the actual layer) and from sosa:Sensor (which is the physical observing device)."@en .
 <https://w3id.org/mqto#Signal> <http://www.w3.org/2000/01/rdf-schema#label> "Signal"@en .
-# 
-# https://w3id.org/pko#Procedure
-# 
-# https://w3id.org/pko#ProcedureExecution
-# 
-# https://w3id.org/pko#StepExecution
 # 
 # 
 # 
