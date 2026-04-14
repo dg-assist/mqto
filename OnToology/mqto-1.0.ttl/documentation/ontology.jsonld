@@ -504,6 +504,12 @@
   "@id" : "http://purl.org/dc/terms/subject",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/net/p-plan#Step",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://purl.org/ontology/bibo/status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://schema.org/codeRepository",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -522,11 +528,17 @@
   "@id" : "http://www.w3.org/ns/sosa/ActuableProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "http://xmlns.com/foaf/0.1/Person",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://xmlns.com/foaf/0.1/homepage",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://orcid.org/0000-0001-9521-8907",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://xmlns.com/foaf/0.1/Person" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "Stefan Bischof"
   } ],
@@ -534,10 +546,29 @@
     "@id" : "https://www.siemens.at/"
   } ]
 }, {
+  "@id" : "https://orcid.org/0000-0002-3050-159X",
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Josiane Xavier Parreira"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "https://www.siemens.at/"
+  } ]
+}, {
   "@id" : "https://orcid.org/0000-0003-2661-5575",
-  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://xmlns.com/foaf/0.1/Person" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://xmlns.com/foaf/0.1/Person"
+  } ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "Florian Rötzer"
+  } ]
+}, {
+  "@id" : "https://orcid.org/0000-0003-3445-0504",
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Erwin Filtz"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "https://www.siemens.at/"
   } ]
 }, {
   "@id" : "https://schema.org/affiliation",
@@ -569,6 +600,10 @@
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "http://www.apache.org/licenses/LICENSE-2.0"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-04-14"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@id" : "https://github.com/dg-assist"
@@ -2155,6 +2190,15 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#int"
   } ]
+}, {
+  "@id" : "https://w3id.org/pko#Procedure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/pko#ProcedureExecution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/pko#StepExecution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://www.siemens.at/",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {

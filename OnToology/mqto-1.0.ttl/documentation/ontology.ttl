@@ -18,6 +18,7 @@
                          <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-9521-8907> ;
                          <http://purl.org/dc/terms/description> "A generalised ontology for manufacturing quality troubleshooting, applicable across different manufacturing domains. Covers both the specified (schema-level) and actual (instance-level) layers of a manufacturing process, with a focus on root cause analysis, failure diagnosis, and countermeasure recommendation."@en ;
                          <http://purl.org/dc/terms/license> <http://www.apache.org/licenses/LICENSE-2.0> ;
+                         <http://purl.org/dc/terms/modified> "2026-04-14"^^xsd:date ;
                          <http://purl.org/dc/terms/publisher> <https://github.com/dg-assist> ;
                          <http://purl.org/dc/terms/rights> "Copyright 2026 DG Assist. Licensed under the Apache License, Version 2.0."@en ;
                          <http://purl.org/dc/terms/subject> "Industry 4.0"@en ,
@@ -51,6 +52,10 @@
 
 ###  http://purl.org/dc/terms/subject
 <http://purl.org/dc/terms/subject> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/status
+<http://purl.org/ontology/bibo/status> rdf:type owl:AnnotationProperty .
 
 
 ###  http://schema.org/codeRepository
@@ -579,12 +584,20 @@ At query time: SELECT ?value WHERE { ?metric mqto:resultProperty ?prop . ?result
 #    Classes
 #################################################################
 
+###  http://purl.org/net/p-plan#Step
+<http://purl.org/net/p-plan#Step> rdf:type owl:Class .
+
+
 ###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
 rdf:Property rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/sosa/ActuableProperty
 <http://www.w3.org/ns/sosa/ActuableProperty> rdf:type owl:Class .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class .
 
 
 ###  https://w3id.org/mqto#ActuableProperty
@@ -1004,6 +1017,18 @@ rdf:Property rdf:type owl:Class .
         rdfs:label "Signal"@en .
 
 
+###  https://w3id.org/pko#Procedure
+<https://w3id.org/pko#Procedure> rdf:type owl:Class .
+
+
+###  https://w3id.org/pko#ProcedureExecution
+<https://w3id.org/pko#ProcedureExecution> rdf:type owl:Class .
+
+
+###  https://w3id.org/pko#StepExecution
+<https://w3id.org/pko#StepExecution> rdf:type owl:Class .
+
+
 #################################################################
 #    Individuals
 #################################################################
@@ -1034,6 +1059,14 @@ rdf:Property rdf:type owl:Class .
 #################################################################
 #    Annotations
 #################################################################
+
+<https://orcid.org/0000-0002-3050-159X> <http://xmlns.com/foaf/0.1/name> "Josiane Xavier Parreira" ;
+                                        <https://schema.org/affiliation> <https://www.siemens.at/> .
+
+
+<https://orcid.org/0000-0003-3445-0504> <http://xmlns.com/foaf/0.1/name> "Erwin Filtz" ;
+                                        <https://schema.org/affiliation> <https://www.siemens.at/> .
+
 
 <https://www.siemens.at/> rdfs:label "Siemens AG Österreich" .
 

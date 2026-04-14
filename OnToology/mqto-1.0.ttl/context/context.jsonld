@@ -336,6 +336,9 @@
       "@id" : "https://w3id.org/mqto#raisedBy",
       "@type" : "@id"
     },
+    "modified" : {
+      "@id" : "http://purl.org/dc/terms/modified"
+    },
     "mitigated" : {
       "@id" : "https://w3id.org/mqto#mitigated",
       "@type" : "@id"
