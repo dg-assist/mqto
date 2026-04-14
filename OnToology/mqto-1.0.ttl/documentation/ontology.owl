@@ -43,6 +43,7 @@
         <terms:subject xml:lang="en">root cause analysis</terms:subject>
         <terms:subject xml:lang="en">troubleshooting</terms:subject>
         <terms:title xml:lang="en">Manufacturing Quality Troubleshooting Ontology</terms:title>
+        <bibo:doi>10.5281/zenodo.19571023</bibo:doi>
         <bibo:status rdf:resource="http://purl.org/ontology/bibo/status/draft"/>
         <vann:preferredNamespacePrefix>mqto</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/mqto#</vann:preferredNamespaceUri>
@@ -81,6 +82,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/subject"/>
+    
+
+
+    <!-- http://purl.org/ontology/bibo/doi -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/ontology/bibo/doi"/>
     
 
 

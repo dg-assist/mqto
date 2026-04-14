@@ -22,6 +22,7 @@
 <https://w3id.org/mqto> <http://purl.org/dc/terms/subject> "root cause analysis"@en .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/subject> "troubleshooting"@en .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/title> "Manufacturing Quality Troubleshooting Ontology"@en .
+<https://w3id.org/mqto> <http://purl.org/ontology/bibo/doi> "10.5281/zenodo.19571023" .
 <https://w3id.org/mqto> <http://purl.org/ontology/bibo/status> <http://purl.org/ontology/bibo/status/draft> .
 <https://w3id.org/mqto> <http://purl.org/vocab/vann/preferredNamespacePrefix> "mqto" .
 <https://w3id.org/mqto> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/mqto#" .
@@ -47,6 +48,9 @@
 # 
 # http://purl.org/dc/terms/subject
 <http://purl.org/dc/terms/subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/ontology/bibo/doi
+<http://purl.org/ontology/bibo/doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://schema.org/codeRepository
 <http://schema.org/codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

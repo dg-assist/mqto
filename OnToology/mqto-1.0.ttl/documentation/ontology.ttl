@@ -30,6 +30,7 @@
                                                             "root cause analysis"@en ,
                                                             "troubleshooting"@en ;
                          <http://purl.org/dc/terms/title> "Manufacturing Quality Troubleshooting Ontology"@en ;
+                         <http://purl.org/ontology/bibo/doi> "10.5281/zenodo.19571023" ;
                          <http://purl.org/ontology/bibo/status> <http://purl.org/ontology/bibo/status/draft> ;
                          <http://purl.org/vocab/vann/preferredNamespacePrefix> "mqto" ;
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/mqto#" ;
@@ -52,6 +53,10 @@
 
 ###  http://purl.org/dc/terms/subject
 <http://purl.org/dc/terms/subject> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/ontology/bibo/doi
+<http://purl.org/ontology/bibo/doi> rdf:type owl:AnnotationProperty .
 
 
 ###  http://schema.org/codeRepository

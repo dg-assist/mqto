@@ -136,6 +136,9 @@
     "method" : {
       "@id" : "https://w3id.org/mqto#method"
     },
+    "doi" : {
+      "@id" : "http://purl.org/ontology/bibo/doi"
+    },
     "calculatedFor" : {
       "@id" : "https://w3id.org/mqto#calculatedFor",
       "@type" : "@id"
