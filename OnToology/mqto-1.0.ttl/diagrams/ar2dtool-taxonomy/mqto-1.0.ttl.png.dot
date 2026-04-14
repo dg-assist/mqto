@@ -1,7 +1,7 @@
 digraph ar2dtool_diagram { 
 rankdir=LR;
 size="1000"
-node [shape = rectangle, color="black"]; "mqto:CountermeasureExecution" "mqto:Manpower" "mqto:PhysicalMachine" "mqto:Machine" "mqto:Material" "mqto:Measurement" "sosa:ActuableProperty" "mqto:ActualIshikawaItem" "mqto:FailureMode" "mqto:ObservableProperty" "mqto:Countermeasure" "mqto:Method" "mqto:Signal" "mqto:CountermeasureStepExecution" "mqto:ProcessExecution" "mqto:Observation" "mqto:FailureOccurrence" "mqto:MetricAssessment" "mqto:Metric" "mqto:ActuableProperty" "mqto:IshikawaItem" "mqto:Result" "mqto:PhysicalMaterial" "mqto:CountermeasureStep" "mqto:Property" "pko:UserFeedbackOccurrence" "prov:Activity" "http://www.w3.org/ns/dcat#Resource" "pko:StepVerification" "pko:Procedure" "pko:IssueOccurrence" "pko:ProcedureExecution" "pko:StepExecution" "prov:InstantaneousEvent" "p-plan:Step" "pko:UserQuestionOccurrence" "pko:FrequentlyAskedQuestion" "p-plan:Plan" "ssn:Deployment" "sosa:ObservableProperty" "lis:Object" "sosa:FeatureOfInterest" "ssn:Input" "sosa:Actuation" "ssn:Output" "sosa:Platform" "lis:Quality" "sosa:ActuatableProperty" "sosa:Actuator" "sosa:Observation" "ssn:Property" "lis:Dependent" "lis:PhysicalObject" "sosa:Sensor" "ssn:System" "sosa:Sampling" "sosa:Procedure" "lis:System" "ssn:Stimulus" "lis:Activity" "sosa:Sampler" "sosa:Result" "lis:InformationObject" "lis:Disposition" "lis:ActivityProfile" "lis:IntervalRegion" "lis:PointInSpace" "lis:LineInSpace" "lis:Phase" "lis:Stream" "lis:Potential" "lis:InstantRegion" "lis:PhaseQuality" "lis:SpatiotemporalRegion" "lis:MaterialCompositionQuality" "lis:Organization" "lis:Site" "lis:QualityDatum" "lis:Instant" "lis:Person" "lis:Interest" "lis:Scale" "lis:SpatialLocation" "lis:Feature" "lis:Interval" "lis:UnitOfMeasure" "lis:VolumeInSpace" "lis:Location" "lis:FunctionalObject" "lis:Function" "lis:Specified" "lis:PlaneInSpace" "lis:PhysicalArtefact" "lis:Actual" "lis:PhysicalQuantity" "lis:Organism" "lis:TemporalRegion" "lis:Role" "lis:Compound" "lis:ShapeQuality" "lis:Temporal" "lis:InanimatePhysicalObject" "lis:ScalarQuantityDatum" "lis:Event" "lis:Capability" "sosa:Sample" ; /*classes style*/
+node [shape = rectangle, color="black"]; "mqto:CountermeasureExecution" "mqto:Manpower" "mqto:PhysicalMachine" "mqto:Machine" "mqto:Material" "mqto:Measurement" "sosa:ActuableProperty" "mqto:ActualIshikawaItem" "mqto:FailureMode" "mqto:ObservableProperty" "mqto:Countermeasure" "mqto:Method" "mqto:Signal" "mqto:CountermeasureStepExecution" "mqto:ProcessExecution" "mqto:FailureOccurrence" "mqto:Observation" "mqto:MetricAssessment" "mqto:Metric" "mqto:ActuableProperty" "mqto:IshikawaItem" "mqto:Result" "mqto:PhysicalMaterial" "mqto:CountermeasureStep" "mqto:Property" "ssn:Deployment" "sosa:ObservableProperty" "lis:Object" "sosa:FeatureOfInterest" "ssn:Input" "sosa:Actuation" "ssn:Output" "sosa:Platform" "lis:Quality" "sosa:ActuatableProperty" "sosa:Actuator" "sosa:Observation" "ssn:Property" "lis:Dependent" "lis:PhysicalObject" "sosa:Sensor" "ssn:System" "sosa:Sampling" "sosa:Procedure" "lis:System" "ssn:Stimulus" "lis:Activity" "sosa:Sampler" "sosa:Result" "lis:InformationObject" "lis:Disposition" "lis:ActivityProfile" "lis:IntervalRegion" "lis:PointInSpace" "lis:LineInSpace" "lis:Phase" "lis:Stream" "lis:Potential" "lis:InstantRegion" "lis:PhaseQuality" "lis:SpatiotemporalRegion" "lis:MaterialCompositionQuality" "lis:Organization" "lis:Site" "lis:QualityDatum" "lis:Instant" "lis:Person" "lis:Interest" "lis:Scale" "lis:SpatialLocation" "lis:Feature" "lis:Interval" "lis:UnitOfMeasure" "lis:VolumeInSpace" "lis:Location" "lis:FunctionalObject" "lis:Function" "lis:Specified" "lis:PlaneInSpace" "lis:PhysicalArtefact" "lis:Actual" "lis:PhysicalQuantity" "lis:Organism" "lis:TemporalRegion" "lis:Role" "lis:Compound" "lis:ShapeQuality" "lis:Temporal" "lis:InanimatePhysicalObject" "lis:ScalarQuantityDatum" "lis:Event" "lis:Capability" "sosa:Sample" ; /*classes style*/
 	"lis:PlaneInSpace" -> "lis:SpatialLocation" [ label = "rdfs:subClassOf" ];
 	"lis:ActivityProfile" -> "lis:Activity" [ label = "rdfs:subClassOf" ];
 	"lis:Stream" -> "lis:InanimatePhysicalObject" [ label = "rdfs:subClassOf" ];
@@ -24,13 +24,11 @@ node [shape = rectangle, color="black"]; "mqto:CountermeasureExecution" "mqto:Ma
 	"mqto:Signal" -> "lis:Specified" [ label = "rdfs:subClassOf" ];
 	"lis:ShapeQuality" -> "lis:Quality" [ label = "rdfs:subClassOf" ];
 	"lis:IntervalRegion" -> "lis:TemporalRegion" [ label = "rdfs:subClassOf" ];
-	"pko:StepExecution" -> "prov:Activity" [ label = "rdfs:subClassOf" ];
 	"mqto:Result" -> "sosa:Result" [ label = "rdfs:subClassOf" ];
 	"lis:VolumeInSpace" -> "lis:SpatialLocation" [ label = "rdfs:subClassOf" ];
 	"lis:Potential" -> "lis:Dependent" [ label = "rdfs:subClassOf" ];
-	"lis:Function" -> "lis:Capability" [ label = "rdfs:subClassOf" ];
 	"ssn:Input" -> "lis:InformationObject" [ label = "rdfs:subClassOf" ];
-	"pko:IssueOccurrence" -> "prov:InstantaneousEvent" [ label = "rdfs:subClassOf" ];
+	"lis:Function" -> "lis:Capability" [ label = "rdfs:subClassOf" ];
 	"mqto:ActualIshikawaItem" -> "sosa:FeatureOfInterest" [ label = "rdfs:subClassOf" ];
 	"mqto:ActualIshikawaItem" -> "lis:Actual" [ label = "rdfs:subClassOf" ];
 	"mqto:PhysicalMachine" -> "mqto:ActualIshikawaItem" [ label = "rdfs:subClassOf" ];
@@ -40,8 +38,6 @@ node [shape = rectangle, color="black"]; "mqto:CountermeasureExecution" "mqto:Ma
 	"mqto:CountermeasureExecution" -> "lis:Activity" [ label = "rdfs:subClassOf" ];
 	"lis:QualityDatum" -> "lis:InformationObject" [ label = "rdfs:subClassOf" ];
 	"lis:TemporalRegion" -> "lis:Temporal" [ label = "rdfs:subClassOf" ];
-	"pko:UserQuestionOccurrence" -> "prov:InstantaneousEvent" [ label = "rdfs:subClassOf" ];
-	"pko:StepVerification" -> "p-plan:Step" [ label = "rdfs:subClassOf" ];
 	"lis:Role" -> "lis:Potential" [ label = "rdfs:subClassOf" ];
 	"lis:Capability" -> "lis:Disposition" [ label = "rdfs:subClassOf" ];
 	"mqto:Metric" -> "lis:Specified" [ label = "rdfs:subClassOf" ];
@@ -74,9 +70,9 @@ node [shape = rectangle, color="black"]; "mqto:CountermeasureExecution" "mqto:Ma
 	"ssn:System" -> "lis:System" [ label = "rdfs:subClassOf" ];
 	"lis:Event" -> "lis:Activity" [ label = "rdfs:subClassOf" ];
 	"lis:System" -> "lis:FunctionalObject" [ label = "rdfs:subClassOf" ];
+	"sosa:Procedure" -> "lis:InformationObject" [ label = "rdfs:subClassOf" ];
 	"sosa:Sensor" -> "lis:PhysicalObject" [ label = "rdfs:subClassOf" ];
 	"sosa:Sensor" -> "ssn:System" [ label = "rdfs:subClassOf" ];
-	"sosa:Procedure" -> "lis:InformationObject" [ label = "rdfs:subClassOf" ];
 	"lis:Location" -> "lis:Object" [ label = "rdfs:subClassOf" ];
 	"lis:PhysicalQuantity" -> "lis:Quality" [ label = "rdfs:subClassOf" ];
 	"lis:PhysicalObject" -> "lis:Object" [ label = "rdfs:subClassOf" ];
@@ -87,12 +83,9 @@ node [shape = rectangle, color="black"]; "mqto:CountermeasureExecution" "mqto:Ma
 	"lis:SpatialLocation" -> "lis:Location" [ label = "rdfs:subClassOf" ];
 	"mqto:ObservableProperty" -> "mqto:Property" [ label = "rdfs:subClassOf" ];
 	"mqto:ObservableProperty" -> "sosa:ObservableProperty" [ label = "rdfs:subClassOf" ];
-	"pko:Procedure" -> "http://www.w3.org/ns/dcat#Resource" [ label = "rdfs:subClassOf" ];
-	"pko:Procedure" -> "p-plan:Plan" [ label = "rdfs:subClassOf" ];
 	"mqto:Method" -> "mqto:IshikawaItem" [ label = "rdfs:subClassOf" ];
 	"mqto:Method" -> "lis:Activity" [ label = "rdfs:subClassOf" ];
 	"lis:Site" -> "lis:Location" [ label = "rdfs:subClassOf" ];
-	"pko:FrequentlyAskedQuestion" -> "http://www.w3.org/ns/dcat#Resource" [ label = "rdfs:subClassOf" ];
 	"ssn:Stimulus" -> "lis:Activity" [ label = "rdfs:subClassOf" ];
 	"lis:Person" -> "lis:Organism" [ label = "rdfs:subClassOf" ];
 	"lis:FunctionalObject" -> "lis:Object" [ label = "rdfs:subClassOf" ];
@@ -103,13 +96,11 @@ node [shape = rectangle, color="black"]; "mqto:CountermeasureExecution" "mqto:Ma
 	"mqto:IshikawaItem" -> "lis:Specified" [ label = "rdfs:subClassOf" ];
 	"mqto:FailureOccurrence" -> "lis:Actual" [ label = "rdfs:subClassOf" ];
 	"mqto:FailureOccurrence" -> "lis:Activity" [ label = "rdfs:subClassOf" ];
-	"pko:UserFeedbackOccurrence" -> "prov:InstantaneousEvent" [ label = "rdfs:subClassOf" ];
 	"sosa:Observation" -> "lis:Activity" [ label = "rdfs:subClassOf" ];
 	"lis:Disposition" -> "lis:Potential" [ label = "rdfs:subClassOf" ];
 	"mqto:ProcessExecution" -> "mqto:ActualIshikawaItem" [ label = "rdfs:subClassOf" ];
 	"mqto:Machine" -> "mqto:IshikawaItem" [ label = "rdfs:subClassOf" ];
 	"mqto:Machine" -> "lis:PhysicalArtefact" [ label = "rdfs:subClassOf" ];
-	"pko:ProcedureExecution" -> "prov:Activity" [ label = "rdfs:subClassOf" ];
 	"mqto:Material" -> "mqto:IshikawaItem" [ label = "rdfs:subClassOf" ];
 	"mqto:Material" -> "lis:PhysicalArtefact" [ label = "rdfs:subClassOf" ];
 	"lis:MaterialCompositionQuality" -> "lis:Quality" [ label = "rdfs:subClassOf" ];
