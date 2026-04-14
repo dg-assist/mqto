@@ -40,6 +40,7 @@
                                          "root cause analysis"@en ,
                                          "troubleshooting"@en ;
                          dcterms:title "Manufacturing Quality Troubleshooting Ontology"@en ;
+                         bibo:doi "10.5281/zenodo.19571023" ;
                          bibo:status <http://purl.org/ontology/bibo/status/draft> ;
                          vann:preferredNamespacePrefix "mqto" ;
                          vann:preferredNamespaceUri "https://w3id.org/mqto#" ;

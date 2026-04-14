@@ -42,5 +42,5 @@ abstract: >
   processes.
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.XXXXXXX
-    description: Zenodo archive (DOI to be added after publication)
+    value: 10.5281/zenodo.19571023
+    description: Zenodo archive
