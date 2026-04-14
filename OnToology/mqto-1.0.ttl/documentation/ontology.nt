@@ -10,6 +10,7 @@
 <https://w3id.org/mqto> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-9521-8907> .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/description> "A generalised ontology for manufacturing quality troubleshooting, applicable across different manufacturing domains. Covers both the specified (schema-level) and actual (instance-level) layers of a manufacturing process, with a focus on root cause analysis, failure diagnosis, and countermeasure recommendation."@en .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/license> <http://www.apache.org/licenses/LICENSE-2.0> .
+<https://w3id.org/mqto> <http://purl.org/dc/terms/modified> "2026-04-14"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/publisher> <https://github.com/dg-assist> .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/rights> "Copyright 2026 DG Assist. Licensed under the Apache License, Version 2.0."@en .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/subject> "Industry 4.0"@en .
@@ -968,6 +969,12 @@ _:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #
 # #################################################################
 # 
+# 
+<https://orcid.org/0000-0002-3050-159X> <http://xmlns.com/foaf/0.1/name> "Josiane Xavier Parreira" .
+<https://orcid.org/0000-0002-3050-159X> <https://schema.org/affiliation> <https://www.siemens.at/> .
+# 
+<https://orcid.org/0000-0003-3445-0504> <http://xmlns.com/foaf/0.1/name> "Erwin Filtz" .
+<https://orcid.org/0000-0003-3445-0504> <https://schema.org/affiliation> <https://www.siemens.at/> .
 # 
 <https://www.siemens.at/> <http://www.w3.org/2000/01/rdf-schema#label> "Siemens AG Österreich" .
 # 

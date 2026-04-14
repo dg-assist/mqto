@@ -534,10 +534,26 @@
     "@id" : "https://www.siemens.at/"
   } ]
 }, {
+  "@id" : "https://orcid.org/0000-0002-3050-159X",
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Josiane Xavier Parreira"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "https://www.siemens.at/"
+  } ]
+}, {
   "@id" : "https://orcid.org/0000-0003-2661-5575",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://xmlns.com/foaf/0.1/Person" ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "Florian Rötzer"
+  } ]
+}, {
+  "@id" : "https://orcid.org/0000-0003-3445-0504",
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Erwin Filtz"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "https://www.siemens.at/"
   } ]
 }, {
   "@id" : "https://schema.org/affiliation",
@@ -569,6 +585,10 @@
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "http://www.apache.org/licenses/LICENSE-2.0"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2026-04-14"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@id" : "https://github.com/dg-assist"
