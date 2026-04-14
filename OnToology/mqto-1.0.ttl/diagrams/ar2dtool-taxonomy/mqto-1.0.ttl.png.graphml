@@ -5,7 +5,7 @@
    <key for="edge" id="d2" yfiles.type="edgegraphics" />
    <key attr.name="description" attr.type="string" for="edge" id="d3" />
    <key for="graphml" id="d4" yfiles.type="resources" />
-   <graph edgedefault="directed" id="G" parse.edges="117" parse.nodes="104" parse.order="free">
+   <graph edgedefault="directed" id="G" parse.edges="121" parse.nodes="106" parse.order="free">
       <node id="nid_lis:PlaneInSpace">
          <data key="d0">
             <y:ShapeNode>
@@ -331,6 +331,64 @@
          </data>
          <data key="d3" />
       </edge>
+      <node id="nid_mqto:Measurement">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="160.0" x="0.0" y="0.0" />
+               <y:Fill color="#000000" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">mqto:Measurement</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+      <node id="nid_mqto:IshikawaItem">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="170.0" x="0.0" y="0.0" />
+               <y:Fill color="#000000" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">mqto:IshikawaItem</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_rdfs:subClassOf11" source="nid_mqto:Measurement" target="nid_mqto:IshikawaItem">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_sosa:Procedure">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="140.0" x="0.0" y="0.0" />
+               <y:Fill color="#000000" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">sosa:Procedure</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_rdfs:subClassOf12" source="nid_mqto:Measurement" target="nid_sosa:Procedure">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
       <node id="nid_sosa:Platform">
          <data key="d0">
             <y:ShapeNode>
@@ -343,7 +401,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf11" source="nid_sosa:Platform" target="nid_lis:PhysicalObject">
+    <edge id="eid_rdfs:subClassOf13" source="nid_sosa:Platform" target="nid_lis:PhysicalObject">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -366,7 +424,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf12" source="nid_ssn:Deployment" target="nid_lis:Activity">
+    <edge id="eid_rdfs:subClassOf14" source="nid_ssn:Deployment" target="nid_lis:Activity">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -389,7 +447,65 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf13" source="nid_lis:UnitOfMeasure" target="nid_lis:InformationObject">
+    <edge id="eid_rdfs:subClassOf15" source="nid_lis:UnitOfMeasure" target="nid_lis:InformationObject">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_mqto:PhysicalMaterial">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="210.0" x="0.0" y="0.0" />
+               <y:Fill color="#000000" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">mqto:PhysicalMaterial</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+      <node id="nid_mqto:ActualIshikawaItem">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="230.0" x="0.0" y="0.0" />
+               <y:Fill color="#000000" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">mqto:ActualIshikawaItem</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_rdfs:subClassOf16" source="nid_mqto:PhysicalMaterial" target="nid_mqto:ActualIshikawaItem">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_lis:PhysicalArtefact">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="200.0" x="0.0" y="0.0" />
+               <y:Fill color="#000000" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">lis:PhysicalArtefact</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_rdfs:subClassOf17" source="nid_mqto:PhysicalMaterial" target="nid_lis:PhysicalArtefact">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -412,7 +528,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf14" source="nid_sosa:Actuation" target="nid_lis:Activity">
+    <edge id="eid_rdfs:subClassOf18" source="nid_sosa:Actuation" target="nid_lis:Activity">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -435,7 +551,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf15" source="nid_mqto:Signal" target="nid_lis:Specified">
+    <edge id="eid_rdfs:subClassOf19" source="nid_mqto:Signal" target="nid_lis:Specified">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -458,7 +574,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf16" source="nid_lis:ShapeQuality" target="nid_lis:Quality">
+    <edge id="eid_rdfs:subClassOf20" source="nid_lis:ShapeQuality" target="nid_lis:Quality">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -493,7 +609,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf17" source="nid_lis:IntervalRegion" target="nid_lis:TemporalRegion">
+    <edge id="eid_rdfs:subClassOf21" source="nid_lis:IntervalRegion" target="nid_lis:TemporalRegion">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -528,7 +644,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf18" source="nid_pko:StepExecution" target="nid_prov:Activity">
+    <edge id="eid_rdfs:subClassOf22" source="nid_pko:StepExecution" target="nid_prov:Activity">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -563,7 +679,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf19" source="nid_mqto:Result" target="nid_sosa:Result">
+    <edge id="eid_rdfs:subClassOf23" source="nid_mqto:Result" target="nid_sosa:Result">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -586,7 +702,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf20" source="nid_lis:VolumeInSpace" target="nid_lis:SpatialLocation">
+    <edge id="eid_rdfs:subClassOf24" source="nid_lis:VolumeInSpace" target="nid_lis:SpatialLocation">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -609,7 +725,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf21" source="nid_lis:Potential" target="nid_lis:Dependent">
+    <edge id="eid_rdfs:subClassOf25" source="nid_lis:Potential" target="nid_lis:Dependent">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -644,7 +760,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf22" source="nid_lis:Function" target="nid_lis:Capability">
+    <edge id="eid_rdfs:subClassOf26" source="nid_lis:Function" target="nid_lis:Capability">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -667,7 +783,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf23" source="nid_ssn:Input" target="nid_lis:InformationObject">
+    <edge id="eid_rdfs:subClassOf27" source="nid_ssn:Input" target="nid_lis:InformationObject">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -702,7 +818,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf24" source="nid_pko:IssueOccurrence" target="nid_prov:InstantaneousEvent">
+    <edge id="eid_rdfs:subClassOf28" source="nid_pko:IssueOccurrence" target="nid_prov:InstantaneousEvent">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -713,18 +829,6 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_mqto:ActualIshikawaItem">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="230.0" x="0.0" y="0.0" />
-               <y:Fill color="#000000" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">mqto:ActualIshikawaItem</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
       <node id="nid_sosa:FeatureOfInterest">
          <data key="d0">
             <y:ShapeNode>
@@ -737,7 +841,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf25" source="nid_mqto:ActualIshikawaItem" target="nid_sosa:FeatureOfInterest">
+    <edge id="eid_rdfs:subClassOf29" source="nid_mqto:ActualIshikawaItem" target="nid_sosa:FeatureOfInterest">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -760,7 +864,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf26" source="nid_mqto:ActualIshikawaItem" target="nid_lis:Actual">
+    <edge id="eid_rdfs:subClassOf30" source="nid_mqto:ActualIshikawaItem" target="nid_lis:Actual">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -783,7 +887,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf27" source="nid_mqto:PhysicalMachine" target="nid_mqto:ActualIshikawaItem">
+    <edge id="eid_rdfs:subClassOf31" source="nid_mqto:PhysicalMachine" target="nid_mqto:ActualIshikawaItem">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -794,19 +898,7 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_lis:PhysicalArtefact">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="200.0" x="0.0" y="0.0" />
-               <y:Fill color="#000000" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">lis:PhysicalArtefact</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_rdfs:subClassOf28" source="nid_mqto:PhysicalMachine" target="nid_lis:PhysicalArtefact">
+    <edge id="eid_rdfs:subClassOf32" source="nid_mqto:PhysicalMachine" target="nid_lis:PhysicalArtefact">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -829,7 +921,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf29" source="nid_mqto:CountermeasureExecution" target="nid_lis:Actual">
+    <edge id="eid_rdfs:subClassOf33" source="nid_mqto:CountermeasureExecution" target="nid_lis:Actual">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -852,7 +944,18 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf30" source="nid_mqto:CountermeasureExecution" target="nid_pko:ProcedureExecution">
+    <edge id="eid_rdfs:subClassOf34" source="nid_mqto:CountermeasureExecution" target="nid_pko:ProcedureExecution">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_rdfs:subClassOf35" source="nid_mqto:CountermeasureExecution" target="nid_lis:Activity">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -875,7 +978,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf31" source="nid_lis:QualityDatum" target="nid_lis:InformationObject">
+    <edge id="eid_rdfs:subClassOf36" source="nid_lis:QualityDatum" target="nid_lis:InformationObject">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -898,7 +1001,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf32" source="nid_lis:TemporalRegion" target="nid_lis:Temporal">
+    <edge id="eid_rdfs:subClassOf37" source="nid_lis:TemporalRegion" target="nid_lis:Temporal">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -921,7 +1024,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf33" source="nid_pko:UserQuestionOccurrence" target="nid_prov:InstantaneousEvent">
+    <edge id="eid_rdfs:subClassOf38" source="nid_pko:UserQuestionOccurrence" target="nid_prov:InstantaneousEvent">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -956,7 +1059,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf34" source="nid_pko:StepVerification" target="nid_p-plan:Step">
+    <edge id="eid_rdfs:subClassOf39" source="nid_pko:StepVerification" target="nid_p-plan:Step">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -979,7 +1082,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf35" source="nid_lis:Role" target="nid_lis:Potential">
+    <edge id="eid_rdfs:subClassOf40" source="nid_lis:Role" target="nid_lis:Potential">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1002,7 +1105,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf36" source="nid_lis:Capability" target="nid_lis:Disposition">
+    <edge id="eid_rdfs:subClassOf41" source="nid_lis:Capability" target="nid_lis:Disposition">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1025,7 +1128,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf37" source="nid_mqto:Metric" target="nid_lis:Specified">
+    <edge id="eid_rdfs:subClassOf42" source="nid_mqto:Metric" target="nid_lis:Specified">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1060,7 +1163,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf38" source="nid_mqto:Observation" target="nid_sosa:Observation">
+    <edge id="eid_rdfs:subClassOf43" source="nid_mqto:Observation" target="nid_sosa:Observation">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1083,7 +1186,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf39" source="nid_lis:Interval" target="nid_lis:IntervalRegion">
+    <edge id="eid_rdfs:subClassOf44" source="nid_lis:Interval" target="nid_lis:IntervalRegion">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1118,7 +1221,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf40" source="nid_lis:Organization" target="nid_lis:Object">
+    <edge id="eid_rdfs:subClassOf45" source="nid_lis:Organization" target="nid_lis:Object">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1141,7 +1244,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf41" source="nid_sosa:Sampling" target="nid_lis:Activity">
+    <edge id="eid_rdfs:subClassOf46" source="nid_sosa:Sampling" target="nid_lis:Activity">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1164,7 +1267,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf42" source="nid_sosa:Actuator" target="nid_lis:PhysicalObject">
+    <edge id="eid_rdfs:subClassOf47" source="nid_sosa:Actuator" target="nid_lis:PhysicalObject">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1175,7 +1278,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf43" source="nid_sosa:Actuator" target="nid_ssn:System">
+    <edge id="eid_rdfs:subClassOf48" source="nid_sosa:Actuator" target="nid_ssn:System">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1198,7 +1301,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf44" source="nid_lis:ScalarQuantityDatum" target="nid_lis:QualityDatum">
+    <edge id="eid_rdfs:subClassOf49" source="nid_lis:ScalarQuantityDatum" target="nid_lis:QualityDatum">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1221,7 +1324,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf45" source="nid_sosa:Sample" target="nid_sosa:Result">
+    <edge id="eid_rdfs:subClassOf50" source="nid_sosa:Sample" target="nid_sosa:Result">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1232,7 +1335,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf46" source="nid_sosa:Sample" target="nid_sosa:FeatureOfInterest">
+    <edge id="eid_rdfs:subClassOf51" source="nid_sosa:Sample" target="nid_sosa:FeatureOfInterest">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1255,7 +1358,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf47" source="nid_lis:Interest" target="nid_lis:Potential">
+    <edge id="eid_rdfs:subClassOf52" source="nid_lis:Interest" target="nid_lis:Potential">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1278,7 +1381,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf48" source="nid_mqto:CountermeasureStepExecution" target="nid_pko:StepExecution">
+    <edge id="eid_rdfs:subClassOf53" source="nid_mqto:CountermeasureStepExecution" target="nid_pko:StepExecution">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1289,7 +1392,18 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf49" source="nid_mqto:CountermeasureStepExecution" target="nid_lis:Actual">
+    <edge id="eid_rdfs:subClassOf54" source="nid_mqto:CountermeasureStepExecution" target="nid_lis:Actual">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_rdfs:subClassOf55" source="nid_mqto:CountermeasureStepExecution" target="nid_lis:Activity">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1312,7 +1426,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf50" source="nid_lis:PhaseQuality" target="nid_lis:Quality">
+    <edge id="eid_rdfs:subClassOf56" source="nid_lis:PhaseQuality" target="nid_lis:Quality">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1323,7 +1437,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf51" source="nid_lis:PhysicalArtefact" target="nid_lis:PhysicalObject">
+    <edge id="eid_rdfs:subClassOf57" source="nid_lis:PhysicalArtefact" target="nid_lis:PhysicalObject">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1346,7 +1460,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf52" source="nid_mqto:CountermeasureStep" target="nid_p-plan:Step">
+    <edge id="eid_rdfs:subClassOf58" source="nid_mqto:CountermeasureStep" target="nid_lis:Specified">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1357,7 +1471,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf53" source="nid_mqto:CountermeasureStep" target="nid_lis:Specified">
+    <edge id="eid_rdfs:subClassOf59" source="nid_mqto:CountermeasureStep" target="nid_lis:Activity">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1368,7 +1482,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf54" source="nid_mqto:CountermeasureStep" target="nid_lis:Activity">
+    <edge id="eid_rdfs:subClassOf60" source="nid_mqto:CountermeasureStep" target="nid_p-plan:Step">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1391,7 +1505,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf55" source="nid_lis:Compound" target="nid_lis:PhysicalObject">
+    <edge id="eid_rdfs:subClassOf61" source="nid_lis:Compound" target="nid_lis:PhysicalObject">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1414,7 +1528,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf56" source="nid_lis:Phase" target="nid_lis:PhysicalObject">
+    <edge id="eid_rdfs:subClassOf62" source="nid_lis:Phase" target="nid_lis:PhysicalObject">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1437,7 +1551,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf57" source="nid_lis:InstantRegion" target="nid_lis:TemporalRegion">
+    <edge id="eid_rdfs:subClassOf63" source="nid_lis:InstantRegion" target="nid_lis:TemporalRegion">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1448,7 +1562,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf58" source="nid_lis:Activity" target="nid_lis:Temporal">
+    <edge id="eid_rdfs:subClassOf64" source="nid_lis:Activity" target="nid_lis:Temporal">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1471,17 +1585,6 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf59" source="nid_mqto:Property" target="nid_lis:Actual">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
       <node id="nid_ssn:Property">
          <data key="d0">
             <y:ShapeNode>
@@ -1494,7 +1597,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf60" source="nid_mqto:Property" target="nid_ssn:Property">
+    <edge id="eid_rdfs:subClassOf65" source="nid_mqto:Property" target="nid_ssn:Property">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1505,7 +1608,41 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf61" source="nid_lis:InformationObject" target="nid_lis:Object">
+    <edge id="eid_rdfs:subClassOf66" source="nid_mqto:Property" target="nid_lis:Actual">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+      <node id="nid_mqto:Manpower">
+         <data key="d0">
+            <y:ShapeNode>
+               <y:Geometry height="30.0" width="130.0" x="0.0" y="0.0" />
+               <y:Fill color="#000000" transparent="false" />
+               <y:BorderStyle color="#000000" type="line" width="1.0" />
+               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">mqto:Manpower</y:NodeLabel>
+               <y:Shape type="rectangle" />
+            </y:ShapeNode>
+         </data>
+         <data key="d1" />
+      </node>
+    <edge id="eid_rdfs:subClassOf67" source="nid_mqto:Manpower" target="nid_mqto:IshikawaItem">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_rdfs:subClassOf68" source="nid_lis:InformationObject" target="nid_lis:Object">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1528,7 +1665,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf62" source="nid_ssn:System" target="nid_lis:System">
+    <edge id="eid_rdfs:subClassOf69" source="nid_ssn:System" target="nid_lis:System">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1551,7 +1688,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf63" source="nid_lis:Event" target="nid_lis:Activity">
+    <edge id="eid_rdfs:subClassOf70" source="nid_lis:Event" target="nid_lis:Activity">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1574,7 +1711,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf64" source="nid_lis:System" target="nid_lis:FunctionalObject">
+    <edge id="eid_rdfs:subClassOf71" source="nid_lis:System" target="nid_lis:FunctionalObject">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1597,7 +1734,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf65" source="nid_sosa:Sensor" target="nid_lis:PhysicalObject">
+    <edge id="eid_rdfs:subClassOf72" source="nid_sosa:Sensor" target="nid_lis:PhysicalObject">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1608,7 +1745,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf66" source="nid_sosa:Sensor" target="nid_ssn:System">
+    <edge id="eid_rdfs:subClassOf73" source="nid_sosa:Sensor" target="nid_ssn:System">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1619,19 +1756,7 @@
          </data>
          <data key="d3" />
       </edge>
-      <node id="nid_sosa:Procedure">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="140.0" x="0.0" y="0.0" />
-               <y:Fill color="#000000" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">sosa:Procedure</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_rdfs:subClassOf67" source="nid_sosa:Procedure" target="nid_lis:InformationObject">
+    <edge id="eid_rdfs:subClassOf74" source="nid_sosa:Procedure" target="nid_lis:InformationObject">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1654,7 +1779,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf68" source="nid_lis:Location" target="nid_lis:Object">
+    <edge id="eid_rdfs:subClassOf75" source="nid_lis:Location" target="nid_lis:Object">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1677,7 +1802,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf69" source="nid_lis:PhysicalQuantity" target="nid_lis:Quality">
+    <edge id="eid_rdfs:subClassOf76" source="nid_lis:PhysicalQuantity" target="nid_lis:Quality">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1688,7 +1813,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf70" source="nid_lis:PhysicalObject" target="nid_lis:Object">
+    <edge id="eid_rdfs:subClassOf77" source="nid_lis:PhysicalObject" target="nid_lis:Object">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1699,7 +1824,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf71" source="nid_ssn:Property" target="nid_lis:Dependent">
+    <edge id="eid_rdfs:subClassOf78" source="nid_ssn:Property" target="nid_lis:Dependent">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1722,7 +1847,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf72" source="nid_lis:PointInSpace" target="nid_lis:SpatialLocation">
+    <edge id="eid_rdfs:subClassOf79" source="nid_lis:PointInSpace" target="nid_lis:SpatialLocation">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1745,7 +1870,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf73" source="nid_mqto:MetricAssessment" target="nid_lis:Actual">
+    <edge id="eid_rdfs:subClassOf80" source="nid_mqto:MetricAssessment" target="nid_lis:Actual">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1768,7 +1893,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf74" source="nid_lis:Organism" target="nid_lis:PhysicalObject">
+    <edge id="eid_rdfs:subClassOf81" source="nid_lis:Organism" target="nid_lis:PhysicalObject">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1779,7 +1904,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf75" source="nid_lis:SpatialLocation" target="nid_lis:Location">
+    <edge id="eid_rdfs:subClassOf82" source="nid_lis:SpatialLocation" target="nid_lis:Location">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1802,6 +1927,17 @@
          </data>
          <data key="d1" />
       </node>
+    <edge id="eid_rdfs:subClassOf83" source="nid_mqto:ObservableProperty" target="nid_mqto:Property">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
       <node id="nid_sosa:ObservableProperty">
          <data key="d0">
             <y:ShapeNode>
@@ -1814,18 +1950,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf76" source="nid_mqto:ObservableProperty" target="nid_sosa:ObservableProperty">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-    <edge id="eid_rdfs:subClassOf77" source="nid_mqto:ObservableProperty" target="nid_mqto:Property">
+    <edge id="eid_rdfs:subClassOf84" source="nid_mqto:ObservableProperty" target="nid_sosa:ObservableProperty">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1860,7 +1985,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf78" source="nid_pko:Procedure" target="nid_http://www.w3.org/ns/dcat#Resource">
+    <edge id="eid_rdfs:subClassOf85" source="nid_pko:Procedure" target="nid_http://www.w3.org/ns/dcat#Resource">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1883,7 +2008,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf79" source="nid_pko:Procedure" target="nid_p-plan:Plan">
+    <edge id="eid_rdfs:subClassOf86" source="nid_pko:Procedure" target="nid_p-plan:Plan">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1906,19 +2031,7 @@
          </data>
          <data key="d1" />
       </node>
-      <node id="nid_mqto:IshikawaItem">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="170.0" x="0.0" y="0.0" />
-               <y:Fill color="#000000" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">mqto:IshikawaItem</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_rdfs:subClassOf80" source="nid_mqto:Method" target="nid_mqto:IshikawaItem">
+    <edge id="eid_rdfs:subClassOf87" source="nid_mqto:Method" target="nid_mqto:IshikawaItem">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1929,7 +2042,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf81" source="nid_mqto:Method" target="nid_lis:Activity">
+    <edge id="eid_rdfs:subClassOf88" source="nid_mqto:Method" target="nid_lis:Activity">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1952,7 +2065,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf82" source="nid_lis:Site" target="nid_lis:Location">
+    <edge id="eid_rdfs:subClassOf89" source="nid_lis:Site" target="nid_lis:Location">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1975,7 +2088,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf83" source="nid_pko:FrequentlyAskedQuestion" target="nid_http://www.w3.org/ns/dcat#Resource">
+    <edge id="eid_rdfs:subClassOf90" source="nid_pko:FrequentlyAskedQuestion" target="nid_http://www.w3.org/ns/dcat#Resource">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -1998,7 +2111,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf84" source="nid_ssn:Stimulus" target="nid_lis:Activity">
+    <edge id="eid_rdfs:subClassOf91" source="nid_ssn:Stimulus" target="nid_lis:Activity">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2021,7 +2134,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf85" source="nid_lis:Person" target="nid_lis:Organism">
+    <edge id="eid_rdfs:subClassOf92" source="nid_lis:Person" target="nid_lis:Organism">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2032,7 +2145,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf86" source="nid_lis:FunctionalObject" target="nid_lis:Object">
+    <edge id="eid_rdfs:subClassOf93" source="nid_lis:FunctionalObject" target="nid_lis:Object">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2055,7 +2168,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf87" source="nid_lis:Instant" target="nid_lis:InstantRegion">
+    <edge id="eid_rdfs:subClassOf94" source="nid_lis:Instant" target="nid_lis:InstantRegion">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2078,7 +2191,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf88" source="nid_mqto:Countermeasure" target="nid_pko:Procedure">
+    <edge id="eid_rdfs:subClassOf95" source="nid_mqto:Countermeasure" target="nid_pko:Procedure">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2089,7 +2202,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf89" source="nid_mqto:Countermeasure" target="nid_lis:Specified">
+    <edge id="eid_rdfs:subClassOf96" source="nid_mqto:Countermeasure" target="nid_lis:Specified">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2100,7 +2213,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf90" source="nid_mqto:Countermeasure" target="nid_lis:Activity">
+    <edge id="eid_rdfs:subClassOf97" source="nid_mqto:Countermeasure" target="nid_lis:Activity">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2111,7 +2224,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf91" source="nid_mqto:IshikawaItem" target="nid_lis:Specified">
+    <edge id="eid_rdfs:subClassOf98" source="nid_mqto:IshikawaItem" target="nid_lis:Specified">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2134,7 +2247,18 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf92" source="nid_mqto:FailureOccurrence" target="nid_lis:Actual">
+    <edge id="eid_rdfs:subClassOf99" source="nid_mqto:FailureOccurrence" target="nid_lis:Actual">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
+    <edge id="eid_rdfs:subClassOf100" source="nid_mqto:FailureOccurrence" target="nid_lis:Activity">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2157,7 +2281,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf93" source="nid_pko:UserFeedbackOccurrence" target="nid_prov:InstantaneousEvent">
+    <edge id="eid_rdfs:subClassOf101" source="nid_pko:UserFeedbackOccurrence" target="nid_prov:InstantaneousEvent">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2168,7 +2292,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf94" source="nid_sosa:Observation" target="nid_lis:Activity">
+    <edge id="eid_rdfs:subClassOf102" source="nid_sosa:Observation" target="nid_lis:Activity">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2179,7 +2303,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf95" source="nid_lis:Disposition" target="nid_lis:Potential">
+    <edge id="eid_rdfs:subClassOf103" source="nid_lis:Disposition" target="nid_lis:Potential">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2202,7 +2326,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf96" source="nid_mqto:ProcessExecution" target="nid_mqto:ActualIshikawaItem">
+    <edge id="eid_rdfs:subClassOf104" source="nid_mqto:ProcessExecution" target="nid_mqto:ActualIshikawaItem">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2225,7 +2349,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf97" source="nid_mqto:Machine" target="nid_mqto:IshikawaItem">
+    <edge id="eid_rdfs:subClassOf105" source="nid_mqto:Machine" target="nid_mqto:IshikawaItem">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2236,7 +2360,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf98" source="nid_mqto:Machine" target="nid_lis:PhysicalArtefact">
+    <edge id="eid_rdfs:subClassOf106" source="nid_mqto:Machine" target="nid_lis:PhysicalArtefact">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2247,7 +2371,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf99" source="nid_pko:ProcedureExecution" target="nid_prov:Activity">
+    <edge id="eid_rdfs:subClassOf107" source="nid_pko:ProcedureExecution" target="nid_prov:Activity">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2270,7 +2394,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf100" source="nid_mqto:Material" target="nid_mqto:IshikawaItem">
+    <edge id="eid_rdfs:subClassOf108" source="nid_mqto:Material" target="nid_mqto:IshikawaItem">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2281,18 +2405,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf101" source="nid_mqto:Material" target="nid_lis:Compound">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-    <edge id="eid_rdfs:subClassOf102" source="nid_mqto:Material" target="nid_lis:PhysicalArtefact">
+    <edge id="eid_rdfs:subClassOf109" source="nid_mqto:Material" target="nid_lis:PhysicalArtefact">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2315,7 +2428,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf103" source="nid_lis:MaterialCompositionQuality" target="nid_lis:Quality">
+    <edge id="eid_rdfs:subClassOf110" source="nid_lis:MaterialCompositionQuality" target="nid_lis:Quality">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2326,52 +2439,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf104" source="nid_sosa:FeatureOfInterest" target="nid_lis:Object">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-      <node id="nid_mqto:MaterialChunk">
-         <data key="d0">
-            <y:ShapeNode>
-               <y:Geometry height="30.0" width="180.0" x="0.0" y="0.0" />
-               <y:Fill color="#000000" transparent="false" />
-               <y:BorderStyle color="#000000" type="line" width="1.0" />
-               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="internal" modelPosition="c" textColor="#000000" visible="true">mqto:MaterialChunk</y:NodeLabel>
-               <y:Shape type="rectangle" />
-            </y:ShapeNode>
-         </data>
-         <data key="d1" />
-      </node>
-    <edge id="eid_rdfs:subClassOf105" source="nid_mqto:MaterialChunk" target="nid_mqto:ActualIshikawaItem">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-    <edge id="eid_rdfs:subClassOf106" source="nid_mqto:MaterialChunk" target="nid_lis:Compound">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-    <edge id="eid_rdfs:subClassOf107" source="nid_mqto:MaterialChunk" target="nid_lis:PhysicalArtefact">
+    <edge id="eid_rdfs:subClassOf111" source="nid_sosa:FeatureOfInterest" target="nid_lis:Object">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2394,7 +2462,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf108" source="nid_ssn:Output" target="nid_lis:InformationObject">
+    <edge id="eid_rdfs:subClassOf112" source="nid_ssn:Output" target="nid_lis:InformationObject">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2405,7 +2473,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf109" source="nid_sosa:Result" target="nid_lis:Object">
+    <edge id="eid_rdfs:subClassOf113" source="nid_sosa:Result" target="nid_lis:Object">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2416,7 +2484,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf110" source="nid_sosa:ObservableProperty" target="nid_lis:Quality">
+    <edge id="eid_rdfs:subClassOf114" source="nid_sosa:ObservableProperty" target="nid_lis:Quality">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2427,7 +2495,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf111" source="nid_sosa:ObservableProperty" target="nid_ssn:Property">
+    <edge id="eid_rdfs:subClassOf115" source="nid_sosa:ObservableProperty" target="nid_ssn:Property">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2450,7 +2518,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf112" source="nid_lis:SpatiotemporalRegion" target="nid_lis:Temporal">
+    <edge id="eid_rdfs:subClassOf116" source="nid_lis:SpatiotemporalRegion" target="nid_lis:Temporal">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2473,7 +2541,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf113" source="nid_sosa:ActuatableProperty" target="nid_lis:Disposition">
+    <edge id="eid_rdfs:subClassOf117" source="nid_sosa:ActuatableProperty" target="nid_lis:Disposition">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2484,7 +2552,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf114" source="nid_sosa:ActuatableProperty" target="nid_ssn:Property">
+    <edge id="eid_rdfs:subClassOf118" source="nid_sosa:ActuatableProperty" target="nid_ssn:Property">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2507,6 +2575,17 @@
          </data>
          <data key="d1" />
       </node>
+    <edge id="eid_rdfs:subClassOf119" source="nid_mqto:ActuableProperty" target="nid_mqto:Property">
+         <data key="d2">
+            <y:PolyLineEdge>
+               <y:LineStyle color="black" type="line" width="1.0" />
+               <y:Arrows source="none" target="normal" />
+               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
+               <y:BendStyle smoothed="false" />
+            </y:PolyLineEdge>
+         </data>
+         <data key="d3" />
+      </edge>
       <node id="nid_sosa:ActuableProperty">
          <data key="d0">
             <y:ShapeNode>
@@ -2519,18 +2598,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf115" source="nid_mqto:ActuableProperty" target="nid_sosa:ActuableProperty">
-         <data key="d2">
-            <y:PolyLineEdge>
-               <y:LineStyle color="black" type="line" width="1.0" />
-               <y:Arrows source="none" target="normal" />
-               <y:EdgeLabel alignment="center" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" modelName="six_pos" modelPosition="tail" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" visible="true">rdfs:subClassOf</y:EdgeLabel>
-               <y:BendStyle smoothed="false" />
-            </y:PolyLineEdge>
-         </data>
-         <data key="d3" />
-      </edge>
-    <edge id="eid_rdfs:subClassOf116" source="nid_mqto:ActuableProperty" target="nid_mqto:Property">
+    <edge id="eid_rdfs:subClassOf120" source="nid_mqto:ActuableProperty" target="nid_sosa:ActuableProperty">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />

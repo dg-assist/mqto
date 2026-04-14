@@ -40,10 +40,13 @@ This section provides details for each class and property defined by Manufacturi
          <a href="#Machine" title="https://w3id.org/mqto#Machine">Machine</a>
       </li>
       <li>
+         <a href="#Manpower" title="https://w3id.org/mqto#Manpower">Manpower</a>
+      </li>
+      <li>
          <a href="#Material" title="https://w3id.org/mqto#Material">Material</a>
       </li>
       <li>
-         <a href="#MaterialChunk" title="https://w3id.org/mqto#MaterialChunk">Material Chunk</a>
+         <a href="#Measurement" title="https://w3id.org/mqto#Measurement">Measurement</a>
       </li>
       <li>
          <a href="#Method" title="https://w3id.org/mqto#Method">Method</a>
@@ -62,6 +65,9 @@ This section provides details for each class and property defined by Manufacturi
       </li>
       <li>
          <a href="#PhysicalMachine" title="https://w3id.org/mqto#PhysicalMachine">Physical Machine</a>
+      </li>
+      <li>
+         <a href="#PhysicalMaterial" title="https://w3id.org/mqto#PhysicalMaterial">Physical Material</a>
       </li>
       <li>
          <a href="#ProcessExecution" title="https://w3id.org/mqto#ProcessExecution">Process Execution</a>
@@ -105,7 +111,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#ActualIshikawaItem</p>
       <div class="comment">
-         <span class="markdown">Abstract superclass for actual/instance layer counterparts of IshikawaItem. Integrates SOSA: each ActualIshikawaItem is a FeatureOfInterest that can be observed, has ObservableProperties, and can have FailureOccurrences. Concrete instances include specific machines, material batches, and production runs.</span>
+         <span class="markdown">Abstract superclass for actual/instance layer counterparts of IshikawaItem. Integrates SOSA: each ActualIshikawaItem is a FeatureOfInterest that can be observed, has ObservableProperties, and can have FailureOccurrences. MQTO defines three concrete subclasses: PhysicalMachine (implements Machine), PhysicalMaterial (implements Material), and ProcessExecution (implements Method). Actual-layer counterparts for Manpower and Measurement are not defined in MQTO; domain-specific ontologies are expected to provide them.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -118,8 +124,8 @@ This section provides details for each class and property defined by Manufacturi
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#MaterialChunk" title="https://w3id.org/mqto#MaterialChunk">Material Chunk</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#PhysicalMachine" title="https://w3id.org/mqto#PhysicalMachine">Physical Machine</a>
+            <a href="#PhysicalMachine" title="https://w3id.org/mqto#PhysicalMachine">Physical Machine</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PhysicalMaterial" title="https://w3id.org/mqto#PhysicalMaterial">Physical Material</a>
             <sup class="type-c" title="class">c</sup>, <a href="#ProcessExecution" title="https://w3id.org/mqto#ProcessExecution">Process Execution</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -173,12 +179,14 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#CountermeasureExecution</p>
       <div class="comment">
-         <span class="markdown">The actual execution of a Countermeasure procedure, performed to mitigate one or more FailureOccurrences. Links to the Countermeasure specification via lis:implements (LIS pattern) and tracks which specific failures were addressed. As a subclass of pko:ProcedureExecution, countermeasure executions align with PKO's procedure execution model while maintaining LIS actual/specified semantics. Note: Does not directly subclass lis:Activity (which is lis:Specified), but implements Countermeasure (which is lis:Activity), maintaining the LIS distinction between specified and actual layers.</span>
+         <span class="markdown">The actual execution of a Countermeasure procedure, performed to mitigate one or more FailureOccurrences. As a subclass of both lis:Activity and lis:Actual, it is a concrete temporal event that implements a Countermeasure specification. Links to the Countermeasure via lis:implements, records mitigated FailureOccurrences via mqto:mitigated, and tracks constituent steps via mqto:hasStep. Participants (machines, materials, or personnel) are not constrained at the MQTO level; the participant restriction is carried by the Countermeasure specification, and domain-specific ontologies may further restrict or extend participation. As a subclass of pko:ProcedureExecution, countermeasure executions align with PKO's procedure execution model.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Actual"
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Activity">activity</a>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Actual"
                target="_blank"
                title="http://rds.posccaesar.org/ontology/lis14/rdl/Actual">actual</a>, <a href="https://w3id.org/pko#ProcedureExecution"
                target="_blank"
@@ -187,7 +195,6 @@ This section provides details for each class and property defined by Manufacturi
          <dt>is in domain of</dt>
          <dd>
             <a href="#hasFirstStep" title="https://w3id.org/mqto#hasFirstStep">has first step</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#hasStep" title="https://w3id.org/mqto#hasStep">has step</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#mitigated" title="https://w3id.org/mqto#mitigated">mitigated</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#reasoningLine" title="https://w3id.org/mqto#reasoningLine">reasoning line</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#score" title="https://w3id.org/mqto#score">score</a>
@@ -242,12 +249,14 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#CountermeasureStepExecution</p>
       <div class="comment">
-         <span class="markdown">The actual, single execution of one CountermeasureStep. Each execution implements a specific CountermeasureStep from the specified layer via lis:implements, performed in a concrete, non-reused linear order encoded via mqto:hasFirstStep / mqto:hasNextStep, contrasting with the specified layer where mqto:List enables step reuse across procedures. As a subclass of pko:StepExecution, countermeasure step executions align with PKO's step execution model. Note: Does not directly subclass lis:Activity (which is lis:Specified), but implements CountermeasureStep (which is lis:Activity), maintaining the LIS distinction between specified and actual layers.</span>
+         <span class="markdown">The actual, single execution of one CountermeasureStep. Each execution implements a specific CountermeasureStep from the specified layer via lis:implements, performed in a concrete, non-reused linear order encoded via mqto:hasFirstStep / mqto:hasNextStep, contrasting with the specified layer where mqto:List enables step reuse across procedures. As a subclass of both lis:Activity and lis:Actual, it is a concrete temporal activity. As a subclass of pko:StepExecution, countermeasure step executions align with PKO's step execution model.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Actual"
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Activity">activity</a>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Actual"
                target="_blank"
                title="http://rds.posccaesar.org/ontology/lis14/rdl/Actual">actual</a>, <a href="https://w3id.org/pko#StepExecution"
                target="_blank"
@@ -276,7 +285,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#FailureMode</p>
       <div class="comment">
-         <span class="markdown">A manner in which a manufacturing component, system, or process could potentially fail to meet its intended function or quality requirements (specified layer). Aligns with FMEA terminology per IEC 60812:2018. Belongs to an IshikawaItem (Machine, Material, or Method category), refers to diagnostic Metrics, and can be mitigated by Countermeasures. Failure Modes can have causal relationships with other Failure Modes (causes/causedBy) to model root cause chains. The actual-layer counterpart is FailureOccurrence.</span>
+         <span class="markdown">A manner in which a manufacturing component, system, or process could potentially fail to meet its intended function or quality requirements (specified layer). Aligns with FMEA terminology per IEC 60812:2018. Belongs to an IshikawaItem (Machine, Manpower, Material, Measurement, or Method category), refers to diagnostic Metrics, and can be mitigated by Countermeasures. Failure Modes can have causal relationships with other Failure Modes (causes/causedBy) to model root cause chains. The actual-layer counterpart is FailureOccurrence.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -313,22 +322,24 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#FailureOccurrence</p>
       <div class="comment">
-         <span class="markdown">An instance-layer event representing a specific quality defect or operational problem detected during production. Implements a Failure Mode specification, appears on an ActualIshikawaItem, and is raised by one or more MetricAssessments that detected threshold violations. Can be mitigated by CountermeasureExecutions. Captures the actual occurrence with timestamps and context, as opposed to the schema-level Failure Mode definition.</span>
+         <span class="markdown">An instance-layer temporal event representing a specific quality defect or operational problem detected during production. As a subclass of both lis:Activity and lis:Actual, it is a concrete occurrence in time. Implements a Failure Mode specification, appears on an ActualIshikawaItem, and is raised by one or more MetricAssessments that detected threshold violations. Can be mitigated by CountermeasureExecutions. The timestamp of the occurrence is recorded via mqto:occurrenceTime.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Actual"
+            <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Activity">activity</a>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Actual"
                target="_blank"
                title="http://rds.posccaesar.org/ontology/lis14/rdl/Actual">actual</a>
          </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#appearedOn" title="https://w3id.org/mqto#appearedOn">appeared on</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#raisedBy" title="https://w3id.org/mqto#raisedBy">raised by</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#occurrenceTime" title="https://w3id.org/mqto#occurrenceTime">occurrence time</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#raisedBy" title="https://w3id.org/mqto#raisedBy">raised by</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#suggested" title="https://w3id.org/mqto#suggested">suggested</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#viewTime" title="https://w3id.org/mqto#viewTime">view time</a>
-            <sup class="type-dp" title="data property">dp</sup>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -347,7 +358,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#IshikawaItem</p>
       <div class="comment">
-         <span class="markdown">Abstract superclass for the three categories of root causes in an Ishikawa (fishbone) diagram: Machine, Material, and Method. Domain-specific ontologies can specialize these concepts for their manufacturing domain.</span>
+         <span class="markdown">Abstract superclass for the five categories of root causes in an Ishikawa (fishbone) diagram: Machine, Manpower, Material, Measurement, and Method. Domain-specific ontologies can specialize these concepts for their manufacturing domain.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -359,7 +370,9 @@ This section provides details for each class and property defined by Manufacturi
          <dt>has sub-classes</dt>
          <dd>
             <a href="#Machine" title="https://w3id.org/mqto#Machine">Machine</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Manpower" title="https://w3id.org/mqto#Manpower">Manpower</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Material" title="https://w3id.org/mqto#Material">Material</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Measurement" title="https://w3id.org/mqto#Measurement">Measurement</a>
             <sup class="type-c" title="class">c</sup>, <a href="#Method" title="https://w3id.org/mqto#Method">Method</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -429,6 +442,24 @@ This section provides details for each class and property defined by Manufacturi
          </dd>
       </dl>
    </div>
+   <div class="entity" id="Manpower">
+      <h3>Manpower<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#Manpower</p>
+      <div class="comment">
+         <span class="markdown">Workforce, operators, and personnel involved in manufacturing (the 'M' in Ishikawa's Manpower). Represents the specified human resource roles that contribute to manufacturing processes. Domain-specific ontologies can define specific roles such as machine operators, quality inspectors, and process engineers. Manpower can be associated with Failure Modes and Metrics, and participates in Methods as a contributing factor.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#IshikawaItem" title="https://w3id.org/mqto#IshikawaItem">Ishikawa Item</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Material">
       <h3>Material<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -443,33 +474,29 @@ This section provides details for each class and property defined by Manufacturi
          <dt>has super-classes</dt>
          <dd>
             <a href="#IshikawaItem" title="https://w3id.org/mqto#IshikawaItem">Ishikawa Item</a>
-            <sup class="type-c" title="class">c</sup>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Compound"
-               target="_blank"
-               title="http://rds.posccaesar.org/ontology/lis14/rdl/Compound">compound</a>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact"
+            <sup class="type-c" title="class">c</sup>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact"
                target="_blank"
                title="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact">physical artefact</a>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="MaterialChunk">
-      <h3>Material Chunk<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="Measurement">
+      <h3>Measurement<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/mqto#MaterialChunk</p>
+         <strong>IRI:</strong> https://w3id.org/mqto#Measurement</p>
       <div class="comment">
-         <span class="markdown">Actual material instance, the instance-layer counterpart of Material. Represents specific batches, lots, or quantities of material with identifiers, composition data, and quality measurements. Examples include specific material batches with batch numbers, chemical composition, and quality measurements.</span>
+         <span class="markdown">A measurement procedure or inspection method (the 'M' in Ishikawa's Measurement). Represents the specified procedure for how a quantity is measured or a quality attribute is assessed. As a subclass of sosa:Procedure (which is lis:InformationObject in the ido-ssn integration), Measurement is an information object — a specification of how to measure — rather than a physical thing or activity. Its actual-layer counterpart is expressed via sosa:Observation instances that reference this procedure through sosa:usedProcedure. Domain-specific ontologies can define specific measurement procedures such as gauge calibration protocols, CMM inspection programs, or SPC sampling procedures.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#ActualIshikawaItem" title="https://w3id.org/mqto#ActualIshikawaItem">Actual Ishikawa Item</a>
-            <sup class="type-c" title="class">c</sup>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Compound"
+            <a href="#IshikawaItem" title="https://w3id.org/mqto#IshikawaItem">Ishikawa Item</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://www.w3.org/ns/sosa/Procedure"
                target="_blank"
-               title="http://rds.posccaesar.org/ontology/lis14/rdl/Compound">compound</a>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact"
-               target="_blank"
-               title="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact">physical artefact</a>
+               title="http://www.w3.org/ns/sosa/Procedure">procedure</a>
          </dd>
       </dl>
    </div>
@@ -481,7 +508,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#Method</p>
       <div class="comment">
-         <span class="markdown">A manufacturing process or procedure (the 'M' in Ishikawa's Method). Represents the specified activities and steps in manufacturing. This includes operations and procedures specific to the manufacturing domain. Methods can be decomposed into sub-methods and have Machines and Materials as participants.</span>
+         <span class="markdown">A manufacturing process or procedure (the 'M' in Ishikawa's Method). Represents the specified activities and steps in manufacturing. This includes operations and procedures specific to the manufacturing domain. Methods can be decomposed into sub-methods and have Machines, Materials, and Manpower as participants.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -541,6 +568,18 @@ This section provides details for each class and property defined by Manufacturi
       <div class="comment">
          <span class="markdown">An instance-layer evaluation that implements a Metric specification by computing a value from actual Observations and comparing it against threshold bounds. Calculated for an ActualIshikawaItem at a specific time, based on observations within a time window. Produces both a calculatedValue (quantitative result) and assessmentValue (boolean pass/fail). When threshold violations are detected, raises FailureOccurrences.</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>ex:MA_001  a mqto:MetricAssessment ;
+    lis:implements       ex:TemperatureMetric ;
+    mqto:calculatedFor   ex:Machine4115 ;
+    mqto:calculatedValue 718.3 ;
+    mqto:assessmentValue true ;
+    mqto:calculatedTime  "2026-04-14T08:15:00"^^xsd:dateTime .
+    # calculatedValue was read from Result.ex:temperature via resultProperty</pre>
+         </dd>
+      </dl>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -647,6 +686,26 @@ This section provides details for each class and property defined by Manufacturi
          </dd>
       </dl>
    </div>
+   <div class="entity" id="PhysicalMaterial">
+      <h3>Physical Material<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#PhysicalMaterial</p>
+      <div class="comment">
+         <span class="markdown">Actual material instance, the instance-layer counterpart of Material. Represents specific batches, lots, or quantities of material with identifiers, composition data, and quality measurements. Examples include specific material batches with batch numbers, chemical composition, and quality measurements.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ActualIshikawaItem" title="https://w3id.org/mqto#ActualIshikawaItem">Actual Ishikawa Item</a>
+            <sup class="type-c" title="class">c</sup>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact">physical artefact</a>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="ProcessExecution">
       <h3>Process Execution<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -655,7 +714,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#ProcessExecution</p>
       <div class="comment">
-         <span class="markdown">Actual execution of a Method, the instance-layer counterpart of Method. Links to concrete PhysicalMachines and MaterialChunks as participants. This represents actual production operations with specific machines, material batches, timestamps, and observation data. Note: ProcessExecution does not directly subclass lis:Activity (which is lis:Specified), but instead subclasses ActualIshikawaItem (lis:Actual) and implements Method (which is lis:Activity). This maintains the LIS distinction between specified and actual layers.</span>
+         <span class="markdown">Actual execution of a Method, the instance-layer counterpart of Method. Links to concrete PhysicalMachines and PhysicalMaterials as participants. This represents actual production operations with specific machines, material batches, timestamps, and observation data. Note: ProcessExecution does not subclass lis:Activity (lis:Temporal) because it subclasses ActualIshikawaItem, which inherits sosa:FeatureOfInterest (lis:Object). In LIS, lis:Temporal and lis:Object are disjoint top-level categories, so both superclasses together would make the class unsatisfiable. The temporal character of a process execution is expressed instead through mqto:startTime / mqto:endTime properties and the sosa:Observations for which it serves as feature of interest.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -702,6 +761,16 @@ This section provides details for each class and property defined by Manufacturi
       <div class="comment">
          <span class="markdown">The outcome of an Observation, containing the measured value (via measValue or other result properties). Subclass of sosa:Result. MetricAssessments extract result values from these Result instances using the resultProperty meta-property to specify which data property should be read.</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>A die-casting shot produces one Result per PLC cycle carrying multiple process values:
+  ex:Result_Shot042  a mqto:Result ;
+      ex:temperature   718.3 ;
+      ex:pressure      980.0 ;
+      ex:cycleTime      24.7 .</pre>
+         </dd>
+      </dl>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -875,7 +944,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#appearedOn</p>
       <div class="comment">
-         <span class="markdown">Links a FailureOccurrence to the specific ActualIshikawaItem (physical machine, material batch, or process execution) where it manifested. Establishes the concrete location or context of the failure event in the actual layer.</span>
+         <span class="markdown">Links a FailureOccurrence to the specific ActualIshikawaItem where it manifested. In MQTO, ActualIshikawaItems are PhysicalMachine, PhysicalMaterial, and ProcessExecution; domain-specific ontologies may add actual-layer counterparts for Manpower and Measurement. Establishes the concrete location or context of the failure event in the actual layer.</span>
       </div>
       <div class="description">
          <dl>
@@ -960,7 +1029,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#calculatedFor</p>
       <div class="comment">
-         <span class="markdown">Links a MetricAssessment to the specific ActualIshikawaItem (physical machine, material batch, or process execution) it evaluates. Establishes which concrete entity the metric calculation applies to in the actual layer.</span>
+         <span class="markdown">Links a MetricAssessment to the specific ActualIshikawaItem it evaluates. In MQTO, ActualIshikawaItems are PhysicalMachine, PhysicalMaterial, and ProcessExecution; domain-specific ontologies may add actual-layer counterparts for Manpower and Measurement. Establishes which concrete entity the metric calculation applies to in the actual layer.</span>
       </div>
       <div class="description">
          <dl>
@@ -1269,7 +1338,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#failureBelongsTo</p>
       <div class="comment">
-         <span class="markdown">Associates a Failure Mode with the IshikawaItem (Machine, Material, or Method) category it belongs to in the fishbone diagram structure. Establishes which root cause category the failure is classified under. Inverse of hasFailure.</span>
+         <span class="markdown">Associates a Failure Mode with the IshikawaItem (Machine, Manpower, Material, Measurement, or Method) category it belongs to in the fishbone diagram structure. Establishes which root cause category the failure is classified under. Inverse of hasFailure.</span>
       </div>
       <div class="description">
          <dl>
@@ -1324,7 +1393,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#hasFailure</p>
       <div class="comment">
-         <span class="markdown">Associates an IshikawaItem (Machine, Material, or Method) with a Failure Mode that can occur in that category. Establishes which failures belong to each root cause category in the fishbone diagram structure. Inverse of failureBelongsTo.</span>
+         <span class="markdown">Associates an IshikawaItem (Machine, Manpower, Material, Measurement, or Method) with a Failure Mode that can occur in that category. Establishes which failures belong to each root cause category in the fishbone diagram structure. Inverse of failureBelongsTo.</span>
       </div>
       <div class="description">
          <dl>
@@ -1385,7 +1454,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#hasMetric</p>
       <div class="comment">
-         <span class="markdown">Associates an IshikawaItem (Machine, Material, or Method) with a Metric used to monitor or assess that category. Establishes which metrics are relevant for monitoring each root cause category. Inverse of metricBelongsTo.</span>
+         <span class="markdown">Associates an IshikawaItem (Machine, Manpower, Material, Measurement, or Method) with a Metric used to monitor or assess that category. Establishes which metrics are relevant for monitoring each root cause category. Inverse of metricBelongsTo.</span>
       </div>
       <div class="description">
          <dl>
@@ -1447,7 +1516,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#hasStep</p>
       <div class="comment">
-         <span class="markdown">Links a CountermeasureExecution to its constituent CountermeasureStepExecutions in the actual layer. General property for all steps; hasFirstStep identifies the starting step, and hasNextStep chains the sequence. Subproperty of lis:hasActivityPart.</span>
+         <span class="markdown">Links a CountermeasureExecution to its constituent CountermeasureStepExecutions in the actual layer. General property for all steps; hasFirstStep identifies the starting step, and hasNextStep chains the sequence. Subproperty of lis:hasActivityPart. No global rdfs:domain is declared; the source class is constrained by the allValuesFrom restriction on CountermeasureExecution, avoiding unintended domain inferences on hasNextStep (which is a subproperty).</span>
       </div>
       <div class="description">
          <dl>
@@ -1462,11 +1531,6 @@ This section provides details for each class and property defined by Manufacturi
                <a href="#hasFirstStep" title="https://w3id.org/mqto#hasFirstStep">has first step</a>
                <sup class="type-op" title="object property">op</sup>, <a href="#hasNextStep" title="https://w3id.org/mqto#hasNextStep">has next step</a>
                <sup class="type-op" title="object property">op</sup>
-            </dd>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#CountermeasureExecution" title="https://w3id.org/mqto#CountermeasureExecution">Countermeasure Execution</a>
-               <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
@@ -1485,7 +1549,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#metricBelongsTo</p>
       <div class="comment">
-         <span class="markdown">Associates a Metric with the IshikawaItem (Machine, Material, or Method) category it monitors or assesses. Establishes which root cause category a metric is used for. Inverse of hasMetric.</span>
+         <span class="markdown">Associates a Metric with the IshikawaItem (Machine, Manpower, Material, Measurement, or Method) category it monitors or assesses. Establishes which root cause category a metric is used for. Inverse of hasMetric.</span>
       </div>
       <div class="description">
          <dl>
@@ -1570,7 +1634,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#mitigatedBy</p>
       <div class="comment">
-         <span class="markdown">Links a Failure Mode to a Countermeasure that can remediate or reduce it (specified layer). Establishes which remediation procedures are applicable for addressing specific failure types. Inverse of mitigates. The actual-layer equivalent links FailureOccurrence to CountermeasureExecution.</span>
+         <span class="markdown">Links a Failure Mode to a Countermeasure that can remediate or reduce it (specified layer). Establishes which remediation procedures are applicable for addressing specific failure types. Inverse of mitigates. The actual-layer counterpart is mqto:mitigated (domain: CountermeasureExecution, range: FailureOccurrence), which uses a distinct property to avoid range conflicts between the two layers.</span>
       </div>
       <div class="description">
          <dl>
@@ -1630,7 +1694,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#providesSignal</p>
       <div class="comment">
-         <span class="markdown">Relates an IshikawaItem (Machine, Material, or Method) to the data channels (Signals) associated with it. A Signal may be an output channel carrying measurement data from the item (e.g. a temperature sensor reading) or an input channel carrying control data to the item (e.g. a setpoint or actuator command). The Signal is a specified channel descriptor; actual observations are made via sosa:Observation on the corresponding ActualIshikawaItem.</span>
+         <span class="markdown">Relates an IshikawaItem (Machine, Manpower, Material, Measurement, or Method) to the data channels (Signals) associated with it. A Signal may be an output channel carrying measurement data from the item (e.g. a temperature sensor reading) or an input channel carrying control data to the item (e.g. a setpoint or actuator command). The Signal is a specified channel descriptor; actual observations are made via sosa:Observation on the corresponding ActualIshikawaItem.</span>
       </div>
       <div class="description">
          <dl>
@@ -1835,8 +1899,23 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#resultProperty</p>
       <div class="comment">
-         <span class="markdown">Meta-property that specifies which data property of sosa:Result instances should be extracted and used as input for this Metric's calculation. For example, a Metric's resultProperty can point to a specific data property of the Result to extract that field from each Result instance within the specified time window. This enables multiple metrics to derive different calculations from the same observation results by selecting different result attributes. Note: This is a meta-level construct (an object property pointing to data properties), which while not ideal OWL modeling practice, provides a simple declarative mechanism for metrics to specify their input data field without requiring complex extraction rules or SPARQL property paths.</span>
+         <span class="markdown">Specifies which data property of mqto:Result instances should be read when computing this Metric. A single Result instance commonly carries multiple measured values as separate data properties (e.g., ex:temperature, ex:pressure, ex:cycleTime on one PLC-cycle Result). Each Metric declares its resultProperty to select exactly one of those properties: a TemperatureMetric sets resultProperty to ex:temperature, while a PressureMetric on the same observations sets it to ex:pressure. At query time, an application reads ?metric mqto:resultProperty ?prop and then retrieves ?result ?prop ?value for each Result in the time window. Note: this is a meta-level construct — an object property whose value is itself a property — which falls outside normal OWL type-system validation. It is retained because it provides a simple, declarative way to parameterise Metrics without requiring SPARQL property-path strings or a SHACL infrastructure at the schema level.</span>
       </div>
+      <dl>
+         <dt>Example</dt>
+         <dd>
+            <pre>A PLC cycle produces one Result with three data properties:
+  ex:Result_Shot042  ex:temperature  718.3 ;
+                     ex:pressure     980.0 ;
+                     ex:cycleTime     24.7 .
+
+Two Metrics select different properties from the same Result:
+  ex:TemperatureMetric  mqto:resultProperty  ex:temperature .
+  ex:PressureMetric     mqto:resultProperty  ex:pressure .
+
+At query time: SELECT ?value WHERE { ?metric mqto:resultProperty ?prop . ?result ?prop ?value . }</pre>
+         </dd>
+      </dl>
       <div class="description">
          <dl>
             <dt>has domain</dt>
@@ -1862,7 +1941,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#signalProvidedBy</p>
       <div class="comment">
-         <span class="markdown">Associates a Signal (data channel) with the IshikawaItem (Machine, Material, or Method) that provides it. Establishes the source of measurement or control data channels. Inverse of providesSignal.</span>
+         <span class="markdown">Associates a Signal (data channel) with the IshikawaItem (Machine, Manpower, Material, Measurement, or Method) that provides it. Establishes the source of measurement or control data channels. Inverse of providesSignal.</span>
       </div>
       <div class="description">
          <dl>
@@ -2011,6 +2090,9 @@ This section provides details for each class and property defined by Manufacturi
          <a href="#method" title="https://w3id.org/mqto#method">method</a>
       </li>
       <li>
+         <a href="#occurrenceTime" title="https://w3id.org/mqto#occurrenceTime">occurrence time</a>
+      </li>
+      <li>
          <a href="#reasoningLine" title="https://w3id.org/mqto#reasoningLine">reasoning line</a>
       </li>
       <li>
@@ -2027,9 +2109,6 @@ This section provides details for each class and property defined by Manufacturi
       </li>
       <li>
          <a href="#upperBound" title="https://w3id.org/mqto#upperBound">upper bound</a>
-      </li>
-      <li>
-         <a href="#viewTime" title="https://w3id.org/mqto#viewTime">view time</a>
       </li>
       <li>
          <a href="#weight" title="https://w3id.org/mqto#weight">weight</a>
@@ -2211,17 +2290,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#identifier</p>
       <div class="comment">
-         <span class="markdown">A unique identifier for an entity such as a machine serial number, material batch code, signal name, or process ID. Subproperty of dcterms:identifier. Enables correlation between ontology instances and external systems (ERP, MES, SCADA).</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="http://purl.org/dc/terms/identifier"
-                  target="_blank"
-                  title="http://purl.org/dc/terms/identifier">identifier</a>
-            </dd>
-         </dl>
+         <span class="markdown">A unique identifier for an entity such as a machine serial number, material batch code, signal name, or process ID. Conceptually aligned with dcterms:identifier but declared as an independent OWL DatatypeProperty (rdfs:subPropertyOf is not used because dcterms:identifier is an annotation property and OWL 2 DL does not permit a datatype property to be a subproperty of an annotation property). Enables correlation between ontology instances and external systems (ERP, MES, SCADA).</span>
       </div>
    </div>
    <div class="entity" id="lowerBound">
@@ -2232,7 +2301,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#lowerBound</p>
       <div class="comment">
-         <span class="markdown">The minimum acceptable threshold value for a Metric. MetricAssessments compare their calculatedValue against this bound; values below the lowerBound indicate a threshold violation. Must include units compatible with the Metric's measurement context.</span>
+         <span class="markdown">The minimum acceptable threshold value for a Metric, as a dimensionless double. MetricAssessments compare their calculatedValue against this bound; values below the lowerBound indicate a threshold violation. The unit of measurement is determined by the Metric's associated Signal.</span>
       </div>
       <div class="description">
          <dl>
@@ -2243,9 +2312,9 @@ This section provides details for each class and property defined by Manufacturi
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+               <a href="http://www.w3.org/2001/XMLSchema#double"
                   target="_blank"
-                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
+                  title="http://www.w3.org/2001/XMLSchema#double">double</a>
             </dd>
          </dl>
       </div>
@@ -2298,9 +2367,9 @@ This section provides details for each class and property defined by Manufacturi
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#float"
+               <a href="http://www.w3.org/2001/XMLSchema#double"
                   target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#float">float</a>
+                  title="http://www.w3.org/2001/XMLSchema#double">double</a>
             </dd>
          </dl>
       </div>
@@ -2321,6 +2390,32 @@ This section provides details for each class and property defined by Manufacturi
             <dd>
                <a href="#Metric" title="https://w3id.org/mqto#Metric">Metric</a>
                <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="occurrenceTime">
+      <h3>occurrence time<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#occurrenceTime</p>
+      <div class="comment">
+         <span class="markdown">The timestamp when this failure occurrence actually happened in the physical world. Essential for failure frequency analysis, MTBF calculations, and temporal correlation with process events and observations.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FailureOccurrence" title="https://w3id.org/mqto#FailureOccurrence">Failure Occurrence</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
             </dd>
          </dl>
       </div>
@@ -2432,7 +2527,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#timeWindowSize</p>
       <div class="comment">
-         <span class="markdown">The duration of the time window over which a Metric aggregates observations for calculation. Defines how far back in time from the calculatedTime the metric should consider observation data. Typical representations include ISO 8601 durations (e.g., 'PT5M' for 5 minutes) or numeric values with implicit units.</span>
+         <span class="markdown">The duration of the time window over which a Metric aggregates observations for calculation, expressed as an xsd:duration value (e.g., "PT5M"^^xsd:duration for 5 minutes, "PT1H"^^xsd:duration for 1 hour). Defines how far back in time from the calculatedTime the metric should consider observation data.</span>
       </div>
       <div class="description">
          <dl>
@@ -2443,9 +2538,9 @@ This section provides details for each class and property defined by Manufacturi
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+               <a href="http://www.w3.org/2001/XMLSchema#duration"
                   target="_blank"
-                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
+                  title="http://www.w3.org/2001/XMLSchema#duration">duration</a>
             </dd>
          </dl>
       </div>
@@ -2458,7 +2553,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#upperBound</p>
       <div class="comment">
-         <span class="markdown">The maximum acceptable threshold value for a Metric. MetricAssessments compare their calculatedValue against this bound; values above the upperBound indicate a threshold violation. Must include units compatible with the Metric's measurement context.</span>
+         <span class="markdown">The maximum acceptable threshold value for a Metric, as a dimensionless double. MetricAssessments compare their calculatedValue against this bound; values above the upperBound indicate a threshold violation. The unit of measurement is determined by the Metric's associated Signal.</span>
       </div>
       <div class="description">
          <dl>
@@ -2469,35 +2564,9 @@ This section provides details for each class and property defined by Manufacturi
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="http://www.w3.org/2000/01/rdf-schema#Literal"
+               <a href="http://www.w3.org/2001/XMLSchema#double"
                   target="_blank"
-                  title="http://www.w3.org/2000/01/rdf-schema#Literal">literal</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="viewTime">
-      <h3>view time<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/mqto#viewTime</p>
-      <div class="comment">
-         <span class="markdown">The timestamp when a FailureOccurrence was viewed, acknowledged, or presented to a user or system. Distinct from the actual occurrence time of the failure event itself. Used to track when failures entered human awareness or triggered system responses.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#FailureOccurrence" title="https://w3id.org/mqto#FailureOccurrence">Failure Occurrence</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
+                  title="http://www.w3.org/2001/XMLSchema#double">double</a>
             </dd>
          </dl>
       </div>
