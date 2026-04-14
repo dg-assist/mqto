@@ -21,6 +21,9 @@
     "FailureMode" : {
       "@id" : "https://w3id.org/mqto#FailureMode"
     },
+    "affiliation" : {
+      "@id" : "https://schema.org/affiliation"
+    },
     "score" : {
       "@id" : "https://w3id.org/mqto#score",
       "@type" : "http://www.w3.org/2001/XMLSchema#double"
@@ -39,9 +42,12 @@
       "@id" : "https://w3id.org/mqto#causesWeakly",
       "@type" : "@id"
     },
+    "example" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#example"
+    },
     "lowerBound" : {
       "@id" : "https://w3id.org/mqto#lowerBound",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
     },
     "mitigates" : {
       "@id" : "https://w3id.org/mqto#mitigates",
@@ -54,7 +60,7 @@
       "@id" : "https://w3id.org/mqto#CountermeasureStepExecution"
     },
     "Procedure" : {
-      "@id" : "https://w3id.org/pko#Procedure"
+      "@id" : "http://www.w3.org/ns/sosa/Procedure"
     },
     "hasActivityPart" : {
       "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart",
@@ -98,7 +104,7 @@
     },
     "measValue" : {
       "@id" : "https://w3id.org/mqto#measValue",
-      "@type" : "http://www.w3.org/2001/XMLSchema#float"
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
     },
     "FeatureOfInterest" : {
       "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
@@ -145,6 +151,9 @@
     "Result" : {
       "@id" : "http://www.w3.org/ns/sosa/Result"
     },
+    "Measurement" : {
+      "@id" : "https://w3id.org/mqto#Measurement"
+    },
     "Signal" : {
       "@id" : "https://w3id.org/mqto#Signal"
     },
@@ -188,8 +197,8 @@
       "@id" : "https://w3id.org/mqto#assessmentValue",
       "@type" : "http://www.w3.org/2001/XMLSchema#boolean"
     },
-    "Compound" : {
-      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Compound"
+    "Manpower" : {
+      "@id" : "https://w3id.org/mqto#Manpower"
     },
     "abortedTime" : {
       "@id" : "https://w3id.org/mqto#abortedTime",
@@ -204,6 +213,10 @@
     },
     "creator" : {
       "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "occurrenceTime" : {
+      "@id" : "https://w3id.org/mqto#occurrenceTime",
+      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
     },
     "name" : {
       "@id" : "http://xmlns.com/foaf/0.1/name"
@@ -280,9 +293,6 @@
     "Countermeasure" : {
       "@id" : "https://w3id.org/mqto#Countermeasure"
     },
-    "MaterialChunk" : {
-      "@id" : "https://w3id.org/mqto#MaterialChunk"
-    },
     "mitigatedBy" : {
       "@id" : "https://w3id.org/mqto#mitigatedBy",
       "@type" : "@id"
@@ -320,7 +330,7 @@
     },
     "upperBound" : {
       "@id" : "https://w3id.org/mqto#upperBound",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+      "@type" : "http://www.w3.org/2001/XMLSchema#double"
     },
     "raisedBy" : {
       "@id" : "https://w3id.org/mqto#raisedBy",
@@ -362,10 +372,6 @@
     "ObservableProperty" : {
       "@id" : "http://www.w3.org/ns/sosa/ObservableProperty"
     },
-    "viewTime" : {
-      "@id" : "https://w3id.org/mqto#viewTime",
-      "@type" : "http://www.w3.org/2001/XMLSchema#dateTime"
-    },
     "causesModerately" : {
       "@id" : "https://w3id.org/mqto#causesModerately",
       "@type" : "@id"
@@ -383,6 +389,9 @@
     "funding" : {
       "@id" : "http://schema.org/funding"
     },
+    "PhysicalMaterial" : {
+      "@id" : "https://w3id.org/mqto#PhysicalMaterial"
+    },
     "PhysicalArtefact" : {
       "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact"
     },
@@ -396,7 +405,7 @@
     },
     "timeWindowSize" : {
       "@id" : "https://w3id.org/mqto#timeWindowSize",
-      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+      "@type" : "http://www.w3.org/2001/XMLSchema#duration"
     },
     "weight" : {
       "@id" : "https://w3id.org/mqto#weight",
