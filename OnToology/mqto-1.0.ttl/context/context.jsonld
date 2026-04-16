@@ -14,10 +14,6 @@
     "ActuableProperty" : {
       "@id" : "https://w3id.org/mqto#ActuableProperty"
     },
-    "role" : {
-      "@id" : "https://w3id.org/mqto#role",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
     "FailureMode" : {
       "@id" : "https://w3id.org/mqto#FailureMode"
     },
@@ -98,10 +94,6 @@
     "Specified" : {
       "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Specified"
     },
-    "measValue" : {
-      "@id" : "https://w3id.org/mqto#measValue",
-      "@type" : "http://www.w3.org/2001/XMLSchema#double"
-    },
     "FeatureOfInterest" : {
       "@id" : "http://www.w3.org/ns/sosa/FeatureOfInterest"
     },
@@ -139,10 +131,6 @@
       "@id" : "https://w3id.org/mqto#calculatedFor",
       "@type" : "@id"
     },
-    "reasoningLine" : {
-      "@id" : "https://w3id.org/mqto#reasoningLine",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
     "failureBelongsTo" : {
       "@id" : "https://w3id.org/mqto#failureBelongsTo",
       "@type" : "@id"
@@ -169,9 +157,6 @@
     "suggested" : {
       "@id" : "https://w3id.org/mqto#suggested",
       "@type" : "@id"
-    },
-    "homepage" : {
-      "@id" : "http://xmlns.com/foaf/0.1/homepage"
     },
     "causedByStrongly" : {
       "@id" : "https://w3id.org/mqto#causedByStrongly",
@@ -316,6 +301,10 @@
       "@id" : "https://w3id.org/mqto#metricBelongsTo",
       "@type" : "@id"
     },
+    "itemWindowSize" : {
+      "@id" : "https://w3id.org/mqto#itemWindowSize",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
     "List" : {
       "@id" : "https://w3id.org/mqto#List"
     },
@@ -346,10 +335,6 @@
     },
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
-    },
-    "markdownContent" : {
-      "@id" : "https://w3id.org/mqto#markdownContent",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "evaluatesProperty" : {
       "@id" : "https://w3id.org/mqto#evaluatesProperty",

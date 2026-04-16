@@ -5,11 +5,11 @@
     "@list" : [ {
       "@id" : "https://w3id.org/mqto#Countermeasure"
     }, {
-      "@id" : "https://w3id.org/mqto#CountermeasureStep"
+      "@id" : "https://w3id.org/mqto#FailureMode"
     } ]
   } ]
 }, {
-  "@id" : "_:genid13",
+  "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#FailureMode"
@@ -18,7 +18,7 @@
     "@id" : "https://w3id.org/mqto#mitigates"
   } ]
 }, {
-  "@id" : "_:genid14",
+  "@id" : "_:genid11",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/implements"
@@ -27,7 +27,7 @@
     "@id" : "https://w3id.org/mqto#Countermeasure"
   } ]
 }, {
-  "@id" : "_:genid15",
+  "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#FailureOccurrence"
@@ -36,7 +36,7 @@
     "@id" : "https://w3id.org/mqto#mitigated"
   } ]
 }, {
-  "@id" : "_:genid16",
+  "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#FailureOccurrence"
@@ -45,7 +45,7 @@
     "@id" : "https://w3id.org/mqto#suggestedBy"
   } ]
 }, {
-  "@id" : "_:genid17",
+  "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#CountermeasureStepExecution"
@@ -54,7 +54,7 @@
     "@id" : "https://w3id.org/pko#includesStepExecution"
   } ]
 }, {
-  "@id" : "_:genid18",
+  "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/implements"
@@ -63,7 +63,7 @@
     "@id" : "https://w3id.org/mqto#CountermeasureStep"
   } ]
 }, {
-  "@id" : "_:genid19",
+  "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/mqto#failureBelongsTo"
@@ -72,7 +72,7 @@
     "@id" : "https://w3id.org/mqto#IshikawaItem"
   } ]
 }, {
-  "@id" : "_:genid20",
+  "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#FailureMode"
@@ -81,7 +81,7 @@
     "@id" : "https://w3id.org/mqto#causedBy"
   } ]
 }, {
-  "@id" : "_:genid21",
+  "@id" : "_:genid18",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#FailureMode"
@@ -90,7 +90,7 @@
     "@id" : "https://w3id.org/mqto#causes"
   } ]
 }, {
-  "@id" : "_:genid22",
+  "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#IshikawaItem"
@@ -99,7 +99,7 @@
     "@id" : "https://w3id.org/mqto#failureBelongsTo"
   } ]
 }, {
-  "@id" : "_:genid23",
+  "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#Countermeasure"
@@ -108,7 +108,7 @@
     "@id" : "https://w3id.org/mqto#mitigatedBy"
   } ]
 }, {
-  "@id" : "_:genid24",
+  "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#Metric"
@@ -117,7 +117,7 @@
     "@id" : "https://w3id.org/mqto#refersToMetric"
   } ]
 }, {
-  "@id" : "_:genid25",
+  "@id" : "_:genid22",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/implements"
@@ -126,7 +126,7 @@
     "@id" : "https://w3id.org/mqto#FailureMode"
   } ]
 }, {
-  "@id" : "_:genid26",
+  "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/mqto#appearedOn"
@@ -135,7 +135,7 @@
     "@id" : "https://w3id.org/mqto#ActualIshikawaItem"
   } ]
 }, {
-  "@id" : "_:genid27",
+  "@id" : "_:genid24",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#MetricAssessment"
@@ -144,7 +144,7 @@
     "@id" : "https://w3id.org/mqto#raisedBy"
   } ]
 }, {
-  "@id" : "_:genid28",
+  "@id" : "_:genid25",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#FailureMode"
@@ -153,7 +153,7 @@
     "@id" : "https://w3id.org/mqto#hasFailure"
   } ]
 }, {
-  "@id" : "_:genid29",
+  "@id" : "_:genid26",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#Metric"
@@ -162,7 +162,7 @@
     "@id" : "https://w3id.org/mqto#hasMetric"
   } ]
 }, {
-  "@id" : "_:genid30",
+  "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#Signal"
@@ -171,7 +171,7 @@
     "@id" : "https://w3id.org/mqto#providesSignal"
   } ]
 }, {
-  "@id" : "_:genid31",
+  "@id" : "_:genid28",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#Method"
@@ -180,7 +180,7 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/participantIn"
   } ]
 }, {
-  "@id" : "_:genid32",
+  "@id" : "_:genid29",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#Method"
@@ -189,7 +189,7 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/participantIn"
   } ]
 }, {
-  "@id" : "_:genid33",
+  "@id" : "_:genid30",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#Method"
@@ -198,7 +198,7 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf"
   } ]
 }, {
-  "@id" : "_:genid34",
+  "@id" : "_:genid31",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#Method"
@@ -207,16 +207,16 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart"
   } ]
 }, {
-  "@id" : "_:genid35",
+  "@id" : "_:genid32",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid36"
+    "@id" : "_:genid33"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"
   } ]
 }, {
-  "@id" : "_:genid36",
+  "@id" : "_:genid33",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -228,17 +228,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid4",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/mqto#Countermeasure"
-    }, {
-      "@id" : "https://w3id.org/mqto#FailureMode"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid40",
+  "@id" : "_:genid37",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#IshikawaItem"
@@ -247,7 +237,7 @@
     "@id" : "https://w3id.org/mqto#metricBelongsTo"
   } ]
 }, {
-  "@id" : "_:genid41",
+  "@id" : "_:genid38",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#FailureMode"
@@ -256,7 +246,7 @@
     "@id" : "https://w3id.org/mqto#metricReferredBy"
   } ]
 }, {
-  "@id" : "_:genid42",
+  "@id" : "_:genid39",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#Signal"
@@ -265,7 +255,16 @@
     "@id" : "https://w3id.org/mqto#readsFrom"
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/mqto#hasStepList"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/mqto#List"
+  } ]
+}, {
+  "@id" : "_:genid40",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/implements"
@@ -274,7 +273,7 @@
     "@id" : "https://w3id.org/mqto#Metric"
   } ]
 }, {
-  "@id" : "_:genid44",
+  "@id" : "_:genid41",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/mqto#calculatedFor"
@@ -283,7 +282,7 @@
     "@id" : "https://w3id.org/mqto#ActualIshikawaItem"
   } ]
 }, {
-  "@id" : "_:genid45",
+  "@id" : "_:genid42",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#DataEvent"
@@ -292,7 +291,7 @@
     "@id" : "https://w3id.org/mqto#basedOn"
   } ]
 }, {
-  "@id" : "_:genid46",
+  "@id" : "_:genid43",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#Property"
@@ -301,7 +300,7 @@
     "@id" : "https://w3id.org/mqto#evaluatesProperty"
   } ]
 }, {
-  "@id" : "_:genid47",
+  "@id" : "_:genid44",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#FailureOccurrence"
@@ -310,7 +309,7 @@
     "@id" : "https://w3id.org/mqto#raised"
   } ]
 }, {
-  "@id" : "_:genid48",
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/implements"
@@ -319,7 +318,7 @@
     "@id" : "https://w3id.org/mqto#Machine"
   } ]
 }, {
-  "@id" : "_:genid49",
+  "@id" : "_:genid46",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#ProcessExecution"
@@ -328,7 +327,7 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/participantIn"
   } ]
 }, {
-  "@id" : "_:genid50",
+  "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/implements"
@@ -337,7 +336,7 @@
     "@id" : "https://w3id.org/mqto#Material"
   } ]
 }, {
-  "@id" : "_:genid51",
+  "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#ProcessExecution"
@@ -346,7 +345,7 @@
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/participantIn"
   } ]
 }, {
-  "@id" : "_:genid52",
+  "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/implements"
@@ -355,16 +354,25 @@
     "@id" : "https://w3id.org/mqto#Method"
   } ]
 }, {
-  "@id" : "_:genid53",
+  "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid54"
+    "@id" : "_:genid6"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"
   } ]
 }, {
-  "@id" : "_:genid54",
+  "@id" : "_:genid50",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "_:genid51"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"
+  } ]
+}, {
+  "@id" : "_:genid51",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -374,7 +382,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid57",
+  "@id" : "_:genid54",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/implements"
@@ -383,7 +391,7 @@
     "@id" : "https://w3id.org/mqto#Signal"
   } ]
 }, {
-  "@id" : "_:genid58",
+  "@id" : "_:genid55",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#ActualIshikawaItem"
@@ -392,7 +400,7 @@
     "@id" : "http://www.w3.org/ns/ssn/isPropertyOf"
   } ]
 }, {
-  "@id" : "_:genid59",
+  "@id" : "_:genid56",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#MetricAssessment"
@@ -401,7 +409,7 @@
     "@id" : "https://w3id.org/mqto#evaluatedBy"
   } ]
 }, {
-  "@id" : "_:genid60",
+  "@id" : "_:genid57",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#Metric"
@@ -410,7 +418,7 @@
     "@id" : "https://w3id.org/mqto#readBy"
   } ]
 }, {
-  "@id" : "_:genid61",
+  "@id" : "_:genid58",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "https://w3id.org/mqto#IshikawaItem"
@@ -419,25 +427,7 @@
     "@id" : "https://w3id.org/mqto#signalProvidedBy"
   } ]
 }, {
-  "@id" : "_:genid7",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/mqto#hasStepList"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/mqto#List"
-  } ]
-}, {
-  "@id" : "_:genid8",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid9"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"
-  } ]
-}, {
-  "@id" : "_:genid9",
+  "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -476,9 +466,6 @@
   "@id" : "http://www.w3.org/ns/sosa/ActuableProperty",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
-  "@id" : "http://xmlns.com/foaf/0.1/homepage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
   "@id" : "https://orcid.org/0000-0001-9521-8907",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://xmlns.com/foaf/0.1/Person" ],
   "http://xmlns.com/foaf/0.1/name" : [ {
@@ -516,7 +503,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://w3id.org/mqto",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@language" : "en",
     "@value" : "The Manufacturing Quality Troubleshooting Ontology (MQTO) provides a domain-independent semantic framework for modeling manufacturing quality inspection, failure diagnosis, and countermeasure recommendation. Building on the LIS (Lifecycle Information System) specified/actual pattern and integrating SOSA/SSN observation semantics, MQTO enables structured representation of Ishikawa (fishbone) root cause analysis across five categories: Machine, Manpower, Material, Measurement, and Method. The ontology supports both schema-level knowledge (failure types, metrics, countermeasure procedures) and instance-level data (actual observations, failure occurrences, executed remediation steps), making it applicable across diverse manufacturing domains including die-casting, injection molding, machining, and assembly processes."
@@ -543,6 +530,7 @@
     "@id" : "http://www.apache.org/licenses/LICENSE-2.0"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2026-04-16"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
@@ -623,9 +611,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "1.0.0"
-  } ],
-  "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "https://dg-assist.github.io/mqto/"
   } ]
 }, {
   "@id" : "https://w3id.org/mqto#ActuableProperty",
@@ -693,11 +678,11 @@
   }, {
     "@id" : "https://w3id.org/pko#Procedure"
   }, {
-    "@id" : "_:genid7"
+    "@id" : "_:genid4"
   }, {
-    "@id" : "_:genid8"
+    "@id" : "_:genid5"
   }, {
-    "@id" : "_:genid13"
+    "@id" : "_:genid10"
   } ]
 }, {
   "@id" : "https://w3id.org/mqto#CountermeasureExecution",
@@ -717,13 +702,13 @@
   }, {
     "@id" : "https://w3id.org/pko#ProcedureExecution"
   }, {
+    "@id" : "_:genid11"
+  }, {
+    "@id" : "_:genid12"
+  }, {
+    "@id" : "_:genid13"
+  }, {
     "@id" : "_:genid14"
-  }, {
-    "@id" : "_:genid15"
-  }, {
-    "@id" : "_:genid16"
-  }, {
-    "@id" : "_:genid17"
   } ]
 }, {
   "@id" : "https://w3id.org/mqto#CountermeasureStep",
@@ -761,7 +746,7 @@
   }, {
     "@id" : "https://w3id.org/pko#StepExecution"
   }, {
-    "@id" : "_:genid18"
+    "@id" : "_:genid15"
   } ]
 }, {
   "@id" : "https://w3id.org/mqto#DataEvent",
@@ -788,17 +773,17 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Specified"
   }, {
+    "@id" : "_:genid16"
+  }, {
+    "@id" : "_:genid17"
+  }, {
+    "@id" : "_:genid18"
+  }, {
     "@id" : "_:genid19"
   }, {
     "@id" : "_:genid20"
   }, {
     "@id" : "_:genid21"
-  }, {
-    "@id" : "_:genid22"
-  }, {
-    "@id" : "_:genid23"
-  }, {
-    "@id" : "_:genid24"
   } ]
 }, {
   "@id" : "https://w3id.org/mqto#FailureOccurrence",
@@ -814,11 +799,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Actual"
   }, {
-    "@id" : "_:genid25"
+    "@id" : "_:genid22"
   }, {
-    "@id" : "_:genid26"
+    "@id" : "_:genid23"
   }, {
-    "@id" : "_:genid27"
+    "@id" : "_:genid24"
   } ]
 }, {
   "@id" : "https://w3id.org/mqto#IshikawaItem",
@@ -834,11 +819,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Specified"
   }, {
-    "@id" : "_:genid28"
+    "@id" : "_:genid25"
   }, {
-    "@id" : "_:genid29"
+    "@id" : "_:genid26"
   }, {
-    "@id" : "_:genid30"
+    "@id" : "_:genid27"
   } ]
 }, {
   "@id" : "https://w3id.org/mqto#List",
@@ -870,20 +855,22 @@
   }, {
     "@id" : "https://w3id.org/mqto#IshikawaItem"
   }, {
-    "@id" : "_:genid31"
+    "@id" : "_:genid28"
   } ]
 }, {
   "@id" : "https://w3id.org/mqto#Manpower",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Workforce, operators, and personnel involved in manufacturing (the 'M' in Ishikawa's Manpower). Represents the specified human resource roles that contribute to manufacturing processes. Domain-specific ontologies can define specific roles such as machine operators, quality inspectors, and process engineers. Manpower can be associated with Failure Modes and Metrics, and participates in Methods as a contributing factor."
+    "@value" : "Workforce, operators, and personnel involved in manufacturing (the 'M' in Ishikawa's Manpower). As a subclass of lis:Person, Manpower represents human individuals in manufacturing roles. Represents the specified human resource roles that contribute to manufacturing processes. Domain-specific ontologies can define specific roles such as machine operators, quality inspectors, and process engineers, following the LIS-recommended pattern of subclassing lis:Person with role restrictions. Manpower can be associated with Failure Modes and Metrics, and participates in Methods as a contributing factor."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Manpower"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Person"
+  }, {
     "@id" : "https://w3id.org/mqto#IshikawaItem"
   } ]
 }, {
@@ -902,7 +889,7 @@
   }, {
     "@id" : "https://w3id.org/mqto#IshikawaItem"
   }, {
-    "@id" : "_:genid32"
+    "@id" : "_:genid29"
   } ]
 }, {
   "@id" : "https://w3id.org/mqto#Measurement",
@@ -936,11 +923,11 @@
   }, {
     "@id" : "https://w3id.org/mqto#IshikawaItem"
   }, {
-    "@id" : "_:genid33"
+    "@id" : "_:genid30"
   }, {
-    "@id" : "_:genid34"
+    "@id" : "_:genid31"
   }, {
-    "@id" : "_:genid35"
+    "@id" : "_:genid32"
   } ]
 }, {
   "@id" : "https://w3id.org/mqto#Metric",
@@ -956,11 +943,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Specified"
   }, {
-    "@id" : "_:genid40"
+    "@id" : "_:genid37"
   }, {
-    "@id" : "_:genid41"
+    "@id" : "_:genid38"
   }, {
-    "@id" : "_:genid42"
+    "@id" : "_:genid39"
   } ]
 }, {
   "@id" : "https://w3id.org/mqto#MetricAssessment",
@@ -976,15 +963,15 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Actual"
   }, {
+    "@id" : "_:genid40"
+  }, {
+    "@id" : "_:genid41"
+  }, {
+    "@id" : "_:genid42"
+  }, {
     "@id" : "_:genid43"
   }, {
     "@id" : "_:genid44"
-  }, {
-    "@id" : "_:genid45"
-  }, {
-    "@id" : "_:genid46"
-  }, {
-    "@id" : "_:genid47"
   } ],
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
@@ -1038,9 +1025,9 @@
   }, {
     "@id" : "https://w3id.org/mqto#ActualIshikawaItem"
   }, {
-    "@id" : "_:genid48"
+    "@id" : "_:genid45"
   }, {
-    "@id" : "_:genid49"
+    "@id" : "_:genid46"
   } ]
 }, {
   "@id" : "https://w3id.org/mqto#PhysicalMaterial",
@@ -1058,9 +1045,9 @@
   }, {
     "@id" : "https://w3id.org/mqto#ActualIshikawaItem"
   }, {
-    "@id" : "_:genid50"
+    "@id" : "_:genid47"
   }, {
-    "@id" : "_:genid51"
+    "@id" : "_:genid48"
   } ]
 }, {
   "@id" : "https://w3id.org/mqto#ProcessExecution",
@@ -1076,9 +1063,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/mqto#ActualIshikawaItem"
   }, {
-    "@id" : "_:genid52"
+    "@id" : "_:genid49"
   }, {
-    "@id" : "_:genid53"
+    "@id" : "_:genid50"
   } ]
 }, {
   "@id" : "https://w3id.org/mqto#Property",
@@ -1096,18 +1083,18 @@
   }, {
     "@id" : "http://www.w3.org/ns/ssn/Property"
   }, {
-    "@id" : "_:genid57"
+    "@id" : "_:genid54"
   }, {
-    "@id" : "_:genid58"
+    "@id" : "_:genid55"
   }, {
-    "@id" : "_:genid59"
+    "@id" : "_:genid56"
   } ]
 }, {
   "@id" : "https://w3id.org/mqto#Result",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "The outcome of an Observation, containing the measured value (via measValue or other result properties). Subclass of sosa:Result. MetricAssessments extract result values from these Result instances using the resultProperty meta-property to specify which data property should be read."
+    "@value" : "The outcome of an Observation or Actuation, containing measured values as data properties (e.g., sosa:hasSimpleResult or domain-specific properties). Subclass of sosa:Result. MetricAssessments extract result values from these Result instances using the resultProperty meta-property to specify which data property should be read."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1134,9 +1121,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/Specified"
   }, {
-    "@id" : "_:genid60"
+    "@id" : "_:genid57"
   }, {
-    "@id" : "_:genid61"
+    "@id" : "_:genid58"
   } ]
 }, {
   "@id" : "https://w3id.org/mqto#abortedReason",
@@ -1592,6 +1579,23 @@
     "@id" : "http://purl.org/dc/terms/identifier"
   } ]
 }, {
+  "@id" : "https://w3id.org/mqto#itemWindowSize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The number of production items (shots, batches, or cycles) over which a Metric aggregates observations for calculation. Complements timeWindowSize for item-count-based windows, e.g., 'last N shots'. Either or both window parameters may be set depending on whether the metric uses a time-based, item-based, or combined aggregation window."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/mqto#Metric"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "item window size"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
   "@id" : "https://w3id.org/mqto#lowerBound",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1604,40 +1608,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "lower bound"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#double"
-  } ]
-}, {
-  "@id" : "https://w3id.org/mqto#markdownContent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Detailed procedural instructions or documentation in Markdown format. Used for Countermeasure and CountermeasureStep to provide rich-text descriptions, images, checklists, and formatting for human-readable remediation guidance."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid1"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "markdown content"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://w3id.org/mqto#measValue",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "The numeric measured value contained in an Observation Result. Represents a single data point from a sensor or data source. This property can be referenced by Metric.resultProperty to extract values for metric calculations."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/mqto#Result"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "measurement value"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#double"
@@ -1869,23 +1839,6 @@
     "@id" : "https://w3id.org/mqto#Signal"
   } ]
 }, {
-  "@id" : "https://w3id.org/mqto#reasoningLine",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Human-readable explanation of why a particular CountermeasureExecution was selected or recommended. Documents the diagnostic reasoning chain linking observed failures to the chosen remediation procedure, supporting auditability and knowledge capture."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/mqto#CountermeasureExecution"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "reasoning line"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
   "@id" : "https://w3id.org/mqto#refersToMetric",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1939,23 +1892,6 @@
   "http://www.w3.org/2004/02/skos/core#example" : [ {
     "@language" : "en",
     "@value" : "A PLC cycle produces one Result with three data properties:\n  ex:Result_Shot042  ex:temperature  718.3 ;\n                     ex:pressure     980.0 ;\n                     ex:cycleTime     24.7 .\n\nTwo Metrics select different properties from the same Result:\n  ex:TemperatureMetric  mqto:resultProperty  ex:temperature .\n  ex:PressureMetric     mqto:resultProperty  ex:pressure .\n\nAt query time: SELECT ?value WHERE { ?metric mqto:resultProperty ?prop . ?result ?prop ?value . }"
-  } ]
-}, {
-  "@id" : "https://w3id.org/mqto#role",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "The responsible role or job function that should perform a CountermeasureStep (e.g., 'operator', 'maintenance technician', 'quality inspector'). Enables workflow assignment and ensures appropriate expertise for remediation tasks."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/mqto#CountermeasureStep"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://w3id.org/mqto#score",
@@ -2084,7 +2020,7 @@
     "@value" : "A relative ranking weight assigned to a Failure Mode or Countermeasure. For Failure Modes, indicates severity or priority. For Countermeasures, indicates effectiveness or preference. Provides anchor points for external ranking logic; the ontology does not prescribe the ranking algorithm itself."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid4"
+    "@id" : "_:genid1"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
