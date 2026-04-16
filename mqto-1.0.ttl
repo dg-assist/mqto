@@ -357,12 +357,12 @@ mqto:signalProvidedBy rdf:type owl:ObjectProperty ;
                       rdfs:label "signal provided by"@en .
 
 
-###  https://w3id.org/mqto#steps
-mqto:steps rdf:type owl:ObjectProperty ;
-           rdfs:domain mqto:Countermeasure ;
-           rdfs:range mqto:List ;
-           rdfs:comment "Links a Countermeasure to its ordered list of steps. The indirection via mqto:List enables the same CountermeasureStep to be referenced in multiple Countermeasure definitions (reuse across procedures)."@en ;
-           rdfs:label "steps"@en .
+###  https://w3id.org/mqto#hasStepList
+mqto:hasStepList rdf:type owl:ObjectProperty ;
+                 rdfs:domain mqto:Countermeasure ;
+                 rdfs:range mqto:List ;
+                 rdfs:comment "Links a Countermeasure to its ordered list of steps (mqto:List). The indirection via mqto:List enables the same CountermeasureStep to be referenced in multiple Countermeasure definitions (reuse across procedures). Named hasStepList rather than hasStep to distinguish it from pko:hasStep, which links directly to step instances rather than to a list container."@en ;
+                 rdfs:label "has step list"@en .
 
 
 ###  https://w3id.org/mqto#suggested
@@ -594,7 +594,7 @@ mqto:Countermeasure rdf:type owl:Class ;
                                     lis:Specified ,
                                     pko:Procedure ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty mqto:steps ;
+                                      owl:onProperty mqto:hasStepList ;
                                       owl:someValuesFrom mqto:List
                                     ] ,
                                     [ rdf:type owl:Restriction ;
