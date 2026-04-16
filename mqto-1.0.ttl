@@ -27,9 +27,10 @@
                                              <https://orcid.org/0000-0003-2661-5575> ,
                                              <https://orcid.org/0000-0003-3445-0504> ;
                          dcterms:created "2026-03-17"^^xsd:date ;
+                         dcterms:creator <https://orcid.org/0000-0001-9521-8907> ;
                          dcterms:description "A generalised ontology for manufacturing quality troubleshooting, applicable across different manufacturing domains. Covers both the specified (schema-level) and actual (instance-level) layers of a manufacturing process, with a focus on root cause analysis, failure diagnosis, and countermeasure recommendation."@en ;
                          dcterms:license <http://www.apache.org/licenses/LICENSE-2.0> ;
-                         dcterms:modified "2026-04-16" ;
+                         dcterms:modified "2026-04-16"^^xsd:date ;
                          dcterms:publisher <https://github.com/dg-assist> ;
                          dcterms:rights "Copyright 2026 DG Assist. Licensed under the Apache License, Version 2.0."@en ;
                          dcterms:subject "Industry 4.0"@en ,
@@ -51,8 +52,7 @@
                          rdfs:comment "Relationship to Procedural Knowledge Ontology (PKO): mqto countermeasure classes align with PKO procedure modeling patterns. mqto:Countermeasure is a subclass of pko:Procedure, representing remediation procedures in the specified layer. mqto:CountermeasureStep aligns with p-plan:Step for individual actions. In the actual layer, mqto:CountermeasureExecution extends pko:ProcedureExecution and mqto:CountermeasureStepExecution extends pko:StepExecution. Both ontologies follow a specification/execution (plan/actual) pattern, though mqto uses LIS (lis:Specified/lis:Actual with lis:implements) while PKO uses P-PLAN/PROV (with pko:executesProcedure/pko:executesStep). Key architectural difference: mqto externalizes step ordering via mqto:List containers for step reusability across procedures, while PKO embeds ordering directly in steps via pko:nextStep properties."@en ;
                          rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
                          rdfs:label "Manufacturing Quality Troubleshooting Ontology"@en ;
-                         owl:versionInfo "1.0.0" ;
-                         foaf:homepage <https://dg-assist.github.io/mqto/> .
+                         owl:versionInfo "1.0.0" .
 
 
 #################################################################
@@ -425,32 +425,20 @@ mqto:identifier rdf:type owl:DatatypeProperty ;
                 rdfs:seeAlso dcterms:identifier .
 
 
+###  https://w3id.org/mqto#itemWindowSize
+mqto:itemWindowSize rdf:type owl:DatatypeProperty ;
+                    rdfs:domain mqto:Metric ;
+                    rdfs:range xsd:integer ;
+                    rdfs:comment "The number of production items (shots, batches, or cycles) over which a Metric aggregates observations for calculation. Complements timeWindowSize for item-count-based windows, e.g., 'last N shots'. Either or both window parameters may be set depending on whether the metric uses a time-based, item-based, or combined aggregation window."@en ;
+                    rdfs:label "item window size"@en .
+
+
 ###  https://w3id.org/mqto#lowerBound
 mqto:lowerBound rdf:type owl:DatatypeProperty ;
                 rdfs:domain mqto:Metric ;
                 rdfs:range xsd:double ;
                 rdfs:comment "The minimum acceptable threshold value for a Metric, as a dimensionless double. MetricAssessments compare their calculatedValue against this bound; values below the lowerBound indicate a threshold violation. The unit of measurement is determined by the Metric's associated Signal."@en ;
                 rdfs:label "lower bound"@en .
-
-
-###  https://w3id.org/mqto#markdownContent
-mqto:markdownContent rdf:type owl:DatatypeProperty ;
-                     rdfs:domain [ rdf:type owl:Class ;
-                                   owl:unionOf ( mqto:Countermeasure
-                                                 mqto:CountermeasureStep
-                                               )
-                                 ] ;
-                     rdfs:range xsd:string ;
-                     rdfs:comment "Detailed procedural instructions or documentation in Markdown format. Used for Countermeasure and CountermeasureStep to provide rich-text descriptions, images, checklists, and formatting for human-readable remediation guidance."@en ;
-                     rdfs:label "markdown content"@en .
-
-
-###  https://w3id.org/mqto#measValue
-mqto:measValue rdf:type owl:DatatypeProperty ;
-               rdfs:domain mqto:Result ;
-               rdfs:range xsd:double ;
-               rdfs:comment "The numeric measured value contained in an Observation Result. Represents a single data point from a sensor or data source. This property can be referenced by Metric.resultProperty to extract values for metric calculations."@en ;
-               rdfs:label "measurement value"@en .
 
 
 ###  https://w3id.org/mqto#method
@@ -466,22 +454,6 @@ mqto:occurrenceTime rdf:type owl:DatatypeProperty ;
                     rdfs:range xsd:dateTime ;
                     rdfs:comment "The timestamp when this failure occurrence actually happened in the physical world. Essential for failure frequency analysis, MTBF calculations, and temporal correlation with process events and observations."@en ;
                     rdfs:label "occurrence time"@en .
-
-
-###  https://w3id.org/mqto#reasoningLine
-mqto:reasoningLine rdf:type owl:DatatypeProperty ;
-                   rdfs:domain mqto:CountermeasureExecution ;
-                   rdfs:range xsd:string ;
-                   rdfs:comment "Human-readable explanation of why a particular CountermeasureExecution was selected or recommended. Documents the diagnostic reasoning chain linking observed failures to the chosen remediation procedure, supporting auditability and knowledge capture."@en ;
-                   rdfs:label "reasoning line"@en .
-
-
-###  https://w3id.org/mqto#role
-mqto:role rdf:type owl:DatatypeProperty ;
-          rdfs:domain mqto:CountermeasureStep ;
-          rdfs:range xsd:string ;
-          rdfs:comment "The responsible role or job function that should perform a CountermeasureStep (e.g., 'operator', 'maintenance technician', 'quality inspector'). Enables workflow assignment and ensures appropriate expertise for remediation tasks."@en ;
-          rdfs:label "role"@en .
 
 
 ###  https://w3id.org/mqto#score
@@ -732,8 +704,9 @@ mqto:Machine rdf:type owl:Class ;
 
 ###  https://w3id.org/mqto#Manpower
 mqto:Manpower rdf:type owl:Class ;
-              rdfs:subClassOf mqto:IshikawaItem ;
-              rdfs:comment "Workforce, operators, and personnel involved in manufacturing (the 'M' in Ishikawa's Manpower). Represents the specified human resource roles that contribute to manufacturing processes. Domain-specific ontologies can define specific roles such as machine operators, quality inspectors, and process engineers. Manpower can be associated with Failure Modes and Metrics, and participates in Methods as a contributing factor."@en ;
+              rdfs:subClassOf lis:Person ,
+                              mqto:IshikawaItem ;
+              rdfs:comment "Workforce, operators, and personnel involved in manufacturing (the 'M' in Ishikawa's Manpower). As a subclass of lis:Person, Manpower represents human individuals in manufacturing roles. Represents the specified human resource roles that contribute to manufacturing processes. Domain-specific ontologies can define specific roles such as machine operators, quality inspectors, and process engineers, following the LIS-recommended pattern of subclassing lis:Person with role restrictions. Manpower can be associated with Failure Modes and Metrics, and participates in Methods as a contributing factor."@en ;
               rdfs:label "Manpower"@en .
 
 
@@ -925,7 +898,7 @@ mqto:Property rdf:type owl:Class ;
 ###  https://w3id.org/mqto#Result
 mqto:Result rdf:type owl:Class ;
             rdfs:subClassOf sosa:Result ;
-            rdfs:comment "The outcome of an Observation, containing the measured value (via measValue or other result properties). Subclass of sosa:Result. MetricAssessments extract result values from these Result instances using the resultProperty meta-property to specify which data property should be read."@en ;
+            rdfs:comment "The outcome of an Observation or Actuation, containing measured values as data properties (e.g., sosa:hasSimpleResult or domain-specific properties). Subclass of sosa:Result. MetricAssessments extract result values from these Result instances using the resultProperty meta-property to specify which data property should be read."@en ;
             rdfs:label "Result"@en ;
             <http://www.w3.org/2004/02/skos/core#example> """A die-casting shot produces one Result per PLC cycle carrying multiple process values:
   ex:Result_Shot042  a mqto:Result ;
@@ -978,12 +951,6 @@ mqto:Signal rdf:type owl:Class ;
                                                  foaf:Person ;
                                         foaf:name "Erwin Filtz" ;
                                         <https://schema.org/affiliation> <https://www.siemens.at/> .
-
-
-###  https://w3id.org/mqto
-<https://w3id.org/mqto> rdf:type owl:NamedIndividual ;
-                        dcterms:creator <https://orcid.org/0000-0001-9521-8907> .
-
 
 ###  https://w3id.org/mqto#nil
 mqto:nil rdf:type owl:NamedIndividual ,
