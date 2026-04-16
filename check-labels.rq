@@ -1,3 +1,9 @@
+# This SPARQL query checks for entities in the MQTO ontology
+# that are of type owl:Class, owl:ObjectProperty, or owl:DatatypeProperty
+# and do not have an rdfs:label.
+# It filters for entities that are within the MQTO namespace
+# and orders the results by type and entity.
+
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX mqto: <https://w3id.org/mqto#>

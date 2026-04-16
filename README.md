@@ -56,11 +56,21 @@ MQTO occupies the middle layer in a three-layer architecture:
 
 ### Validation
 
-**Tools required:** Apache Jena (for SPARQL), pyshacl (optional)
+**Tools required** for validation:
+- [Apache Jena](https://jena.apache.org/) (for SPARQL)
+- [pySHACL](https://github.com/RDFLib/pySHACL) (optional)
+
+**Validation queries** are available as `.rq` files in the repository for checking ontology completeness:
+- `check-labels.rq` – validates that all entities have labels
+- `check-definitions.rq` – validates that all entities have definitions
+
+#### Linux / macOS
 
 ```bash
 # Syntax validation
 rapper -i turtle -o ntriples mqto-1.0.ttl > /dev/null
+# or, alternatively (if you're already using Apache Jena)
+riot --validate mqto-1.0.ttl
 
 # Check for missing labels
 sparql --data=mqto-1.0.ttl --query=check-labels.rq
@@ -72,7 +82,23 @@ sparql --data=mqto-1.0.ttl --query=check-definitions.rq
 pyshacl -s shapes.ttl -df turtle mqto-1.0.ttl
 ```
 
-**Validation queries** are available in the repository for checking ontology completeness.
+#### Windows
+
+```powershell
+# Syntax validation
+rapper -i turtle -o ntriples mqto-1.0.ttl > $null
+# or, alternatively (if you're already using Apache Jena)
+riot --validate mqto-1.0.ttl
+
+# Check for missing labels
+sparql --data=mqto-1.0.ttl --query=check-labels.rq
+
+# Check for missing definitions
+sparql --data=mqto-1.0.ttl --query=check-definitions.rq
+
+# SHACL validation (if shapes defined)
+pyshacl -s shapes.ttl -df turtle mqto-1.0.ttl
+```
 
 ## License
 
