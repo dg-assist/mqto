@@ -12,13 +12,13 @@ SELECT ?failureType ?failureLabel (COUNT(?occurrence) AS ?count)
 WHERE {
   ?occurrence a mqto:FailureOccurrence ;
               lis:implements ?failureType ;
-              mqto:viewTime ?viewTime .
+              mqto:occurrenceTime ?occurrenceTime .
 
   ?failureType rdfs:label ?failureLabel .
 
   # Time filter: occurrences in the last 30 days
-  FILTER(?viewTime >= "2026-03-01T00:00:00"^^xsd:dateTime &&
-         ?viewTime <= "2026-03-31T23:59:59"^^xsd:dateTime)
+  FILTER(?occurrenceTime >= "2026-03-01T00:00:00"^^xsd:dateTime &&
+         ?occurrenceTime <= "2026-03-31T23:59:59"^^xsd:dateTime)
 
   # Optional: Filter by context (uncomment to use)
   # OPTIONAL {

@@ -8,7 +8,7 @@ PREFIX mqto: <https://w3id.org/mqto#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX lis: <http://rds.posccaesar.org/ontology/lis14/rdl/>
 
-SELECT ?metricAssessment ?metric ?metricLabel ?calculatedValue ?failureOccurrence ?failureType ?failureLabel ?viewTime
+SELECT ?metricAssessment ?metric ?metricLabel ?calculatedValue ?failureOccurrence ?failureType ?failureLabel ?occurrenceTime
 WHERE {
   # Find metric assessments that raised failures
   ?metricAssessment a mqto:MetricAssessment ;
@@ -21,8 +21,8 @@ WHERE {
   # Retrieve the failure occurrence details
   ?failureOccurrence a mqto:FailureOccurrence ;
                      lis:implements ?failureType ;
-                     mqto:viewTime ?viewTime .
+                     mqto:occurrenceTime ?occurrenceTime .
 
   ?failureType rdfs:label ?failureLabel .
 }
-ORDER BY DESC(?viewTime)
+ORDER BY DESC(?occurrenceTime)

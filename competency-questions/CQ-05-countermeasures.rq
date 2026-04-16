@@ -7,7 +7,7 @@ PREFIX mqto: <https://w3id.org/mqto#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX lis: <http://rds.posccaesar.org/ontology/lis14/rdl/>
 
-SELECT ?countermeasure ?cmLabel ?step ?stepLabel ?execution ?executionTime ?rejected
+SELECT ?countermeasure ?cmLabel ?step ?stepLabel ?execution ?executionTime ?abortedTime ?abortedReason
 WHERE {
   # Bind the target failure to investigate
   BIND(<https://w3id.org/mqto/example#Porosity> AS ?targetFailure)
@@ -16,9 +16,9 @@ WHERE {
   ?targetFailure mqto:mitigatedBy ?countermeasure .
   ?countermeasure rdfs:label ?cmLabel .
 
-  # Retrieve the steps for this countermeasure
+  # Retrieve the steps for this countermeasure via the List container
   OPTIONAL {
-    ?countermeasure mqto:steps ?stepList .
+    ?countermeasure mqto:hasStepList ?stepList .
     ?stepList mqto:first ?step .
     # Note: Full list traversal would require recursive querying or property paths
     ?step rdfs:label ?stepLabel .
@@ -30,9 +30,9 @@ WHERE {
                lis:implements ?countermeasure ;
                mqto:startTime ?executionTime .
 
-    OPTIONAL {
-      ?execution mqto:rejected ?rejected .
-    }
+    # Check if execution was aborted
+    OPTIONAL { ?execution mqto:abortedTime ?abortedTime . }
+    OPTIONAL { ?execution mqto:abortedReason ?abortedReason . }
   }
 }
 ORDER BY ?cmLabel ?stepLabel

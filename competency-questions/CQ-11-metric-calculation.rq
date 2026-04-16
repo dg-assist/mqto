@@ -6,7 +6,7 @@
 PREFIX mqto: <https://w3id.org/mqto#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-SELECT ?metric ?metricLabel ?method ?signal ?signalLabel ?timeWindowSize ?lowerBound ?upperBound ?resultProperty
+SELECT ?metric ?metricLabel ?method ?signal ?signalLabel ?timeWindowSize ?itemWindowSize ?lowerBound ?upperBound ?resultProperty
 WHERE {
   # Bind the target metric to investigate
   BIND(<https://w3id.org/mqto/example#TemperatureDeviation> AS ?metric)
@@ -25,9 +25,14 @@ WHERE {
     ?signal rdfs:label ?signalLabel .
   }
 
-  # Time window for aggregation
+  # Time-based window for aggregation (e.g., "PT5M" for 5 minutes)
   OPTIONAL {
     ?metric mqto:timeWindowSize ?timeWindowSize .
+  }
+
+  # Item-count-based window for aggregation (e.g., last N shots/cycles)
+  OPTIONAL {
+    ?metric mqto:itemWindowSize ?itemWindowSize .
   }
 
   # Threshold bounds

@@ -34,7 +34,7 @@ WHERE {
     # Determine participant type
     OPTIONAL {
       ?participant a ?participantType .
-      FILTER(?participantType IN (mqto:PhysicalMachine, mqto:MaterialChunk))
+      FILTER(?participantType IN (mqto:PhysicalMachine, mqto:PhysicalMaterial))
     }
   }
 }

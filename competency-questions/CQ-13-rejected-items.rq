@@ -1,38 +1,19 @@
-# CQ-13: Was a detected failure or a suggested countermeasure rejected by the user?
+# CQ-13: Was a suggested countermeasure or step execution aborted?
 #
-# This query identifies failures and countermeasures that were rejected, indicating
-# false positives or inapplicable suggestions.
+# This query identifies countermeasure executions and step executions that were
+# aborted before completion, indicating inapplicable or unsuccessful remediation
+# attempts. Uses mqto:abortedTime and mqto:abortedReason to detect and explain aborts.
 
 PREFIX mqto: <https://w3id.org/mqto#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX lis: <http://rds.posccaesar.org/ontology/lis14/rdl/>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-SELECT ?item ?itemType ?itemLabel ?rejectedValue ?viewTime ?note
+SELECT ?item ?itemType ?itemLabel ?abortedTime ?abortedReason
 WHERE {
   {
-    # Rejected failure occurrences
-    ?item a mqto:FailureOccurrence ;
-          mqto:rejected ?rejectedValue ;
-          mqto:viewTime ?viewTime .
-
-    BIND("FailureOccurrence" AS ?itemType)
-
-    OPTIONAL {
-      ?item lis:implements ?failureSpec .
-      ?failureSpec rdfs:label ?itemLabel .
-    }
-
-    OPTIONAL {
-      ?item mqto:note ?note .
-    }
-  }
-  UNION
-  {
-    # Rejected countermeasure executions
+    # Aborted countermeasure executions
     ?item a mqto:CountermeasureExecution ;
-          mqto:rejected ?rejectedValue ;
-          mqto:startTime ?viewTime .
+          mqto:abortedTime ?abortedTime .
 
     BIND("CountermeasureExecution" AS ?itemType)
 
@@ -41,12 +22,22 @@ WHERE {
       ?cmSpec rdfs:label ?itemLabel .
     }
 
-    OPTIONAL {
-      ?item mqto:note ?note .
-    }
+    OPTIONAL { ?item mqto:abortedReason ?abortedReason . }
   }
+  UNION
+  {
+    # Aborted countermeasure step executions
+    ?item a mqto:CountermeasureStepExecution ;
+          mqto:abortedTime ?abortedTime .
 
-  # Only show rejected items
-  FILTER(?rejectedValue = true)
+    BIND("CountermeasureStepExecution" AS ?itemType)
+
+    OPTIONAL {
+      ?item lis:implements ?stepSpec .
+      ?stepSpec rdfs:label ?itemLabel .
+    }
+
+    OPTIONAL { ?item mqto:abortedReason ?abortedReason . }
+  }
 }
-ORDER BY DESC(?viewTime)
+ORDER BY DESC(?abortedTime)
