@@ -221,8 +221,7 @@ This section provides details for each class and property defined by Manufacturi
          <dt>is in domain of</dt>
          <dd>
             <a href="#mitigated" title="https://w3id.org/mqto#mitigated">mitigated</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#reasoningLine" title="https://w3id.org/mqto#reasoningLine">reasoning line</a>
-            <sup class="type-dp" title="data property">dp</sup>, <a href="#score" title="https://w3id.org/mqto#score">score</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#score" title="https://w3id.org/mqto#score">score</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#suggestedBy" title="https://w3id.org/mqto#suggestedBy">suggested by</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
@@ -253,11 +252,6 @@ This section provides details for each class and property defined by Manufacturi
                title="http://rds.posccaesar.org/ontology/lis14/rdl/Specified">specified</a>, <a href="http://purl.org/net/p-plan#Step"
                target="_blank"
                title="http://purl.org/net/p-plan#Step">step</a>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#role" title="https://w3id.org/mqto#role">role</a>
-            <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -494,13 +488,15 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#Manpower</p>
       <div class="comment">
-         <span class="markdown">Workforce, operators, and personnel involved in manufacturing (the 'M' in Ishikawa's Manpower). Represents the specified human resource roles that contribute to manufacturing processes. Domain-specific ontologies can define specific roles such as machine operators, quality inspectors, and process engineers. Manpower can be associated with Failure Modes and Metrics, and participates in Methods as a contributing factor.</span>
+         <span class="markdown">Workforce, operators, and personnel involved in manufacturing (the 'M' in Ishikawa's Manpower). As a subclass of lis:Person, Manpower represents human individuals in manufacturing roles. Represents the specified human resource roles that contribute to manufacturing processes. Domain-specific ontologies can define specific roles such as machine operators, quality inspectors, and process engineers, following the LIS-recommended pattern of subclassing lis:Person with role restrictions. Manpower can be associated with Failure Modes and Metrics, and participates in Methods as a contributing factor.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
             <a href="#IshikawaItem" title="https://w3id.org/mqto#IshikawaItem">Ishikawa Item</a>
-            <sup class="type-c" title="class">c</sup>
+            <sup class="type-c" title="class">c</sup>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Person"
+               target="_blank"
+               title="http://rds.posccaesar.org/ontology/lis14/rdl/Person">person</a>
          </dd>
       </dl>
    </div>
@@ -583,7 +579,8 @@ This section provides details for each class and property defined by Manufacturi
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#lowerBound" title="https://w3id.org/mqto#lowerBound">lower bound</a>
+            <a href="#itemWindowSize" title="https://w3id.org/mqto#itemWindowSize">item window size</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#lowerBound" title="https://w3id.org/mqto#lowerBound">lower bound</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#method" title="https://w3id.org/mqto#method">method</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#metricBelongsTo" title="https://w3id.org/mqto#metricBelongsTo">metric belongs to</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#metricReferredBy" title="https://w3id.org/mqto#metricReferredBy">metric referred by</a>
@@ -794,7 +791,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#Result</p>
       <div class="comment">
-         <span class="markdown">The outcome of an Observation, containing the measured value (via measValue or other result properties). Subclass of sosa:Result. MetricAssessments extract result values from these Result instances using the resultProperty meta-property to specify which data property should be read.</span>
+         <span class="markdown">The outcome of an Observation or Actuation, containing measured values as data properties (e.g., sosa:hasSimpleResult or domain-specific properties). Subclass of sosa:Result. MetricAssessments extract result values from these Result instances using the resultProperty meta-property to specify which data property should be read.</span>
       </div>
       <dl>
          <dt>Example</dt>
@@ -812,11 +809,6 @@ This section provides details for each class and property defined by Manufacturi
             <a href="http://www.w3.org/ns/sosa/Result"
                target="_blank"
                title="http://www.w3.org/ns/sosa/Result">result</a>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#measValue" title="https://w3id.org/mqto#measValue">measurement value</a>
-            <sup class="type-dp" title="data property">dp</sup>
          </dd>
       </dl>
    </div>
@@ -2008,25 +2000,16 @@ At query time: SELECT ?value WHERE { ?metric mqto:resultProperty ?prop . ?result
          <a href="#identifier" title="https://w3id.org/mqto#identifier">identifier</a>
       </li>
       <li>
+         <a href="#itemWindowSize" title="https://w3id.org/mqto#itemWindowSize">item window size</a>
+      </li>
+      <li>
          <a href="#lowerBound" title="https://w3id.org/mqto#lowerBound">lower bound</a>
-      </li>
-      <li>
-         <a href="#markdownContent" title="https://w3id.org/mqto#markdownContent">markdown content</a>
-      </li>
-      <li>
-         <a href="#measValue" title="https://w3id.org/mqto#measValue">measurement value</a>
       </li>
       <li>
          <a href="#method" title="https://w3id.org/mqto#method">method</a>
       </li>
       <li>
          <a href="#occurrenceTime" title="https://w3id.org/mqto#occurrenceTime">occurrence time</a>
-      </li>
-      <li>
-         <a href="#reasoningLine" title="https://w3id.org/mqto#reasoningLine">reasoning line</a>
-      </li>
-      <li>
-         <a href="#role" title="https://w3id.org/mqto#role">role</a>
       </li>
       <li>
          <a href="#score" title="https://w3id.org/mqto#score">score</a>
@@ -2223,6 +2206,32 @@ At query time: SELECT ?value WHERE { ?metric mqto:resultProperty ?prop . ?result
          <span class="markdown">A unique identifier for an entity such as a machine serial number, material batch code, signal name, or process ID. Conceptually aligned with dcterms:identifier but declared as an independent OWL DatatypeProperty (rdfs:subPropertyOf is not used because dcterms:identifier is an annotation property and OWL 2 DL does not permit a datatype property to be a subproperty of an annotation property). Enables correlation between ontology instances and external systems (ERP, MES, SCADA).</span>
       </div>
    </div>
+   <div class="entity" id="itemWindowSize">
+      <h3>item window size<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#itemWindowSize</p>
+      <div class="comment">
+         <span class="markdown">The number of production items (shots, batches, or cycles) over which a Metric aggregates observations for calculation. Complements timeWindowSize for item-count-based windows, e.g., 'last N shots'. Either or both window parameters may be set depending on whether the metric uses a time-based, item-based, or combined aggregation window.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#Metric" title="https://w3id.org/mqto#Metric">Metric</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#integer"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="lowerBound">
       <h3>lower bound<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -2238,61 +2247,6 @@ At query time: SELECT ?value WHERE { ?metric mqto:resultProperty ?prop . ?result
             <dt>has domain</dt>
             <dd>
                <a href="#Metric" title="https://w3id.org/mqto#Metric">Metric</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#double"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#double">double</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="markdownContent">
-      <h3>markdown content<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/mqto#markdownContent</p>
-      <div class="comment">
-         <span class="markdown">Detailed procedural instructions or documentation in Markdown format. Used for Countermeasure and CountermeasureStep to provide rich-text descriptions, images, checklists, and formatting for human-readable remediation guidance.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Countermeasure" title="https://w3id.org/mqto#Countermeasure">Countermeasure</a>
-               <sup class="type-c" title="class">c</sup> 
-               <span class="logic">or</span> 
-               <a href="#CountermeasureStep" title="https://w3id.org/mqto#CountermeasureStep">Countermeasure Step</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="measValue">
-      <h3>measurement value<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/mqto#measValue</p>
-      <div class="comment">
-         <span class="markdown">The numeric measured value contained in an Observation Result. Represents a single data point from a sensor or data source. This property can be referenced by Metric.resultProperty to extract values for metric calculations.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Result" title="https://w3id.org/mqto#Result">Result</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -2346,58 +2300,6 @@ At query time: SELECT ?value WHERE { ?metric mqto:resultProperty ?prop . ?result
                <a href="http://www.w3.org/2001/XMLSchema#dateTime"
                   target="_blank"
                   title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="reasoningLine">
-      <h3>reasoning line<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/mqto#reasoningLine</p>
-      <div class="comment">
-         <span class="markdown">Human-readable explanation of why a particular CountermeasureExecution was selected or recommended. Documents the diagnostic reasoning chain linking observed failures to the chosen remediation procedure, supporting auditability and knowledge capture.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#CountermeasureExecution" title="https://w3id.org/mqto#CountermeasureExecution">Countermeasure Execution</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="role">
-      <h3>role<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/mqto#role</p>
-      <div class="comment">
-         <span class="markdown">The responsible role or job function that should perform a CountermeasureStep (e.g., 'operator', 'maintenance technician', 'quality inspector'). Enables workflow assignment and ensures appropriate expertise for remediation tasks.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#CountermeasureStep" title="https://w3id.org/mqto#CountermeasureStep">Countermeasure Step</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
             </dd>
          </dl>
       </div>

@@ -1,0 +1,283 @@
+{
+  "@context" : {
+    "signalProvidedBy" : {
+      "@id" : "https://w3id.org/mqto#signalProvidedBy"
+    },
+    "implements" : {
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/implements"
+    },
+    "ActuableProperty" : {
+      "@id" : "https://w3id.org/mqto#ActuableProperty"
+    },
+    "QuantityValue" : {
+      "@id" : "http://qudt.org/schema/qudt/QuantityValue"
+    },
+    "FailureMode" : {
+      "@id" : "https://w3id.org/mqto#FailureMode"
+    },
+    "score" : {
+      "@id" : "https://w3id.org/mqto#score"
+    },
+    "causedBy" : {
+      "@id" : "https://w3id.org/mqto#causedBy"
+    },
+    "causesWeakly" : {
+      "@id" : "https://w3id.org/mqto#causesWeakly"
+    },
+    "lowerBound" : {
+      "@id" : "https://w3id.org/mqto#lowerBound"
+    },
+    "mitigates" : {
+      "@id" : "https://w3id.org/mqto#mitigates"
+    },
+    "impurityPct" : {
+      "@id" : "https://w3id.org/mqto/example#impurityPct"
+    },
+    "CountermeasureStepExecution" : {
+      "@id" : "https://w3id.org/mqto#CountermeasureStepExecution"
+    },
+    "hasActivityPart" : {
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart"
+    },
+    "Material" : {
+      "@id" : "https://w3id.org/mqto#Material"
+    },
+    "abortedReason" : {
+      "@id" : "https://w3id.org/mqto#abortedReason"
+    },
+    "basedOn" : {
+      "@id" : "https://w3id.org/mqto#basedOn"
+    },
+    "calculatedTime" : {
+      "@id" : "https://w3id.org/mqto#calculatedTime"
+    },
+    "hasMetric" : {
+      "@id" : "https://w3id.org/mqto#hasMetric"
+    },
+    "actsOnProperty" : {
+      "@id" : "http://www.w3.org/ns/sosa/actsOnProperty"
+    },
+    "refersToMetric" : {
+      "@id" : "https://w3id.org/mqto#refersToMetric"
+    },
+    "ProcessExecution" : {
+      "@id" : "https://w3id.org/mqto#ProcessExecution"
+    },
+    "resultProperty" : {
+      "@id" : "https://w3id.org/mqto#resultProperty"
+    },
+    "suggestedBy" : {
+      "@id" : "https://w3id.org/mqto#suggestedBy"
+    },
+    "CountermeasureExecution" : {
+      "@id" : "https://w3id.org/mqto#CountermeasureExecution"
+    },
+    "FailureOccurrence" : {
+      "@id" : "https://w3id.org/mqto#FailureOccurrence"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "numericValue" : {
+      "@id" : "http://qudt.org/schema/qudt/numericValue"
+    },
+    "method" : {
+      "@id" : "https://w3id.org/mqto#method"
+    },
+    "calculatedFor" : {
+      "@id" : "https://w3id.org/mqto#calculatedFor"
+    },
+    "failureBelongsTo" : {
+      "@id" : "https://w3id.org/mqto#failureBelongsTo"
+    },
+    "Result" : {
+      "@id" : "https://w3id.org/mqto#Result"
+    },
+    "Measurement" : {
+      "@id" : "https://w3id.org/mqto#Measurement"
+    },
+    "Signal" : {
+      "@id" : "https://w3id.org/mqto#Signal"
+    },
+    "causedByModerately" : {
+      "@id" : "https://w3id.org/mqto#causedByModerately"
+    },
+    "causedByStrongly" : {
+      "@id" : "https://w3id.org/mqto#causedByStrongly"
+    },
+    "rest" : {
+      "@id" : "https://w3id.org/mqto#rest"
+    },
+    "assessmentValue" : {
+      "@id" : "https://w3id.org/mqto#assessmentValue"
+    },
+    "hasStepList" : {
+      "@id" : "https://w3id.org/mqto#hasStepList"
+    },
+    "Manpower" : {
+      "@id" : "https://w3id.org/mqto#Manpower"
+    },
+    "resultTime" : {
+      "@id" : "http://www.w3.org/ns/sosa/resultTime"
+    },
+    "abortedTime" : {
+      "@id" : "https://w3id.org/mqto#abortedTime"
+    },
+    "occurrenceTime" : {
+      "@id" : "https://w3id.org/mqto#occurrenceTime"
+    },
+    "MetricAssessment" : {
+      "@id" : "https://w3id.org/mqto#MetricAssessment"
+    },
+    "hasFailure" : {
+      "@id" : "https://w3id.org/mqto#hasFailure"
+    },
+    "causes" : {
+      "@id" : "https://w3id.org/mqto#causes"
+    },
+    "startTime" : {
+      "@id" : "https://w3id.org/mqto#startTime"
+    },
+    "previousStepExecution" : {
+      "@id" : "https://w3id.org/pko#previousStepExecution"
+    },
+    "temperature" : {
+      "@id" : "https://w3id.org/mqto/example#temperature"
+    },
+    "completionTime" : {
+      "@id" : "https://w3id.org/mqto#completionTime"
+    },
+    "Method" : {
+      "@id" : "https://w3id.org/mqto#Method"
+    },
+    "identifier" : {
+      "@id" : "https://w3id.org/mqto#identifier"
+    },
+    "PhysicalMachine" : {
+      "@id" : "https://w3id.org/mqto#PhysicalMachine"
+    },
+    "causesStrongly" : {
+      "@id" : "https://w3id.org/mqto#causesStrongly"
+    },
+    "nextStepExecution" : {
+      "@id" : "https://w3id.org/pko#nextStepExecution"
+    },
+    "activityPartOf" : {
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf"
+    },
+    "Countermeasure" : {
+      "@id" : "https://w3id.org/mqto#Countermeasure"
+    },
+    "cycleTime" : {
+      "@id" : "https://w3id.org/mqto/example#cycleTime"
+    },
+    "hasResult" : {
+      "@id" : "http://www.w3.org/ns/sosa/hasResult"
+    },
+    "mitigatedBy" : {
+      "@id" : "https://w3id.org/mqto#mitigatedBy"
+    },
+    "usedProcedure" : {
+      "@id" : "http://www.w3.org/ns/sosa/usedProcedure"
+    },
+    "Metric" : {
+      "@id" : "https://w3id.org/mqto#Metric"
+    },
+    "hasParticipant" : {
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"
+    },
+    "raised" : {
+      "@id" : "https://w3id.org/mqto#raised"
+    },
+    "hasFeatureOfInterest" : {
+      "@id" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest"
+    },
+    "metricBelongsTo" : {
+      "@id" : "https://w3id.org/mqto#metricBelongsTo"
+    },
+    "itemWindowSize" : {
+      "@id" : "https://w3id.org/mqto#itemWindowSize"
+    },
+    "List" : {
+      "@id" : "https://w3id.org/mqto#List"
+    },
+    "upperBound" : {
+      "@id" : "https://w3id.org/mqto#upperBound"
+    },
+    "raisedBy" : {
+      "@id" : "https://w3id.org/mqto#raisedBy"
+    },
+    "observedProperty" : {
+      "@id" : "http://www.w3.org/ns/sosa/observedProperty"
+    },
+    "mitigated" : {
+      "@id" : "https://w3id.org/mqto#mitigated"
+    },
+    "unit" : {
+      "@id" : "http://qudt.org/schema/qudt/unit"
+    },
+    "isPropertyOf" : {
+      "@id" : "http://www.w3.org/ns/ssn/isPropertyOf"
+    },
+    "pressure" : {
+      "@id" : "https://w3id.org/mqto/example#pressure"
+    },
+    "evaluatesProperty" : {
+      "@id" : "https://w3id.org/mqto#evaluatesProperty"
+    },
+    "causedByWeakly" : {
+      "@id" : "https://w3id.org/mqto#causedByWeakly"
+    },
+    "endTime" : {
+      "@id" : "https://w3id.org/mqto#endTime"
+    },
+    "ObservableProperty" : {
+      "@id" : "https://w3id.org/mqto#ObservableProperty"
+    },
+    "causesModerately" : {
+      "@id" : "https://w3id.org/mqto#causesModerately"
+    },
+    "includesStepExecution" : {
+      "@id" : "https://w3id.org/pko#includesStepExecution"
+    },
+    "Machine" : {
+      "@id" : "https://w3id.org/mqto#Machine"
+    },
+    "appearedOn" : {
+      "@id" : "https://w3id.org/mqto#appearedOn"
+    },
+    "Actuation" : {
+      "@id" : "https://w3id.org/mqto#Actuation"
+    },
+    "PhysicalMaterial" : {
+      "@id" : "https://w3id.org/mqto#PhysicalMaterial"
+    },
+    "readsFrom" : {
+      "@id" : "https://w3id.org/mqto#readsFrom"
+    },
+    "timeWindowSize" : {
+      "@id" : "https://w3id.org/mqto#timeWindowSize"
+    },
+    "weight" : {
+      "@id" : "https://w3id.org/mqto#weight"
+    },
+    "CountermeasureStep" : {
+      "@id" : "https://w3id.org/mqto#CountermeasureStep"
+    },
+    "calculatedValue" : {
+      "@id" : "https://w3id.org/mqto#calculatedValue"
+    },
+    "first" : {
+      "@id" : "https://w3id.org/mqto#first"
+    },
+    "providesSignal" : {
+      "@id" : "https://w3id.org/mqto#providesSignal"
+    },
+    "Observation" : {
+      "@id" : "https://w3id.org/mqto#Observation"
+    },
+    "hasSimpleResult" : {
+      "@id" : "http://www.w3.org/ns/sosa/hasSimpleResult"
+    }
+  }
+}
