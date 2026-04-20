@@ -1,0 +1,2067 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:pko="https://w3id.org/pko#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdl="http://rds.posccaesar.org/ontology/lis14/rdl/"
+     xmlns:ssn="http://www.w3.org/ns/ssn/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:mqto="https://w3id.org/mqto#"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:sosa="http://www.w3.org/ns/sosa/"
+     xmlns:example="https://w3id.org/mqto/example#">
+    <Ontology/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://qudt.org/schema/qudt/numericValue -->
+
+
+    <AnnotationProperty rdf:about="http://qudt.org/schema/qudt/numericValue"/>
+    
+
+
+    <!-- http://qudt.org/schema/qudt/unit -->
+
+
+    <AnnotationProperty rdf:about="http://qudt.org/schema/qudt/unit"/>
+    
+
+
+    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf -->
+
+
+    <AnnotationProperty rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf"/>
+    
+
+
+    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart -->
+
+
+    <AnnotationProperty rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart"/>
+    
+
+
+    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant -->
+
+
+    <AnnotationProperty rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"/>
+    
+
+
+    <!-- http://rds.posccaesar.org/ontology/lis14/rdl/implements -->
+
+
+    <AnnotationProperty rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/implements"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/actsOnProperty -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/sosa/actsOnProperty"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasFeatureOfInterest -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasResult -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/sosa/hasResult"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/hasSimpleResult -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/sosa/hasSimpleResult"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/observedProperty -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/sosa/observedProperty"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/resultTime -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/sosa/resultTime"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/usedProcedure -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/sosa/usedProcedure"/>
+    
+
+
+    <!-- http://www.w3.org/ns/ssn/isPropertyOf -->
+
+
+    <AnnotationProperty rdf:about="http://www.w3.org/ns/ssn/isPropertyOf"/>
+    
+
+
+    <!-- https://w3id.org/mqto#abortedReason -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#abortedReason"/>
+    
+
+
+    <!-- https://w3id.org/mqto#abortedTime -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#abortedTime"/>
+    
+
+
+    <!-- https://w3id.org/mqto#appearedOn -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#appearedOn"/>
+    
+
+
+    <!-- https://w3id.org/mqto#assessmentValue -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#assessmentValue"/>
+    
+
+
+    <!-- https://w3id.org/mqto#basedOn -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#basedOn"/>
+    
+
+
+    <!-- https://w3id.org/mqto#calculatedFor -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#calculatedFor"/>
+    
+
+
+    <!-- https://w3id.org/mqto#calculatedTime -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#calculatedTime"/>
+    
+
+
+    <!-- https://w3id.org/mqto#calculatedValue -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#calculatedValue"/>
+    
+
+
+    <!-- https://w3id.org/mqto#causedBy -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#causedBy"/>
+    
+
+
+    <!-- https://w3id.org/mqto#causedByModerately -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#causedByModerately"/>
+    
+
+
+    <!-- https://w3id.org/mqto#causedByStrongly -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#causedByStrongly"/>
+    
+
+
+    <!-- https://w3id.org/mqto#causedByWeakly -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#causedByWeakly"/>
+    
+
+
+    <!-- https://w3id.org/mqto#causes -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#causes"/>
+    
+
+
+    <!-- https://w3id.org/mqto#causesModerately -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#causesModerately"/>
+    
+
+
+    <!-- https://w3id.org/mqto#causesStrongly -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#causesStrongly"/>
+    
+
+
+    <!-- https://w3id.org/mqto#causesWeakly -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#causesWeakly"/>
+    
+
+
+    <!-- https://w3id.org/mqto#completionTime -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#completionTime"/>
+    
+
+
+    <!-- https://w3id.org/mqto#endTime -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#endTime"/>
+    
+
+
+    <!-- https://w3id.org/mqto#evaluatesProperty -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#evaluatesProperty"/>
+    
+
+
+    <!-- https://w3id.org/mqto#failureBelongsTo -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#failureBelongsTo"/>
+    
+
+
+    <!-- https://w3id.org/mqto#first -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#first"/>
+    
+
+
+    <!-- https://w3id.org/mqto#hasFailure -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#hasFailure"/>
+    
+
+
+    <!-- https://w3id.org/mqto#hasMetric -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#hasMetric"/>
+    
+
+
+    <!-- https://w3id.org/mqto#hasStepList -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#hasStepList"/>
+    
+
+
+    <!-- https://w3id.org/mqto#identifier -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#identifier"/>
+    
+
+
+    <!-- https://w3id.org/mqto#itemWindowSize -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#itemWindowSize"/>
+    
+
+
+    <!-- https://w3id.org/mqto#lowerBound -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#lowerBound"/>
+    
+
+
+    <!-- https://w3id.org/mqto#method -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#method"/>
+    
+
+
+    <!-- https://w3id.org/mqto#metricBelongsTo -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#metricBelongsTo"/>
+    
+
+
+    <!-- https://w3id.org/mqto#mitigated -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#mitigated"/>
+    
+
+
+    <!-- https://w3id.org/mqto#mitigatedBy -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#mitigatedBy"/>
+    
+
+
+    <!-- https://w3id.org/mqto#mitigates -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#mitigates"/>
+    
+
+
+    <!-- https://w3id.org/mqto#occurrenceTime -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#occurrenceTime"/>
+    
+
+
+    <!-- https://w3id.org/mqto#providesSignal -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#providesSignal"/>
+    
+
+
+    <!-- https://w3id.org/mqto#raised -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#raised"/>
+    
+
+
+    <!-- https://w3id.org/mqto#raisedBy -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#raisedBy"/>
+    
+
+
+    <!-- https://w3id.org/mqto#readsFrom -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#readsFrom"/>
+    
+
+
+    <!-- https://w3id.org/mqto#refersToMetric -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#refersToMetric"/>
+    
+
+
+    <!-- https://w3id.org/mqto#rest -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#rest"/>
+    
+
+
+    <!-- https://w3id.org/mqto#resultProperty -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#resultProperty"/>
+    
+
+
+    <!-- https://w3id.org/mqto#score -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#score"/>
+    
+
+
+    <!-- https://w3id.org/mqto#signalProvidedBy -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#signalProvidedBy"/>
+    
+
+
+    <!-- https://w3id.org/mqto#startTime -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#startTime"/>
+    
+
+
+    <!-- https://w3id.org/mqto#suggestedBy -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#suggestedBy"/>
+    
+
+
+    <!-- https://w3id.org/mqto#timeWindowSize -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#timeWindowSize"/>
+    
+
+
+    <!-- https://w3id.org/mqto#upperBound -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#upperBound"/>
+    
+
+
+    <!-- https://w3id.org/mqto#weight -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/mqto#weight"/>
+    
+
+
+    <!-- https://w3id.org/pko#includesStepExecution -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/pko#includesStepExecution"/>
+    
+
+
+    <!-- https://w3id.org/pko#nextStepExecution -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/pko#nextStepExecution"/>
+    
+
+
+    <!-- https://w3id.org/pko#previousStepExecution -->
+
+
+    <AnnotationProperty rdf:about="https://w3id.org/pko#previousStepExecution"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#duration -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#duration"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/mqto/example#cycleTime -->
+
+
+    <DatatypeProperty rdf:about="https://w3id.org/mqto/example#cycleTime">
+        <rdfs:label xml:lang="en">cycle time</rdfs:label>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mqto/example#impurityPct -->
+
+
+    <DatatypeProperty rdf:about="https://w3id.org/mqto/example#impurityPct">
+        <rdfs:label xml:lang="en">impurity percentage</rdfs:label>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mqto/example#pressure -->
+
+
+    <DatatypeProperty rdf:about="https://w3id.org/mqto/example#pressure">
+        <rdfs:label xml:lang="en">pressure</rdfs:label>
+    </DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/mqto/example#temperature -->
+
+
+    <DatatypeProperty rdf:about="https://w3id.org/mqto/example#temperature">
+        <rdfs:label xml:lang="en">temperature</rdfs:label>
+    </DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://qudt.org/schema/qudt/QuantityValue -->
+
+
+    <Class rdf:about="http://qudt.org/schema/qudt/QuantityValue"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Actuation -->
+
+
+    <Class rdf:about="http://www.w3.org/ns/sosa/Actuation"/>
+    
+
+
+    <!-- http://www.w3.org/ns/sosa/Observation -->
+
+
+    <Class rdf:about="http://www.w3.org/ns/sosa/Observation"/>
+    
+
+
+    <!-- https://w3id.org/mqto#ActuableProperty -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#ActuableProperty"/>
+    
+
+
+    <!-- https://w3id.org/mqto#Actuation -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#Actuation"/>
+    
+
+
+    <!-- https://w3id.org/mqto#Countermeasure -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#Countermeasure"/>
+    
+
+
+    <!-- https://w3id.org/mqto#CountermeasureExecution -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#CountermeasureExecution"/>
+    
+
+
+    <!-- https://w3id.org/mqto#CountermeasureStep -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#CountermeasureStep"/>
+    
+
+
+    <!-- https://w3id.org/mqto#CountermeasureStepExecution -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#CountermeasureStepExecution"/>
+    
+
+
+    <!-- https://w3id.org/mqto#FailureMode -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#FailureMode"/>
+    
+
+
+    <!-- https://w3id.org/mqto#FailureOccurrence -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#FailureOccurrence"/>
+    
+
+
+    <!-- https://w3id.org/mqto#List -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#List"/>
+    
+
+
+    <!-- https://w3id.org/mqto#Machine -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#Machine"/>
+    
+
+
+    <!-- https://w3id.org/mqto#Manpower -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#Manpower"/>
+    
+
+
+    <!-- https://w3id.org/mqto#Material -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#Material"/>
+    
+
+
+    <!-- https://w3id.org/mqto#Measurement -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#Measurement"/>
+    
+
+
+    <!-- https://w3id.org/mqto#Method -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#Method"/>
+    
+
+
+    <!-- https://w3id.org/mqto#Metric -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#Metric"/>
+    
+
+
+    <!-- https://w3id.org/mqto#MetricAssessment -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#MetricAssessment"/>
+    
+
+
+    <!-- https://w3id.org/mqto#ObservableProperty -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#ObservableProperty"/>
+    
+
+
+    <!-- https://w3id.org/mqto#Observation -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#Observation"/>
+    
+
+
+    <!-- https://w3id.org/mqto#PhysicalMachine -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#PhysicalMachine"/>
+    
+
+
+    <!-- https://w3id.org/mqto#PhysicalMaterial -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#PhysicalMaterial"/>
+    
+
+
+    <!-- https://w3id.org/mqto#ProcessExecution -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#ProcessExecution"/>
+    
+
+
+    <!-- https://w3id.org/mqto#Result -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#Result"/>
+    
+
+
+    <!-- https://w3id.org/mqto#Signal -->
+
+
+    <Class rdf:about="https://w3id.org/mqto#Signal"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/mqto/example#Act001 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Act001">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+        <rdf:type rdf:resource="https://w3id.org/mqto#Actuation"/>
+        <sosa:actsOnProperty rdf:resource="https://w3id.org/mqto/example#Machine4115_FurnaceSetpoint"/>
+        <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <sosa:hasResult rdf:resource="https://w3id.org/mqto/example#Result_Act001"/>
+        <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">710.0</sosa:hasSimpleResult>
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T10:50:00</sosa:resultTime>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#AdjustFurnaceSetpoint -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#AdjustFurnaceSetpoint">
+        <rdf:type rdf:resource="https://w3id.org/mqto#CountermeasureStep"/>
+        <rdfs:label xml:lang="en">Adjust furnace setpoint</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#AdjustMeltTemp -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#AdjustMeltTemp">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Countermeasure"/>
+        <rdl:hasParticipant rdf:resource="https://w3id.org/mqto/example#DieCastingCell"/>
+        <rdfs:label xml:lang="en">Adjust melt holding temperature to alloy specification</rdfs:label>
+        <mqto:hasStepList rdf:resource="https://w3id.org/mqto/example#AdjustMeltTemp_List1"/>
+        <mqto:mitigates rdf:resource="https://w3id.org/mqto/example#MeltTempTooHigh"/>
+        <mqto:mitigates rdf:resource="https://w3id.org/mqto/example#Porosity"/>
+        <mqto:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</mqto:weight>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#AdjustMeltTemp_List1 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#AdjustMeltTemp_List1">
+        <rdf:type rdf:resource="https://w3id.org/mqto#List"/>
+        <mqto:first rdf:resource="https://w3id.org/mqto/example#CheckCurrentTemp"/>
+        <mqto:rest rdf:resource="https://w3id.org/mqto/example#AdjustMeltTemp_List2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#AdjustMeltTemp_List2 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#AdjustMeltTemp_List2">
+        <rdf:type rdf:resource="https://w3id.org/mqto#List"/>
+        <mqto:first rdf:resource="https://w3id.org/mqto/example#AdjustFurnaceSetpoint"/>
+        <mqto:rest rdf:resource="https://w3id.org/mqto/example#AdjustMeltTemp_List3"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#AdjustMeltTemp_List3 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#AdjustMeltTemp_List3">
+        <rdf:type rdf:resource="https://w3id.org/mqto#List"/>
+        <mqto:first rdf:resource="https://w3id.org/mqto/example#VerifyNewTemp"/>
+        <mqto:rest rdf:resource="https://w3id.org/mqto#nil"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#AdjustSlowShotDuration -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#AdjustSlowShotDuration">
+        <rdf:type rdf:resource="https://w3id.org/mqto#CountermeasureStep"/>
+        <rdfs:label xml:lang="en">Adjust slow-shot phase duration</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#AlBatch2026_0042 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#AlBatch2026_0042">
+        <rdf:type rdf:resource="https://w3id.org/mqto#PhysicalMaterial"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#AluminiumAlloy"/>
+        <rdfs:label xml:lang="en">Aluminium batch AL-2026-0042</rdfs:label>
+        <mqto:identifier>AL-2026-0042</mqto:identifier>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#AlBatch2026_0043 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#AlBatch2026_0043">
+        <rdf:type rdf:resource="https://w3id.org/mqto#PhysicalMaterial"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#AluminiumAlloy"/>
+        <rdfs:label xml:lang="en">Aluminium batch AL-2026-0043</rdfs:label>
+        <mqto:identifier>AL-2026-0043</mqto:identifier>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#AlBatch2026_0043_Impurity -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#AlBatch2026_0043_Impurity">
+        <rdf:type rdf:resource="https://w3id.org/mqto#ObservableProperty"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#ImpurityLevelSignal"/>
+        <rdfs:label xml:lang="en">Impurity level of batch AL-2026-0043</rdfs:label>
+        <ssn:isPropertyOf rdf:resource="https://w3id.org/mqto/example#AlBatch2026_0043"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#AlloyContamination -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#AlloyContamination">
+        <rdf:type rdf:resource="https://w3id.org/mqto#FailureMode"/>
+        <rdfs:label xml:lang="en">Alloy contamination</rdfs:label>
+        <mqto:causes rdf:resource="https://w3id.org/mqto/example#Porosity"/>
+        <mqto:causesModerately rdf:resource="https://w3id.org/mqto/example#Porosity"/>
+        <mqto:failureBelongsTo rdf:resource="https://w3id.org/mqto/example#AluminiumAlloy"/>
+        <mqto:mitigatedBy rdf:resource="https://w3id.org/mqto/example#ReplaceAlloyBatch"/>
+        <mqto:refersToMetric rdf:resource="https://w3id.org/mqto/example#ImpurityLevel"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#AluminiumAlloy -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#AluminiumAlloy">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Material"/>
+        <rdfs:label xml:lang="en">Aluminium alloy EN AC-46000</rdfs:label>
+        <mqto:hasFailure rdf:resource="https://w3id.org/mqto/example#AlloyContamination"/>
+        <mqto:hasMetric rdf:resource="https://w3id.org/mqto/example#ImpurityLevel"/>
+        <mqto:providesSignal rdf:resource="https://w3id.org/mqto/example#ImpurityLevelSignal"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#CE_001 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#CE_001">
+        <rdf:type rdf:resource="https://w3id.org/mqto#CountermeasureExecution"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#AdjustMeltTemp"/>
+        <mqto:endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T11:20:00</mqto:endTime>
+        <mqto:mitigated rdf:resource="https://w3id.org/mqto/example#FO_001"/>
+        <mqto:score rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.92</mqto:score>
+        <mqto:startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T10:30:00</mqto:startTime>
+        <mqto:suggestedBy rdf:resource="https://w3id.org/mqto/example#FO_001"/>
+        <pko:includesStepExecution rdf:resource="https://w3id.org/mqto/example#CSE_001"/>
+        <pko:includesStepExecution rdf:resource="https://w3id.org/mqto/example#CSE_002"/>
+        <pko:includesStepExecution rdf:resource="https://w3id.org/mqto/example#CSE_003"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#CE_002 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#CE_002">
+        <rdf:type rdf:resource="https://w3id.org/mqto#CountermeasureExecution"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#VerifyThermocouple"/>
+        <mqto:abortedReason>Thermocouple within calibration limits; no adjustment needed.</mqto:abortedReason>
+        <mqto:abortedTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-17T12:00:00</mqto:abortedTime>
+        <mqto:score rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.75</mqto:score>
+        <mqto:startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-17T11:30:00</mqto:startTime>
+        <mqto:suggestedBy rdf:resource="https://w3id.org/mqto/example#FO_003"/>
+        <pko:includesStepExecution rdf:resource="https://w3id.org/mqto/example#CSE_004"/>
+        <pko:includesStepExecution rdf:resource="https://w3id.org/mqto/example#CSE_005"/>
+        <pko:includesStepExecution rdf:resource="https://w3id.org/mqto/example#CSE_006"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#CSE_001 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#CSE_001">
+        <rdf:type rdf:resource="https://w3id.org/mqto#CountermeasureStepExecution"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#CheckCurrentTemp"/>
+        <mqto:completionTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T10:35:00</mqto:completionTime>
+        <pko:nextStepExecution rdf:resource="https://w3id.org/mqto/example#CSE_002"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#CSE_002 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#CSE_002">
+        <rdf:type rdf:resource="https://w3id.org/mqto#CountermeasureStepExecution"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#AdjustFurnaceSetpoint"/>
+        <mqto:completionTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T10:50:00</mqto:completionTime>
+        <pko:nextStepExecution rdf:resource="https://w3id.org/mqto/example#CSE_003"/>
+        <pko:previousStepExecution rdf:resource="https://w3id.org/mqto/example#CSE_001"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#CSE_003 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#CSE_003">
+        <rdf:type rdf:resource="https://w3id.org/mqto#CountermeasureStepExecution"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#VerifyNewTemp"/>
+        <mqto:completionTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T11:20:00</mqto:completionTime>
+        <pko:previousStepExecution rdf:resource="https://w3id.org/mqto/example#CSE_002"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#CSE_004 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#CSE_004">
+        <rdf:type rdf:resource="https://w3id.org/mqto#CountermeasureStepExecution"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#InspectThermocouple"/>
+        <mqto:completionTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-17T11:45:00</mqto:completionTime>
+        <pko:nextStepExecution rdf:resource="https://w3id.org/mqto/example#CSE_005"/>
+        <pko:previousStepExecution rdf:resource="https://w3id.org/mqto/example#CSE_006"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#CSE_005 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#CSE_005">
+        <rdf:type rdf:resource="https://w3id.org/mqto#CountermeasureStepExecution"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#CalibrateIfNeeded"/>
+        <mqto:abortedReason>Not needed — thermocouple readings within tolerance.</mqto:abortedReason>
+        <mqto:abortedTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-17T12:00:00</mqto:abortedTime>
+        <pko:previousStepExecution rdf:resource="https://w3id.org/mqto/example#CSE_004"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#CSE_006 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#CSE_006">
+        <rdf:type rdf:resource="https://w3id.org/mqto#CountermeasureStepExecution"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#CheckCurrentTemp"/>
+        <mqto:completionTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-17T11:35:00</mqto:completionTime>
+        <pko:nextStepExecution rdf:resource="https://w3id.org/mqto/example#CSE_004"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#CalibrateIfNeeded -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#CalibrateIfNeeded">
+        <rdf:type rdf:resource="https://w3id.org/mqto#CountermeasureStep"/>
+        <rdfs:label xml:lang="en">Calibrate if needed</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#CheckCurrentTemp -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#CheckCurrentTemp">
+        <rdf:type rdf:resource="https://w3id.org/mqto#CountermeasureStep"/>
+        <rdfs:label xml:lang="en">Check current melt temperature</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#ColdShut -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#ColdShut">
+        <rdf:type rdf:resource="https://w3id.org/mqto#FailureMode"/>
+        <rdfs:label xml:lang="en">Cold shut</rdfs:label>
+        <mqto:failureBelongsTo rdf:resource="https://w3id.org/mqto/example#DieCastingCell"/>
+        <mqto:mitigatedBy rdf:resource="https://w3id.org/mqto/example#IncreaseSlowShot"/>
+        <mqto:refersToMetric rdf:resource="https://w3id.org/mqto/example#CycleTimeVariance"/>
+        <mqto:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</mqto:weight>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#CycleTimeSignal -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#CycleTimeSignal">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Signal"/>
+        <rdfs:label xml:lang="en">Cycle time signal</rdfs:label>
+        <mqto:identifier>PLC.CycleTime</mqto:identifier>
+        <mqto:signalProvidedBy rdf:resource="https://w3id.org/mqto/example#DieCastingCell"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#CycleTimeVariance -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#CycleTimeVariance">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Metric"/>
+        <rdfs:label xml:lang="en">Cycle time variance</rdfs:label>
+        <mqto:itemWindowSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</mqto:itemWindowSize>
+        <mqto:lowerBound rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</mqto:lowerBound>
+        <mqto:method>stdev</mqto:method>
+        <mqto:metricBelongsTo rdf:resource="https://w3id.org/mqto/example#DieCastingCell"/>
+        <mqto:readsFrom rdf:resource="https://w3id.org/mqto/example#CycleTimeSignal"/>
+        <mqto:resultProperty rdf:resource="https://w3id.org/mqto/example#cycleTime"/>
+        <mqto:timeWindowSize rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT10M</mqto:timeWindowSize>
+        <mqto:upperBound rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</mqto:upperBound>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#DieCastingCell -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#DieCastingCell">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Machine"/>
+        <rdfs:label xml:lang="en">Die-casting cell</rdfs:label>
+        <mqto:hasFailure rdf:resource="https://w3id.org/mqto/example#ColdShut"/>
+        <mqto:hasFailure rdf:resource="https://w3id.org/mqto/example#GasPorosity"/>
+        <mqto:hasFailure rdf:resource="https://w3id.org/mqto/example#MeltTempTooHigh"/>
+        <mqto:hasFailure rdf:resource="https://w3id.org/mqto/example#Porosity"/>
+        <mqto:hasFailure rdf:resource="https://w3id.org/mqto/example#ShrinkagePorosity"/>
+        <mqto:hasMetric rdf:resource="https://w3id.org/mqto/example#CycleTimeVariance"/>
+        <mqto:hasMetric rdf:resource="https://w3id.org/mqto/example#InjectionPressurePeak"/>
+        <mqto:hasMetric rdf:resource="https://w3id.org/mqto/example#TemperatureDeviation"/>
+        <mqto:identifier>Cell-Type-A</mqto:identifier>
+        <mqto:providesSignal rdf:resource="https://w3id.org/mqto/example#CycleTimeSignal"/>
+        <mqto:providesSignal rdf:resource="https://w3id.org/mqto/example#FurnaceSetpointSignal"/>
+        <mqto:providesSignal rdf:resource="https://w3id.org/mqto/example#InjectionPressureSignal"/>
+        <mqto:providesSignal rdf:resource="https://w3id.org/mqto/example#MeltTemperatureSignal"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#DieCastingProcess -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#DieCastingProcess">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Method"/>
+        <rdl:hasActivityPart rdf:resource="https://w3id.org/mqto/example#InjectionPhase"/>
+        <rdl:hasParticipant rdf:resource="https://w3id.org/mqto/example#AluminiumAlloy"/>
+        <rdl:hasParticipant rdf:resource="https://w3id.org/mqto/example#DieCastingCell"/>
+        <rdl:hasParticipant rdf:resource="https://w3id.org/mqto/example#Operator"/>
+        <rdfs:label xml:lang="en">Die-casting process</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#FO_001 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#FO_001">
+        <rdf:type rdf:resource="https://w3id.org/mqto#FailureOccurrence"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#Porosity"/>
+        <mqto:appearedOn rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <mqto:occurrenceTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T10:01:00</mqto:occurrenceTime>
+        <mqto:raisedBy rdf:resource="https://w3id.org/mqto/example#MA_001"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#FO_002 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#FO_002">
+        <rdf:type rdf:resource="https://w3id.org/mqto#FailureOccurrence"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#GasPorosity"/>
+        <mqto:appearedOn rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <mqto:occurrenceTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T16:01:00</mqto:occurrenceTime>
+        <mqto:raisedBy rdf:resource="https://w3id.org/mqto/example#MA_004"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#FO_003 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#FO_003">
+        <rdf:type rdf:resource="https://w3id.org/mqto#FailureOccurrence"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#Porosity"/>
+        <mqto:appearedOn rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <mqto:occurrenceTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-17T11:01:00</mqto:occurrenceTime>
+        <mqto:raisedBy rdf:resource="https://w3id.org/mqto/example#MA_006"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#FO_004 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#FO_004">
+        <rdf:type rdf:resource="https://w3id.org/mqto#FailureOccurrence"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#ColdShut"/>
+        <mqto:appearedOn rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <mqto:occurrenceTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-20T09:30:00</mqto:occurrenceTime>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#FO_005 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#FO_005">
+        <rdf:type rdf:resource="https://w3id.org/mqto#FailureOccurrence"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#AlloyContamination"/>
+        <mqto:appearedOn rdf:resource="https://w3id.org/mqto/example#AlBatch2026_0043"/>
+        <mqto:occurrenceTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-17T07:30:00</mqto:occurrenceTime>
+        <mqto:raisedBy rdf:resource="https://w3id.org/mqto/example#MA_007"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#FurnaceSetpointSignal -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#FurnaceSetpointSignal">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Signal"/>
+        <rdfs:label xml:lang="en">Furnace setpoint signal</rdfs:label>
+        <mqto:identifier>PLC.FurnaceSetpoint</mqto:identifier>
+        <mqto:signalProvidedBy rdf:resource="https://w3id.org/mqto/example#DieCastingCell"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#GasPorosity -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#GasPorosity">
+        <rdf:type rdf:resource="https://w3id.org/mqto#FailureMode"/>
+        <rdfs:label xml:lang="en">Gas porosity</rdfs:label>
+        <mqto:causes rdf:resource="https://w3id.org/mqto/example#Porosity"/>
+        <mqto:causesStrongly rdf:resource="https://w3id.org/mqto/example#Porosity"/>
+        <mqto:failureBelongsTo rdf:resource="https://w3id.org/mqto/example#DieCastingCell"/>
+        <mqto:refersToMetric rdf:resource="https://w3id.org/mqto/example#TemperatureDeviation"/>
+        <mqto:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</mqto:weight>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#ImpurityLevel -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#ImpurityLevel">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Metric"/>
+        <rdfs:label xml:lang="en">Alloy impurity level</rdfs:label>
+        <mqto:method>latest</mqto:method>
+        <mqto:metricBelongsTo rdf:resource="https://w3id.org/mqto/example#AluminiumAlloy"/>
+        <mqto:readsFrom rdf:resource="https://w3id.org/mqto/example#ImpurityLevelSignal"/>
+        <mqto:resultProperty rdf:resource="https://w3id.org/mqto/example#impurityPct"/>
+        <mqto:timeWindowSize rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT24H</mqto:timeWindowSize>
+        <mqto:upperBound rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</mqto:upperBound>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#ImpurityLevelSignal -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#ImpurityLevelSignal">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Signal"/>
+        <rdfs:label xml:lang="en">Impurity level signal</rdfs:label>
+        <mqto:identifier>LAB.Impurity</mqto:identifier>
+        <mqto:signalProvidedBy rdf:resource="https://w3id.org/mqto/example#AluminiumAlloy"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#IncreaseSlowShot -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#IncreaseSlowShot">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Countermeasure"/>
+        <rdfs:label xml:lang="en">Increase slow-shot phase duration</rdfs:label>
+        <mqto:hasStepList rdf:resource="https://w3id.org/mqto/example#IncreaseSlowShot_List1"/>
+        <mqto:mitigates rdf:resource="https://w3id.org/mqto/example#ColdShut"/>
+        <mqto:mitigates rdf:resource="https://w3id.org/mqto/example#Porosity"/>
+        <mqto:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</mqto:weight>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#IncreaseSlowShot_List1 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#IncreaseSlowShot_List1">
+        <rdf:type rdf:resource="https://w3id.org/mqto#List"/>
+        <mqto:first rdf:resource="https://w3id.org/mqto/example#ReviewInjectionProfile"/>
+        <mqto:rest rdf:resource="https://w3id.org/mqto/example#IncreaseSlowShot_List2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#IncreaseSlowShot_List2 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#IncreaseSlowShot_List2">
+        <rdf:type rdf:resource="https://w3id.org/mqto#List"/>
+        <mqto:first rdf:resource="https://w3id.org/mqto/example#AdjustSlowShotDuration"/>
+        <mqto:rest rdf:resource="https://w3id.org/mqto#nil"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#InjectionPhase -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#InjectionPhase">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Method"/>
+        <rdl:activityPartOf rdf:resource="https://w3id.org/mqto/example#DieCastingProcess"/>
+        <rdfs:label xml:lang="en">Injection phase</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#InjectionPressurePeak -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#InjectionPressurePeak">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Metric"/>
+        <rdfs:label xml:lang="en">Injection pressure peak</rdfs:label>
+        <mqto:itemWindowSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</mqto:itemWindowSize>
+        <mqto:lowerBound rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">800.0</mqto:lowerBound>
+        <mqto:method>max</mqto:method>
+        <mqto:metricBelongsTo rdf:resource="https://w3id.org/mqto/example#DieCastingCell"/>
+        <mqto:readsFrom rdf:resource="https://w3id.org/mqto/example#InjectionPressureSignal"/>
+        <mqto:resultProperty rdf:resource="https://w3id.org/mqto/example#pressure"/>
+        <mqto:timeWindowSize rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT2M</mqto:timeWindowSize>
+        <mqto:upperBound rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1100.0</mqto:upperBound>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#InjectionPressureSignal -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#InjectionPressureSignal">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Signal"/>
+        <rdfs:label xml:lang="en">Injection pressure signal</rdfs:label>
+        <mqto:identifier>PLC.InjPressure</mqto:identifier>
+        <mqto:signalProvidedBy rdf:resource="https://w3id.org/mqto/example#DieCastingCell"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#InspectThermocouple -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#InspectThermocouple">
+        <rdf:type rdf:resource="https://w3id.org/mqto#CountermeasureStep"/>
+        <rdfs:label xml:lang="en">Inspect thermocouple</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#MA_001 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#MA_001">
+        <rdf:type rdf:resource="https://w3id.org/mqto#MetricAssessment"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#TemperatureDeviation"/>
+        <mqto:assessmentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</mqto:assessmentValue>
+        <mqto:basedOn rdf:resource="https://w3id.org/mqto/example#Obs001"/>
+        <mqto:basedOn rdf:resource="https://w3id.org/mqto/example#Obs002"/>
+        <mqto:basedOn rdf:resource="https://w3id.org/mqto/example#Obs003"/>
+        <mqto:calculatedFor rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <mqto:calculatedTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T10:00:00</mqto:calculatedTime>
+        <mqto:calculatedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">718.3</mqto:calculatedValue>
+        <mqto:evaluatesProperty rdf:resource="https://w3id.org/mqto/example#Machine4115_MeltTemp"/>
+        <mqto:raised rdf:resource="https://w3id.org/mqto/example#FO_001"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#MA_002 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#MA_002">
+        <rdf:type rdf:resource="https://w3id.org/mqto#MetricAssessment"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#TemperatureDeviation"/>
+        <mqto:assessmentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</mqto:assessmentValue>
+        <mqto:basedOn rdf:resource="https://w3id.org/mqto/example#Act001"/>
+        <mqto:basedOn rdf:resource="https://w3id.org/mqto/example#Obs004"/>
+        <mqto:calculatedFor rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <mqto:calculatedTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T14:00:00</mqto:calculatedTime>
+        <mqto:calculatedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">705.1</mqto:calculatedValue>
+        <mqto:evaluatesProperty rdf:resource="https://w3id.org/mqto/example#Machine4115_MeltTemp"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#MA_003 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#MA_003">
+        <rdf:type rdf:resource="https://w3id.org/mqto#MetricAssessment"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#InjectionPressurePeak"/>
+        <mqto:assessmentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</mqto:assessmentValue>
+        <mqto:basedOn rdf:resource="https://w3id.org/mqto/example#Obs005"/>
+        <mqto:basedOn rdf:resource="https://w3id.org/mqto/example#Obs006"/>
+        <mqto:calculatedFor rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <mqto:calculatedTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T10:05:00</mqto:calculatedTime>
+        <mqto:calculatedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1085.0</mqto:calculatedValue>
+        <mqto:evaluatesProperty rdf:resource="https://w3id.org/mqto/example#Machine4115_InjPressure"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#MA_004 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#MA_004">
+        <rdf:type rdf:resource="https://w3id.org/mqto#MetricAssessment"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#TemperatureDeviation"/>
+        <mqto:assessmentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</mqto:assessmentValue>
+        <mqto:basedOn rdf:resource="https://w3id.org/mqto/example#Obs007"/>
+        <mqto:calculatedFor rdf:resource="https://w3id.org/mqto/example#Process1234"/>
+        <mqto:calculatedTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T16:00:00</mqto:calculatedTime>
+        <mqto:calculatedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">722.5</mqto:calculatedValue>
+        <mqto:evaluatesProperty rdf:resource="https://w3id.org/mqto/example#Machine4115_MeltTemp"/>
+        <mqto:raised rdf:resource="https://w3id.org/mqto/example#FO_002"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#MA_005 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#MA_005">
+        <rdf:type rdf:resource="https://w3id.org/mqto#MetricAssessment"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#CycleTimeVariance"/>
+        <mqto:assessmentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</mqto:assessmentValue>
+        <mqto:basedOn rdf:resource="https://w3id.org/mqto/example#Obs008"/>
+        <mqto:calculatedFor rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <mqto:calculatedTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-16T09:00:00</mqto:calculatedTime>
+        <mqto:calculatedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.1</mqto:calculatedValue>
+        <mqto:evaluatesProperty rdf:resource="https://w3id.org/mqto/example#Machine4115_CycleTime"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#MA_006 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#MA_006">
+        <rdf:type rdf:resource="https://w3id.org/mqto#MetricAssessment"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#TemperatureDeviation"/>
+        <mqto:assessmentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</mqto:assessmentValue>
+        <mqto:basedOn rdf:resource="https://w3id.org/mqto/example#Obs009"/>
+        <mqto:basedOn rdf:resource="https://w3id.org/mqto/example#Obs010"/>
+        <mqto:calculatedFor rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <mqto:calculatedTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-17T11:00:00</mqto:calculatedTime>
+        <mqto:calculatedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">725.8</mqto:calculatedValue>
+        <mqto:evaluatesProperty rdf:resource="https://w3id.org/mqto/example#Machine4115_MeltTemp"/>
+        <mqto:raised rdf:resource="https://w3id.org/mqto/example#FO_003"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#MA_007 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#MA_007">
+        <rdf:type rdf:resource="https://w3id.org/mqto#MetricAssessment"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#ImpurityLevel"/>
+        <mqto:assessmentValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</mqto:assessmentValue>
+        <mqto:basedOn rdf:resource="https://w3id.org/mqto/example#Obs011"/>
+        <mqto:calculatedFor rdf:resource="https://w3id.org/mqto/example#AlBatch2026_0043"/>
+        <mqto:calculatedTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-17T07:15:00</mqto:calculatedTime>
+        <mqto:calculatedValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.62</mqto:calculatedValue>
+        <mqto:evaluatesProperty rdf:resource="https://w3id.org/mqto/example#AlBatch2026_0043_Impurity"/>
+        <mqto:raised rdf:resource="https://w3id.org/mqto/example#FO_005"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Machine4115 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Machine4115">
+        <rdf:type rdf:resource="https://w3id.org/mqto#PhysicalMachine"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#DieCastingCell"/>
+        <rdfs:label xml:lang="en">Machine 4115</rdfs:label>
+        <mqto:identifier>4115</mqto:identifier>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Machine4115_CycleTime -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Machine4115_CycleTime">
+        <rdf:type rdf:resource="https://w3id.org/mqto#ObservableProperty"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#CycleTimeSignal"/>
+        <rdfs:label xml:lang="en">Cycle time of Machine 4115</rdfs:label>
+        <ssn:isPropertyOf rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Machine4115_FurnaceSetpoint -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Machine4115_FurnaceSetpoint">
+        <rdf:type rdf:resource="https://w3id.org/mqto#ActuableProperty"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#FurnaceSetpointSignal"/>
+        <rdfs:label xml:lang="en">Furnace setpoint of Machine 4115</rdfs:label>
+        <ssn:isPropertyOf rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Machine4115_InjPressure -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Machine4115_InjPressure">
+        <rdf:type rdf:resource="https://w3id.org/mqto#ObservableProperty"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#InjectionPressureSignal"/>
+        <rdfs:label xml:lang="en">Injection pressure of Machine 4115</rdfs:label>
+        <ssn:isPropertyOf rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Machine4115_MeltTemp -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Machine4115_MeltTemp">
+        <rdf:type rdf:resource="https://w3id.org/mqto#ObservableProperty"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#MeltTemperatureSignal"/>
+        <rdfs:label xml:lang="en">Melt temperature of Machine 4115</rdfs:label>
+        <ssn:isPropertyOf rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#MeltTempTooHigh -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#MeltTempTooHigh">
+        <rdf:type rdf:resource="https://w3id.org/mqto#FailureMode"/>
+        <rdfs:label xml:lang="en">Melt temperature too high</rdfs:label>
+        <mqto:causes rdf:resource="https://w3id.org/mqto/example#Porosity"/>
+        <mqto:causesWeakly rdf:resource="https://w3id.org/mqto/example#Porosity"/>
+        <mqto:failureBelongsTo rdf:resource="https://w3id.org/mqto/example#DieCastingCell"/>
+        <mqto:mitigatedBy rdf:resource="https://w3id.org/mqto/example#AdjustMeltTemp"/>
+        <mqto:refersToMetric rdf:resource="https://w3id.org/mqto/example#TemperatureDeviation"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#MeltTemperatureSignal -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#MeltTemperatureSignal">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Signal"/>
+        <rdfs:label xml:lang="en">Melt temperature signal</rdfs:label>
+        <mqto:identifier>PLC.MeltTemp</mqto:identifier>
+        <mqto:signalProvidedBy rdf:resource="https://w3id.org/mqto/example#DieCastingCell"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Obs001 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Obs001">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdf:type rdf:resource="https://w3id.org/mqto#Observation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <sosa:hasResult rdf:resource="https://w3id.org/mqto/example#Result001"/>
+        <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">721.5</sosa:hasSimpleResult>
+        <sosa:observedProperty rdf:resource="https://w3id.org/mqto/example#Machine4115_MeltTemp"/>
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T09:55:00</sosa:resultTime>
+        <sosa:usedProcedure rdf:resource="https://w3id.org/mqto/example#TemperatureMeasurement"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Obs002 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Obs002">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdf:type rdf:resource="https://w3id.org/mqto#Observation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <sosa:hasResult rdf:resource="https://w3id.org/mqto/example#Result002"/>
+        <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">719.2</sosa:hasSimpleResult>
+        <sosa:observedProperty rdf:resource="https://w3id.org/mqto/example#Machine4115_MeltTemp"/>
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T09:57:00</sosa:resultTime>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Obs003 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Obs003">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdf:type rdf:resource="https://w3id.org/mqto#Observation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <sosa:hasResult rdf:resource="https://w3id.org/mqto/example#Result003"/>
+        <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">718.3</sosa:hasSimpleResult>
+        <sosa:observedProperty rdf:resource="https://w3id.org/mqto/example#Machine4115_MeltTemp"/>
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T09:59:00</sosa:resultTime>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Obs004 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Obs004">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdf:type rdf:resource="https://w3id.org/mqto#Observation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <sosa:hasResult rdf:resource="https://w3id.org/mqto/example#Result004"/>
+        <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">705.1</sosa:hasSimpleResult>
+        <sosa:observedProperty rdf:resource="https://w3id.org/mqto/example#Machine4115_MeltTemp"/>
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T13:55:00</sosa:resultTime>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Obs005 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Obs005">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdf:type rdf:resource="https://w3id.org/mqto#Observation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <sosa:hasResult rdf:resource="https://w3id.org/mqto/example#Result_Shot042"/>
+        <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1085.0</sosa:hasSimpleResult>
+        <sosa:observedProperty rdf:resource="https://w3id.org/mqto/example#Machine4115_InjPressure"/>
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T10:02:00</sosa:resultTime>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Obs006 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Obs006">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdf:type rdf:resource="https://w3id.org/mqto#Observation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <sosa:hasResult rdf:resource="https://w3id.org/mqto/example#Result_Shot043"/>
+        <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1042.3</sosa:hasSimpleResult>
+        <sosa:observedProperty rdf:resource="https://w3id.org/mqto/example#Machine4115_InjPressure"/>
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T10:04:00</sosa:resultTime>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Obs007 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Obs007">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdf:type rdf:resource="https://w3id.org/mqto#Observation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <sosa:hasResult rdf:resource="https://w3id.org/mqto/example#Result007"/>
+        <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">722.5</sosa:hasSimpleResult>
+        <sosa:observedProperty rdf:resource="https://w3id.org/mqto/example#Machine4115_MeltTemp"/>
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T15:50:00</sosa:resultTime>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Obs008 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Obs008">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdf:type rdf:resource="https://w3id.org/mqto#Observation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <sosa:hasResult rdf:resource="https://w3id.org/mqto/example#Result008"/>
+        <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.7</sosa:hasSimpleResult>
+        <sosa:observedProperty rdf:resource="https://w3id.org/mqto/example#Machine4115_CycleTime"/>
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-16T08:55:00</sosa:resultTime>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Obs009 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Obs009">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdf:type rdf:resource="https://w3id.org/mqto#Observation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <sosa:hasResult rdf:resource="https://w3id.org/mqto/example#Result009"/>
+        <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">725.8</sosa:hasSimpleResult>
+        <sosa:observedProperty rdf:resource="https://w3id.org/mqto/example#Machine4115_MeltTemp"/>
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-17T10:55:00</sosa:resultTime>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Obs010 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Obs010">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdf:type rdf:resource="https://w3id.org/mqto#Observation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <sosa:hasResult rdf:resource="https://w3id.org/mqto/example#Result010"/>
+        <sosa:hasSimpleResult rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">723.4</sosa:hasSimpleResult>
+        <sosa:observedProperty rdf:resource="https://w3id.org/mqto/example#Machine4115_MeltTemp"/>
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-17T10:58:00</sosa:resultTime>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Obs011 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Obs011">
+        <rdf:type rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdf:type rdf:resource="https://w3id.org/mqto#Observation"/>
+        <sosa:hasFeatureOfInterest rdf:resource="https://w3id.org/mqto/example#AlBatch2026_0043"/>
+        <sosa:hasResult rdf:resource="https://w3id.org/mqto/example#Result011"/>
+        <sosa:observedProperty rdf:resource="https://w3id.org/mqto/example#AlBatch2026_0043_Impurity"/>
+        <sosa:resultTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-17T07:00:00</sosa:resultTime>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Operator -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Operator">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Manpower"/>
+        <rdfs:label xml:lang="en">Machine operator</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Porosity -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Porosity">
+        <rdf:type rdf:resource="https://w3id.org/mqto#FailureMode"/>
+        <rdfs:label xml:lang="en">Porosity</rdfs:label>
+        <mqto:causedBy rdf:resource="https://w3id.org/mqto/example#AlloyContamination"/>
+        <mqto:causedBy rdf:resource="https://w3id.org/mqto/example#GasPorosity"/>
+        <mqto:causedBy rdf:resource="https://w3id.org/mqto/example#MeltTempTooHigh"/>
+        <mqto:causedBy rdf:resource="https://w3id.org/mqto/example#ShrinkagePorosity"/>
+        <mqto:causedByModerately rdf:resource="https://w3id.org/mqto/example#AlloyContamination"/>
+        <mqto:causedByModerately rdf:resource="https://w3id.org/mqto/example#ShrinkagePorosity"/>
+        <mqto:causedByStrongly rdf:resource="https://w3id.org/mqto/example#GasPorosity"/>
+        <mqto:causedByWeakly rdf:resource="https://w3id.org/mqto/example#MeltTempTooHigh"/>
+        <mqto:failureBelongsTo rdf:resource="https://w3id.org/mqto/example#DieCastingCell"/>
+        <mqto:mitigatedBy rdf:resource="https://w3id.org/mqto/example#AdjustMeltTemp"/>
+        <mqto:mitigatedBy rdf:resource="https://w3id.org/mqto/example#IncreaseSlowShot"/>
+        <mqto:mitigatedBy rdf:resource="https://w3id.org/mqto/example#VerifyThermocouple"/>
+        <mqto:refersToMetric rdf:resource="https://w3id.org/mqto/example#InjectionPressurePeak"/>
+        <mqto:refersToMetric rdf:resource="https://w3id.org/mqto/example#TemperatureDeviation"/>
+        <mqto:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</mqto:weight>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Process1234 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Process1234">
+        <rdf:type rdf:resource="https://w3id.org/mqto#ProcessExecution"/>
+        <rdl:hasParticipant rdf:resource="https://w3id.org/mqto/example#AlBatch2026_0042"/>
+        <rdl:hasParticipant rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#DieCastingProcess"/>
+        <rdfs:label xml:lang="en">Process execution 1234</rdfs:label>
+        <mqto:endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T16:00:00</mqto:endTime>
+        <mqto:startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-15T08:00:00</mqto:startTime>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Process1235 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Process1235">
+        <rdf:type rdf:resource="https://w3id.org/mqto#ProcessExecution"/>
+        <rdl:hasParticipant rdf:resource="https://w3id.org/mqto/example#AlBatch2026_0042"/>
+        <rdl:hasParticipant rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#DieCastingProcess"/>
+        <rdfs:label xml:lang="en">Process execution 1235</rdfs:label>
+        <mqto:endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-16T16:00:00</mqto:endTime>
+        <mqto:startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-16T08:00:00</mqto:startTime>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Process1236 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Process1236">
+        <rdf:type rdf:resource="https://w3id.org/mqto#ProcessExecution"/>
+        <rdl:hasParticipant rdf:resource="https://w3id.org/mqto/example#AlBatch2026_0043"/>
+        <rdl:hasParticipant rdf:resource="https://w3id.org/mqto/example#Machine4115"/>
+        <rdl:implements rdf:resource="https://w3id.org/mqto/example#DieCastingProcess"/>
+        <rdfs:label xml:lang="en">Process execution 1236</rdfs:label>
+        <mqto:endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-17T16:00:00</mqto:endTime>
+        <mqto:startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2026-03-17T08:00:00</mqto:startTime>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#ReplaceAlloyBatch -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#ReplaceAlloyBatch">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Countermeasure"/>
+        <rdl:hasParticipant rdf:resource="https://w3id.org/mqto/example#AluminiumAlloy"/>
+        <rdl:hasParticipant rdf:resource="https://w3id.org/mqto/example#Operator"/>
+        <rdfs:label xml:lang="en">Replace contaminated alloy batch</rdfs:label>
+        <mqto:hasStepList rdf:resource="https://w3id.org/mqto/example#ReplaceAlloyBatch_List1"/>
+        <mqto:mitigates rdf:resource="https://w3id.org/mqto/example#AlloyContamination"/>
+        <mqto:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</mqto:weight>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#ReplaceAlloyBatch_List1 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#ReplaceAlloyBatch_List1">
+        <rdf:type rdf:resource="https://w3id.org/mqto#List"/>
+        <mqto:first rdf:resource="https://w3id.org/mqto/example#CheckCurrentTemp"/>
+        <mqto:rest rdf:resource="https://w3id.org/mqto/example#ReplaceAlloyBatch_List2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#ReplaceAlloyBatch_List2 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#ReplaceAlloyBatch_List2">
+        <rdf:type rdf:resource="https://w3id.org/mqto#List"/>
+        <mqto:first rdf:resource="https://w3id.org/mqto/example#SwapAlloyBatch"/>
+        <mqto:rest rdf:resource="https://w3id.org/mqto/example#ReplaceAlloyBatch_List3"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#ReplaceAlloyBatch_List3 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#ReplaceAlloyBatch_List3">
+        <rdf:type rdf:resource="https://w3id.org/mqto#List"/>
+        <mqto:first rdf:resource="https://w3id.org/mqto/example#VerifyNewTemp"/>
+        <mqto:rest rdf:resource="https://w3id.org/mqto#nil"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Result001 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Result001">
+        <rdf:type rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
+        <rdf:type rdf:resource="https://w3id.org/mqto#Result"/>
+        <example:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">721.5</example:temperature>
+        <qudt:numericValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">721.5</qudt:numericValue>
+        <qudt:unit rdf:resource="http://qudt.org/vocab/unit/DEG_C"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Result002 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Result002">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Result"/>
+        <example:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">719.2</example:temperature>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Result003 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Result003">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Result"/>
+        <example:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">718.3</example:temperature>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Result004 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Result004">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Result"/>
+        <example:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">705.1</example:temperature>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Result007 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Result007">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Result"/>
+        <example:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">722.5</example:temperature>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Result008 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Result008">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Result"/>
+        <example:cycleTime rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.7</example:cycleTime>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Result009 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Result009">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Result"/>
+        <example:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">725.8</example:temperature>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Result010 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Result010">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Result"/>
+        <example:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">723.4</example:temperature>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Result011 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Result011">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Result"/>
+        <example:impurityPct rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.62</example:impurityPct>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Result_Act001 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Result_Act001">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Result"/>
+        <example:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">710.0</example:temperature>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Result_Shot042 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Result_Shot042">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Result"/>
+        <example:cycleTime rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23.9</example:cycleTime>
+        <example:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1085.0</example:pressure>
+        <example:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">719.8</example:temperature>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#Result_Shot043 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#Result_Shot043">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Result"/>
+        <example:cycleTime rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.2</example:cycleTime>
+        <example:pressure rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1042.3</example:pressure>
+        <example:temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">718.1</example:temperature>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#ReviewInjectionProfile -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#ReviewInjectionProfile">
+        <rdf:type rdf:resource="https://w3id.org/mqto#CountermeasureStep"/>
+        <rdfs:label xml:lang="en">Review injection profile</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#ShrinkagePorosity -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#ShrinkagePorosity">
+        <rdf:type rdf:resource="https://w3id.org/mqto#FailureMode"/>
+        <rdfs:label xml:lang="en">Shrinkage porosity</rdfs:label>
+        <mqto:causes rdf:resource="https://w3id.org/mqto/example#Porosity"/>
+        <mqto:causesModerately rdf:resource="https://w3id.org/mqto/example#Porosity"/>
+        <mqto:failureBelongsTo rdf:resource="https://w3id.org/mqto/example#DieCastingCell"/>
+        <mqto:refersToMetric rdf:resource="https://w3id.org/mqto/example#InjectionPressurePeak"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#SwapAlloyBatch -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#SwapAlloyBatch">
+        <rdf:type rdf:resource="https://w3id.org/mqto#CountermeasureStep"/>
+        <rdfs:label xml:lang="en">Swap alloy batch</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#TemperatureDeviation -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#TemperatureDeviation">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Metric"/>
+        <rdfs:label xml:lang="en">Melt temperature deviation</rdfs:label>
+        <mqto:itemWindowSize rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</mqto:itemWindowSize>
+        <mqto:lowerBound rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">680.0</mqto:lowerBound>
+        <mqto:method>mean</mqto:method>
+        <mqto:metricBelongsTo rdf:resource="https://w3id.org/mqto/example#DieCastingCell"/>
+        <mqto:readsFrom rdf:resource="https://w3id.org/mqto/example#MeltTemperatureSignal"/>
+        <mqto:resultProperty rdf:resource="https://w3id.org/mqto/example#temperature"/>
+        <mqto:timeWindowSize rdf:datatype="http://www.w3.org/2001/XMLSchema#duration">PT5M</mqto:timeWindowSize>
+        <mqto:upperBound rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">720.0</mqto:upperBound>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#TemperatureMeasurement -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#TemperatureMeasurement">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Measurement"/>
+        <rdfs:label xml:lang="en">Melt temperature measurement</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#VerifyNewTemp -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#VerifyNewTemp">
+        <rdf:type rdf:resource="https://w3id.org/mqto#CountermeasureStep"/>
+        <rdfs:label xml:lang="en">Verify new temperature</rdfs:label>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#VerifyThermocouple -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#VerifyThermocouple">
+        <rdf:type rdf:resource="https://w3id.org/mqto#Countermeasure"/>
+        <rdfs:label xml:lang="en">Verify thermocouple calibration on furnace</rdfs:label>
+        <mqto:hasStepList rdf:resource="https://w3id.org/mqto/example#VerifyThermocouple_List1"/>
+        <mqto:mitigates rdf:resource="https://w3id.org/mqto/example#Porosity"/>
+        <mqto:weight rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</mqto:weight>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#VerifyThermocouple_List1 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#VerifyThermocouple_List1">
+        <rdf:type rdf:resource="https://w3id.org/mqto#List"/>
+        <mqto:first rdf:resource="https://w3id.org/mqto/example#CheckCurrentTemp"/>
+        <mqto:rest rdf:resource="https://w3id.org/mqto/example#VerifyThermocouple_List2"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#VerifyThermocouple_List2 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#VerifyThermocouple_List2">
+        <rdf:type rdf:resource="https://w3id.org/mqto#List"/>
+        <mqto:first rdf:resource="https://w3id.org/mqto/example#InspectThermocouple"/>
+        <mqto:rest rdf:resource="https://w3id.org/mqto/example#VerifyThermocouple_List3"/>
+    </NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/mqto/example#VerifyThermocouple_List3 -->
+
+
+    <NamedIndividual rdf:about="https://w3id.org/mqto/example#VerifyThermocouple_List3">
+        <rdf:type rdf:resource="https://w3id.org/mqto#List"/>
+        <mqto:first rdf:resource="https://w3id.org/mqto/example#CalibrateIfNeeded"/>
+        <mqto:rest rdf:resource="https://w3id.org/mqto#nil"/>
+    </NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

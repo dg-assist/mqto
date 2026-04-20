@@ -1,0 +1,2262 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/QuantityValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/numericValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://qudt.org/schema/qudt/unit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/implements",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#duration",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/Actuation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/Observation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/actsOnProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hasFeatureOfInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hasResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/hasSimpleResult",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/observedProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/resultTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/sosa/usedProcedure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/ns/ssn/isPropertyOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#ActuableProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#Actuation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#Countermeasure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#CountermeasureExecution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#CountermeasureStep",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#CountermeasureStepExecution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#FailureMode",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#FailureOccurrence",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#List",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#Machine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#Manpower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#Material",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#Measurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#Method",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#Metric",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#MetricAssessment",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#ObservableProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#Observation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#PhysicalMachine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#PhysicalMaterial",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#ProcessExecution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#Result",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#Signal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#abortedReason",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#abortedTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#appearedOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#assessmentValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#basedOn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#calculatedFor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#calculatedTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#calculatedValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#causedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#causedByModerately",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#causedByStrongly",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#causedByWeakly",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#causes",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#causesModerately",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#causesStrongly",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#causesWeakly",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#completionTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#endTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#evaluatesProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#failureBelongsTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#first",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#hasFailure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#hasMetric",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#hasStepList",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#itemWindowSize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#lowerBound",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#method",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#metricBelongsTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#mitigated",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#mitigatedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#mitigates",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#occurrenceTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#providesSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#raised",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#raisedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#readsFrom",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#refersToMetric",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#rest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#resultProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#score",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#signalProvidedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#startTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#suggestedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#timeWindowSize",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#upperBound",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto#weight",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Act001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Actuation"
+  }, {
+    "@id" : "https://w3id.org/mqto#Actuation"
+  } ],
+  "http://www.w3.org/ns/sosa/actsOnProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115_FurnaceSetpoint"
+  } ],
+  "http://www.w3.org/ns/sosa/hasFeatureOfInterest" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "http://www.w3.org/ns/sosa/hasResult" : [ {
+    "@id" : "https://w3id.org/mqto/example#Result_Act001"
+  } ],
+  "http://www.w3.org/ns/sosa/hasSimpleResult" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "710.0"
+  } ],
+  "http://www.w3.org/ns/sosa/resultTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T10:50:00"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#AdjustFurnaceSetpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#CountermeasureStep"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Adjust furnace setpoint"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#AdjustMeltTemp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant" : [ {
+    "@id" : "https://w3id.org/mqto/example#DieCastingCell"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Countermeasure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Adjust melt holding temperature to alloy specification"
+  } ],
+  "https://w3id.org/mqto#hasStepList" : [ {
+    "@id" : "https://w3id.org/mqto/example#AdjustMeltTemp_List1"
+  } ],
+  "https://w3id.org/mqto#mitigates" : [ {
+    "@id" : "https://w3id.org/mqto/example#MeltTempTooHigh"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#Porosity"
+  } ],
+  "https://w3id.org/mqto#weight" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "90"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#AdjustMeltTemp_List1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#List"
+  } ],
+  "https://w3id.org/mqto#first" : [ {
+    "@id" : "https://w3id.org/mqto/example#CheckCurrentTemp"
+  } ],
+  "https://w3id.org/mqto#rest" : [ {
+    "@id" : "https://w3id.org/mqto/example#AdjustMeltTemp_List2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#AdjustMeltTemp_List2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#List"
+  } ],
+  "https://w3id.org/mqto#first" : [ {
+    "@id" : "https://w3id.org/mqto/example#AdjustFurnaceSetpoint"
+  } ],
+  "https://w3id.org/mqto#rest" : [ {
+    "@id" : "https://w3id.org/mqto/example#AdjustMeltTemp_List3"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#AdjustMeltTemp_List3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#List"
+  } ],
+  "https://w3id.org/mqto#first" : [ {
+    "@id" : "https://w3id.org/mqto/example#VerifyNewTemp"
+  } ],
+  "https://w3id.org/mqto#rest" : [ {
+    "@id" : "https://w3id.org/mqto#nil"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#AdjustSlowShotDuration",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#CountermeasureStep"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Adjust slow-shot phase duration"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#AlBatch2026_0042",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#AluminiumAlloy"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#PhysicalMaterial"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Aluminium batch AL-2026-0042"
+  } ],
+  "https://w3id.org/mqto#identifier" : [ {
+    "@value" : "AL-2026-0042"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#AlBatch2026_0043",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#AluminiumAlloy"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#PhysicalMaterial"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Aluminium batch AL-2026-0043"
+  } ],
+  "https://w3id.org/mqto#identifier" : [ {
+    "@value" : "AL-2026-0043"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#AlBatch2026_0043_Impurity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#ImpurityLevelSignal"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#ObservableProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Impurity level of batch AL-2026-0043"
+  } ],
+  "http://www.w3.org/ns/ssn/isPropertyOf" : [ {
+    "@id" : "https://w3id.org/mqto/example#AlBatch2026_0043"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#AlloyContamination",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#FailureMode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Alloy contamination"
+  } ],
+  "https://w3id.org/mqto#causes" : [ {
+    "@id" : "https://w3id.org/mqto/example#Porosity"
+  } ],
+  "https://w3id.org/mqto#causesModerately" : [ {
+    "@id" : "https://w3id.org/mqto/example#Porosity"
+  } ],
+  "https://w3id.org/mqto#failureBelongsTo" : [ {
+    "@id" : "https://w3id.org/mqto/example#AluminiumAlloy"
+  } ],
+  "https://w3id.org/mqto#mitigatedBy" : [ {
+    "@id" : "https://w3id.org/mqto/example#ReplaceAlloyBatch"
+  } ],
+  "https://w3id.org/mqto#refersToMetric" : [ {
+    "@id" : "https://w3id.org/mqto/example#ImpurityLevel"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#AluminiumAlloy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Aluminium alloy EN AC-46000"
+  } ],
+  "https://w3id.org/mqto#hasFailure" : [ {
+    "@id" : "https://w3id.org/mqto/example#AlloyContamination"
+  } ],
+  "https://w3id.org/mqto#hasMetric" : [ {
+    "@id" : "https://w3id.org/mqto/example#ImpurityLevel"
+  } ],
+  "https://w3id.org/mqto#providesSignal" : [ {
+    "@id" : "https://w3id.org/mqto/example#ImpurityLevelSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#CE_001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#AdjustMeltTemp"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#CountermeasureExecution"
+  } ],
+  "https://w3id.org/mqto#endTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T11:20:00"
+  } ],
+  "https://w3id.org/mqto#mitigated" : [ {
+    "@id" : "https://w3id.org/mqto/example#FO_001"
+  } ],
+  "https://w3id.org/mqto#score" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.92"
+  } ],
+  "https://w3id.org/mqto#startTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T10:30:00"
+  } ],
+  "https://w3id.org/mqto#suggestedBy" : [ {
+    "@id" : "https://w3id.org/mqto/example#FO_001"
+  } ],
+  "https://w3id.org/pko#includesStepExecution" : [ {
+    "@id" : "https://w3id.org/mqto/example#CSE_001"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#CSE_002"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#CSE_003"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#CE_002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#VerifyThermocouple"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#CountermeasureExecution"
+  } ],
+  "https://w3id.org/mqto#abortedReason" : [ {
+    "@value" : "Thermocouple within calibration limits; no adjustment needed."
+  } ],
+  "https://w3id.org/mqto#abortedTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-17T12:00:00"
+  } ],
+  "https://w3id.org/mqto#score" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.75"
+  } ],
+  "https://w3id.org/mqto#startTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-17T11:30:00"
+  } ],
+  "https://w3id.org/mqto#suggestedBy" : [ {
+    "@id" : "https://w3id.org/mqto/example#FO_003"
+  } ],
+  "https://w3id.org/pko#includesStepExecution" : [ {
+    "@id" : "https://w3id.org/mqto/example#CSE_004"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#CSE_005"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#CSE_006"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#CSE_001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#CheckCurrentTemp"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#CountermeasureStepExecution"
+  } ],
+  "https://w3id.org/mqto#completionTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T10:35:00"
+  } ],
+  "https://w3id.org/pko#nextStepExecution" : [ {
+    "@id" : "https://w3id.org/mqto/example#CSE_002"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#CSE_002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#AdjustFurnaceSetpoint"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#CountermeasureStepExecution"
+  } ],
+  "https://w3id.org/mqto#completionTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T10:50:00"
+  } ],
+  "https://w3id.org/pko#nextStepExecution" : [ {
+    "@id" : "https://w3id.org/mqto/example#CSE_003"
+  } ],
+  "https://w3id.org/pko#previousStepExecution" : [ {
+    "@id" : "https://w3id.org/mqto/example#CSE_001"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#CSE_003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#VerifyNewTemp"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#CountermeasureStepExecution"
+  } ],
+  "https://w3id.org/mqto#completionTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T11:20:00"
+  } ],
+  "https://w3id.org/pko#previousStepExecution" : [ {
+    "@id" : "https://w3id.org/mqto/example#CSE_002"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#CSE_004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#InspectThermocouple"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#CountermeasureStepExecution"
+  } ],
+  "https://w3id.org/mqto#completionTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-17T11:45:00"
+  } ],
+  "https://w3id.org/pko#nextStepExecution" : [ {
+    "@id" : "https://w3id.org/mqto/example#CSE_005"
+  } ],
+  "https://w3id.org/pko#previousStepExecution" : [ {
+    "@id" : "https://w3id.org/mqto/example#CSE_006"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#CSE_005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#CalibrateIfNeeded"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#CountermeasureStepExecution"
+  } ],
+  "https://w3id.org/mqto#abortedReason" : [ {
+    "@value" : "Not needed — thermocouple readings within tolerance."
+  } ],
+  "https://w3id.org/mqto#abortedTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-17T12:00:00"
+  } ],
+  "https://w3id.org/pko#previousStepExecution" : [ {
+    "@id" : "https://w3id.org/mqto/example#CSE_004"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#CSE_006",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#CheckCurrentTemp"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#CountermeasureStepExecution"
+  } ],
+  "https://w3id.org/mqto#completionTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-17T11:35:00"
+  } ],
+  "https://w3id.org/pko#nextStepExecution" : [ {
+    "@id" : "https://w3id.org/mqto/example#CSE_004"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#CalibrateIfNeeded",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#CountermeasureStep"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Calibrate if needed"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#CheckCurrentTemp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#CountermeasureStep"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Check current melt temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#ColdShut",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#FailureMode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cold shut"
+  } ],
+  "https://w3id.org/mqto#failureBelongsTo" : [ {
+    "@id" : "https://w3id.org/mqto/example#DieCastingCell"
+  } ],
+  "https://w3id.org/mqto#mitigatedBy" : [ {
+    "@id" : "https://w3id.org/mqto/example#IncreaseSlowShot"
+  } ],
+  "https://w3id.org/mqto#refersToMetric" : [ {
+    "@id" : "https://w3id.org/mqto/example#CycleTimeVariance"
+  } ],
+  "https://w3id.org/mqto#weight" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "40"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#CycleTimeSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cycle time signal"
+  } ],
+  "https://w3id.org/mqto#identifier" : [ {
+    "@value" : "PLC.CycleTime"
+  } ],
+  "https://w3id.org/mqto#signalProvidedBy" : [ {
+    "@id" : "https://w3id.org/mqto/example#DieCastingCell"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#CycleTimeVariance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Metric"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cycle time variance"
+  } ],
+  "https://w3id.org/mqto#itemWindowSize" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "20"
+  } ],
+  "https://w3id.org/mqto#lowerBound" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.0"
+  } ],
+  "https://w3id.org/mqto#method" : [ {
+    "@value" : "stdev"
+  } ],
+  "https://w3id.org/mqto#metricBelongsTo" : [ {
+    "@id" : "https://w3id.org/mqto/example#DieCastingCell"
+  } ],
+  "https://w3id.org/mqto#readsFrom" : [ {
+    "@id" : "https://w3id.org/mqto/example#CycleTimeSignal"
+  } ],
+  "https://w3id.org/mqto#resultProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#cycleTime"
+  } ],
+  "https://w3id.org/mqto#timeWindowSize" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#duration",
+    "@value" : "PT10M"
+  } ],
+  "https://w3id.org/mqto#upperBound" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "3.0"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#DieCastingCell",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Machine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Die-casting cell"
+  } ],
+  "https://w3id.org/mqto#hasFailure" : [ {
+    "@id" : "https://w3id.org/mqto/example#ColdShut"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#GasPorosity"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#MeltTempTooHigh"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#Porosity"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#ShrinkagePorosity"
+  } ],
+  "https://w3id.org/mqto#hasMetric" : [ {
+    "@id" : "https://w3id.org/mqto/example#CycleTimeVariance"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#InjectionPressurePeak"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#TemperatureDeviation"
+  } ],
+  "https://w3id.org/mqto#identifier" : [ {
+    "@value" : "Cell-Type-A"
+  } ],
+  "https://w3id.org/mqto#providesSignal" : [ {
+    "@id" : "https://w3id.org/mqto/example#CycleTimeSignal"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#FurnaceSetpointSignal"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#InjectionPressureSignal"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#MeltTemperatureSignal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#DieCastingProcess",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart" : [ {
+    "@id" : "https://w3id.org/mqto/example#InjectionPhase"
+  } ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant" : [ {
+    "@id" : "https://w3id.org/mqto/example#AluminiumAlloy"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#DieCastingCell"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#Operator"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Method"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Die-casting process"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#FO_001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#Porosity"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#FailureOccurrence"
+  } ],
+  "https://w3id.org/mqto#appearedOn" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "https://w3id.org/mqto#occurrenceTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T10:01:00"
+  } ],
+  "https://w3id.org/mqto#raisedBy" : [ {
+    "@id" : "https://w3id.org/mqto/example#MA_001"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#FO_002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#GasPorosity"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#FailureOccurrence"
+  } ],
+  "https://w3id.org/mqto#appearedOn" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "https://w3id.org/mqto#occurrenceTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T16:01:00"
+  } ],
+  "https://w3id.org/mqto#raisedBy" : [ {
+    "@id" : "https://w3id.org/mqto/example#MA_004"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#FO_003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#Porosity"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#FailureOccurrence"
+  } ],
+  "https://w3id.org/mqto#appearedOn" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "https://w3id.org/mqto#occurrenceTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-17T11:01:00"
+  } ],
+  "https://w3id.org/mqto#raisedBy" : [ {
+    "@id" : "https://w3id.org/mqto/example#MA_006"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#FO_004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#ColdShut"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#FailureOccurrence"
+  } ],
+  "https://w3id.org/mqto#appearedOn" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "https://w3id.org/mqto#occurrenceTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-20T09:30:00"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#FO_005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#AlloyContamination"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#FailureOccurrence"
+  } ],
+  "https://w3id.org/mqto#appearedOn" : [ {
+    "@id" : "https://w3id.org/mqto/example#AlBatch2026_0043"
+  } ],
+  "https://w3id.org/mqto#occurrenceTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-17T07:30:00"
+  } ],
+  "https://w3id.org/mqto#raisedBy" : [ {
+    "@id" : "https://w3id.org/mqto/example#MA_007"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#FurnaceSetpointSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Furnace setpoint signal"
+  } ],
+  "https://w3id.org/mqto#identifier" : [ {
+    "@value" : "PLC.FurnaceSetpoint"
+  } ],
+  "https://w3id.org/mqto#signalProvidedBy" : [ {
+    "@id" : "https://w3id.org/mqto/example#DieCastingCell"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#GasPorosity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#FailureMode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Gas porosity"
+  } ],
+  "https://w3id.org/mqto#causes" : [ {
+    "@id" : "https://w3id.org/mqto/example#Porosity"
+  } ],
+  "https://w3id.org/mqto#causesStrongly" : [ {
+    "@id" : "https://w3id.org/mqto/example#Porosity"
+  } ],
+  "https://w3id.org/mqto#failureBelongsTo" : [ {
+    "@id" : "https://w3id.org/mqto/example#DieCastingCell"
+  } ],
+  "https://w3id.org/mqto#refersToMetric" : [ {
+    "@id" : "https://w3id.org/mqto/example#TemperatureDeviation"
+  } ],
+  "https://w3id.org/mqto#weight" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "60"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#ImpurityLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Metric"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Alloy impurity level"
+  } ],
+  "https://w3id.org/mqto#method" : [ {
+    "@value" : "latest"
+  } ],
+  "https://w3id.org/mqto#metricBelongsTo" : [ {
+    "@id" : "https://w3id.org/mqto/example#AluminiumAlloy"
+  } ],
+  "https://w3id.org/mqto#readsFrom" : [ {
+    "@id" : "https://w3id.org/mqto/example#ImpurityLevelSignal"
+  } ],
+  "https://w3id.org/mqto#resultProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#impurityPct"
+  } ],
+  "https://w3id.org/mqto#timeWindowSize" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#duration",
+    "@value" : "PT24H"
+  } ],
+  "https://w3id.org/mqto#upperBound" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#ImpurityLevelSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Impurity level signal"
+  } ],
+  "https://w3id.org/mqto#identifier" : [ {
+    "@value" : "LAB.Impurity"
+  } ],
+  "https://w3id.org/mqto#signalProvidedBy" : [ {
+    "@id" : "https://w3id.org/mqto/example#AluminiumAlloy"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#IncreaseSlowShot",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Countermeasure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Increase slow-shot phase duration"
+  } ],
+  "https://w3id.org/mqto#hasStepList" : [ {
+    "@id" : "https://w3id.org/mqto/example#IncreaseSlowShot_List1"
+  } ],
+  "https://w3id.org/mqto#mitigates" : [ {
+    "@id" : "https://w3id.org/mqto/example#ColdShut"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#Porosity"
+  } ],
+  "https://w3id.org/mqto#weight" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "50"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#IncreaseSlowShot_List1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#List"
+  } ],
+  "https://w3id.org/mqto#first" : [ {
+    "@id" : "https://w3id.org/mqto/example#ReviewInjectionProfile"
+  } ],
+  "https://w3id.org/mqto#rest" : [ {
+    "@id" : "https://w3id.org/mqto/example#IncreaseSlowShot_List2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#IncreaseSlowShot_List2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#List"
+  } ],
+  "https://w3id.org/mqto#first" : [ {
+    "@id" : "https://w3id.org/mqto/example#AdjustSlowShotDuration"
+  } ],
+  "https://w3id.org/mqto#rest" : [ {
+    "@id" : "https://w3id.org/mqto#nil"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#InjectionPhase",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf" : [ {
+    "@id" : "https://w3id.org/mqto/example#DieCastingProcess"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Method"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Injection phase"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#InjectionPressurePeak",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Metric"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Injection pressure peak"
+  } ],
+  "https://w3id.org/mqto#itemWindowSize" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "5"
+  } ],
+  "https://w3id.org/mqto#lowerBound" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "800.0"
+  } ],
+  "https://w3id.org/mqto#method" : [ {
+    "@value" : "max"
+  } ],
+  "https://w3id.org/mqto#metricBelongsTo" : [ {
+    "@id" : "https://w3id.org/mqto/example#DieCastingCell"
+  } ],
+  "https://w3id.org/mqto#readsFrom" : [ {
+    "@id" : "https://w3id.org/mqto/example#InjectionPressureSignal"
+  } ],
+  "https://w3id.org/mqto#resultProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#pressure"
+  } ],
+  "https://w3id.org/mqto#timeWindowSize" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#duration",
+    "@value" : "PT2M"
+  } ],
+  "https://w3id.org/mqto#upperBound" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1100.0"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#InjectionPressureSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Injection pressure signal"
+  } ],
+  "https://w3id.org/mqto#identifier" : [ {
+    "@value" : "PLC.InjPressure"
+  } ],
+  "https://w3id.org/mqto#signalProvidedBy" : [ {
+    "@id" : "https://w3id.org/mqto/example#DieCastingCell"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#InspectThermocouple",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#CountermeasureStep"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Inspect thermocouple"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#MA_001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#TemperatureDeviation"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#MetricAssessment"
+  } ],
+  "https://w3id.org/mqto#assessmentValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://w3id.org/mqto#basedOn" : [ {
+    "@id" : "https://w3id.org/mqto/example#Obs001"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#Obs002"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#Obs003"
+  } ],
+  "https://w3id.org/mqto#calculatedFor" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "https://w3id.org/mqto#calculatedTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T10:00:00"
+  } ],
+  "https://w3id.org/mqto#calculatedValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "718.3"
+  } ],
+  "https://w3id.org/mqto#evaluatesProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115_MeltTemp"
+  } ],
+  "https://w3id.org/mqto#raised" : [ {
+    "@id" : "https://w3id.org/mqto/example#FO_001"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#MA_002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#TemperatureDeviation"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#MetricAssessment"
+  } ],
+  "https://w3id.org/mqto#assessmentValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "https://w3id.org/mqto#basedOn" : [ {
+    "@id" : "https://w3id.org/mqto/example#Act001"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#Obs004"
+  } ],
+  "https://w3id.org/mqto#calculatedFor" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "https://w3id.org/mqto#calculatedTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T14:00:00"
+  } ],
+  "https://w3id.org/mqto#calculatedValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "705.1"
+  } ],
+  "https://w3id.org/mqto#evaluatesProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115_MeltTemp"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#MA_003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#InjectionPressurePeak"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#MetricAssessment"
+  } ],
+  "https://w3id.org/mqto#assessmentValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "https://w3id.org/mqto#basedOn" : [ {
+    "@id" : "https://w3id.org/mqto/example#Obs005"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#Obs006"
+  } ],
+  "https://w3id.org/mqto#calculatedFor" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "https://w3id.org/mqto#calculatedTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T10:05:00"
+  } ],
+  "https://w3id.org/mqto#calculatedValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1085.0"
+  } ],
+  "https://w3id.org/mqto#evaluatesProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115_InjPressure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#MA_004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#TemperatureDeviation"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#MetricAssessment"
+  } ],
+  "https://w3id.org/mqto#assessmentValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://w3id.org/mqto#basedOn" : [ {
+    "@id" : "https://w3id.org/mqto/example#Obs007"
+  } ],
+  "https://w3id.org/mqto#calculatedFor" : [ {
+    "@id" : "https://w3id.org/mqto/example#Process1234"
+  } ],
+  "https://w3id.org/mqto#calculatedTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T16:00:00"
+  } ],
+  "https://w3id.org/mqto#calculatedValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "722.5"
+  } ],
+  "https://w3id.org/mqto#evaluatesProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115_MeltTemp"
+  } ],
+  "https://w3id.org/mqto#raised" : [ {
+    "@id" : "https://w3id.org/mqto/example#FO_002"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#MA_005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#CycleTimeVariance"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#MetricAssessment"
+  } ],
+  "https://w3id.org/mqto#assessmentValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "https://w3id.org/mqto#basedOn" : [ {
+    "@id" : "https://w3id.org/mqto/example#Obs008"
+  } ],
+  "https://w3id.org/mqto#calculatedFor" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "https://w3id.org/mqto#calculatedTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-16T09:00:00"
+  } ],
+  "https://w3id.org/mqto#calculatedValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "2.1"
+  } ],
+  "https://w3id.org/mqto#evaluatesProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115_CycleTime"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#MA_006",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#TemperatureDeviation"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#MetricAssessment"
+  } ],
+  "https://w3id.org/mqto#assessmentValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://w3id.org/mqto#basedOn" : [ {
+    "@id" : "https://w3id.org/mqto/example#Obs009"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#Obs010"
+  } ],
+  "https://w3id.org/mqto#calculatedFor" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "https://w3id.org/mqto#calculatedTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-17T11:00:00"
+  } ],
+  "https://w3id.org/mqto#calculatedValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "725.8"
+  } ],
+  "https://w3id.org/mqto#evaluatesProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115_MeltTemp"
+  } ],
+  "https://w3id.org/mqto#raised" : [ {
+    "@id" : "https://w3id.org/mqto/example#FO_003"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#MA_007",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#ImpurityLevel"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#MetricAssessment"
+  } ],
+  "https://w3id.org/mqto#assessmentValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "https://w3id.org/mqto#basedOn" : [ {
+    "@id" : "https://w3id.org/mqto/example#Obs011"
+  } ],
+  "https://w3id.org/mqto#calculatedFor" : [ {
+    "@id" : "https://w3id.org/mqto/example#AlBatch2026_0043"
+  } ],
+  "https://w3id.org/mqto#calculatedTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-17T07:15:00"
+  } ],
+  "https://w3id.org/mqto#calculatedValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.62"
+  } ],
+  "https://w3id.org/mqto#evaluatesProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#AlBatch2026_0043_Impurity"
+  } ],
+  "https://w3id.org/mqto#raised" : [ {
+    "@id" : "https://w3id.org/mqto/example#FO_005"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Machine4115",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#DieCastingCell"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#PhysicalMachine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Machine 4115"
+  } ],
+  "https://w3id.org/mqto#identifier" : [ {
+    "@value" : "4115"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Machine4115_CycleTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#CycleTimeSignal"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#ObservableProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Cycle time of Machine 4115"
+  } ],
+  "http://www.w3.org/ns/ssn/isPropertyOf" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Machine4115_FurnaceSetpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#FurnaceSetpointSignal"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#ActuableProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Furnace setpoint of Machine 4115"
+  } ],
+  "http://www.w3.org/ns/ssn/isPropertyOf" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Machine4115_InjPressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#InjectionPressureSignal"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#ObservableProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Injection pressure of Machine 4115"
+  } ],
+  "http://www.w3.org/ns/ssn/isPropertyOf" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Machine4115_MeltTemp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#MeltTemperatureSignal"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#ObservableProperty"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Melt temperature of Machine 4115"
+  } ],
+  "http://www.w3.org/ns/ssn/isPropertyOf" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#MeltTempTooHigh",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#FailureMode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Melt temperature too high"
+  } ],
+  "https://w3id.org/mqto#causes" : [ {
+    "@id" : "https://w3id.org/mqto/example#Porosity"
+  } ],
+  "https://w3id.org/mqto#causesWeakly" : [ {
+    "@id" : "https://w3id.org/mqto/example#Porosity"
+  } ],
+  "https://w3id.org/mqto#failureBelongsTo" : [ {
+    "@id" : "https://w3id.org/mqto/example#DieCastingCell"
+  } ],
+  "https://w3id.org/mqto#mitigatedBy" : [ {
+    "@id" : "https://w3id.org/mqto/example#AdjustMeltTemp"
+  } ],
+  "https://w3id.org/mqto#refersToMetric" : [ {
+    "@id" : "https://w3id.org/mqto/example#TemperatureDeviation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#MeltTemperatureSignal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Signal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Melt temperature signal"
+  } ],
+  "https://w3id.org/mqto#identifier" : [ {
+    "@value" : "PLC.MeltTemp"
+  } ],
+  "https://w3id.org/mqto#signalProvidedBy" : [ {
+    "@id" : "https://w3id.org/mqto/example#DieCastingCell"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Obs001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  }, {
+    "@id" : "https://w3id.org/mqto#Observation"
+  } ],
+  "http://www.w3.org/ns/sosa/hasFeatureOfInterest" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "http://www.w3.org/ns/sosa/hasResult" : [ {
+    "@id" : "https://w3id.org/mqto/example#Result001"
+  } ],
+  "http://www.w3.org/ns/sosa/hasSimpleResult" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "721.5"
+  } ],
+  "http://www.w3.org/ns/sosa/observedProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115_MeltTemp"
+  } ],
+  "http://www.w3.org/ns/sosa/resultTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T09:55:00"
+  } ],
+  "http://www.w3.org/ns/sosa/usedProcedure" : [ {
+    "@id" : "https://w3id.org/mqto/example#TemperatureMeasurement"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Obs002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  }, {
+    "@id" : "https://w3id.org/mqto#Observation"
+  } ],
+  "http://www.w3.org/ns/sosa/hasFeatureOfInterest" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "http://www.w3.org/ns/sosa/hasResult" : [ {
+    "@id" : "https://w3id.org/mqto/example#Result002"
+  } ],
+  "http://www.w3.org/ns/sosa/hasSimpleResult" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "719.2"
+  } ],
+  "http://www.w3.org/ns/sosa/observedProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115_MeltTemp"
+  } ],
+  "http://www.w3.org/ns/sosa/resultTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T09:57:00"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Obs003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  }, {
+    "@id" : "https://w3id.org/mqto#Observation"
+  } ],
+  "http://www.w3.org/ns/sosa/hasFeatureOfInterest" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "http://www.w3.org/ns/sosa/hasResult" : [ {
+    "@id" : "https://w3id.org/mqto/example#Result003"
+  } ],
+  "http://www.w3.org/ns/sosa/hasSimpleResult" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "718.3"
+  } ],
+  "http://www.w3.org/ns/sosa/observedProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115_MeltTemp"
+  } ],
+  "http://www.w3.org/ns/sosa/resultTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T09:59:00"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Obs004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  }, {
+    "@id" : "https://w3id.org/mqto#Observation"
+  } ],
+  "http://www.w3.org/ns/sosa/hasFeatureOfInterest" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "http://www.w3.org/ns/sosa/hasResult" : [ {
+    "@id" : "https://w3id.org/mqto/example#Result004"
+  } ],
+  "http://www.w3.org/ns/sosa/hasSimpleResult" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "705.1"
+  } ],
+  "http://www.w3.org/ns/sosa/observedProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115_MeltTemp"
+  } ],
+  "http://www.w3.org/ns/sosa/resultTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T13:55:00"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Obs005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  }, {
+    "@id" : "https://w3id.org/mqto#Observation"
+  } ],
+  "http://www.w3.org/ns/sosa/hasFeatureOfInterest" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "http://www.w3.org/ns/sosa/hasResult" : [ {
+    "@id" : "https://w3id.org/mqto/example#Result_Shot042"
+  } ],
+  "http://www.w3.org/ns/sosa/hasSimpleResult" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1085.0"
+  } ],
+  "http://www.w3.org/ns/sosa/observedProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115_InjPressure"
+  } ],
+  "http://www.w3.org/ns/sosa/resultTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T10:02:00"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Obs006",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  }, {
+    "@id" : "https://w3id.org/mqto#Observation"
+  } ],
+  "http://www.w3.org/ns/sosa/hasFeatureOfInterest" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "http://www.w3.org/ns/sosa/hasResult" : [ {
+    "@id" : "https://w3id.org/mqto/example#Result_Shot043"
+  } ],
+  "http://www.w3.org/ns/sosa/hasSimpleResult" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1042.3"
+  } ],
+  "http://www.w3.org/ns/sosa/observedProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115_InjPressure"
+  } ],
+  "http://www.w3.org/ns/sosa/resultTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T10:04:00"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Obs007",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  }, {
+    "@id" : "https://w3id.org/mqto#Observation"
+  } ],
+  "http://www.w3.org/ns/sosa/hasFeatureOfInterest" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "http://www.w3.org/ns/sosa/hasResult" : [ {
+    "@id" : "https://w3id.org/mqto/example#Result007"
+  } ],
+  "http://www.w3.org/ns/sosa/hasSimpleResult" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "722.5"
+  } ],
+  "http://www.w3.org/ns/sosa/observedProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115_MeltTemp"
+  } ],
+  "http://www.w3.org/ns/sosa/resultTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T15:50:00"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Obs008",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  }, {
+    "@id" : "https://w3id.org/mqto#Observation"
+  } ],
+  "http://www.w3.org/ns/sosa/hasFeatureOfInterest" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "http://www.w3.org/ns/sosa/hasResult" : [ {
+    "@id" : "https://w3id.org/mqto/example#Result008"
+  } ],
+  "http://www.w3.org/ns/sosa/hasSimpleResult" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "24.7"
+  } ],
+  "http://www.w3.org/ns/sosa/observedProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115_CycleTime"
+  } ],
+  "http://www.w3.org/ns/sosa/resultTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-16T08:55:00"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Obs009",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  }, {
+    "@id" : "https://w3id.org/mqto#Observation"
+  } ],
+  "http://www.w3.org/ns/sosa/hasFeatureOfInterest" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "http://www.w3.org/ns/sosa/hasResult" : [ {
+    "@id" : "https://w3id.org/mqto/example#Result009"
+  } ],
+  "http://www.w3.org/ns/sosa/hasSimpleResult" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "725.8"
+  } ],
+  "http://www.w3.org/ns/sosa/observedProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115_MeltTemp"
+  } ],
+  "http://www.w3.org/ns/sosa/resultTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-17T10:55:00"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Obs010",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  }, {
+    "@id" : "https://w3id.org/mqto#Observation"
+  } ],
+  "http://www.w3.org/ns/sosa/hasFeatureOfInterest" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "http://www.w3.org/ns/sosa/hasResult" : [ {
+    "@id" : "https://w3id.org/mqto/example#Result010"
+  } ],
+  "http://www.w3.org/ns/sosa/hasSimpleResult" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "723.4"
+  } ],
+  "http://www.w3.org/ns/sosa/observedProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#Machine4115_MeltTemp"
+  } ],
+  "http://www.w3.org/ns/sosa/resultTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-17T10:58:00"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Obs011",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/ns/sosa/Observation"
+  }, {
+    "@id" : "https://w3id.org/mqto#Observation"
+  } ],
+  "http://www.w3.org/ns/sosa/hasFeatureOfInterest" : [ {
+    "@id" : "https://w3id.org/mqto/example#AlBatch2026_0043"
+  } ],
+  "http://www.w3.org/ns/sosa/hasResult" : [ {
+    "@id" : "https://w3id.org/mqto/example#Result011"
+  } ],
+  "http://www.w3.org/ns/sosa/observedProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#AlBatch2026_0043_Impurity"
+  } ],
+  "http://www.w3.org/ns/sosa/resultTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-17T07:00:00"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Operator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Manpower"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Machine operator"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Porosity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#FailureMode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Porosity"
+  } ],
+  "https://w3id.org/mqto#causedBy" : [ {
+    "@id" : "https://w3id.org/mqto/example#AlloyContamination"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#GasPorosity"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#MeltTempTooHigh"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#ShrinkagePorosity"
+  } ],
+  "https://w3id.org/mqto#causedByModerately" : [ {
+    "@id" : "https://w3id.org/mqto/example#AlloyContamination"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#ShrinkagePorosity"
+  } ],
+  "https://w3id.org/mqto#causedByStrongly" : [ {
+    "@id" : "https://w3id.org/mqto/example#GasPorosity"
+  } ],
+  "https://w3id.org/mqto#causedByWeakly" : [ {
+    "@id" : "https://w3id.org/mqto/example#MeltTempTooHigh"
+  } ],
+  "https://w3id.org/mqto#failureBelongsTo" : [ {
+    "@id" : "https://w3id.org/mqto/example#DieCastingCell"
+  } ],
+  "https://w3id.org/mqto#mitigatedBy" : [ {
+    "@id" : "https://w3id.org/mqto/example#AdjustMeltTemp"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#IncreaseSlowShot"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#VerifyThermocouple"
+  } ],
+  "https://w3id.org/mqto#refersToMetric" : [ {
+    "@id" : "https://w3id.org/mqto/example#InjectionPressurePeak"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#TemperatureDeviation"
+  } ],
+  "https://w3id.org/mqto#weight" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "80"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Process1234",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant" : [ {
+    "@id" : "https://w3id.org/mqto/example#AlBatch2026_0042"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#DieCastingProcess"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#ProcessExecution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Process execution 1234"
+  } ],
+  "https://w3id.org/mqto#endTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T16:00:00"
+  } ],
+  "https://w3id.org/mqto#startTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-15T08:00:00"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Process1235",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant" : [ {
+    "@id" : "https://w3id.org/mqto/example#AlBatch2026_0042"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#DieCastingProcess"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#ProcessExecution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Process execution 1235"
+  } ],
+  "https://w3id.org/mqto#endTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-16T16:00:00"
+  } ],
+  "https://w3id.org/mqto#startTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-16T08:00:00"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Process1236",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant" : [ {
+    "@id" : "https://w3id.org/mqto/example#AlBatch2026_0043"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#Machine4115"
+  } ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
+    "@id" : "https://w3id.org/mqto/example#DieCastingProcess"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#ProcessExecution"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Process execution 1236"
+  } ],
+  "https://w3id.org/mqto#endTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-17T16:00:00"
+  } ],
+  "https://w3id.org/mqto#startTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "@value" : "2026-03-17T08:00:00"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#ReplaceAlloyBatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant" : [ {
+    "@id" : "https://w3id.org/mqto/example#AluminiumAlloy"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#Operator"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Countermeasure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Replace contaminated alloy batch"
+  } ],
+  "https://w3id.org/mqto#hasStepList" : [ {
+    "@id" : "https://w3id.org/mqto/example#ReplaceAlloyBatch_List1"
+  } ],
+  "https://w3id.org/mqto#mitigates" : [ {
+    "@id" : "https://w3id.org/mqto/example#AlloyContamination"
+  } ],
+  "https://w3id.org/mqto#weight" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "85"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#ReplaceAlloyBatch_List1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#List"
+  } ],
+  "https://w3id.org/mqto#first" : [ {
+    "@id" : "https://w3id.org/mqto/example#CheckCurrentTemp"
+  } ],
+  "https://w3id.org/mqto#rest" : [ {
+    "@id" : "https://w3id.org/mqto/example#ReplaceAlloyBatch_List2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#ReplaceAlloyBatch_List2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#List"
+  } ],
+  "https://w3id.org/mqto#first" : [ {
+    "@id" : "https://w3id.org/mqto/example#SwapAlloyBatch"
+  } ],
+  "https://w3id.org/mqto#rest" : [ {
+    "@id" : "https://w3id.org/mqto/example#ReplaceAlloyBatch_List3"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#ReplaceAlloyBatch_List3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#List"
+  } ],
+  "https://w3id.org/mqto#first" : [ {
+    "@id" : "https://w3id.org/mqto/example#VerifyNewTemp"
+  } ],
+  "https://w3id.org/mqto#rest" : [ {
+    "@id" : "https://w3id.org/mqto#nil"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Result001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://qudt.org/schema/qudt/numericValue" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "721.5"
+  } ],
+  "http://qudt.org/schema/qudt/unit" : [ {
+    "@id" : "http://qudt.org/vocab/unit/DEG_C"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://qudt.org/schema/qudt/QuantityValue"
+  }, {
+    "@id" : "https://w3id.org/mqto#Result"
+  } ],
+  "https://w3id.org/mqto/example#temperature" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "721.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Result002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Result"
+  } ],
+  "https://w3id.org/mqto/example#temperature" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "719.2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Result003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Result"
+  } ],
+  "https://w3id.org/mqto/example#temperature" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "718.3"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Result004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Result"
+  } ],
+  "https://w3id.org/mqto/example#temperature" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "705.1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Result007",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Result"
+  } ],
+  "https://w3id.org/mqto/example#temperature" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "722.5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Result008",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Result"
+  } ],
+  "https://w3id.org/mqto/example#cycleTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "24.7"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Result009",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Result"
+  } ],
+  "https://w3id.org/mqto/example#temperature" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "725.8"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Result010",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Result"
+  } ],
+  "https://w3id.org/mqto/example#temperature" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "723.4"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Result011",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Result"
+  } ],
+  "https://w3id.org/mqto/example#impurityPct" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "0.62"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Result_Act001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Result"
+  } ],
+  "https://w3id.org/mqto/example#temperature" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "710.0"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Result_Shot042",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Result"
+  } ],
+  "https://w3id.org/mqto/example#cycleTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "23.9"
+  } ],
+  "https://w3id.org/mqto/example#pressure" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1085.0"
+  } ],
+  "https://w3id.org/mqto/example#temperature" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "719.8"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#Result_Shot043",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Result"
+  } ],
+  "https://w3id.org/mqto/example#cycleTime" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "24.2"
+  } ],
+  "https://w3id.org/mqto/example#pressure" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1042.3"
+  } ],
+  "https://w3id.org/mqto/example#temperature" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "718.1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#ReviewInjectionProfile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#CountermeasureStep"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Review injection profile"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#ShrinkagePorosity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#FailureMode"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Shrinkage porosity"
+  } ],
+  "https://w3id.org/mqto#causes" : [ {
+    "@id" : "https://w3id.org/mqto/example#Porosity"
+  } ],
+  "https://w3id.org/mqto#causesModerately" : [ {
+    "@id" : "https://w3id.org/mqto/example#Porosity"
+  } ],
+  "https://w3id.org/mqto#failureBelongsTo" : [ {
+    "@id" : "https://w3id.org/mqto/example#DieCastingCell"
+  } ],
+  "https://w3id.org/mqto#refersToMetric" : [ {
+    "@id" : "https://w3id.org/mqto/example#InjectionPressurePeak"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#SwapAlloyBatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#CountermeasureStep"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Swap alloy batch"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#TemperatureDeviation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Metric"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Melt temperature deviation"
+  } ],
+  "https://w3id.org/mqto#itemWindowSize" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "10"
+  } ],
+  "https://w3id.org/mqto#lowerBound" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "680.0"
+  } ],
+  "https://w3id.org/mqto#method" : [ {
+    "@value" : "mean"
+  } ],
+  "https://w3id.org/mqto#metricBelongsTo" : [ {
+    "@id" : "https://w3id.org/mqto/example#DieCastingCell"
+  } ],
+  "https://w3id.org/mqto#readsFrom" : [ {
+    "@id" : "https://w3id.org/mqto/example#MeltTemperatureSignal"
+  } ],
+  "https://w3id.org/mqto#resultProperty" : [ {
+    "@id" : "https://w3id.org/mqto/example#temperature"
+  } ],
+  "https://w3id.org/mqto#timeWindowSize" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#duration",
+    "@value" : "PT5M"
+  } ],
+  "https://w3id.org/mqto#upperBound" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "720.0"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#TemperatureMeasurement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Measurement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Melt temperature measurement"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#VerifyNewTemp",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#CountermeasureStep"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Verify new temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#VerifyThermocouple",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#Countermeasure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Verify thermocouple calibration on furnace"
+  } ],
+  "https://w3id.org/mqto#hasStepList" : [ {
+    "@id" : "https://w3id.org/mqto/example#VerifyThermocouple_List1"
+  } ],
+  "https://w3id.org/mqto#mitigates" : [ {
+    "@id" : "https://w3id.org/mqto/example#Porosity"
+  } ],
+  "https://w3id.org/mqto#weight" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "70"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#VerifyThermocouple_List1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#List"
+  } ],
+  "https://w3id.org/mqto#first" : [ {
+    "@id" : "https://w3id.org/mqto/example#CheckCurrentTemp"
+  } ],
+  "https://w3id.org/mqto#rest" : [ {
+    "@id" : "https://w3id.org/mqto/example#VerifyThermocouple_List2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#VerifyThermocouple_List2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#List"
+  } ],
+  "https://w3id.org/mqto#first" : [ {
+    "@id" : "https://w3id.org/mqto/example#InspectThermocouple"
+  } ],
+  "https://w3id.org/mqto#rest" : [ {
+    "@id" : "https://w3id.org/mqto/example#VerifyThermocouple_List3"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#VerifyThermocouple_List3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/mqto#List"
+  } ],
+  "https://w3id.org/mqto#first" : [ {
+    "@id" : "https://w3id.org/mqto/example#CalibrateIfNeeded"
+  } ],
+  "https://w3id.org/mqto#rest" : [ {
+    "@id" : "https://w3id.org/mqto#nil"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#cycleTime",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "cycle time"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#impurityPct",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "impurity percentage"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#pressure",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "pressure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/mqto/example#temperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "temperature"
+  } ]
+}, {
+  "@id" : "https://w3id.org/pko#includesStepExecution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/pko#nextStepExecution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://w3id.org/pko#previousStepExecution",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]

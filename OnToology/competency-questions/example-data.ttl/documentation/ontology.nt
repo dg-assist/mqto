@@ -1,0 +1,1152 @@
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://qudt.org/schema/qudt/numericValue
+<http://qudt.org/schema/qudt/numericValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://qudt.org/schema/qudt/unit
+<http://qudt.org/schema/qudt/unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf
+<http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart
+<http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant
+<http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://rds.posccaesar.org/ontology/lis14/rdl/implements
+<http://rds.posccaesar.org/ontology/lis14/rdl/implements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/sosa/actsOnProperty
+<http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/sosa/hasResult
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/sosa/hasSimpleResult
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/sosa/resultTime
+<http://www.w3.org/ns/sosa/resultTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/sosa/usedProcedure
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/ssn/isPropertyOf
+<http://www.w3.org/ns/ssn/isPropertyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#abortedReason
+<https://w3id.org/mqto#abortedReason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#abortedTime
+<https://w3id.org/mqto#abortedTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#appearedOn
+<https://w3id.org/mqto#appearedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#assessmentValue
+<https://w3id.org/mqto#assessmentValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#basedOn
+<https://w3id.org/mqto#basedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#calculatedFor
+<https://w3id.org/mqto#calculatedFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#calculatedTime
+<https://w3id.org/mqto#calculatedTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#calculatedValue
+<https://w3id.org/mqto#calculatedValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#causedBy
+<https://w3id.org/mqto#causedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#causedByModerately
+<https://w3id.org/mqto#causedByModerately> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#causedByStrongly
+<https://w3id.org/mqto#causedByStrongly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#causedByWeakly
+<https://w3id.org/mqto#causedByWeakly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#causes
+<https://w3id.org/mqto#causes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#causesModerately
+<https://w3id.org/mqto#causesModerately> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#causesStrongly
+<https://w3id.org/mqto#causesStrongly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#causesWeakly
+<https://w3id.org/mqto#causesWeakly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#completionTime
+<https://w3id.org/mqto#completionTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#endTime
+<https://w3id.org/mqto#endTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#evaluatesProperty
+<https://w3id.org/mqto#evaluatesProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#failureBelongsTo
+<https://w3id.org/mqto#failureBelongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#first
+<https://w3id.org/mqto#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#hasFailure
+<https://w3id.org/mqto#hasFailure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#hasMetric
+<https://w3id.org/mqto#hasMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#hasStepList
+<https://w3id.org/mqto#hasStepList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#identifier
+<https://w3id.org/mqto#identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#itemWindowSize
+<https://w3id.org/mqto#itemWindowSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#lowerBound
+<https://w3id.org/mqto#lowerBound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#method
+<https://w3id.org/mqto#method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#metricBelongsTo
+<https://w3id.org/mqto#metricBelongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#mitigated
+<https://w3id.org/mqto#mitigated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#mitigatedBy
+<https://w3id.org/mqto#mitigatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#mitigates
+<https://w3id.org/mqto#mitigates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#occurrenceTime
+<https://w3id.org/mqto#occurrenceTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#providesSignal
+<https://w3id.org/mqto#providesSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#raised
+<https://w3id.org/mqto#raised> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#raisedBy
+<https://w3id.org/mqto#raisedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#readsFrom
+<https://w3id.org/mqto#readsFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#refersToMetric
+<https://w3id.org/mqto#refersToMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#rest
+<https://w3id.org/mqto#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#resultProperty
+<https://w3id.org/mqto#resultProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#score
+<https://w3id.org/mqto#score> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#signalProvidedBy
+<https://w3id.org/mqto#signalProvidedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#startTime
+<https://w3id.org/mqto#startTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#suggestedBy
+<https://w3id.org/mqto#suggestedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#timeWindowSize
+<https://w3id.org/mqto#timeWindowSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#upperBound
+<https://w3id.org/mqto#upperBound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#weight
+<https://w3id.org/mqto#weight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/pko#includesStepExecution
+<https://w3id.org/pko#includesStepExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/pko#nextStepExecution
+<https://w3id.org/pko#nextStepExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/pko#previousStepExecution
+<https://w3id.org/pko#previousStepExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#duration
+<http://www.w3.org/2001/XMLSchema#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/mqto/example#cycleTime
+<https://w3id.org/mqto/example#cycleTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mqto/example#cycleTime> <http://www.w3.org/2000/01/rdf-schema#label> "cycle time"@en .
+# 
+# https://w3id.org/mqto/example#impurityPct
+<https://w3id.org/mqto/example#impurityPct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mqto/example#impurityPct> <http://www.w3.org/2000/01/rdf-schema#label> "impurity percentage"@en .
+# 
+# https://w3id.org/mqto/example#pressure
+<https://w3id.org/mqto/example#pressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mqto/example#pressure> <http://www.w3.org/2000/01/rdf-schema#label> "pressure"@en .
+# 
+# https://w3id.org/mqto/example#temperature
+<https://w3id.org/mqto/example#temperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/mqto/example#temperature> <http://www.w3.org/2000/01/rdf-schema#label> "temperature"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://qudt.org/schema/qudt/QuantityValue
+<http://qudt.org/schema/qudt/QuantityValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/Actuation
+<http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#ActuableProperty
+<https://w3id.org/mqto#ActuableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#Actuation
+<https://w3id.org/mqto#Actuation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#Countermeasure
+<https://w3id.org/mqto#Countermeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#CountermeasureExecution
+<https://w3id.org/mqto#CountermeasureExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#CountermeasureStep
+<https://w3id.org/mqto#CountermeasureStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#CountermeasureStepExecution
+<https://w3id.org/mqto#CountermeasureStepExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#FailureMode
+<https://w3id.org/mqto#FailureMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#FailureOccurrence
+<https://w3id.org/mqto#FailureOccurrence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#List
+<https://w3id.org/mqto#List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#Machine
+<https://w3id.org/mqto#Machine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#Manpower
+<https://w3id.org/mqto#Manpower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#Material
+<https://w3id.org/mqto#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#Measurement
+<https://w3id.org/mqto#Measurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#Method
+<https://w3id.org/mqto#Method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#Metric
+<https://w3id.org/mqto#Metric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#MetricAssessment
+<https://w3id.org/mqto#MetricAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#ObservableProperty
+<https://w3id.org/mqto#ObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#Observation
+<https://w3id.org/mqto#Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#PhysicalMachine
+<https://w3id.org/mqto#PhysicalMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#PhysicalMaterial
+<https://w3id.org/mqto#PhysicalMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#ProcessExecution
+<https://w3id.org/mqto#ProcessExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#Result
+<https://w3id.org/mqto#Result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#Signal
+<https://w3id.org/mqto#Signal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/mqto/example#Act001
+<https://w3id.org/mqto/example#Act001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Act001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Actuation> .
+<https://w3id.org/mqto/example#Act001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Actuation> .
+<https://w3id.org/mqto/example#Act001> <http://www.w3.org/ns/sosa/actsOnProperty> <https://w3id.org/mqto/example#Machine4115_FurnaceSetpoint> .
+<https://w3id.org/mqto/example#Act001> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#Act001> <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result_Act001> .
+<https://w3id.org/mqto/example#Act001> <http://www.w3.org/ns/sosa/hasSimpleResult> "710.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#Act001> <http://www.w3.org/ns/sosa/resultTime> "2026-03-15T10:50:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://w3id.org/mqto/example#AdjustFurnaceSetpoint
+<https://w3id.org/mqto/example#AdjustFurnaceSetpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#AdjustFurnaceSetpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStep> .
+<https://w3id.org/mqto/example#AdjustFurnaceSetpoint> <http://www.w3.org/2000/01/rdf-schema#label> "Adjust furnace setpoint"@en .
+# 
+# https://w3id.org/mqto/example#AdjustMeltTemp
+<https://w3id.org/mqto/example#AdjustMeltTemp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#AdjustMeltTemp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Countermeasure> .
+<https://w3id.org/mqto/example#AdjustMeltTemp> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#DieCastingCell> .
+<https://w3id.org/mqto/example#AdjustMeltTemp> <http://www.w3.org/2000/01/rdf-schema#label> "Adjust melt holding temperature to alloy specification"@en .
+<https://w3id.org/mqto/example#AdjustMeltTemp> <https://w3id.org/mqto#hasStepList> <https://w3id.org/mqto/example#AdjustMeltTemp_List1> .
+<https://w3id.org/mqto/example#AdjustMeltTemp> <https://w3id.org/mqto#mitigates> <https://w3id.org/mqto/example#MeltTempTooHigh> .
+<https://w3id.org/mqto/example#AdjustMeltTemp> <https://w3id.org/mqto#mitigates> <https://w3id.org/mqto/example#Porosity> .
+<https://w3id.org/mqto/example#AdjustMeltTemp> <https://w3id.org/mqto#weight> "90"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://w3id.org/mqto/example#AdjustMeltTemp_List1
+<https://w3id.org/mqto/example#AdjustMeltTemp_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#AdjustMeltTemp_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#AdjustMeltTemp_List1> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#CheckCurrentTemp> .
+<https://w3id.org/mqto/example#AdjustMeltTemp_List1> <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#AdjustMeltTemp_List2> .
+# 
+# https://w3id.org/mqto/example#AdjustMeltTemp_List2
+<https://w3id.org/mqto/example#AdjustMeltTemp_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#AdjustMeltTemp_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#AdjustMeltTemp_List2> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#AdjustFurnaceSetpoint> .
+<https://w3id.org/mqto/example#AdjustMeltTemp_List2> <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#AdjustMeltTemp_List3> .
+# 
+# https://w3id.org/mqto/example#AdjustMeltTemp_List3
+<https://w3id.org/mqto/example#AdjustMeltTemp_List3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#AdjustMeltTemp_List3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#AdjustMeltTemp_List3> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#VerifyNewTemp> .
+<https://w3id.org/mqto/example#AdjustMeltTemp_List3> <https://w3id.org/mqto#rest> <https://w3id.org/mqto#nil> .
+# 
+# https://w3id.org/mqto/example#AdjustSlowShotDuration
+<https://w3id.org/mqto/example#AdjustSlowShotDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#AdjustSlowShotDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStep> .
+<https://w3id.org/mqto/example#AdjustSlowShotDuration> <http://www.w3.org/2000/01/rdf-schema#label> "Adjust slow-shot phase duration"@en .
+# 
+# https://w3id.org/mqto/example#AlBatch2026_0042
+<https://w3id.org/mqto/example#AlBatch2026_0042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#AlBatch2026_0042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#PhysicalMaterial> .
+<https://w3id.org/mqto/example#AlBatch2026_0042> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#AluminiumAlloy> .
+<https://w3id.org/mqto/example#AlBatch2026_0042> <http://www.w3.org/2000/01/rdf-schema#label> "Aluminium batch AL-2026-0042"@en .
+<https://w3id.org/mqto/example#AlBatch2026_0042> <https://w3id.org/mqto#identifier> "AL-2026-0042" .
+# 
+# https://w3id.org/mqto/example#AlBatch2026_0043
+<https://w3id.org/mqto/example#AlBatch2026_0043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#AlBatch2026_0043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#PhysicalMaterial> .
+<https://w3id.org/mqto/example#AlBatch2026_0043> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#AluminiumAlloy> .
+<https://w3id.org/mqto/example#AlBatch2026_0043> <http://www.w3.org/2000/01/rdf-schema#label> "Aluminium batch AL-2026-0043"@en .
+<https://w3id.org/mqto/example#AlBatch2026_0043> <https://w3id.org/mqto#identifier> "AL-2026-0043" .
+# 
+# https://w3id.org/mqto/example#AlBatch2026_0043_Impurity
+<https://w3id.org/mqto/example#AlBatch2026_0043_Impurity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#AlBatch2026_0043_Impurity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#ObservableProperty> .
+<https://w3id.org/mqto/example#AlBatch2026_0043_Impurity> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#ImpurityLevelSignal> .
+<https://w3id.org/mqto/example#AlBatch2026_0043_Impurity> <http://www.w3.org/2000/01/rdf-schema#label> "Impurity level of batch AL-2026-0043"@en .
+<https://w3id.org/mqto/example#AlBatch2026_0043_Impurity> <http://www.w3.org/ns/ssn/isPropertyOf> <https://w3id.org/mqto/example#AlBatch2026_0043> .
+# 
+# https://w3id.org/mqto/example#AlloyContamination
+<https://w3id.org/mqto/example#AlloyContamination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#AlloyContamination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#FailureMode> .
+<https://w3id.org/mqto/example#AlloyContamination> <http://www.w3.org/2000/01/rdf-schema#label> "Alloy contamination"@en .
+<https://w3id.org/mqto/example#AlloyContamination> <https://w3id.org/mqto#causes> <https://w3id.org/mqto/example#Porosity> .
+<https://w3id.org/mqto/example#AlloyContamination> <https://w3id.org/mqto#causesModerately> <https://w3id.org/mqto/example#Porosity> .
+<https://w3id.org/mqto/example#AlloyContamination> <https://w3id.org/mqto#failureBelongsTo> <https://w3id.org/mqto/example#AluminiumAlloy> .
+<https://w3id.org/mqto/example#AlloyContamination> <https://w3id.org/mqto#mitigatedBy> <https://w3id.org/mqto/example#ReplaceAlloyBatch> .
+<https://w3id.org/mqto/example#AlloyContamination> <https://w3id.org/mqto#refersToMetric> <https://w3id.org/mqto/example#ImpurityLevel> .
+# 
+# https://w3id.org/mqto/example#AluminiumAlloy
+<https://w3id.org/mqto/example#AluminiumAlloy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#AluminiumAlloy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Material> .
+<https://w3id.org/mqto/example#AluminiumAlloy> <http://www.w3.org/2000/01/rdf-schema#label> "Aluminium alloy EN AC-46000"@en .
+<https://w3id.org/mqto/example#AluminiumAlloy> <https://w3id.org/mqto#hasFailure> <https://w3id.org/mqto/example#AlloyContamination> .
+<https://w3id.org/mqto/example#AluminiumAlloy> <https://w3id.org/mqto#hasMetric> <https://w3id.org/mqto/example#ImpurityLevel> .
+<https://w3id.org/mqto/example#AluminiumAlloy> <https://w3id.org/mqto#providesSignal> <https://w3id.org/mqto/example#ImpurityLevelSignal> .
+# 
+# https://w3id.org/mqto/example#CE_001
+<https://w3id.org/mqto/example#CE_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#CE_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureExecution> .
+<https://w3id.org/mqto/example#CE_001> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#AdjustMeltTemp> .
+<https://w3id.org/mqto/example#CE_001> <https://w3id.org/mqto#endTime> "2026-03-15T11:20:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#CE_001> <https://w3id.org/mqto#mitigated> <https://w3id.org/mqto/example#FO_001> .
+<https://w3id.org/mqto/example#CE_001> <https://w3id.org/mqto#score> "0.92"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#CE_001> <https://w3id.org/mqto#startTime> "2026-03-15T10:30:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#CE_001> <https://w3id.org/mqto#suggestedBy> <https://w3id.org/mqto/example#FO_001> .
+<https://w3id.org/mqto/example#CE_001> <https://w3id.org/pko#includesStepExecution> <https://w3id.org/mqto/example#CSE_001> .
+<https://w3id.org/mqto/example#CE_001> <https://w3id.org/pko#includesStepExecution> <https://w3id.org/mqto/example#CSE_002> .
+<https://w3id.org/mqto/example#CE_001> <https://w3id.org/pko#includesStepExecution> <https://w3id.org/mqto/example#CSE_003> .
+# 
+# https://w3id.org/mqto/example#CE_002
+<https://w3id.org/mqto/example#CE_002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#CE_002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureExecution> .
+<https://w3id.org/mqto/example#CE_002> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#VerifyThermocouple> .
+<https://w3id.org/mqto/example#CE_002> <https://w3id.org/mqto#abortedReason> "Thermocouple within calibration limits; no adjustment needed." .
+<https://w3id.org/mqto/example#CE_002> <https://w3id.org/mqto#abortedTime> "2026-03-17T12:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#CE_002> <https://w3id.org/mqto#score> "0.75"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#CE_002> <https://w3id.org/mqto#startTime> "2026-03-17T11:30:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#CE_002> <https://w3id.org/mqto#suggestedBy> <https://w3id.org/mqto/example#FO_003> .
+<https://w3id.org/mqto/example#CE_002> <https://w3id.org/pko#includesStepExecution> <https://w3id.org/mqto/example#CSE_004> .
+<https://w3id.org/mqto/example#CE_002> <https://w3id.org/pko#includesStepExecution> <https://w3id.org/mqto/example#CSE_005> .
+<https://w3id.org/mqto/example#CE_002> <https://w3id.org/pko#includesStepExecution> <https://w3id.org/mqto/example#CSE_006> .
+# 
+# https://w3id.org/mqto/example#CSE_001
+<https://w3id.org/mqto/example#CSE_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#CSE_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStepExecution> .
+<https://w3id.org/mqto/example#CSE_001> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#CheckCurrentTemp> .
+<https://w3id.org/mqto/example#CSE_001> <https://w3id.org/mqto#completionTime> "2026-03-15T10:35:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#CSE_001> <https://w3id.org/pko#nextStepExecution> <https://w3id.org/mqto/example#CSE_002> .
+# 
+# https://w3id.org/mqto/example#CSE_002
+<https://w3id.org/mqto/example#CSE_002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#CSE_002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStepExecution> .
+<https://w3id.org/mqto/example#CSE_002> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#AdjustFurnaceSetpoint> .
+<https://w3id.org/mqto/example#CSE_002> <https://w3id.org/mqto#completionTime> "2026-03-15T10:50:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#CSE_002> <https://w3id.org/pko#nextStepExecution> <https://w3id.org/mqto/example#CSE_003> .
+<https://w3id.org/mqto/example#CSE_002> <https://w3id.org/pko#previousStepExecution> <https://w3id.org/mqto/example#CSE_001> .
+# 
+# https://w3id.org/mqto/example#CSE_003
+<https://w3id.org/mqto/example#CSE_003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#CSE_003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStepExecution> .
+<https://w3id.org/mqto/example#CSE_003> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#VerifyNewTemp> .
+<https://w3id.org/mqto/example#CSE_003> <https://w3id.org/mqto#completionTime> "2026-03-15T11:20:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#CSE_003> <https://w3id.org/pko#previousStepExecution> <https://w3id.org/mqto/example#CSE_002> .
+# 
+# https://w3id.org/mqto/example#CSE_004
+<https://w3id.org/mqto/example#CSE_004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#CSE_004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStepExecution> .
+<https://w3id.org/mqto/example#CSE_004> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#InspectThermocouple> .
+<https://w3id.org/mqto/example#CSE_004> <https://w3id.org/mqto#completionTime> "2026-03-17T11:45:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#CSE_004> <https://w3id.org/pko#nextStepExecution> <https://w3id.org/mqto/example#CSE_005> .
+<https://w3id.org/mqto/example#CSE_004> <https://w3id.org/pko#previousStepExecution> <https://w3id.org/mqto/example#CSE_006> .
+# 
+# https://w3id.org/mqto/example#CSE_005
+<https://w3id.org/mqto/example#CSE_005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#CSE_005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStepExecution> .
+<https://w3id.org/mqto/example#CSE_005> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#CalibrateIfNeeded> .
+<https://w3id.org/mqto/example#CSE_005> <https://w3id.org/mqto#abortedReason> "Not needed — thermocouple readings within tolerance." .
+<https://w3id.org/mqto/example#CSE_005> <https://w3id.org/mqto#abortedTime> "2026-03-17T12:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#CSE_005> <https://w3id.org/pko#previousStepExecution> <https://w3id.org/mqto/example#CSE_004> .
+# 
+# https://w3id.org/mqto/example#CSE_006
+<https://w3id.org/mqto/example#CSE_006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#CSE_006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStepExecution> .
+<https://w3id.org/mqto/example#CSE_006> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#CheckCurrentTemp> .
+<https://w3id.org/mqto/example#CSE_006> <https://w3id.org/mqto#completionTime> "2026-03-17T11:35:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#CSE_006> <https://w3id.org/pko#nextStepExecution> <https://w3id.org/mqto/example#CSE_004> .
+# 
+# https://w3id.org/mqto/example#CalibrateIfNeeded
+<https://w3id.org/mqto/example#CalibrateIfNeeded> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#CalibrateIfNeeded> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStep> .
+<https://w3id.org/mqto/example#CalibrateIfNeeded> <http://www.w3.org/2000/01/rdf-schema#label> "Calibrate if needed"@en .
+# 
+# https://w3id.org/mqto/example#CheckCurrentTemp
+<https://w3id.org/mqto/example#CheckCurrentTemp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#CheckCurrentTemp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStep> .
+<https://w3id.org/mqto/example#CheckCurrentTemp> <http://www.w3.org/2000/01/rdf-schema#label> "Check current melt temperature"@en .
+# 
+# https://w3id.org/mqto/example#ColdShut
+<https://w3id.org/mqto/example#ColdShut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#ColdShut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#FailureMode> .
+<https://w3id.org/mqto/example#ColdShut> <http://www.w3.org/2000/01/rdf-schema#label> "Cold shut"@en .
+<https://w3id.org/mqto/example#ColdShut> <https://w3id.org/mqto#failureBelongsTo> <https://w3id.org/mqto/example#DieCastingCell> .
+<https://w3id.org/mqto/example#ColdShut> <https://w3id.org/mqto#mitigatedBy> <https://w3id.org/mqto/example#IncreaseSlowShot> .
+<https://w3id.org/mqto/example#ColdShut> <https://w3id.org/mqto#refersToMetric> <https://w3id.org/mqto/example#CycleTimeVariance> .
+<https://w3id.org/mqto/example#ColdShut> <https://w3id.org/mqto#weight> "40"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://w3id.org/mqto/example#CycleTimeSignal
+<https://w3id.org/mqto/example#CycleTimeSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#CycleTimeSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Signal> .
+<https://w3id.org/mqto/example#CycleTimeSignal> <http://www.w3.org/2000/01/rdf-schema#label> "Cycle time signal"@en .
+<https://w3id.org/mqto/example#CycleTimeSignal> <https://w3id.org/mqto#identifier> "PLC.CycleTime" .
+<https://w3id.org/mqto/example#CycleTimeSignal> <https://w3id.org/mqto#signalProvidedBy> <https://w3id.org/mqto/example#DieCastingCell> .
+# 
+# https://w3id.org/mqto/example#CycleTimeVariance
+<https://w3id.org/mqto/example#CycleTimeVariance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#CycleTimeVariance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Metric> .
+<https://w3id.org/mqto/example#CycleTimeVariance> <http://www.w3.org/2000/01/rdf-schema#label> "Cycle time variance"@en .
+<https://w3id.org/mqto/example#CycleTimeVariance> <https://w3id.org/mqto#itemWindowSize> "20"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/mqto/example#CycleTimeVariance> <https://w3id.org/mqto#lowerBound> "0.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#CycleTimeVariance> <https://w3id.org/mqto#method> "stdev" .
+<https://w3id.org/mqto/example#CycleTimeVariance> <https://w3id.org/mqto#metricBelongsTo> <https://w3id.org/mqto/example#DieCastingCell> .
+<https://w3id.org/mqto/example#CycleTimeVariance> <https://w3id.org/mqto#readsFrom> <https://w3id.org/mqto/example#CycleTimeSignal> .
+<https://w3id.org/mqto/example#CycleTimeVariance> <https://w3id.org/mqto#resultProperty> <https://w3id.org/mqto/example#cycleTime> .
+<https://w3id.org/mqto/example#CycleTimeVariance> <https://w3id.org/mqto#timeWindowSize> "PT10M"^^<http://www.w3.org/2001/XMLSchema#duration> .
+<https://w3id.org/mqto/example#CycleTimeVariance> <https://w3id.org/mqto#upperBound> "3.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/mqto/example#DieCastingCell
+<https://w3id.org/mqto/example#DieCastingCell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#DieCastingCell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Machine> .
+<https://w3id.org/mqto/example#DieCastingCell> <http://www.w3.org/2000/01/rdf-schema#label> "Die-casting cell"@en .
+<https://w3id.org/mqto/example#DieCastingCell> <https://w3id.org/mqto#hasFailure> <https://w3id.org/mqto/example#ColdShut> .
+<https://w3id.org/mqto/example#DieCastingCell> <https://w3id.org/mqto#hasFailure> <https://w3id.org/mqto/example#GasPorosity> .
+<https://w3id.org/mqto/example#DieCastingCell> <https://w3id.org/mqto#hasFailure> <https://w3id.org/mqto/example#MeltTempTooHigh> .
+<https://w3id.org/mqto/example#DieCastingCell> <https://w3id.org/mqto#hasFailure> <https://w3id.org/mqto/example#Porosity> .
+<https://w3id.org/mqto/example#DieCastingCell> <https://w3id.org/mqto#hasFailure> <https://w3id.org/mqto/example#ShrinkagePorosity> .
+<https://w3id.org/mqto/example#DieCastingCell> <https://w3id.org/mqto#hasMetric> <https://w3id.org/mqto/example#CycleTimeVariance> .
+<https://w3id.org/mqto/example#DieCastingCell> <https://w3id.org/mqto#hasMetric> <https://w3id.org/mqto/example#InjectionPressurePeak> .
+<https://w3id.org/mqto/example#DieCastingCell> <https://w3id.org/mqto#hasMetric> <https://w3id.org/mqto/example#TemperatureDeviation> .
+<https://w3id.org/mqto/example#DieCastingCell> <https://w3id.org/mqto#identifier> "Cell-Type-A" .
+<https://w3id.org/mqto/example#DieCastingCell> <https://w3id.org/mqto#providesSignal> <https://w3id.org/mqto/example#CycleTimeSignal> .
+<https://w3id.org/mqto/example#DieCastingCell> <https://w3id.org/mqto#providesSignal> <https://w3id.org/mqto/example#FurnaceSetpointSignal> .
+<https://w3id.org/mqto/example#DieCastingCell> <https://w3id.org/mqto#providesSignal> <https://w3id.org/mqto/example#InjectionPressureSignal> .
+<https://w3id.org/mqto/example#DieCastingCell> <https://w3id.org/mqto#providesSignal> <https://w3id.org/mqto/example#MeltTemperatureSignal> .
+# 
+# https://w3id.org/mqto/example#DieCastingProcess
+<https://w3id.org/mqto/example#DieCastingProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#DieCastingProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Method> .
+<https://w3id.org/mqto/example#DieCastingProcess> <http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart> <https://w3id.org/mqto/example#InjectionPhase> .
+<https://w3id.org/mqto/example#DieCastingProcess> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#AluminiumAlloy> .
+<https://w3id.org/mqto/example#DieCastingProcess> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#DieCastingCell> .
+<https://w3id.org/mqto/example#DieCastingProcess> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#Operator> .
+<https://w3id.org/mqto/example#DieCastingProcess> <http://www.w3.org/2000/01/rdf-schema#label> "Die-casting process"@en .
+# 
+# https://w3id.org/mqto/example#FO_001
+<https://w3id.org/mqto/example#FO_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#FO_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#FailureOccurrence> .
+<https://w3id.org/mqto/example#FO_001> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#Porosity> .
+<https://w3id.org/mqto/example#FO_001> <https://w3id.org/mqto#appearedOn> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#FO_001> <https://w3id.org/mqto#occurrenceTime> "2026-03-15T10:01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#FO_001> <https://w3id.org/mqto#raisedBy> <https://w3id.org/mqto/example#MA_001> .
+# 
+# https://w3id.org/mqto/example#FO_002
+<https://w3id.org/mqto/example#FO_002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#FO_002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#FailureOccurrence> .
+<https://w3id.org/mqto/example#FO_002> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#GasPorosity> .
+<https://w3id.org/mqto/example#FO_002> <https://w3id.org/mqto#appearedOn> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#FO_002> <https://w3id.org/mqto#occurrenceTime> "2026-03-15T16:01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#FO_002> <https://w3id.org/mqto#raisedBy> <https://w3id.org/mqto/example#MA_004> .
+# 
+# https://w3id.org/mqto/example#FO_003
+<https://w3id.org/mqto/example#FO_003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#FO_003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#FailureOccurrence> .
+<https://w3id.org/mqto/example#FO_003> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#Porosity> .
+<https://w3id.org/mqto/example#FO_003> <https://w3id.org/mqto#appearedOn> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#FO_003> <https://w3id.org/mqto#occurrenceTime> "2026-03-17T11:01:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#FO_003> <https://w3id.org/mqto#raisedBy> <https://w3id.org/mqto/example#MA_006> .
+# 
+# https://w3id.org/mqto/example#FO_004
+<https://w3id.org/mqto/example#FO_004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#FO_004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#FailureOccurrence> .
+<https://w3id.org/mqto/example#FO_004> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#ColdShut> .
+<https://w3id.org/mqto/example#FO_004> <https://w3id.org/mqto#appearedOn> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#FO_004> <https://w3id.org/mqto#occurrenceTime> "2026-03-20T09:30:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://w3id.org/mqto/example#FO_005
+<https://w3id.org/mqto/example#FO_005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#FO_005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#FailureOccurrence> .
+<https://w3id.org/mqto/example#FO_005> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#AlloyContamination> .
+<https://w3id.org/mqto/example#FO_005> <https://w3id.org/mqto#appearedOn> <https://w3id.org/mqto/example#AlBatch2026_0043> .
+<https://w3id.org/mqto/example#FO_005> <https://w3id.org/mqto#occurrenceTime> "2026-03-17T07:30:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#FO_005> <https://w3id.org/mqto#raisedBy> <https://w3id.org/mqto/example#MA_007> .
+# 
+# https://w3id.org/mqto/example#FurnaceSetpointSignal
+<https://w3id.org/mqto/example#FurnaceSetpointSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#FurnaceSetpointSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Signal> .
+<https://w3id.org/mqto/example#FurnaceSetpointSignal> <http://www.w3.org/2000/01/rdf-schema#label> "Furnace setpoint signal"@en .
+<https://w3id.org/mqto/example#FurnaceSetpointSignal> <https://w3id.org/mqto#identifier> "PLC.FurnaceSetpoint" .
+<https://w3id.org/mqto/example#FurnaceSetpointSignal> <https://w3id.org/mqto#signalProvidedBy> <https://w3id.org/mqto/example#DieCastingCell> .
+# 
+# https://w3id.org/mqto/example#GasPorosity
+<https://w3id.org/mqto/example#GasPorosity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#GasPorosity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#FailureMode> .
+<https://w3id.org/mqto/example#GasPorosity> <http://www.w3.org/2000/01/rdf-schema#label> "Gas porosity"@en .
+<https://w3id.org/mqto/example#GasPorosity> <https://w3id.org/mqto#causes> <https://w3id.org/mqto/example#Porosity> .
+<https://w3id.org/mqto/example#GasPorosity> <https://w3id.org/mqto#causesStrongly> <https://w3id.org/mqto/example#Porosity> .
+<https://w3id.org/mqto/example#GasPorosity> <https://w3id.org/mqto#failureBelongsTo> <https://w3id.org/mqto/example#DieCastingCell> .
+<https://w3id.org/mqto/example#GasPorosity> <https://w3id.org/mqto#refersToMetric> <https://w3id.org/mqto/example#TemperatureDeviation> .
+<https://w3id.org/mqto/example#GasPorosity> <https://w3id.org/mqto#weight> "60"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://w3id.org/mqto/example#ImpurityLevel
+<https://w3id.org/mqto/example#ImpurityLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#ImpurityLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Metric> .
+<https://w3id.org/mqto/example#ImpurityLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Alloy impurity level"@en .
+<https://w3id.org/mqto/example#ImpurityLevel> <https://w3id.org/mqto#method> "latest" .
+<https://w3id.org/mqto/example#ImpurityLevel> <https://w3id.org/mqto#metricBelongsTo> <https://w3id.org/mqto/example#AluminiumAlloy> .
+<https://w3id.org/mqto/example#ImpurityLevel> <https://w3id.org/mqto#readsFrom> <https://w3id.org/mqto/example#ImpurityLevelSignal> .
+<https://w3id.org/mqto/example#ImpurityLevel> <https://w3id.org/mqto#resultProperty> <https://w3id.org/mqto/example#impurityPct> .
+<https://w3id.org/mqto/example#ImpurityLevel> <https://w3id.org/mqto#timeWindowSize> "PT24H"^^<http://www.w3.org/2001/XMLSchema#duration> .
+<https://w3id.org/mqto/example#ImpurityLevel> <https://w3id.org/mqto#upperBound> "0.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/mqto/example#ImpurityLevelSignal
+<https://w3id.org/mqto/example#ImpurityLevelSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#ImpurityLevelSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Signal> .
+<https://w3id.org/mqto/example#ImpurityLevelSignal> <http://www.w3.org/2000/01/rdf-schema#label> "Impurity level signal"@en .
+<https://w3id.org/mqto/example#ImpurityLevelSignal> <https://w3id.org/mqto#identifier> "LAB.Impurity" .
+<https://w3id.org/mqto/example#ImpurityLevelSignal> <https://w3id.org/mqto#signalProvidedBy> <https://w3id.org/mqto/example#AluminiumAlloy> .
+# 
+# https://w3id.org/mqto/example#IncreaseSlowShot
+<https://w3id.org/mqto/example#IncreaseSlowShot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#IncreaseSlowShot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Countermeasure> .
+<https://w3id.org/mqto/example#IncreaseSlowShot> <http://www.w3.org/2000/01/rdf-schema#label> "Increase slow-shot phase duration"@en .
+<https://w3id.org/mqto/example#IncreaseSlowShot> <https://w3id.org/mqto#hasStepList> <https://w3id.org/mqto/example#IncreaseSlowShot_List1> .
+<https://w3id.org/mqto/example#IncreaseSlowShot> <https://w3id.org/mqto#mitigates> <https://w3id.org/mqto/example#ColdShut> .
+<https://w3id.org/mqto/example#IncreaseSlowShot> <https://w3id.org/mqto#mitigates> <https://w3id.org/mqto/example#Porosity> .
+<https://w3id.org/mqto/example#IncreaseSlowShot> <https://w3id.org/mqto#weight> "50"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://w3id.org/mqto/example#IncreaseSlowShot_List1
+<https://w3id.org/mqto/example#IncreaseSlowShot_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#IncreaseSlowShot_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#IncreaseSlowShot_List1> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#ReviewInjectionProfile> .
+<https://w3id.org/mqto/example#IncreaseSlowShot_List1> <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#IncreaseSlowShot_List2> .
+# 
+# https://w3id.org/mqto/example#IncreaseSlowShot_List2
+<https://w3id.org/mqto/example#IncreaseSlowShot_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#IncreaseSlowShot_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#IncreaseSlowShot_List2> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#AdjustSlowShotDuration> .
+<https://w3id.org/mqto/example#IncreaseSlowShot_List2> <https://w3id.org/mqto#rest> <https://w3id.org/mqto#nil> .
+# 
+# https://w3id.org/mqto/example#InjectionPhase
+<https://w3id.org/mqto/example#InjectionPhase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#InjectionPhase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Method> .
+<https://w3id.org/mqto/example#InjectionPhase> <http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf> <https://w3id.org/mqto/example#DieCastingProcess> .
+<https://w3id.org/mqto/example#InjectionPhase> <http://www.w3.org/2000/01/rdf-schema#label> "Injection phase"@en .
+# 
+# https://w3id.org/mqto/example#InjectionPressurePeak
+<https://w3id.org/mqto/example#InjectionPressurePeak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#InjectionPressurePeak> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Metric> .
+<https://w3id.org/mqto/example#InjectionPressurePeak> <http://www.w3.org/2000/01/rdf-schema#label> "Injection pressure peak"@en .
+<https://w3id.org/mqto/example#InjectionPressurePeak> <https://w3id.org/mqto#itemWindowSize> "5"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/mqto/example#InjectionPressurePeak> <https://w3id.org/mqto#lowerBound> "800.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#InjectionPressurePeak> <https://w3id.org/mqto#method> "max" .
+<https://w3id.org/mqto/example#InjectionPressurePeak> <https://w3id.org/mqto#metricBelongsTo> <https://w3id.org/mqto/example#DieCastingCell> .
+<https://w3id.org/mqto/example#InjectionPressurePeak> <https://w3id.org/mqto#readsFrom> <https://w3id.org/mqto/example#InjectionPressureSignal> .
+<https://w3id.org/mqto/example#InjectionPressurePeak> <https://w3id.org/mqto#resultProperty> <https://w3id.org/mqto/example#pressure> .
+<https://w3id.org/mqto/example#InjectionPressurePeak> <https://w3id.org/mqto#timeWindowSize> "PT2M"^^<http://www.w3.org/2001/XMLSchema#duration> .
+<https://w3id.org/mqto/example#InjectionPressurePeak> <https://w3id.org/mqto#upperBound> "1100.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/mqto/example#InjectionPressureSignal
+<https://w3id.org/mqto/example#InjectionPressureSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#InjectionPressureSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Signal> .
+<https://w3id.org/mqto/example#InjectionPressureSignal> <http://www.w3.org/2000/01/rdf-schema#label> "Injection pressure signal"@en .
+<https://w3id.org/mqto/example#InjectionPressureSignal> <https://w3id.org/mqto#identifier> "PLC.InjPressure" .
+<https://w3id.org/mqto/example#InjectionPressureSignal> <https://w3id.org/mqto#signalProvidedBy> <https://w3id.org/mqto/example#DieCastingCell> .
+# 
+# https://w3id.org/mqto/example#InspectThermocouple
+<https://w3id.org/mqto/example#InspectThermocouple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#InspectThermocouple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStep> .
+<https://w3id.org/mqto/example#InspectThermocouple> <http://www.w3.org/2000/01/rdf-schema#label> "Inspect thermocouple"@en .
+# 
+# https://w3id.org/mqto/example#MA_001
+<https://w3id.org/mqto/example#MA_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#MA_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#MetricAssessment> .
+<https://w3id.org/mqto/example#MA_001> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#TemperatureDeviation> .
+<https://w3id.org/mqto/example#MA_001> <https://w3id.org/mqto#assessmentValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/mqto/example#MA_001> <https://w3id.org/mqto#basedOn> <https://w3id.org/mqto/example#Obs001> .
+<https://w3id.org/mqto/example#MA_001> <https://w3id.org/mqto#basedOn> <https://w3id.org/mqto/example#Obs002> .
+<https://w3id.org/mqto/example#MA_001> <https://w3id.org/mqto#basedOn> <https://w3id.org/mqto/example#Obs003> .
+<https://w3id.org/mqto/example#MA_001> <https://w3id.org/mqto#calculatedFor> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#MA_001> <https://w3id.org/mqto#calculatedTime> "2026-03-15T10:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#MA_001> <https://w3id.org/mqto#calculatedValue> "718.3"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#MA_001> <https://w3id.org/mqto#evaluatesProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> .
+<https://w3id.org/mqto/example#MA_001> <https://w3id.org/mqto#raised> <https://w3id.org/mqto/example#FO_001> .
+# 
+# https://w3id.org/mqto/example#MA_002
+<https://w3id.org/mqto/example#MA_002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#MA_002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#MetricAssessment> .
+<https://w3id.org/mqto/example#MA_002> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#TemperatureDeviation> .
+<https://w3id.org/mqto/example#MA_002> <https://w3id.org/mqto#assessmentValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/mqto/example#MA_002> <https://w3id.org/mqto#basedOn> <https://w3id.org/mqto/example#Act001> .
+<https://w3id.org/mqto/example#MA_002> <https://w3id.org/mqto#basedOn> <https://w3id.org/mqto/example#Obs004> .
+<https://w3id.org/mqto/example#MA_002> <https://w3id.org/mqto#calculatedFor> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#MA_002> <https://w3id.org/mqto#calculatedTime> "2026-03-15T14:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#MA_002> <https://w3id.org/mqto#calculatedValue> "705.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#MA_002> <https://w3id.org/mqto#evaluatesProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> .
+# 
+# https://w3id.org/mqto/example#MA_003
+<https://w3id.org/mqto/example#MA_003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#MA_003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#MetricAssessment> .
+<https://w3id.org/mqto/example#MA_003> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#InjectionPressurePeak> .
+<https://w3id.org/mqto/example#MA_003> <https://w3id.org/mqto#assessmentValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/mqto/example#MA_003> <https://w3id.org/mqto#basedOn> <https://w3id.org/mqto/example#Obs005> .
+<https://w3id.org/mqto/example#MA_003> <https://w3id.org/mqto#basedOn> <https://w3id.org/mqto/example#Obs006> .
+<https://w3id.org/mqto/example#MA_003> <https://w3id.org/mqto#calculatedFor> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#MA_003> <https://w3id.org/mqto#calculatedTime> "2026-03-15T10:05:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#MA_003> <https://w3id.org/mqto#calculatedValue> "1085.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#MA_003> <https://w3id.org/mqto#evaluatesProperty> <https://w3id.org/mqto/example#Machine4115_InjPressure> .
+# 
+# https://w3id.org/mqto/example#MA_004
+<https://w3id.org/mqto/example#MA_004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#MA_004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#MetricAssessment> .
+<https://w3id.org/mqto/example#MA_004> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#TemperatureDeviation> .
+<https://w3id.org/mqto/example#MA_004> <https://w3id.org/mqto#assessmentValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/mqto/example#MA_004> <https://w3id.org/mqto#basedOn> <https://w3id.org/mqto/example#Obs007> .
+<https://w3id.org/mqto/example#MA_004> <https://w3id.org/mqto#calculatedFor> <https://w3id.org/mqto/example#Process1234> .
+<https://w3id.org/mqto/example#MA_004> <https://w3id.org/mqto#calculatedTime> "2026-03-15T16:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#MA_004> <https://w3id.org/mqto#calculatedValue> "722.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#MA_004> <https://w3id.org/mqto#evaluatesProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> .
+<https://w3id.org/mqto/example#MA_004> <https://w3id.org/mqto#raised> <https://w3id.org/mqto/example#FO_002> .
+# 
+# https://w3id.org/mqto/example#MA_005
+<https://w3id.org/mqto/example#MA_005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#MA_005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#MetricAssessment> .
+<https://w3id.org/mqto/example#MA_005> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#CycleTimeVariance> .
+<https://w3id.org/mqto/example#MA_005> <https://w3id.org/mqto#assessmentValue> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/mqto/example#MA_005> <https://w3id.org/mqto#basedOn> <https://w3id.org/mqto/example#Obs008> .
+<https://w3id.org/mqto/example#MA_005> <https://w3id.org/mqto#calculatedFor> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#MA_005> <https://w3id.org/mqto#calculatedTime> "2026-03-16T09:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#MA_005> <https://w3id.org/mqto#calculatedValue> "2.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#MA_005> <https://w3id.org/mqto#evaluatesProperty> <https://w3id.org/mqto/example#Machine4115_CycleTime> .
+# 
+# https://w3id.org/mqto/example#MA_006
+<https://w3id.org/mqto/example#MA_006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#MA_006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#MetricAssessment> .
+<https://w3id.org/mqto/example#MA_006> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#TemperatureDeviation> .
+<https://w3id.org/mqto/example#MA_006> <https://w3id.org/mqto#assessmentValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/mqto/example#MA_006> <https://w3id.org/mqto#basedOn> <https://w3id.org/mqto/example#Obs009> .
+<https://w3id.org/mqto/example#MA_006> <https://w3id.org/mqto#basedOn> <https://w3id.org/mqto/example#Obs010> .
+<https://w3id.org/mqto/example#MA_006> <https://w3id.org/mqto#calculatedFor> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#MA_006> <https://w3id.org/mqto#calculatedTime> "2026-03-17T11:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#MA_006> <https://w3id.org/mqto#calculatedValue> "725.8"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#MA_006> <https://w3id.org/mqto#evaluatesProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> .
+<https://w3id.org/mqto/example#MA_006> <https://w3id.org/mqto#raised> <https://w3id.org/mqto/example#FO_003> .
+# 
+# https://w3id.org/mqto/example#MA_007
+<https://w3id.org/mqto/example#MA_007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#MA_007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#MetricAssessment> .
+<https://w3id.org/mqto/example#MA_007> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#ImpurityLevel> .
+<https://w3id.org/mqto/example#MA_007> <https://w3id.org/mqto#assessmentValue> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/mqto/example#MA_007> <https://w3id.org/mqto#basedOn> <https://w3id.org/mqto/example#Obs011> .
+<https://w3id.org/mqto/example#MA_007> <https://w3id.org/mqto#calculatedFor> <https://w3id.org/mqto/example#AlBatch2026_0043> .
+<https://w3id.org/mqto/example#MA_007> <https://w3id.org/mqto#calculatedTime> "2026-03-17T07:15:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#MA_007> <https://w3id.org/mqto#calculatedValue> "0.62"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#MA_007> <https://w3id.org/mqto#evaluatesProperty> <https://w3id.org/mqto/example#AlBatch2026_0043_Impurity> .
+<https://w3id.org/mqto/example#MA_007> <https://w3id.org/mqto#raised> <https://w3id.org/mqto/example#FO_005> .
+# 
+# https://w3id.org/mqto/example#Machine4115
+<https://w3id.org/mqto/example#Machine4115> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Machine4115> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#PhysicalMachine> .
+<https://w3id.org/mqto/example#Machine4115> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#DieCastingCell> .
+<https://w3id.org/mqto/example#Machine4115> <http://www.w3.org/2000/01/rdf-schema#label> "Machine 4115"@en .
+<https://w3id.org/mqto/example#Machine4115> <https://w3id.org/mqto#identifier> "4115" .
+# 
+# https://w3id.org/mqto/example#Machine4115_CycleTime
+<https://w3id.org/mqto/example#Machine4115_CycleTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Machine4115_CycleTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#ObservableProperty> .
+<https://w3id.org/mqto/example#Machine4115_CycleTime> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#CycleTimeSignal> .
+<https://w3id.org/mqto/example#Machine4115_CycleTime> <http://www.w3.org/2000/01/rdf-schema#label> "Cycle time of Machine 4115"@en .
+<https://w3id.org/mqto/example#Machine4115_CycleTime> <http://www.w3.org/ns/ssn/isPropertyOf> <https://w3id.org/mqto/example#Machine4115> .
+# 
+# https://w3id.org/mqto/example#Machine4115_FurnaceSetpoint
+<https://w3id.org/mqto/example#Machine4115_FurnaceSetpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Machine4115_FurnaceSetpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#ActuableProperty> .
+<https://w3id.org/mqto/example#Machine4115_FurnaceSetpoint> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#FurnaceSetpointSignal> .
+<https://w3id.org/mqto/example#Machine4115_FurnaceSetpoint> <http://www.w3.org/2000/01/rdf-schema#label> "Furnace setpoint of Machine 4115"@en .
+<https://w3id.org/mqto/example#Machine4115_FurnaceSetpoint> <http://www.w3.org/ns/ssn/isPropertyOf> <https://w3id.org/mqto/example#Machine4115> .
+# 
+# https://w3id.org/mqto/example#Machine4115_InjPressure
+<https://w3id.org/mqto/example#Machine4115_InjPressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Machine4115_InjPressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#ObservableProperty> .
+<https://w3id.org/mqto/example#Machine4115_InjPressure> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#InjectionPressureSignal> .
+<https://w3id.org/mqto/example#Machine4115_InjPressure> <http://www.w3.org/2000/01/rdf-schema#label> "Injection pressure of Machine 4115"@en .
+<https://w3id.org/mqto/example#Machine4115_InjPressure> <http://www.w3.org/ns/ssn/isPropertyOf> <https://w3id.org/mqto/example#Machine4115> .
+# 
+# https://w3id.org/mqto/example#Machine4115_MeltTemp
+<https://w3id.org/mqto/example#Machine4115_MeltTemp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Machine4115_MeltTemp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#ObservableProperty> .
+<https://w3id.org/mqto/example#Machine4115_MeltTemp> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#MeltTemperatureSignal> .
+<https://w3id.org/mqto/example#Machine4115_MeltTemp> <http://www.w3.org/2000/01/rdf-schema#label> "Melt temperature of Machine 4115"@en .
+<https://w3id.org/mqto/example#Machine4115_MeltTemp> <http://www.w3.org/ns/ssn/isPropertyOf> <https://w3id.org/mqto/example#Machine4115> .
+# 
+# https://w3id.org/mqto/example#MeltTempTooHigh
+<https://w3id.org/mqto/example#MeltTempTooHigh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#MeltTempTooHigh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#FailureMode> .
+<https://w3id.org/mqto/example#MeltTempTooHigh> <http://www.w3.org/2000/01/rdf-schema#label> "Melt temperature too high"@en .
+<https://w3id.org/mqto/example#MeltTempTooHigh> <https://w3id.org/mqto#causes> <https://w3id.org/mqto/example#Porosity> .
+<https://w3id.org/mqto/example#MeltTempTooHigh> <https://w3id.org/mqto#causesWeakly> <https://w3id.org/mqto/example#Porosity> .
+<https://w3id.org/mqto/example#MeltTempTooHigh> <https://w3id.org/mqto#failureBelongsTo> <https://w3id.org/mqto/example#DieCastingCell> .
+<https://w3id.org/mqto/example#MeltTempTooHigh> <https://w3id.org/mqto#mitigatedBy> <https://w3id.org/mqto/example#AdjustMeltTemp> .
+<https://w3id.org/mqto/example#MeltTempTooHigh> <https://w3id.org/mqto#refersToMetric> <https://w3id.org/mqto/example#TemperatureDeviation> .
+# 
+# https://w3id.org/mqto/example#MeltTemperatureSignal
+<https://w3id.org/mqto/example#MeltTemperatureSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#MeltTemperatureSignal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Signal> .
+<https://w3id.org/mqto/example#MeltTemperatureSignal> <http://www.w3.org/2000/01/rdf-schema#label> "Melt temperature signal"@en .
+<https://w3id.org/mqto/example#MeltTemperatureSignal> <https://w3id.org/mqto#identifier> "PLC.MeltTemp" .
+<https://w3id.org/mqto/example#MeltTemperatureSignal> <https://w3id.org/mqto#signalProvidedBy> <https://w3id.org/mqto/example#DieCastingCell> .
+# 
+# https://w3id.org/mqto/example#Obs001
+<https://w3id.org/mqto/example#Obs001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Obs001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<https://w3id.org/mqto/example#Obs001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Observation> .
+<https://w3id.org/mqto/example#Obs001> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#Obs001> <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result001> .
+<https://w3id.org/mqto/example#Obs001> <http://www.w3.org/ns/sosa/hasSimpleResult> "721.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#Obs001> <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> .
+<https://w3id.org/mqto/example#Obs001> <http://www.w3.org/ns/sosa/resultTime> "2026-03-15T09:55:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#Obs001> <http://www.w3.org/ns/sosa/usedProcedure> <https://w3id.org/mqto/example#TemperatureMeasurement> .
+# 
+# https://w3id.org/mqto/example#Obs002
+<https://w3id.org/mqto/example#Obs002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Obs002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<https://w3id.org/mqto/example#Obs002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Observation> .
+<https://w3id.org/mqto/example#Obs002> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#Obs002> <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result002> .
+<https://w3id.org/mqto/example#Obs002> <http://www.w3.org/ns/sosa/hasSimpleResult> "719.2"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#Obs002> <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> .
+<https://w3id.org/mqto/example#Obs002> <http://www.w3.org/ns/sosa/resultTime> "2026-03-15T09:57:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://w3id.org/mqto/example#Obs003
+<https://w3id.org/mqto/example#Obs003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Obs003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<https://w3id.org/mqto/example#Obs003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Observation> .
+<https://w3id.org/mqto/example#Obs003> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#Obs003> <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result003> .
+<https://w3id.org/mqto/example#Obs003> <http://www.w3.org/ns/sosa/hasSimpleResult> "718.3"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#Obs003> <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> .
+<https://w3id.org/mqto/example#Obs003> <http://www.w3.org/ns/sosa/resultTime> "2026-03-15T09:59:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://w3id.org/mqto/example#Obs004
+<https://w3id.org/mqto/example#Obs004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Obs004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<https://w3id.org/mqto/example#Obs004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Observation> .
+<https://w3id.org/mqto/example#Obs004> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#Obs004> <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result004> .
+<https://w3id.org/mqto/example#Obs004> <http://www.w3.org/ns/sosa/hasSimpleResult> "705.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#Obs004> <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> .
+<https://w3id.org/mqto/example#Obs004> <http://www.w3.org/ns/sosa/resultTime> "2026-03-15T13:55:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://w3id.org/mqto/example#Obs005
+<https://w3id.org/mqto/example#Obs005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Obs005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<https://w3id.org/mqto/example#Obs005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Observation> .
+<https://w3id.org/mqto/example#Obs005> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#Obs005> <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result_Shot042> .
+<https://w3id.org/mqto/example#Obs005> <http://www.w3.org/ns/sosa/hasSimpleResult> "1085.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#Obs005> <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_InjPressure> .
+<https://w3id.org/mqto/example#Obs005> <http://www.w3.org/ns/sosa/resultTime> "2026-03-15T10:02:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://w3id.org/mqto/example#Obs006
+<https://w3id.org/mqto/example#Obs006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Obs006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<https://w3id.org/mqto/example#Obs006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Observation> .
+<https://w3id.org/mqto/example#Obs006> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#Obs006> <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result_Shot043> .
+<https://w3id.org/mqto/example#Obs006> <http://www.w3.org/ns/sosa/hasSimpleResult> "1042.3"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#Obs006> <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_InjPressure> .
+<https://w3id.org/mqto/example#Obs006> <http://www.w3.org/ns/sosa/resultTime> "2026-03-15T10:04:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://w3id.org/mqto/example#Obs007
+<https://w3id.org/mqto/example#Obs007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Obs007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<https://w3id.org/mqto/example#Obs007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Observation> .
+<https://w3id.org/mqto/example#Obs007> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#Obs007> <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result007> .
+<https://w3id.org/mqto/example#Obs007> <http://www.w3.org/ns/sosa/hasSimpleResult> "722.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#Obs007> <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> .
+<https://w3id.org/mqto/example#Obs007> <http://www.w3.org/ns/sosa/resultTime> "2026-03-15T15:50:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://w3id.org/mqto/example#Obs008
+<https://w3id.org/mqto/example#Obs008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Obs008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<https://w3id.org/mqto/example#Obs008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Observation> .
+<https://w3id.org/mqto/example#Obs008> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#Obs008> <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result008> .
+<https://w3id.org/mqto/example#Obs008> <http://www.w3.org/ns/sosa/hasSimpleResult> "24.7"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#Obs008> <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_CycleTime> .
+<https://w3id.org/mqto/example#Obs008> <http://www.w3.org/ns/sosa/resultTime> "2026-03-16T08:55:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://w3id.org/mqto/example#Obs009
+<https://w3id.org/mqto/example#Obs009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Obs009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<https://w3id.org/mqto/example#Obs009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Observation> .
+<https://w3id.org/mqto/example#Obs009> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#Obs009> <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result009> .
+<https://w3id.org/mqto/example#Obs009> <http://www.w3.org/ns/sosa/hasSimpleResult> "725.8"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#Obs009> <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> .
+<https://w3id.org/mqto/example#Obs009> <http://www.w3.org/ns/sosa/resultTime> "2026-03-17T10:55:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://w3id.org/mqto/example#Obs010
+<https://w3id.org/mqto/example#Obs010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Obs010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<https://w3id.org/mqto/example#Obs010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Observation> .
+<https://w3id.org/mqto/example#Obs010> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#Obs010> <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result010> .
+<https://w3id.org/mqto/example#Obs010> <http://www.w3.org/ns/sosa/hasSimpleResult> "723.4"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#Obs010> <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> .
+<https://w3id.org/mqto/example#Obs010> <http://www.w3.org/ns/sosa/resultTime> "2026-03-17T10:58:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://w3id.org/mqto/example#Obs011
+<https://w3id.org/mqto/example#Obs011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Obs011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sosa/Observation> .
+<https://w3id.org/mqto/example#Obs011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Observation> .
+<https://w3id.org/mqto/example#Obs011> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#AlBatch2026_0043> .
+<https://w3id.org/mqto/example#Obs011> <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result011> .
+<https://w3id.org/mqto/example#Obs011> <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#AlBatch2026_0043_Impurity> .
+<https://w3id.org/mqto/example#Obs011> <http://www.w3.org/ns/sosa/resultTime> "2026-03-17T07:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://w3id.org/mqto/example#Operator
+<https://w3id.org/mqto/example#Operator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Operator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Manpower> .
+<https://w3id.org/mqto/example#Operator> <http://www.w3.org/2000/01/rdf-schema#label> "Machine operator"@en .
+# 
+# https://w3id.org/mqto/example#Porosity
+<https://w3id.org/mqto/example#Porosity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Porosity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#FailureMode> .
+<https://w3id.org/mqto/example#Porosity> <http://www.w3.org/2000/01/rdf-schema#label> "Porosity"@en .
+<https://w3id.org/mqto/example#Porosity> <https://w3id.org/mqto#causedBy> <https://w3id.org/mqto/example#AlloyContamination> .
+<https://w3id.org/mqto/example#Porosity> <https://w3id.org/mqto#causedBy> <https://w3id.org/mqto/example#GasPorosity> .
+<https://w3id.org/mqto/example#Porosity> <https://w3id.org/mqto#causedBy> <https://w3id.org/mqto/example#MeltTempTooHigh> .
+<https://w3id.org/mqto/example#Porosity> <https://w3id.org/mqto#causedBy> <https://w3id.org/mqto/example#ShrinkagePorosity> .
+<https://w3id.org/mqto/example#Porosity> <https://w3id.org/mqto#causedByModerately> <https://w3id.org/mqto/example#AlloyContamination> .
+<https://w3id.org/mqto/example#Porosity> <https://w3id.org/mqto#causedByModerately> <https://w3id.org/mqto/example#ShrinkagePorosity> .
+<https://w3id.org/mqto/example#Porosity> <https://w3id.org/mqto#causedByStrongly> <https://w3id.org/mqto/example#GasPorosity> .
+<https://w3id.org/mqto/example#Porosity> <https://w3id.org/mqto#causedByWeakly> <https://w3id.org/mqto/example#MeltTempTooHigh> .
+<https://w3id.org/mqto/example#Porosity> <https://w3id.org/mqto#failureBelongsTo> <https://w3id.org/mqto/example#DieCastingCell> .
+<https://w3id.org/mqto/example#Porosity> <https://w3id.org/mqto#mitigatedBy> <https://w3id.org/mqto/example#AdjustMeltTemp> .
+<https://w3id.org/mqto/example#Porosity> <https://w3id.org/mqto#mitigatedBy> <https://w3id.org/mqto/example#IncreaseSlowShot> .
+<https://w3id.org/mqto/example#Porosity> <https://w3id.org/mqto#mitigatedBy> <https://w3id.org/mqto/example#VerifyThermocouple> .
+<https://w3id.org/mqto/example#Porosity> <https://w3id.org/mqto#refersToMetric> <https://w3id.org/mqto/example#InjectionPressurePeak> .
+<https://w3id.org/mqto/example#Porosity> <https://w3id.org/mqto#refersToMetric> <https://w3id.org/mqto/example#TemperatureDeviation> .
+<https://w3id.org/mqto/example#Porosity> <https://w3id.org/mqto#weight> "80"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://w3id.org/mqto/example#Process1234
+<https://w3id.org/mqto/example#Process1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Process1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#ProcessExecution> .
+<https://w3id.org/mqto/example#Process1234> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#AlBatch2026_0042> .
+<https://w3id.org/mqto/example#Process1234> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#Process1234> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#DieCastingProcess> .
+<https://w3id.org/mqto/example#Process1234> <http://www.w3.org/2000/01/rdf-schema#label> "Process execution 1234"@en .
+<https://w3id.org/mqto/example#Process1234> <https://w3id.org/mqto#endTime> "2026-03-15T16:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#Process1234> <https://w3id.org/mqto#startTime> "2026-03-15T08:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://w3id.org/mqto/example#Process1235
+<https://w3id.org/mqto/example#Process1235> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Process1235> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#ProcessExecution> .
+<https://w3id.org/mqto/example#Process1235> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#AlBatch2026_0042> .
+<https://w3id.org/mqto/example#Process1235> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#Process1235> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#DieCastingProcess> .
+<https://w3id.org/mqto/example#Process1235> <http://www.w3.org/2000/01/rdf-schema#label> "Process execution 1235"@en .
+<https://w3id.org/mqto/example#Process1235> <https://w3id.org/mqto#endTime> "2026-03-16T16:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#Process1235> <https://w3id.org/mqto#startTime> "2026-03-16T08:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://w3id.org/mqto/example#Process1236
+<https://w3id.org/mqto/example#Process1236> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Process1236> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#ProcessExecution> .
+<https://w3id.org/mqto/example#Process1236> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#AlBatch2026_0043> .
+<https://w3id.org/mqto/example#Process1236> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#Process1236> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#DieCastingProcess> .
+<https://w3id.org/mqto/example#Process1236> <http://www.w3.org/2000/01/rdf-schema#label> "Process execution 1236"@en .
+<https://w3id.org/mqto/example#Process1236> <https://w3id.org/mqto#endTime> "2026-03-17T16:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/mqto/example#Process1236> <https://w3id.org/mqto#startTime> "2026-03-17T08:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+# 
+# https://w3id.org/mqto/example#ReplaceAlloyBatch
+<https://w3id.org/mqto/example#ReplaceAlloyBatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#ReplaceAlloyBatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Countermeasure> .
+<https://w3id.org/mqto/example#ReplaceAlloyBatch> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#AluminiumAlloy> .
+<https://w3id.org/mqto/example#ReplaceAlloyBatch> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#Operator> .
+<https://w3id.org/mqto/example#ReplaceAlloyBatch> <http://www.w3.org/2000/01/rdf-schema#label> "Replace contaminated alloy batch"@en .
+<https://w3id.org/mqto/example#ReplaceAlloyBatch> <https://w3id.org/mqto#hasStepList> <https://w3id.org/mqto/example#ReplaceAlloyBatch_List1> .
+<https://w3id.org/mqto/example#ReplaceAlloyBatch> <https://w3id.org/mqto#mitigates> <https://w3id.org/mqto/example#AlloyContamination> .
+<https://w3id.org/mqto/example#ReplaceAlloyBatch> <https://w3id.org/mqto#weight> "85"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://w3id.org/mqto/example#ReplaceAlloyBatch_List1
+<https://w3id.org/mqto/example#ReplaceAlloyBatch_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#ReplaceAlloyBatch_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#ReplaceAlloyBatch_List1> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#CheckCurrentTemp> .
+<https://w3id.org/mqto/example#ReplaceAlloyBatch_List1> <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#ReplaceAlloyBatch_List2> .
+# 
+# https://w3id.org/mqto/example#ReplaceAlloyBatch_List2
+<https://w3id.org/mqto/example#ReplaceAlloyBatch_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#ReplaceAlloyBatch_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#ReplaceAlloyBatch_List2> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#SwapAlloyBatch> .
+<https://w3id.org/mqto/example#ReplaceAlloyBatch_List2> <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#ReplaceAlloyBatch_List3> .
+# 
+# https://w3id.org/mqto/example#ReplaceAlloyBatch_List3
+<https://w3id.org/mqto/example#ReplaceAlloyBatch_List3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#ReplaceAlloyBatch_List3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#ReplaceAlloyBatch_List3> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#VerifyNewTemp> .
+<https://w3id.org/mqto/example#ReplaceAlloyBatch_List3> <https://w3id.org/mqto#rest> <https://w3id.org/mqto#nil> .
+# 
+# https://w3id.org/mqto/example#Result001
+<https://w3id.org/mqto/example#Result001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Result001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://qudt.org/schema/qudt/QuantityValue> .
+<https://w3id.org/mqto/example#Result001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Result> .
+<https://w3id.org/mqto/example#Result001> <https://w3id.org/mqto/example#temperature> "721.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#Result001> <http://qudt.org/schema/qudt/numericValue> "721.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#Result001> <http://qudt.org/schema/qudt/unit> <http://qudt.org/vocab/unit/DEG_C> .
+# 
+# https://w3id.org/mqto/example#Result002
+<https://w3id.org/mqto/example#Result002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Result002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Result> .
+<https://w3id.org/mqto/example#Result002> <https://w3id.org/mqto/example#temperature> "719.2"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/mqto/example#Result003
+<https://w3id.org/mqto/example#Result003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Result003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Result> .
+<https://w3id.org/mqto/example#Result003> <https://w3id.org/mqto/example#temperature> "718.3"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/mqto/example#Result004
+<https://w3id.org/mqto/example#Result004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Result004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Result> .
+<https://w3id.org/mqto/example#Result004> <https://w3id.org/mqto/example#temperature> "705.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/mqto/example#Result007
+<https://w3id.org/mqto/example#Result007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Result007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Result> .
+<https://w3id.org/mqto/example#Result007> <https://w3id.org/mqto/example#temperature> "722.5"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/mqto/example#Result008
+<https://w3id.org/mqto/example#Result008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Result008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Result> .
+<https://w3id.org/mqto/example#Result008> <https://w3id.org/mqto/example#cycleTime> "24.7"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/mqto/example#Result009
+<https://w3id.org/mqto/example#Result009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Result009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Result> .
+<https://w3id.org/mqto/example#Result009> <https://w3id.org/mqto/example#temperature> "725.8"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/mqto/example#Result010
+<https://w3id.org/mqto/example#Result010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Result010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Result> .
+<https://w3id.org/mqto/example#Result010> <https://w3id.org/mqto/example#temperature> "723.4"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/mqto/example#Result011
+<https://w3id.org/mqto/example#Result011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Result011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Result> .
+<https://w3id.org/mqto/example#Result011> <https://w3id.org/mqto/example#impurityPct> "0.62"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/mqto/example#Result_Act001
+<https://w3id.org/mqto/example#Result_Act001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Result_Act001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Result> .
+<https://w3id.org/mqto/example#Result_Act001> <https://w3id.org/mqto/example#temperature> "710.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/mqto/example#Result_Shot042
+<https://w3id.org/mqto/example#Result_Shot042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Result_Shot042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Result> .
+<https://w3id.org/mqto/example#Result_Shot042> <https://w3id.org/mqto/example#cycleTime> "23.9"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#Result_Shot042> <https://w3id.org/mqto/example#pressure> "1085.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#Result_Shot042> <https://w3id.org/mqto/example#temperature> "719.8"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/mqto/example#Result_Shot043
+<https://w3id.org/mqto/example#Result_Shot043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#Result_Shot043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Result> .
+<https://w3id.org/mqto/example#Result_Shot043> <https://w3id.org/mqto/example#cycleTime> "24.2"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#Result_Shot043> <https://w3id.org/mqto/example#pressure> "1042.3"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#Result_Shot043> <https://w3id.org/mqto/example#temperature> "718.1"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/mqto/example#ReviewInjectionProfile
+<https://w3id.org/mqto/example#ReviewInjectionProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#ReviewInjectionProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStep> .
+<https://w3id.org/mqto/example#ReviewInjectionProfile> <http://www.w3.org/2000/01/rdf-schema#label> "Review injection profile"@en .
+# 
+# https://w3id.org/mqto/example#ShrinkagePorosity
+<https://w3id.org/mqto/example#ShrinkagePorosity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#ShrinkagePorosity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#FailureMode> .
+<https://w3id.org/mqto/example#ShrinkagePorosity> <http://www.w3.org/2000/01/rdf-schema#label> "Shrinkage porosity"@en .
+<https://w3id.org/mqto/example#ShrinkagePorosity> <https://w3id.org/mqto#causes> <https://w3id.org/mqto/example#Porosity> .
+<https://w3id.org/mqto/example#ShrinkagePorosity> <https://w3id.org/mqto#causesModerately> <https://w3id.org/mqto/example#Porosity> .
+<https://w3id.org/mqto/example#ShrinkagePorosity> <https://w3id.org/mqto#failureBelongsTo> <https://w3id.org/mqto/example#DieCastingCell> .
+<https://w3id.org/mqto/example#ShrinkagePorosity> <https://w3id.org/mqto#refersToMetric> <https://w3id.org/mqto/example#InjectionPressurePeak> .
+# 
+# https://w3id.org/mqto/example#SwapAlloyBatch
+<https://w3id.org/mqto/example#SwapAlloyBatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#SwapAlloyBatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStep> .
+<https://w3id.org/mqto/example#SwapAlloyBatch> <http://www.w3.org/2000/01/rdf-schema#label> "Swap alloy batch"@en .
+# 
+# https://w3id.org/mqto/example#TemperatureDeviation
+<https://w3id.org/mqto/example#TemperatureDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#TemperatureDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Metric> .
+<https://w3id.org/mqto/example#TemperatureDeviation> <http://www.w3.org/2000/01/rdf-schema#label> "Melt temperature deviation"@en .
+<https://w3id.org/mqto/example#TemperatureDeviation> <https://w3id.org/mqto#itemWindowSize> "10"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/mqto/example#TemperatureDeviation> <https://w3id.org/mqto#lowerBound> "680.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/mqto/example#TemperatureDeviation> <https://w3id.org/mqto#method> "mean" .
+<https://w3id.org/mqto/example#TemperatureDeviation> <https://w3id.org/mqto#metricBelongsTo> <https://w3id.org/mqto/example#DieCastingCell> .
+<https://w3id.org/mqto/example#TemperatureDeviation> <https://w3id.org/mqto#readsFrom> <https://w3id.org/mqto/example#MeltTemperatureSignal> .
+<https://w3id.org/mqto/example#TemperatureDeviation> <https://w3id.org/mqto#resultProperty> <https://w3id.org/mqto/example#temperature> .
+<https://w3id.org/mqto/example#TemperatureDeviation> <https://w3id.org/mqto#timeWindowSize> "PT5M"^^<http://www.w3.org/2001/XMLSchema#duration> .
+<https://w3id.org/mqto/example#TemperatureDeviation> <https://w3id.org/mqto#upperBound> "720.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
+# 
+# https://w3id.org/mqto/example#TemperatureMeasurement
+<https://w3id.org/mqto/example#TemperatureMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#TemperatureMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Measurement> .
+<https://w3id.org/mqto/example#TemperatureMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "Melt temperature measurement"@en .
+# 
+# https://w3id.org/mqto/example#VerifyNewTemp
+<https://w3id.org/mqto/example#VerifyNewTemp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#VerifyNewTemp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStep> .
+<https://w3id.org/mqto/example#VerifyNewTemp> <http://www.w3.org/2000/01/rdf-schema#label> "Verify new temperature"@en .
+# 
+# https://w3id.org/mqto/example#VerifyThermocouple
+<https://w3id.org/mqto/example#VerifyThermocouple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#VerifyThermocouple> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#Countermeasure> .
+<https://w3id.org/mqto/example#VerifyThermocouple> <http://www.w3.org/2000/01/rdf-schema#label> "Verify thermocouple calibration on furnace"@en .
+<https://w3id.org/mqto/example#VerifyThermocouple> <https://w3id.org/mqto#hasStepList> <https://w3id.org/mqto/example#VerifyThermocouple_List1> .
+<https://w3id.org/mqto/example#VerifyThermocouple> <https://w3id.org/mqto#mitigates> <https://w3id.org/mqto/example#Porosity> .
+<https://w3id.org/mqto/example#VerifyThermocouple> <https://w3id.org/mqto#weight> "70"^^<http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://w3id.org/mqto/example#VerifyThermocouple_List1
+<https://w3id.org/mqto/example#VerifyThermocouple_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#VerifyThermocouple_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#VerifyThermocouple_List1> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#CheckCurrentTemp> .
+<https://w3id.org/mqto/example#VerifyThermocouple_List1> <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#VerifyThermocouple_List2> .
+# 
+# https://w3id.org/mqto/example#VerifyThermocouple_List2
+<https://w3id.org/mqto/example#VerifyThermocouple_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#VerifyThermocouple_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#VerifyThermocouple_List2> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#InspectThermocouple> .
+<https://w3id.org/mqto/example#VerifyThermocouple_List2> <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#VerifyThermocouple_List3> .
+# 
+# https://w3id.org/mqto/example#VerifyThermocouple_List3
+<https://w3id.org/mqto/example#VerifyThermocouple_List3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/mqto/example#VerifyThermocouple_List3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#VerifyThermocouple_List3> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#CalibrateIfNeeded> .
+<https://w3id.org/mqto/example#VerifyThermocouple_List3> <https://w3id.org/mqto#rest> <https://w3id.org/mqto#nil> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

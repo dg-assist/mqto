@@ -1,0 +1,1330 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.w3.org/2002/07/owl#> .
+
+[ rdf:type owl:Ontology
+ ] .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://qudt.org/schema/qudt/numericValue
+<http://qudt.org/schema/qudt/numericValue> rdf:type owl:AnnotationProperty .
+
+
+###  http://qudt.org/schema/qudt/unit
+<http://qudt.org/schema/qudt/unit> rdf:type owl:AnnotationProperty .
+
+
+###  http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf
+<http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf> rdf:type owl:AnnotationProperty .
+
+
+###  http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart
+<http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart> rdf:type owl:AnnotationProperty .
+
+
+###  http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant
+<http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> rdf:type owl:AnnotationProperty .
+
+
+###  http://rds.posccaesar.org/ontology/lis14/rdl/implements
+<http://rds.posccaesar.org/ontology/lis14/rdl/implements> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/sosa/actsOnProperty
+<http://www.w3.org/ns/sosa/actsOnProperty> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/sosa/hasFeatureOfInterest
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/sosa/hasResult
+<http://www.w3.org/ns/sosa/hasResult> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/sosa/hasSimpleResult
+<http://www.w3.org/ns/sosa/hasSimpleResult> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/sosa/observedProperty
+<http://www.w3.org/ns/sosa/observedProperty> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/sosa/resultTime
+<http://www.w3.org/ns/sosa/resultTime> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/sosa/usedProcedure
+<http://www.w3.org/ns/sosa/usedProcedure> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/ns/ssn/isPropertyOf
+<http://www.w3.org/ns/ssn/isPropertyOf> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#abortedReason
+<https://w3id.org/mqto#abortedReason> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#abortedTime
+<https://w3id.org/mqto#abortedTime> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#appearedOn
+<https://w3id.org/mqto#appearedOn> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#assessmentValue
+<https://w3id.org/mqto#assessmentValue> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#basedOn
+<https://w3id.org/mqto#basedOn> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#calculatedFor
+<https://w3id.org/mqto#calculatedFor> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#calculatedTime
+<https://w3id.org/mqto#calculatedTime> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#calculatedValue
+<https://w3id.org/mqto#calculatedValue> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#causedBy
+<https://w3id.org/mqto#causedBy> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#causedByModerately
+<https://w3id.org/mqto#causedByModerately> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#causedByStrongly
+<https://w3id.org/mqto#causedByStrongly> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#causedByWeakly
+<https://w3id.org/mqto#causedByWeakly> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#causes
+<https://w3id.org/mqto#causes> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#causesModerately
+<https://w3id.org/mqto#causesModerately> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#causesStrongly
+<https://w3id.org/mqto#causesStrongly> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#causesWeakly
+<https://w3id.org/mqto#causesWeakly> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#completionTime
+<https://w3id.org/mqto#completionTime> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#endTime
+<https://w3id.org/mqto#endTime> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#evaluatesProperty
+<https://w3id.org/mqto#evaluatesProperty> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#failureBelongsTo
+<https://w3id.org/mqto#failureBelongsTo> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#first
+<https://w3id.org/mqto#first> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#hasFailure
+<https://w3id.org/mqto#hasFailure> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#hasMetric
+<https://w3id.org/mqto#hasMetric> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#hasStepList
+<https://w3id.org/mqto#hasStepList> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#identifier
+<https://w3id.org/mqto#identifier> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#itemWindowSize
+<https://w3id.org/mqto#itemWindowSize> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#lowerBound
+<https://w3id.org/mqto#lowerBound> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#method
+<https://w3id.org/mqto#method> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#metricBelongsTo
+<https://w3id.org/mqto#metricBelongsTo> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#mitigated
+<https://w3id.org/mqto#mitigated> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#mitigatedBy
+<https://w3id.org/mqto#mitigatedBy> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#mitigates
+<https://w3id.org/mqto#mitigates> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#occurrenceTime
+<https://w3id.org/mqto#occurrenceTime> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#providesSignal
+<https://w3id.org/mqto#providesSignal> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#raised
+<https://w3id.org/mqto#raised> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#raisedBy
+<https://w3id.org/mqto#raisedBy> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#readsFrom
+<https://w3id.org/mqto#readsFrom> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#refersToMetric
+<https://w3id.org/mqto#refersToMetric> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#rest
+<https://w3id.org/mqto#rest> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#resultProperty
+<https://w3id.org/mqto#resultProperty> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#score
+<https://w3id.org/mqto#score> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#signalProvidedBy
+<https://w3id.org/mqto#signalProvidedBy> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#startTime
+<https://w3id.org/mqto#startTime> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#suggestedBy
+<https://w3id.org/mqto#suggestedBy> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#timeWindowSize
+<https://w3id.org/mqto#timeWindowSize> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#upperBound
+<https://w3id.org/mqto#upperBound> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#weight
+<https://w3id.org/mqto#weight> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/pko#includesStepExecution
+<https://w3id.org/pko#includesStepExecution> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/pko#nextStepExecution
+<https://w3id.org/pko#nextStepExecution> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/pko#previousStepExecution
+<https://w3id.org/pko#previousStepExecution> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#duration
+xsd:duration rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/mqto/example#cycleTime
+<https://w3id.org/mqto/example#cycleTime> rdf:type owl:DatatypeProperty ;
+                                          rdfs:label "cycle time"@en .
+
+
+###  https://w3id.org/mqto/example#impurityPct
+<https://w3id.org/mqto/example#impurityPct> rdf:type owl:DatatypeProperty ;
+                                            rdfs:label "impurity percentage"@en .
+
+
+###  https://w3id.org/mqto/example#pressure
+<https://w3id.org/mqto/example#pressure> rdf:type owl:DatatypeProperty ;
+                                         rdfs:label "pressure"@en .
+
+
+###  https://w3id.org/mqto/example#temperature
+<https://w3id.org/mqto/example#temperature> rdf:type owl:DatatypeProperty ;
+                                            rdfs:label "temperature"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://qudt.org/schema/qudt/QuantityValue
+<http://qudt.org/schema/qudt/QuantityValue> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/Actuation
+<http://www.w3.org/ns/sosa/Actuation> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/sosa/Observation
+<http://www.w3.org/ns/sosa/Observation> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#ActuableProperty
+<https://w3id.org/mqto#ActuableProperty> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#Actuation
+<https://w3id.org/mqto#Actuation> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#Countermeasure
+<https://w3id.org/mqto#Countermeasure> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#CountermeasureExecution
+<https://w3id.org/mqto#CountermeasureExecution> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#CountermeasureStep
+<https://w3id.org/mqto#CountermeasureStep> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#CountermeasureStepExecution
+<https://w3id.org/mqto#CountermeasureStepExecution> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#FailureMode
+<https://w3id.org/mqto#FailureMode> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#FailureOccurrence
+<https://w3id.org/mqto#FailureOccurrence> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#List
+<https://w3id.org/mqto#List> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#Machine
+<https://w3id.org/mqto#Machine> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#Manpower
+<https://w3id.org/mqto#Manpower> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#Material
+<https://w3id.org/mqto#Material> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#Measurement
+<https://w3id.org/mqto#Measurement> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#Method
+<https://w3id.org/mqto#Method> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#Metric
+<https://w3id.org/mqto#Metric> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#MetricAssessment
+<https://w3id.org/mqto#MetricAssessment> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#ObservableProperty
+<https://w3id.org/mqto#ObservableProperty> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#Observation
+<https://w3id.org/mqto#Observation> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#PhysicalMachine
+<https://w3id.org/mqto#PhysicalMachine> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#PhysicalMaterial
+<https://w3id.org/mqto#PhysicalMaterial> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#ProcessExecution
+<https://w3id.org/mqto#ProcessExecution> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#Result
+<https://w3id.org/mqto#Result> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#Signal
+<https://w3id.org/mqto#Signal> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/mqto/example#Act001
+<https://w3id.org/mqto/example#Act001> rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/ns/sosa/Actuation> ,
+                                                <https://w3id.org/mqto#Actuation> ;
+                                       <http://www.w3.org/ns/sosa/actsOnProperty> <https://w3id.org/mqto/example#Machine4115_FurnaceSetpoint> ;
+                                       <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result_Act001> ;
+                                       <http://www.w3.org/ns/sosa/hasSimpleResult> 710.0 ;
+                                       <http://www.w3.org/ns/sosa/resultTime> "2026-03-15T10:50:00"^^xsd:dateTime .
+
+
+###  https://w3id.org/mqto/example#AdjustFurnaceSetpoint
+<https://w3id.org/mqto/example#AdjustFurnaceSetpoint> rdf:type owl:NamedIndividual ,
+                                                               <https://w3id.org/mqto#CountermeasureStep> ;
+                                                      rdfs:label "Adjust furnace setpoint"@en .
+
+
+###  https://w3id.org/mqto/example#AdjustMeltTemp
+<https://w3id.org/mqto/example#AdjustMeltTemp> rdf:type owl:NamedIndividual ,
+                                                        <https://w3id.org/mqto#Countermeasure> ;
+                                               <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#DieCastingCell> ;
+                                               rdfs:label "Adjust melt holding temperature to alloy specification"@en ;
+                                               <https://w3id.org/mqto#hasStepList> <https://w3id.org/mqto/example#AdjustMeltTemp_List1> ;
+                                               <https://w3id.org/mqto#mitigates> <https://w3id.org/mqto/example#MeltTempTooHigh> ,
+                                                                                 <https://w3id.org/mqto/example#Porosity> ;
+                                               <https://w3id.org/mqto#weight> 90 .
+
+
+###  https://w3id.org/mqto/example#AdjustMeltTemp_List1
+<https://w3id.org/mqto/example#AdjustMeltTemp_List1> rdf:type owl:NamedIndividual ,
+                                                              <https://w3id.org/mqto#List> ;
+                                                     <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#CheckCurrentTemp> ;
+                                                     <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#AdjustMeltTemp_List2> .
+
+
+###  https://w3id.org/mqto/example#AdjustMeltTemp_List2
+<https://w3id.org/mqto/example#AdjustMeltTemp_List2> rdf:type owl:NamedIndividual ,
+                                                              <https://w3id.org/mqto#List> ;
+                                                     <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#AdjustFurnaceSetpoint> ;
+                                                     <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#AdjustMeltTemp_List3> .
+
+
+###  https://w3id.org/mqto/example#AdjustMeltTemp_List3
+<https://w3id.org/mqto/example#AdjustMeltTemp_List3> rdf:type owl:NamedIndividual ,
+                                                              <https://w3id.org/mqto#List> ;
+                                                     <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#VerifyNewTemp> ;
+                                                     <https://w3id.org/mqto#rest> <https://w3id.org/mqto#nil> .
+
+
+###  https://w3id.org/mqto/example#AdjustSlowShotDuration
+<https://w3id.org/mqto/example#AdjustSlowShotDuration> rdf:type owl:NamedIndividual ,
+                                                                <https://w3id.org/mqto#CountermeasureStep> ;
+                                                       rdfs:label "Adjust slow-shot phase duration"@en .
+
+
+###  https://w3id.org/mqto/example#AlBatch2026_0042
+<https://w3id.org/mqto/example#AlBatch2026_0042> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/mqto#PhysicalMaterial> ;
+                                                 <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#AluminiumAlloy> ;
+                                                 rdfs:label "Aluminium batch AL-2026-0042"@en ;
+                                                 <https://w3id.org/mqto#identifier> "AL-2026-0042" .
+
+
+###  https://w3id.org/mqto/example#AlBatch2026_0043
+<https://w3id.org/mqto/example#AlBatch2026_0043> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/mqto#PhysicalMaterial> ;
+                                                 <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#AluminiumAlloy> ;
+                                                 rdfs:label "Aluminium batch AL-2026-0043"@en ;
+                                                 <https://w3id.org/mqto#identifier> "AL-2026-0043" .
+
+
+###  https://w3id.org/mqto/example#AlBatch2026_0043_Impurity
+<https://w3id.org/mqto/example#AlBatch2026_0043_Impurity> rdf:type owl:NamedIndividual ,
+                                                                   <https://w3id.org/mqto#ObservableProperty> ;
+                                                          <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#ImpurityLevelSignal> ;
+                                                          rdfs:label "Impurity level of batch AL-2026-0043"@en ;
+                                                          <http://www.w3.org/ns/ssn/isPropertyOf> <https://w3id.org/mqto/example#AlBatch2026_0043> .
+
+
+###  https://w3id.org/mqto/example#AlloyContamination
+<https://w3id.org/mqto/example#AlloyContamination> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/mqto#FailureMode> ;
+                                                   rdfs:label "Alloy contamination"@en ;
+                                                   <https://w3id.org/mqto#causes> <https://w3id.org/mqto/example#Porosity> ;
+                                                   <https://w3id.org/mqto#causesModerately> <https://w3id.org/mqto/example#Porosity> ;
+                                                   <https://w3id.org/mqto#failureBelongsTo> <https://w3id.org/mqto/example#AluminiumAlloy> ;
+                                                   <https://w3id.org/mqto#mitigatedBy> <https://w3id.org/mqto/example#ReplaceAlloyBatch> ;
+                                                   <https://w3id.org/mqto#refersToMetric> <https://w3id.org/mqto/example#ImpurityLevel> .
+
+
+###  https://w3id.org/mqto/example#AluminiumAlloy
+<https://w3id.org/mqto/example#AluminiumAlloy> rdf:type owl:NamedIndividual ,
+                                                        <https://w3id.org/mqto#Material> ;
+                                               rdfs:label "Aluminium alloy EN AC-46000"@en ;
+                                               <https://w3id.org/mqto#hasFailure> <https://w3id.org/mqto/example#AlloyContamination> ;
+                                               <https://w3id.org/mqto#hasMetric> <https://w3id.org/mqto/example#ImpurityLevel> ;
+                                               <https://w3id.org/mqto#providesSignal> <https://w3id.org/mqto/example#ImpurityLevelSignal> .
+
+
+###  https://w3id.org/mqto/example#CE_001
+<https://w3id.org/mqto/example#CE_001> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/mqto#CountermeasureExecution> ;
+                                       <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#AdjustMeltTemp> ;
+                                       <https://w3id.org/mqto#endTime> "2026-03-15T11:20:00"^^xsd:dateTime ;
+                                       <https://w3id.org/mqto#mitigated> <https://w3id.org/mqto/example#FO_001> ;
+                                       <https://w3id.org/mqto#score> 0.92 ;
+                                       <https://w3id.org/mqto#startTime> "2026-03-15T10:30:00"^^xsd:dateTime ;
+                                       <https://w3id.org/mqto#suggestedBy> <https://w3id.org/mqto/example#FO_001> ;
+                                       <https://w3id.org/pko#includesStepExecution> <https://w3id.org/mqto/example#CSE_001> ,
+                                                                                    <https://w3id.org/mqto/example#CSE_002> ,
+                                                                                    <https://w3id.org/mqto/example#CSE_003> .
+
+
+###  https://w3id.org/mqto/example#CE_002
+<https://w3id.org/mqto/example#CE_002> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/mqto#CountermeasureExecution> ;
+                                       <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#VerifyThermocouple> ;
+                                       <https://w3id.org/mqto#abortedReason> "Thermocouple within calibration limits; no adjustment needed." ;
+                                       <https://w3id.org/mqto#abortedTime> "2026-03-17T12:00:00"^^xsd:dateTime ;
+                                       <https://w3id.org/mqto#score> 0.75 ;
+                                       <https://w3id.org/mqto#startTime> "2026-03-17T11:30:00"^^xsd:dateTime ;
+                                       <https://w3id.org/mqto#suggestedBy> <https://w3id.org/mqto/example#FO_003> ;
+                                       <https://w3id.org/pko#includesStepExecution> <https://w3id.org/mqto/example#CSE_004> ,
+                                                                                    <https://w3id.org/mqto/example#CSE_005> ,
+                                                                                    <https://w3id.org/mqto/example#CSE_006> .
+
+
+###  https://w3id.org/mqto/example#CSE_001
+<https://w3id.org/mqto/example#CSE_001> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/mqto#CountermeasureStepExecution> ;
+                                        <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#CheckCurrentTemp> ;
+                                        <https://w3id.org/mqto#completionTime> "2026-03-15T10:35:00"^^xsd:dateTime ;
+                                        <https://w3id.org/pko#nextStepExecution> <https://w3id.org/mqto/example#CSE_002> .
+
+
+###  https://w3id.org/mqto/example#CSE_002
+<https://w3id.org/mqto/example#CSE_002> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/mqto#CountermeasureStepExecution> ;
+                                        <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#AdjustFurnaceSetpoint> ;
+                                        <https://w3id.org/mqto#completionTime> "2026-03-15T10:50:00"^^xsd:dateTime ;
+                                        <https://w3id.org/pko#nextStepExecution> <https://w3id.org/mqto/example#CSE_003> ;
+                                        <https://w3id.org/pko#previousStepExecution> <https://w3id.org/mqto/example#CSE_001> .
+
+
+###  https://w3id.org/mqto/example#CSE_003
+<https://w3id.org/mqto/example#CSE_003> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/mqto#CountermeasureStepExecution> ;
+                                        <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#VerifyNewTemp> ;
+                                        <https://w3id.org/mqto#completionTime> "2026-03-15T11:20:00"^^xsd:dateTime ;
+                                        <https://w3id.org/pko#previousStepExecution> <https://w3id.org/mqto/example#CSE_002> .
+
+
+###  https://w3id.org/mqto/example#CSE_004
+<https://w3id.org/mqto/example#CSE_004> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/mqto#CountermeasureStepExecution> ;
+                                        <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#InspectThermocouple> ;
+                                        <https://w3id.org/mqto#completionTime> "2026-03-17T11:45:00"^^xsd:dateTime ;
+                                        <https://w3id.org/pko#nextStepExecution> <https://w3id.org/mqto/example#CSE_005> ;
+                                        <https://w3id.org/pko#previousStepExecution> <https://w3id.org/mqto/example#CSE_006> .
+
+
+###  https://w3id.org/mqto/example#CSE_005
+<https://w3id.org/mqto/example#CSE_005> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/mqto#CountermeasureStepExecution> ;
+                                        <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#CalibrateIfNeeded> ;
+                                        <https://w3id.org/mqto#abortedReason> "Not needed — thermocouple readings within tolerance." ;
+                                        <https://w3id.org/mqto#abortedTime> "2026-03-17T12:00:00"^^xsd:dateTime ;
+                                        <https://w3id.org/pko#previousStepExecution> <https://w3id.org/mqto/example#CSE_004> .
+
+
+###  https://w3id.org/mqto/example#CSE_006
+<https://w3id.org/mqto/example#CSE_006> rdf:type owl:NamedIndividual ,
+                                                 <https://w3id.org/mqto#CountermeasureStepExecution> ;
+                                        <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#CheckCurrentTemp> ;
+                                        <https://w3id.org/mqto#completionTime> "2026-03-17T11:35:00"^^xsd:dateTime ;
+                                        <https://w3id.org/pko#nextStepExecution> <https://w3id.org/mqto/example#CSE_004> .
+
+
+###  https://w3id.org/mqto/example#CalibrateIfNeeded
+<https://w3id.org/mqto/example#CalibrateIfNeeded> rdf:type owl:NamedIndividual ,
+                                                           <https://w3id.org/mqto#CountermeasureStep> ;
+                                                  rdfs:label "Calibrate if needed"@en .
+
+
+###  https://w3id.org/mqto/example#CheckCurrentTemp
+<https://w3id.org/mqto/example#CheckCurrentTemp> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/mqto#CountermeasureStep> ;
+                                                 rdfs:label "Check current melt temperature"@en .
+
+
+###  https://w3id.org/mqto/example#ColdShut
+<https://w3id.org/mqto/example#ColdShut> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/mqto#FailureMode> ;
+                                         rdfs:label "Cold shut"@en ;
+                                         <https://w3id.org/mqto#failureBelongsTo> <https://w3id.org/mqto/example#DieCastingCell> ;
+                                         <https://w3id.org/mqto#mitigatedBy> <https://w3id.org/mqto/example#IncreaseSlowShot> ;
+                                         <https://w3id.org/mqto#refersToMetric> <https://w3id.org/mqto/example#CycleTimeVariance> ;
+                                         <https://w3id.org/mqto#weight> 40 .
+
+
+###  https://w3id.org/mqto/example#CycleTimeSignal
+<https://w3id.org/mqto/example#CycleTimeSignal> rdf:type owl:NamedIndividual ,
+                                                         <https://w3id.org/mqto#Signal> ;
+                                                rdfs:label "Cycle time signal"@en ;
+                                                <https://w3id.org/mqto#identifier> "PLC.CycleTime" ;
+                                                <https://w3id.org/mqto#signalProvidedBy> <https://w3id.org/mqto/example#DieCastingCell> .
+
+
+###  https://w3id.org/mqto/example#CycleTimeVariance
+<https://w3id.org/mqto/example#CycleTimeVariance> rdf:type owl:NamedIndividual ,
+                                                           <https://w3id.org/mqto#Metric> ;
+                                                  rdfs:label "Cycle time variance"@en ;
+                                                  <https://w3id.org/mqto#itemWindowSize> 20 ;
+                                                  <https://w3id.org/mqto#lowerBound> 0.0 ;
+                                                  <https://w3id.org/mqto#method> "stdev" ;
+                                                  <https://w3id.org/mqto#metricBelongsTo> <https://w3id.org/mqto/example#DieCastingCell> ;
+                                                  <https://w3id.org/mqto#readsFrom> <https://w3id.org/mqto/example#CycleTimeSignal> ;
+                                                  <https://w3id.org/mqto#resultProperty> <https://w3id.org/mqto/example#cycleTime> ;
+                                                  <https://w3id.org/mqto#timeWindowSize> "PT10M"^^xsd:duration ;
+                                                  <https://w3id.org/mqto#upperBound> 3.0 .
+
+
+###  https://w3id.org/mqto/example#DieCastingCell
+<https://w3id.org/mqto/example#DieCastingCell> rdf:type owl:NamedIndividual ,
+                                                        <https://w3id.org/mqto#Machine> ;
+                                               rdfs:label "Die-casting cell"@en ;
+                                               <https://w3id.org/mqto#hasFailure> <https://w3id.org/mqto/example#ColdShut> ,
+                                                                                  <https://w3id.org/mqto/example#GasPorosity> ,
+                                                                                  <https://w3id.org/mqto/example#MeltTempTooHigh> ,
+                                                                                  <https://w3id.org/mqto/example#Porosity> ,
+                                                                                  <https://w3id.org/mqto/example#ShrinkagePorosity> ;
+                                               <https://w3id.org/mqto#hasMetric> <https://w3id.org/mqto/example#CycleTimeVariance> ,
+                                                                                 <https://w3id.org/mqto/example#InjectionPressurePeak> ,
+                                                                                 <https://w3id.org/mqto/example#TemperatureDeviation> ;
+                                               <https://w3id.org/mqto#identifier> "Cell-Type-A" ;
+                                               <https://w3id.org/mqto#providesSignal> <https://w3id.org/mqto/example#CycleTimeSignal> ,
+                                                                                      <https://w3id.org/mqto/example#FurnaceSetpointSignal> ,
+                                                                                      <https://w3id.org/mqto/example#InjectionPressureSignal> ,
+                                                                                      <https://w3id.org/mqto/example#MeltTemperatureSignal> .
+
+
+###  https://w3id.org/mqto/example#DieCastingProcess
+<https://w3id.org/mqto/example#DieCastingProcess> rdf:type owl:NamedIndividual ,
+                                                           <https://w3id.org/mqto#Method> ;
+                                                  <http://rds.posccaesar.org/ontology/lis14/rdl/hasActivityPart> <https://w3id.org/mqto/example#InjectionPhase> ;
+                                                  <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#AluminiumAlloy> ,
+                                                                                                                <https://w3id.org/mqto/example#DieCastingCell> ,
+                                                                                                                <https://w3id.org/mqto/example#Operator> ;
+                                                  rdfs:label "Die-casting process"@en .
+
+
+###  https://w3id.org/mqto/example#FO_001
+<https://w3id.org/mqto/example#FO_001> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/mqto#FailureOccurrence> ;
+                                       <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#Porosity> ;
+                                       <https://w3id.org/mqto#appearedOn> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <https://w3id.org/mqto#occurrenceTime> "2026-03-15T10:01:00"^^xsd:dateTime ;
+                                       <https://w3id.org/mqto#raisedBy> <https://w3id.org/mqto/example#MA_001> .
+
+
+###  https://w3id.org/mqto/example#FO_002
+<https://w3id.org/mqto/example#FO_002> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/mqto#FailureOccurrence> ;
+                                       <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#GasPorosity> ;
+                                       <https://w3id.org/mqto#appearedOn> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <https://w3id.org/mqto#occurrenceTime> "2026-03-15T16:01:00"^^xsd:dateTime ;
+                                       <https://w3id.org/mqto#raisedBy> <https://w3id.org/mqto/example#MA_004> .
+
+
+###  https://w3id.org/mqto/example#FO_003
+<https://w3id.org/mqto/example#FO_003> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/mqto#FailureOccurrence> ;
+                                       <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#Porosity> ;
+                                       <https://w3id.org/mqto#appearedOn> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <https://w3id.org/mqto#occurrenceTime> "2026-03-17T11:01:00"^^xsd:dateTime ;
+                                       <https://w3id.org/mqto#raisedBy> <https://w3id.org/mqto/example#MA_006> .
+
+
+###  https://w3id.org/mqto/example#FO_004
+<https://w3id.org/mqto/example#FO_004> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/mqto#FailureOccurrence> ;
+                                       <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#ColdShut> ;
+                                       <https://w3id.org/mqto#appearedOn> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <https://w3id.org/mqto#occurrenceTime> "2026-03-20T09:30:00"^^xsd:dateTime .
+
+
+###  https://w3id.org/mqto/example#FO_005
+<https://w3id.org/mqto/example#FO_005> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/mqto#FailureOccurrence> ;
+                                       <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#AlloyContamination> ;
+                                       <https://w3id.org/mqto#appearedOn> <https://w3id.org/mqto/example#AlBatch2026_0043> ;
+                                       <https://w3id.org/mqto#occurrenceTime> "2026-03-17T07:30:00"^^xsd:dateTime ;
+                                       <https://w3id.org/mqto#raisedBy> <https://w3id.org/mqto/example#MA_007> .
+
+
+###  https://w3id.org/mqto/example#FurnaceSetpointSignal
+<https://w3id.org/mqto/example#FurnaceSetpointSignal> rdf:type owl:NamedIndividual ,
+                                                               <https://w3id.org/mqto#Signal> ;
+                                                      rdfs:label "Furnace setpoint signal"@en ;
+                                                      <https://w3id.org/mqto#identifier> "PLC.FurnaceSetpoint" ;
+                                                      <https://w3id.org/mqto#signalProvidedBy> <https://w3id.org/mqto/example#DieCastingCell> .
+
+
+###  https://w3id.org/mqto/example#GasPorosity
+<https://w3id.org/mqto/example#GasPorosity> rdf:type owl:NamedIndividual ,
+                                                     <https://w3id.org/mqto#FailureMode> ;
+                                            rdfs:label "Gas porosity"@en ;
+                                            <https://w3id.org/mqto#causes> <https://w3id.org/mqto/example#Porosity> ;
+                                            <https://w3id.org/mqto#causesStrongly> <https://w3id.org/mqto/example#Porosity> ;
+                                            <https://w3id.org/mqto#failureBelongsTo> <https://w3id.org/mqto/example#DieCastingCell> ;
+                                            <https://w3id.org/mqto#refersToMetric> <https://w3id.org/mqto/example#TemperatureDeviation> ;
+                                            <https://w3id.org/mqto#weight> 60 .
+
+
+###  https://w3id.org/mqto/example#ImpurityLevel
+<https://w3id.org/mqto/example#ImpurityLevel> rdf:type owl:NamedIndividual ,
+                                                       <https://w3id.org/mqto#Metric> ;
+                                              rdfs:label "Alloy impurity level"@en ;
+                                              <https://w3id.org/mqto#method> "latest" ;
+                                              <https://w3id.org/mqto#metricBelongsTo> <https://w3id.org/mqto/example#AluminiumAlloy> ;
+                                              <https://w3id.org/mqto#readsFrom> <https://w3id.org/mqto/example#ImpurityLevelSignal> ;
+                                              <https://w3id.org/mqto#resultProperty> <https://w3id.org/mqto/example#impurityPct> ;
+                                              <https://w3id.org/mqto#timeWindowSize> "PT24H"^^xsd:duration ;
+                                              <https://w3id.org/mqto#upperBound> 0.5 .
+
+
+###  https://w3id.org/mqto/example#ImpurityLevelSignal
+<https://w3id.org/mqto/example#ImpurityLevelSignal> rdf:type owl:NamedIndividual ,
+                                                             <https://w3id.org/mqto#Signal> ;
+                                                    rdfs:label "Impurity level signal"@en ;
+                                                    <https://w3id.org/mqto#identifier> "LAB.Impurity" ;
+                                                    <https://w3id.org/mqto#signalProvidedBy> <https://w3id.org/mqto/example#AluminiumAlloy> .
+
+
+###  https://w3id.org/mqto/example#IncreaseSlowShot
+<https://w3id.org/mqto/example#IncreaseSlowShot> rdf:type owl:NamedIndividual ,
+                                                          <https://w3id.org/mqto#Countermeasure> ;
+                                                 rdfs:label "Increase slow-shot phase duration"@en ;
+                                                 <https://w3id.org/mqto#hasStepList> <https://w3id.org/mqto/example#IncreaseSlowShot_List1> ;
+                                                 <https://w3id.org/mqto#mitigates> <https://w3id.org/mqto/example#ColdShut> ,
+                                                                                   <https://w3id.org/mqto/example#Porosity> ;
+                                                 <https://w3id.org/mqto#weight> 50 .
+
+
+###  https://w3id.org/mqto/example#IncreaseSlowShot_List1
+<https://w3id.org/mqto/example#IncreaseSlowShot_List1> rdf:type owl:NamedIndividual ,
+                                                                <https://w3id.org/mqto#List> ;
+                                                       <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#ReviewInjectionProfile> ;
+                                                       <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#IncreaseSlowShot_List2> .
+
+
+###  https://w3id.org/mqto/example#IncreaseSlowShot_List2
+<https://w3id.org/mqto/example#IncreaseSlowShot_List2> rdf:type owl:NamedIndividual ,
+                                                                <https://w3id.org/mqto#List> ;
+                                                       <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#AdjustSlowShotDuration> ;
+                                                       <https://w3id.org/mqto#rest> <https://w3id.org/mqto#nil> .
+
+
+###  https://w3id.org/mqto/example#InjectionPhase
+<https://w3id.org/mqto/example#InjectionPhase> rdf:type owl:NamedIndividual ,
+                                                        <https://w3id.org/mqto#Method> ;
+                                               <http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf> <https://w3id.org/mqto/example#DieCastingProcess> ;
+                                               rdfs:label "Injection phase"@en .
+
+
+###  https://w3id.org/mqto/example#InjectionPressurePeak
+<https://w3id.org/mqto/example#InjectionPressurePeak> rdf:type owl:NamedIndividual ,
+                                                               <https://w3id.org/mqto#Metric> ;
+                                                      rdfs:label "Injection pressure peak"@en ;
+                                                      <https://w3id.org/mqto#itemWindowSize> 5 ;
+                                                      <https://w3id.org/mqto#lowerBound> 800.0 ;
+                                                      <https://w3id.org/mqto#method> "max" ;
+                                                      <https://w3id.org/mqto#metricBelongsTo> <https://w3id.org/mqto/example#DieCastingCell> ;
+                                                      <https://w3id.org/mqto#readsFrom> <https://w3id.org/mqto/example#InjectionPressureSignal> ;
+                                                      <https://w3id.org/mqto#resultProperty> <https://w3id.org/mqto/example#pressure> ;
+                                                      <https://w3id.org/mqto#timeWindowSize> "PT2M"^^xsd:duration ;
+                                                      <https://w3id.org/mqto#upperBound> 1100.0 .
+
+
+###  https://w3id.org/mqto/example#InjectionPressureSignal
+<https://w3id.org/mqto/example#InjectionPressureSignal> rdf:type owl:NamedIndividual ,
+                                                                 <https://w3id.org/mqto#Signal> ;
+                                                        rdfs:label "Injection pressure signal"@en ;
+                                                        <https://w3id.org/mqto#identifier> "PLC.InjPressure" ;
+                                                        <https://w3id.org/mqto#signalProvidedBy> <https://w3id.org/mqto/example#DieCastingCell> .
+
+
+###  https://w3id.org/mqto/example#InspectThermocouple
+<https://w3id.org/mqto/example#InspectThermocouple> rdf:type owl:NamedIndividual ,
+                                                             <https://w3id.org/mqto#CountermeasureStep> ;
+                                                    rdfs:label "Inspect thermocouple"@en .
+
+
+###  https://w3id.org/mqto/example#MA_001
+<https://w3id.org/mqto/example#MA_001> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/mqto#MetricAssessment> ;
+                                       <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#TemperatureDeviation> ;
+                                       <https://w3id.org/mqto#assessmentValue> "true"^^xsd:boolean ;
+                                       <https://w3id.org/mqto#basedOn> <https://w3id.org/mqto/example#Obs001> ,
+                                                                       <https://w3id.org/mqto/example#Obs002> ,
+                                                                       <https://w3id.org/mqto/example#Obs003> ;
+                                       <https://w3id.org/mqto#calculatedFor> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <https://w3id.org/mqto#calculatedTime> "2026-03-15T10:00:00"^^xsd:dateTime ;
+                                       <https://w3id.org/mqto#calculatedValue> 718.3 ;
+                                       <https://w3id.org/mqto#evaluatesProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> ;
+                                       <https://w3id.org/mqto#raised> <https://w3id.org/mqto/example#FO_001> .
+
+
+###  https://w3id.org/mqto/example#MA_002
+<https://w3id.org/mqto/example#MA_002> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/mqto#MetricAssessment> ;
+                                       <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#TemperatureDeviation> ;
+                                       <https://w3id.org/mqto#assessmentValue> "false"^^xsd:boolean ;
+                                       <https://w3id.org/mqto#basedOn> <https://w3id.org/mqto/example#Act001> ,
+                                                                       <https://w3id.org/mqto/example#Obs004> ;
+                                       <https://w3id.org/mqto#calculatedFor> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <https://w3id.org/mqto#calculatedTime> "2026-03-15T14:00:00"^^xsd:dateTime ;
+                                       <https://w3id.org/mqto#calculatedValue> 705.1 ;
+                                       <https://w3id.org/mqto#evaluatesProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> .
+
+
+###  https://w3id.org/mqto/example#MA_003
+<https://w3id.org/mqto/example#MA_003> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/mqto#MetricAssessment> ;
+                                       <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#InjectionPressurePeak> ;
+                                       <https://w3id.org/mqto#assessmentValue> "false"^^xsd:boolean ;
+                                       <https://w3id.org/mqto#basedOn> <https://w3id.org/mqto/example#Obs005> ,
+                                                                       <https://w3id.org/mqto/example#Obs006> ;
+                                       <https://w3id.org/mqto#calculatedFor> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <https://w3id.org/mqto#calculatedTime> "2026-03-15T10:05:00"^^xsd:dateTime ;
+                                       <https://w3id.org/mqto#calculatedValue> 1085.0 ;
+                                       <https://w3id.org/mqto#evaluatesProperty> <https://w3id.org/mqto/example#Machine4115_InjPressure> .
+
+
+###  https://w3id.org/mqto/example#MA_004
+<https://w3id.org/mqto/example#MA_004> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/mqto#MetricAssessment> ;
+                                       <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#TemperatureDeviation> ;
+                                       <https://w3id.org/mqto#assessmentValue> "true"^^xsd:boolean ;
+                                       <https://w3id.org/mqto#basedOn> <https://w3id.org/mqto/example#Obs007> ;
+                                       <https://w3id.org/mqto#calculatedFor> <https://w3id.org/mqto/example#Process1234> ;
+                                       <https://w3id.org/mqto#calculatedTime> "2026-03-15T16:00:00"^^xsd:dateTime ;
+                                       <https://w3id.org/mqto#calculatedValue> 722.5 ;
+                                       <https://w3id.org/mqto#evaluatesProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> ;
+                                       <https://w3id.org/mqto#raised> <https://w3id.org/mqto/example#FO_002> .
+
+
+###  https://w3id.org/mqto/example#MA_005
+<https://w3id.org/mqto/example#MA_005> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/mqto#MetricAssessment> ;
+                                       <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#CycleTimeVariance> ;
+                                       <https://w3id.org/mqto#assessmentValue> "false"^^xsd:boolean ;
+                                       <https://w3id.org/mqto#basedOn> <https://w3id.org/mqto/example#Obs008> ;
+                                       <https://w3id.org/mqto#calculatedFor> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <https://w3id.org/mqto#calculatedTime> "2026-03-16T09:00:00"^^xsd:dateTime ;
+                                       <https://w3id.org/mqto#calculatedValue> 2.1 ;
+                                       <https://w3id.org/mqto#evaluatesProperty> <https://w3id.org/mqto/example#Machine4115_CycleTime> .
+
+
+###  https://w3id.org/mqto/example#MA_006
+<https://w3id.org/mqto/example#MA_006> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/mqto#MetricAssessment> ;
+                                       <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#TemperatureDeviation> ;
+                                       <https://w3id.org/mqto#assessmentValue> "true"^^xsd:boolean ;
+                                       <https://w3id.org/mqto#basedOn> <https://w3id.org/mqto/example#Obs009> ,
+                                                                       <https://w3id.org/mqto/example#Obs010> ;
+                                       <https://w3id.org/mqto#calculatedFor> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <https://w3id.org/mqto#calculatedTime> "2026-03-17T11:00:00"^^xsd:dateTime ;
+                                       <https://w3id.org/mqto#calculatedValue> 725.8 ;
+                                       <https://w3id.org/mqto#evaluatesProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> ;
+                                       <https://w3id.org/mqto#raised> <https://w3id.org/mqto/example#FO_003> .
+
+
+###  https://w3id.org/mqto/example#MA_007
+<https://w3id.org/mqto/example#MA_007> rdf:type owl:NamedIndividual ,
+                                                <https://w3id.org/mqto#MetricAssessment> ;
+                                       <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#ImpurityLevel> ;
+                                       <https://w3id.org/mqto#assessmentValue> "true"^^xsd:boolean ;
+                                       <https://w3id.org/mqto#basedOn> <https://w3id.org/mqto/example#Obs011> ;
+                                       <https://w3id.org/mqto#calculatedFor> <https://w3id.org/mqto/example#AlBatch2026_0043> ;
+                                       <https://w3id.org/mqto#calculatedTime> "2026-03-17T07:15:00"^^xsd:dateTime ;
+                                       <https://w3id.org/mqto#calculatedValue> 0.62 ;
+                                       <https://w3id.org/mqto#evaluatesProperty> <https://w3id.org/mqto/example#AlBatch2026_0043_Impurity> ;
+                                       <https://w3id.org/mqto#raised> <https://w3id.org/mqto/example#FO_005> .
+
+
+###  https://w3id.org/mqto/example#Machine4115
+<https://w3id.org/mqto/example#Machine4115> rdf:type owl:NamedIndividual ,
+                                                     <https://w3id.org/mqto#PhysicalMachine> ;
+                                            <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#DieCastingCell> ;
+                                            rdfs:label "Machine 4115"@en ;
+                                            <https://w3id.org/mqto#identifier> "4115" .
+
+
+###  https://w3id.org/mqto/example#Machine4115_CycleTime
+<https://w3id.org/mqto/example#Machine4115_CycleTime> rdf:type owl:NamedIndividual ,
+                                                               <https://w3id.org/mqto#ObservableProperty> ;
+                                                      <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#CycleTimeSignal> ;
+                                                      rdfs:label "Cycle time of Machine 4115"@en ;
+                                                      <http://www.w3.org/ns/ssn/isPropertyOf> <https://w3id.org/mqto/example#Machine4115> .
+
+
+###  https://w3id.org/mqto/example#Machine4115_FurnaceSetpoint
+<https://w3id.org/mqto/example#Machine4115_FurnaceSetpoint> rdf:type owl:NamedIndividual ,
+                                                                     <https://w3id.org/mqto#ActuableProperty> ;
+                                                            <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#FurnaceSetpointSignal> ;
+                                                            rdfs:label "Furnace setpoint of Machine 4115"@en ;
+                                                            <http://www.w3.org/ns/ssn/isPropertyOf> <https://w3id.org/mqto/example#Machine4115> .
+
+
+###  https://w3id.org/mqto/example#Machine4115_InjPressure
+<https://w3id.org/mqto/example#Machine4115_InjPressure> rdf:type owl:NamedIndividual ,
+                                                                 <https://w3id.org/mqto#ObservableProperty> ;
+                                                        <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#InjectionPressureSignal> ;
+                                                        rdfs:label "Injection pressure of Machine 4115"@en ;
+                                                        <http://www.w3.org/ns/ssn/isPropertyOf> <https://w3id.org/mqto/example#Machine4115> .
+
+
+###  https://w3id.org/mqto/example#Machine4115_MeltTemp
+<https://w3id.org/mqto/example#Machine4115_MeltTemp> rdf:type owl:NamedIndividual ,
+                                                              <https://w3id.org/mqto#ObservableProperty> ;
+                                                     <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#MeltTemperatureSignal> ;
+                                                     rdfs:label "Melt temperature of Machine 4115"@en ;
+                                                     <http://www.w3.org/ns/ssn/isPropertyOf> <https://w3id.org/mqto/example#Machine4115> .
+
+
+###  https://w3id.org/mqto/example#MeltTempTooHigh
+<https://w3id.org/mqto/example#MeltTempTooHigh> rdf:type owl:NamedIndividual ,
+                                                         <https://w3id.org/mqto#FailureMode> ;
+                                                rdfs:label "Melt temperature too high"@en ;
+                                                <https://w3id.org/mqto#causes> <https://w3id.org/mqto/example#Porosity> ;
+                                                <https://w3id.org/mqto#causesWeakly> <https://w3id.org/mqto/example#Porosity> ;
+                                                <https://w3id.org/mqto#failureBelongsTo> <https://w3id.org/mqto/example#DieCastingCell> ;
+                                                <https://w3id.org/mqto#mitigatedBy> <https://w3id.org/mqto/example#AdjustMeltTemp> ;
+                                                <https://w3id.org/mqto#refersToMetric> <https://w3id.org/mqto/example#TemperatureDeviation> .
+
+
+###  https://w3id.org/mqto/example#MeltTemperatureSignal
+<https://w3id.org/mqto/example#MeltTemperatureSignal> rdf:type owl:NamedIndividual ,
+                                                               <https://w3id.org/mqto#Signal> ;
+                                                      rdfs:label "Melt temperature signal"@en ;
+                                                      <https://w3id.org/mqto#identifier> "PLC.MeltTemp" ;
+                                                      <https://w3id.org/mqto#signalProvidedBy> <https://w3id.org/mqto/example#DieCastingCell> .
+
+
+###  https://w3id.org/mqto/example#Obs001
+<https://w3id.org/mqto/example#Obs001> rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/ns/sosa/Observation> ,
+                                                <https://w3id.org/mqto#Observation> ;
+                                       <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result001> ;
+                                       <http://www.w3.org/ns/sosa/hasSimpleResult> 721.5 ;
+                                       <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> ;
+                                       <http://www.w3.org/ns/sosa/resultTime> "2026-03-15T09:55:00"^^xsd:dateTime ;
+                                       <http://www.w3.org/ns/sosa/usedProcedure> <https://w3id.org/mqto/example#TemperatureMeasurement> .
+
+
+###  https://w3id.org/mqto/example#Obs002
+<https://w3id.org/mqto/example#Obs002> rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/ns/sosa/Observation> ,
+                                                <https://w3id.org/mqto#Observation> ;
+                                       <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result002> ;
+                                       <http://www.w3.org/ns/sosa/hasSimpleResult> 719.2 ;
+                                       <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> ;
+                                       <http://www.w3.org/ns/sosa/resultTime> "2026-03-15T09:57:00"^^xsd:dateTime .
+
+
+###  https://w3id.org/mqto/example#Obs003
+<https://w3id.org/mqto/example#Obs003> rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/ns/sosa/Observation> ,
+                                                <https://w3id.org/mqto#Observation> ;
+                                       <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result003> ;
+                                       <http://www.w3.org/ns/sosa/hasSimpleResult> 718.3 ;
+                                       <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> ;
+                                       <http://www.w3.org/ns/sosa/resultTime> "2026-03-15T09:59:00"^^xsd:dateTime .
+
+
+###  https://w3id.org/mqto/example#Obs004
+<https://w3id.org/mqto/example#Obs004> rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/ns/sosa/Observation> ,
+                                                <https://w3id.org/mqto#Observation> ;
+                                       <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result004> ;
+                                       <http://www.w3.org/ns/sosa/hasSimpleResult> 705.1 ;
+                                       <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> ;
+                                       <http://www.w3.org/ns/sosa/resultTime> "2026-03-15T13:55:00"^^xsd:dateTime .
+
+
+###  https://w3id.org/mqto/example#Obs005
+<https://w3id.org/mqto/example#Obs005> rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/ns/sosa/Observation> ,
+                                                <https://w3id.org/mqto#Observation> ;
+                                       <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result_Shot042> ;
+                                       <http://www.w3.org/ns/sosa/hasSimpleResult> 1085.0 ;
+                                       <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_InjPressure> ;
+                                       <http://www.w3.org/ns/sosa/resultTime> "2026-03-15T10:02:00"^^xsd:dateTime .
+
+
+###  https://w3id.org/mqto/example#Obs006
+<https://w3id.org/mqto/example#Obs006> rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/ns/sosa/Observation> ,
+                                                <https://w3id.org/mqto#Observation> ;
+                                       <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result_Shot043> ;
+                                       <http://www.w3.org/ns/sosa/hasSimpleResult> 1042.3 ;
+                                       <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_InjPressure> ;
+                                       <http://www.w3.org/ns/sosa/resultTime> "2026-03-15T10:04:00"^^xsd:dateTime .
+
+
+###  https://w3id.org/mqto/example#Obs007
+<https://w3id.org/mqto/example#Obs007> rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/ns/sosa/Observation> ,
+                                                <https://w3id.org/mqto#Observation> ;
+                                       <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result007> ;
+                                       <http://www.w3.org/ns/sosa/hasSimpleResult> 722.5 ;
+                                       <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> ;
+                                       <http://www.w3.org/ns/sosa/resultTime> "2026-03-15T15:50:00"^^xsd:dateTime .
+
+
+###  https://w3id.org/mqto/example#Obs008
+<https://w3id.org/mqto/example#Obs008> rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/ns/sosa/Observation> ,
+                                                <https://w3id.org/mqto#Observation> ;
+                                       <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result008> ;
+                                       <http://www.w3.org/ns/sosa/hasSimpleResult> 24.7 ;
+                                       <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_CycleTime> ;
+                                       <http://www.w3.org/ns/sosa/resultTime> "2026-03-16T08:55:00"^^xsd:dateTime .
+
+
+###  https://w3id.org/mqto/example#Obs009
+<https://w3id.org/mqto/example#Obs009> rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/ns/sosa/Observation> ,
+                                                <https://w3id.org/mqto#Observation> ;
+                                       <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result009> ;
+                                       <http://www.w3.org/ns/sosa/hasSimpleResult> 725.8 ;
+                                       <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> ;
+                                       <http://www.w3.org/ns/sosa/resultTime> "2026-03-17T10:55:00"^^xsd:dateTime .
+
+
+###  https://w3id.org/mqto/example#Obs010
+<https://w3id.org/mqto/example#Obs010> rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/ns/sosa/Observation> ,
+                                                <https://w3id.org/mqto#Observation> ;
+                                       <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#Machine4115> ;
+                                       <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result010> ;
+                                       <http://www.w3.org/ns/sosa/hasSimpleResult> 723.4 ;
+                                       <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#Machine4115_MeltTemp> ;
+                                       <http://www.w3.org/ns/sosa/resultTime> "2026-03-17T10:58:00"^^xsd:dateTime .
+
+
+###  https://w3id.org/mqto/example#Obs011
+<https://w3id.org/mqto/example#Obs011> rdf:type owl:NamedIndividual ,
+                                                <http://www.w3.org/ns/sosa/Observation> ,
+                                                <https://w3id.org/mqto#Observation> ;
+                                       <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <https://w3id.org/mqto/example#AlBatch2026_0043> ;
+                                       <http://www.w3.org/ns/sosa/hasResult> <https://w3id.org/mqto/example#Result011> ;
+                                       <http://www.w3.org/ns/sosa/observedProperty> <https://w3id.org/mqto/example#AlBatch2026_0043_Impurity> ;
+                                       <http://www.w3.org/ns/sosa/resultTime> "2026-03-17T07:00:00"^^xsd:dateTime .
+
+
+###  https://w3id.org/mqto/example#Operator
+<https://w3id.org/mqto/example#Operator> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/mqto#Manpower> ;
+                                         rdfs:label "Machine operator"@en .
+
+
+###  https://w3id.org/mqto/example#Porosity
+<https://w3id.org/mqto/example#Porosity> rdf:type owl:NamedIndividual ,
+                                                  <https://w3id.org/mqto#FailureMode> ;
+                                         rdfs:label "Porosity"@en ;
+                                         <https://w3id.org/mqto#causedBy> <https://w3id.org/mqto/example#AlloyContamination> ,
+                                                                          <https://w3id.org/mqto/example#GasPorosity> ,
+                                                                          <https://w3id.org/mqto/example#MeltTempTooHigh> ,
+                                                                          <https://w3id.org/mqto/example#ShrinkagePorosity> ;
+                                         <https://w3id.org/mqto#causedByModerately> <https://w3id.org/mqto/example#AlloyContamination> ,
+                                                                                    <https://w3id.org/mqto/example#ShrinkagePorosity> ;
+                                         <https://w3id.org/mqto#causedByStrongly> <https://w3id.org/mqto/example#GasPorosity> ;
+                                         <https://w3id.org/mqto#causedByWeakly> <https://w3id.org/mqto/example#MeltTempTooHigh> ;
+                                         <https://w3id.org/mqto#failureBelongsTo> <https://w3id.org/mqto/example#DieCastingCell> ;
+                                         <https://w3id.org/mqto#mitigatedBy> <https://w3id.org/mqto/example#AdjustMeltTemp> ,
+                                                                             <https://w3id.org/mqto/example#IncreaseSlowShot> ,
+                                                                             <https://w3id.org/mqto/example#VerifyThermocouple> ;
+                                         <https://w3id.org/mqto#refersToMetric> <https://w3id.org/mqto/example#InjectionPressurePeak> ,
+                                                                                <https://w3id.org/mqto/example#TemperatureDeviation> ;
+                                         <https://w3id.org/mqto#weight> 80 .
+
+
+###  https://w3id.org/mqto/example#Process1234
+<https://w3id.org/mqto/example#Process1234> rdf:type owl:NamedIndividual ,
+                                                     <https://w3id.org/mqto#ProcessExecution> ;
+                                            <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#AlBatch2026_0042> ,
+                                                                                                          <https://w3id.org/mqto/example#Machine4115> ;
+                                            <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#DieCastingProcess> ;
+                                            rdfs:label "Process execution 1234"@en ;
+                                            <https://w3id.org/mqto#endTime> "2026-03-15T16:00:00"^^xsd:dateTime ;
+                                            <https://w3id.org/mqto#startTime> "2026-03-15T08:00:00"^^xsd:dateTime .
+
+
+###  https://w3id.org/mqto/example#Process1235
+<https://w3id.org/mqto/example#Process1235> rdf:type owl:NamedIndividual ,
+                                                     <https://w3id.org/mqto#ProcessExecution> ;
+                                            <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#AlBatch2026_0042> ,
+                                                                                                          <https://w3id.org/mqto/example#Machine4115> ;
+                                            <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#DieCastingProcess> ;
+                                            rdfs:label "Process execution 1235"@en ;
+                                            <https://w3id.org/mqto#endTime> "2026-03-16T16:00:00"^^xsd:dateTime ;
+                                            <https://w3id.org/mqto#startTime> "2026-03-16T08:00:00"^^xsd:dateTime .
+
+
+###  https://w3id.org/mqto/example#Process1236
+<https://w3id.org/mqto/example#Process1236> rdf:type owl:NamedIndividual ,
+                                                     <https://w3id.org/mqto#ProcessExecution> ;
+                                            <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#AlBatch2026_0043> ,
+                                                                                                          <https://w3id.org/mqto/example#Machine4115> ;
+                                            <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#DieCastingProcess> ;
+                                            rdfs:label "Process execution 1236"@en ;
+                                            <https://w3id.org/mqto#endTime> "2026-03-17T16:00:00"^^xsd:dateTime ;
+                                            <https://w3id.org/mqto#startTime> "2026-03-17T08:00:00"^^xsd:dateTime .
+
+
+###  https://w3id.org/mqto/example#ReplaceAlloyBatch
+<https://w3id.org/mqto/example#ReplaceAlloyBatch> rdf:type owl:NamedIndividual ,
+                                                           <https://w3id.org/mqto#Countermeasure> ;
+                                                  <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#AluminiumAlloy> ,
+                                                                                                                <https://w3id.org/mqto/example#Operator> ;
+                                                  rdfs:label "Replace contaminated alloy batch"@en ;
+                                                  <https://w3id.org/mqto#hasStepList> <https://w3id.org/mqto/example#ReplaceAlloyBatch_List1> ;
+                                                  <https://w3id.org/mqto#mitigates> <https://w3id.org/mqto/example#AlloyContamination> ;
+                                                  <https://w3id.org/mqto#weight> 85 .
+
+
+###  https://w3id.org/mqto/example#ReplaceAlloyBatch_List1
+<https://w3id.org/mqto/example#ReplaceAlloyBatch_List1> rdf:type owl:NamedIndividual ,
+                                                                 <https://w3id.org/mqto#List> ;
+                                                        <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#CheckCurrentTemp> ;
+                                                        <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#ReplaceAlloyBatch_List2> .
+
+
+###  https://w3id.org/mqto/example#ReplaceAlloyBatch_List2
+<https://w3id.org/mqto/example#ReplaceAlloyBatch_List2> rdf:type owl:NamedIndividual ,
+                                                                 <https://w3id.org/mqto#List> ;
+                                                        <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#SwapAlloyBatch> ;
+                                                        <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#ReplaceAlloyBatch_List3> .
+
+
+###  https://w3id.org/mqto/example#ReplaceAlloyBatch_List3
+<https://w3id.org/mqto/example#ReplaceAlloyBatch_List3> rdf:type owl:NamedIndividual ,
+                                                                 <https://w3id.org/mqto#List> ;
+                                                        <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#VerifyNewTemp> ;
+                                                        <https://w3id.org/mqto#rest> <https://w3id.org/mqto#nil> .
+
+
+###  https://w3id.org/mqto/example#Result001
+<https://w3id.org/mqto/example#Result001> rdf:type owl:NamedIndividual ,
+                                                   <http://qudt.org/schema/qudt/QuantityValue> ,
+                                                   <https://w3id.org/mqto#Result> ;
+                                          <https://w3id.org/mqto/example#temperature> 721.5 ;
+                                          <http://qudt.org/schema/qudt/numericValue> 721.5 ;
+                                          <http://qudt.org/schema/qudt/unit> <http://qudt.org/vocab/unit/DEG_C> .
+
+
+###  https://w3id.org/mqto/example#Result002
+<https://w3id.org/mqto/example#Result002> rdf:type owl:NamedIndividual ,
+                                                   <https://w3id.org/mqto#Result> ;
+                                          <https://w3id.org/mqto/example#temperature> 719.2 .
+
+
+###  https://w3id.org/mqto/example#Result003
+<https://w3id.org/mqto/example#Result003> rdf:type owl:NamedIndividual ,
+                                                   <https://w3id.org/mqto#Result> ;
+                                          <https://w3id.org/mqto/example#temperature> 718.3 .
+
+
+###  https://w3id.org/mqto/example#Result004
+<https://w3id.org/mqto/example#Result004> rdf:type owl:NamedIndividual ,
+                                                   <https://w3id.org/mqto#Result> ;
+                                          <https://w3id.org/mqto/example#temperature> 705.1 .
+
+
+###  https://w3id.org/mqto/example#Result007
+<https://w3id.org/mqto/example#Result007> rdf:type owl:NamedIndividual ,
+                                                   <https://w3id.org/mqto#Result> ;
+                                          <https://w3id.org/mqto/example#temperature> 722.5 .
+
+
+###  https://w3id.org/mqto/example#Result008
+<https://w3id.org/mqto/example#Result008> rdf:type owl:NamedIndividual ,
+                                                   <https://w3id.org/mqto#Result> ;
+                                          <https://w3id.org/mqto/example#cycleTime> 24.7 .
+
+
+###  https://w3id.org/mqto/example#Result009
+<https://w3id.org/mqto/example#Result009> rdf:type owl:NamedIndividual ,
+                                                   <https://w3id.org/mqto#Result> ;
+                                          <https://w3id.org/mqto/example#temperature> 725.8 .
+
+
+###  https://w3id.org/mqto/example#Result010
+<https://w3id.org/mqto/example#Result010> rdf:type owl:NamedIndividual ,
+                                                   <https://w3id.org/mqto#Result> ;
+                                          <https://w3id.org/mqto/example#temperature> 723.4 .
+
+
+###  https://w3id.org/mqto/example#Result011
+<https://w3id.org/mqto/example#Result011> rdf:type owl:NamedIndividual ,
+                                                   <https://w3id.org/mqto#Result> ;
+                                          <https://w3id.org/mqto/example#impurityPct> 0.62 .
+
+
+###  https://w3id.org/mqto/example#Result_Act001
+<https://w3id.org/mqto/example#Result_Act001> rdf:type owl:NamedIndividual ,
+                                                       <https://w3id.org/mqto#Result> ;
+                                              <https://w3id.org/mqto/example#temperature> 710.0 .
+
+
+###  https://w3id.org/mqto/example#Result_Shot042
+<https://w3id.org/mqto/example#Result_Shot042> rdf:type owl:NamedIndividual ,
+                                                        <https://w3id.org/mqto#Result> ;
+                                               <https://w3id.org/mqto/example#cycleTime> 23.9 ;
+                                               <https://w3id.org/mqto/example#pressure> 1085.0 ;
+                                               <https://w3id.org/mqto/example#temperature> 719.8 .
+
+
+###  https://w3id.org/mqto/example#Result_Shot043
+<https://w3id.org/mqto/example#Result_Shot043> rdf:type owl:NamedIndividual ,
+                                                        <https://w3id.org/mqto#Result> ;
+                                               <https://w3id.org/mqto/example#cycleTime> 24.2 ;
+                                               <https://w3id.org/mqto/example#pressure> 1042.3 ;
+                                               <https://w3id.org/mqto/example#temperature> 718.1 .
+
+
+###  https://w3id.org/mqto/example#ReviewInjectionProfile
+<https://w3id.org/mqto/example#ReviewInjectionProfile> rdf:type owl:NamedIndividual ,
+                                                                <https://w3id.org/mqto#CountermeasureStep> ;
+                                                       rdfs:label "Review injection profile"@en .
+
+
+###  https://w3id.org/mqto/example#ShrinkagePorosity
+<https://w3id.org/mqto/example#ShrinkagePorosity> rdf:type owl:NamedIndividual ,
+                                                           <https://w3id.org/mqto#FailureMode> ;
+                                                  rdfs:label "Shrinkage porosity"@en ;
+                                                  <https://w3id.org/mqto#causes> <https://w3id.org/mqto/example#Porosity> ;
+                                                  <https://w3id.org/mqto#causesModerately> <https://w3id.org/mqto/example#Porosity> ;
+                                                  <https://w3id.org/mqto#failureBelongsTo> <https://w3id.org/mqto/example#DieCastingCell> ;
+                                                  <https://w3id.org/mqto#refersToMetric> <https://w3id.org/mqto/example#InjectionPressurePeak> .
+
+
+###  https://w3id.org/mqto/example#SwapAlloyBatch
+<https://w3id.org/mqto/example#SwapAlloyBatch> rdf:type owl:NamedIndividual ,
+                                                        <https://w3id.org/mqto#CountermeasureStep> ;
+                                               rdfs:label "Swap alloy batch"@en .
+
+
+###  https://w3id.org/mqto/example#TemperatureDeviation
+<https://w3id.org/mqto/example#TemperatureDeviation> rdf:type owl:NamedIndividual ,
+                                                              <https://w3id.org/mqto#Metric> ;
+                                                     rdfs:label "Melt temperature deviation"@en ;
+                                                     <https://w3id.org/mqto#itemWindowSize> 10 ;
+                                                     <https://w3id.org/mqto#lowerBound> 680.0 ;
+                                                     <https://w3id.org/mqto#method> "mean" ;
+                                                     <https://w3id.org/mqto#metricBelongsTo> <https://w3id.org/mqto/example#DieCastingCell> ;
+                                                     <https://w3id.org/mqto#readsFrom> <https://w3id.org/mqto/example#MeltTemperatureSignal> ;
+                                                     <https://w3id.org/mqto#resultProperty> <https://w3id.org/mqto/example#temperature> ;
+                                                     <https://w3id.org/mqto#timeWindowSize> "PT5M"^^xsd:duration ;
+                                                     <https://w3id.org/mqto#upperBound> 720.0 .
+
+
+###  https://w3id.org/mqto/example#TemperatureMeasurement
+<https://w3id.org/mqto/example#TemperatureMeasurement> rdf:type owl:NamedIndividual ,
+                                                                <https://w3id.org/mqto#Measurement> ;
+                                                       rdfs:label "Melt temperature measurement"@en .
+
+
+###  https://w3id.org/mqto/example#VerifyNewTemp
+<https://w3id.org/mqto/example#VerifyNewTemp> rdf:type owl:NamedIndividual ,
+                                                       <https://w3id.org/mqto#CountermeasureStep> ;
+                                              rdfs:label "Verify new temperature"@en .
+
+
+###  https://w3id.org/mqto/example#VerifyThermocouple
+<https://w3id.org/mqto/example#VerifyThermocouple> rdf:type owl:NamedIndividual ,
+                                                            <https://w3id.org/mqto#Countermeasure> ;
+                                                   rdfs:label "Verify thermocouple calibration on furnace"@en ;
+                                                   <https://w3id.org/mqto#hasStepList> <https://w3id.org/mqto/example#VerifyThermocouple_List1> ;
+                                                   <https://w3id.org/mqto#mitigates> <https://w3id.org/mqto/example#Porosity> ;
+                                                   <https://w3id.org/mqto#weight> 70 .
+
+
+###  https://w3id.org/mqto/example#VerifyThermocouple_List1
+<https://w3id.org/mqto/example#VerifyThermocouple_List1> rdf:type owl:NamedIndividual ,
+                                                                  <https://w3id.org/mqto#List> ;
+                                                         <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#CheckCurrentTemp> ;
+                                                         <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#VerifyThermocouple_List2> .
+
+
+###  https://w3id.org/mqto/example#VerifyThermocouple_List2
+<https://w3id.org/mqto/example#VerifyThermocouple_List2> rdf:type owl:NamedIndividual ,
+                                                                  <https://w3id.org/mqto#List> ;
+                                                         <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#InspectThermocouple> ;
+                                                         <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#VerifyThermocouple_List3> .
+
+
+###  https://w3id.org/mqto/example#VerifyThermocouple_List3
+<https://w3id.org/mqto/example#VerifyThermocouple_List3> rdf:type owl:NamedIndividual ,
+                                                                  <https://w3id.org/mqto#List> ;
+                                                         <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#CalibrateIfNeeded> ;
+                                                         <https://w3id.org/mqto#rest> <https://w3id.org/mqto#nil> .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
