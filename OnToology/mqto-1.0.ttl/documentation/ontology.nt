@@ -10,7 +10,7 @@
 <https://w3id.org/mqto> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0001-9521-8907> .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/description> "A generalised ontology for manufacturing quality troubleshooting, applicable across different manufacturing domains. Covers both the specified (schema-level) and actual (instance-level) layers of a manufacturing process, with a focus on root cause analysis, failure diagnosis, and countermeasure recommendation."@en .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/license> <http://www.apache.org/licenses/LICENSE-2.0> .
-<https://w3id.org/mqto> <http://purl.org/dc/terms/modified> "2026-04-16"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/mqto> <http://purl.org/dc/terms/modified> "2026-04-22"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/publisher> <https://github.com/dg-assist> .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/rights> "Copyright 2026 DG Assist. Licensed under the Apache License, Version 2.0."@en .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/subject> "Industry 4.0"@en .
@@ -29,7 +29,7 @@
 <https://w3id.org/mqto> <http://schema.org/codeRepository> <https://github.com/dg-assist/mqto> .
 <https://w3id.org/mqto> <http://schema.org/funding> <https://projekte.ffg.at/projekt/4641766> .
 <https://w3id.org/mqto> <http://schema.org/logo> <https://dg-assist.github.io/mqto/logo.png> .
-<https://w3id.org/mqto> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship to Procedural Knowledge Ontology (PKO): mqto countermeasure classes align with PKO procedure modeling patterns. mqto:Countermeasure is a subclass of pko:Procedure, representing remediation procedures in the specified layer. mqto:CountermeasureStep aligns with p-plan:Step for individual actions. In the actual layer, mqto:CountermeasureExecution extends pko:ProcedureExecution and mqto:CountermeasureStepExecution extends pko:StepExecution. Both ontologies follow a specification/execution (plan/actual) pattern, though mqto uses LIS (lis:Specified/lis:Actual with lis:implements) while PKO uses P-PLAN/PROV (with pko:executesProcedure/pko:executesStep). Key architectural difference: mqto externalizes step ordering via mqto:List containers for step reusability across procedures, while PKO embeds ordering directly in steps via pko:nextStep properties."@en .
+<https://w3id.org/mqto> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship to Procedural Knowledge Ontology (PKO): mqto countermeasure classes align with PKO procedure modeling patterns. mqto:Countermeasure is a subclass of pko:Procedure, representing remediation procedures in the specified layer. mqto:CountermeasureStep aligns with p-plan:Step for individual actions. In the actual layer, mqto:CountermeasureExecution extends pko:ProcedureExecution and mqto:CountermeasureStepExecution extends pko:StepExecution. Both ontologies follow a specification/execution (plan/actual) pattern, though mqto uses LIS (lis:Specified/lis:Actual with lis:implements) while PKO uses P-PLAN/PROV (with pko:executesProcedure/pko:executesStep). Key architectural difference: mqto externalizes step ordering via mqto:CountermeasureStepList containers for step reusability across procedures, while PKO embeds ordering directly in steps via pko:nextStep properties."@en .
 <https://w3id.org/mqto> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/mqto/1.0> .
 <https://w3id.org/mqto> <http://www.w3.org/2000/01/rdf-schema#label> "Manufacturing Quality Troubleshooting Ontology"@en .
 <https://w3id.org/mqto> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" .
@@ -88,7 +88,7 @@
 <https://w3id.org/mqto#appearedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/mqto#appearedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#FailureOccurrence> .
 <https://w3id.org/mqto#appearedOn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#ActualIshikawaItem> .
-<https://w3id.org/mqto#appearedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a FailureOccurrence to the specific ActualIshikawaItem where it manifested. In MQTO, ActualIshikawaItems are PhysicalMachine, PhysicalMaterial, and ProcessExecution; domain-specific ontologies may add actual-layer counterparts for Manpower and Measurement. Establishes the concrete location or context of the failure event in the actual layer."@en .
+<https://w3id.org/mqto#appearedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a FailureOccurrence to the specific ActualIshikawaItem where it manifested. In MQTO, ActualIshikawaItems are PhysicalMachine, PhysicalMaterial, and MethodExecution (actual-layer counterpart of Method); domain-specific ontologies may add actual-layer counterparts for Manpower and Measurement. Establishes the concrete location or context of the failure event in the actual layer."@en .
 <https://w3id.org/mqto#appearedOn> <http://www.w3.org/2000/01/rdf-schema#label> "appeared on"@en .
 # 
 # https://w3id.org/mqto#baseFor
@@ -110,7 +110,7 @@
 <https://w3id.org/mqto#calculatedFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/mqto#calculatedFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#MetricAssessment> .
 <https://w3id.org/mqto#calculatedFor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#ActualIshikawaItem> .
-<https://w3id.org/mqto#calculatedFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a MetricAssessment to the specific ActualIshikawaItem it evaluates. In MQTO, ActualIshikawaItems are PhysicalMachine, PhysicalMaterial, and ProcessExecution; domain-specific ontologies may add actual-layer counterparts for Manpower and Measurement. Establishes which concrete entity the metric calculation applies to in the actual layer."@en .
+<https://w3id.org/mqto#calculatedFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a MetricAssessment to the specific ActualIshikawaItem it evaluates. In MQTO, ActualIshikawaItems are PhysicalMachine, PhysicalMaterial, and MethodExecution (actual-layer counterpart of Method); domain-specific ontologies may add actual-layer counterparts for Manpower and Measurement. Establishes which concrete entity the metric calculation applies to in the actual layer."@en .
 <https://w3id.org/mqto#calculatedFor> <http://www.w3.org/2000/01/rdf-schema#label> "calculated for"@en .
 # 
 # https://w3id.org/mqto#causedBy
@@ -192,7 +192,7 @@
 # 
 # https://w3id.org/mqto#first
 <https://w3id.org/mqto#first> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/mqto#first> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto#first> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#CountermeasureStepList> .
 <https://w3id.org/mqto#first> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#CountermeasureStep> .
 <https://w3id.org/mqto#first> <http://www.w3.org/2000/01/rdf-schema#comment> "Points to the first CountermeasureStep in a reusable ordered list. Analogous to rdf:first but defined as an explicit OWL object property with proper domain/range constraints. The list structure (rather than a direct step-to-step chain) allows the same CountermeasureStep instance to appear in multiple Countermeasure procedures without embedding order into the step itself."@en .
 <https://w3id.org/mqto#first> <http://www.w3.org/2000/01/rdf-schema#label> "first"@en .
@@ -215,8 +215,8 @@
 # https://w3id.org/mqto#hasStepList
 <https://w3id.org/mqto#hasStepList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/mqto#hasStepList> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#Countermeasure> .
-<https://w3id.org/mqto#hasStepList> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#List> .
-<https://w3id.org/mqto#hasStepList> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Countermeasure to its ordered list of steps (mqto:List). The indirection via mqto:List enables the same CountermeasureStep to be referenced in multiple Countermeasure definitions (reuse across procedures). Named hasStepList rather than hasStep to distinguish it from pko:hasStep, which links directly to step instances rather than to a list container."@en .
+<https://w3id.org/mqto#hasStepList> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#CountermeasureStepList> .
+<https://w3id.org/mqto#hasStepList> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Countermeasure to its ordered list of steps (mqto:CountermeasureStepList). The indirection via mqto:CountermeasureStepList enables the same CountermeasureStep to be referenced in multiple Countermeasure definitions (reuse across procedures). Named hasStepList rather than hasStep to distinguish it from pko:hasStep, which links directly to step instances rather than to a list container."@en .
 <https://w3id.org/mqto#hasStepList> <http://www.w3.org/2000/01/rdf-schema#label> "has step list"@en .
 # 
 # https://w3id.org/mqto#metricBelongsTo
@@ -234,26 +234,34 @@
 <https://w3id.org/mqto#metricReferredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a Metric is referred to by a Failure Mode for diagnostic purposes. Establishes which failures use which metrics for detection or characterization. Inverse of refersToMetric."@en .
 <https://w3id.org/mqto#metricReferredBy> <http://www.w3.org/2000/01/rdf-schema#label> "metric referred by"@en .
 # 
-# https://w3id.org/mqto#mitigated
-<https://w3id.org/mqto#mitigated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/mqto#mitigated> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#CountermeasureExecution> .
-<https://w3id.org/mqto#mitigated> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#FailureOccurrence> .
-<https://w3id.org/mqto#mitigated> <http://www.w3.org/2000/01/rdf-schema#comment> "A countermeasure execution mitigated a failure occurrence. Note: this is the actual-layer forward property (past participle). The specified-layer equivalent uses mqto:mitigates (active voice). The naming difference is intentional: 'mitigated' records a completed fact at instance level, while 'mitigates' expresses a general capability at schema level."@en .
-<https://w3id.org/mqto#mitigated> <http://www.w3.org/2000/01/rdf-schema#label> "mitigated"@en .
-# 
 # https://w3id.org/mqto#mitigatedBy
 <https://w3id.org/mqto#mitigatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/mqto#mitigatedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/mqto#mitigates> .
 <https://w3id.org/mqto#mitigatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#FailureMode> .
 <https://w3id.org/mqto#mitigatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#Countermeasure> .
-<https://w3id.org/mqto#mitigatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Failure Mode to a Countermeasure that can remediate or reduce it (specified layer). Establishes which remediation procedures are applicable for addressing specific failure types. Inverse of mitigates. The actual-layer counterpart is mqto:mitigated (domain: CountermeasureExecution, range: FailureOccurrence), which uses a distinct property to avoid range conflicts between the two layers."@en .
+<https://w3id.org/mqto#mitigatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Failure Mode to a Countermeasure that can remediate or reduce it (specified layer). Establishes which remediation procedures are applicable for addressing specific failure types. Inverse of mitigates. The actual-layer counterparts are mqto:mitigatedOccurrence (domain: CountermeasureExecution, range: FailureOccurrence) and its inverse mqto:mitigatedByExecution."@en .
 <https://w3id.org/mqto#mitigatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "mitigated by"@en .
+# 
+# https://w3id.org/mqto#mitigatedByExecution
+<https://w3id.org/mqto#mitigatedByExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mqto#mitigatedByExecution> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/mqto#mitigatedOccurrence> .
+<https://w3id.org/mqto#mitigatedByExecution> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#FailureOccurrence> .
+<https://w3id.org/mqto#mitigatedByExecution> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#CountermeasureExecution> .
+<https://w3id.org/mqto#mitigatedByExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a FailureOccurrence to the CountermeasureExecution that addressed it (actual layer). Inverse of mitigatedOccurrence. The specified-layer counterpart is mqto:mitigatedBy (domain: FailureMode, range: Countermeasure)."@en .
+<https://w3id.org/mqto#mitigatedByExecution> <http://www.w3.org/2000/01/rdf-schema#label> "mitigated by execution"@en .
+# 
+# https://w3id.org/mqto#mitigatedOccurrence
+<https://w3id.org/mqto#mitigatedOccurrence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/mqto#mitigatedOccurrence> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#CountermeasureExecution> .
+<https://w3id.org/mqto#mitigatedOccurrence> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#FailureOccurrence> .
+<https://w3id.org/mqto#mitigatedOccurrence> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a CountermeasureExecution to the FailureOccurrence it addressed (actual layer). Inverse of mitigatedByExecution. The specified-layer counterpart is mqto:mitigates (domain: Countermeasure, range: FailureMode)."@en .
+<https://w3id.org/mqto#mitigatedOccurrence> <http://www.w3.org/2000/01/rdf-schema#label> "mitigated occurrence"@en .
 # 
 # https://w3id.org/mqto#mitigates
 <https://w3id.org/mqto#mitigates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/mqto#mitigates> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#Countermeasure> .
 <https://w3id.org/mqto#mitigates> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#FailureMode> .
-<https://w3id.org/mqto#mitigates> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Countermeasure to the Failure Mode(s) it can remediate or reduce (specified layer). Establishes which failure types a remediation procedure addresses. Inverse of mitigatedBy. The actual-layer equivalent links CountermeasureExecution to FailureOccurrence."@en .
+<https://w3id.org/mqto#mitigates> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Countermeasure to the Failure Mode(s) it can remediate or reduce (specified layer). Establishes which failure types a remediation procedure addresses. Inverse of mitigatedBy. The actual-layer counterparts are mqto:mitigatedOccurrence and mqto:mitigatedByExecution."@en .
 <https://w3id.org/mqto#mitigates> <http://www.w3.org/2000/01/rdf-schema#label> "mitigates"@en .
 # 
 # https://w3id.org/mqto#providesSignal
@@ -303,8 +311,8 @@
 # 
 # https://w3id.org/mqto#rest
 <https://w3id.org/mqto#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/mqto#rest> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#List> .
-<https://w3id.org/mqto#rest> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto#rest> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/mqto#CountermeasureStepList> .
+<https://w3id.org/mqto#rest> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/mqto#CountermeasureStepList> .
 <https://w3id.org/mqto#rest> <http://www.w3.org/2000/01/rdf-schema#comment> "Points to the remainder of the ordered step list. Analogous to rdf:rest but defined as an explicit OWL object property with proper domain/range constraints for better reasoner compatibility. Together with mqto:first, this implements a reusable linked-list container so that step order is encoded in the list, not in the steps themselves. The list must terminate at mqto:nil; circular references are not permitted, though OWL cannot formally enforce acyclicity."@en .
 <https://w3id.org/mqto#rest> <http://www.w3.org/2000/01/rdf-schema#label> "rest"@en .
 # 
@@ -393,7 +401,7 @@
 # https://w3id.org/mqto#endTime
 <https://w3id.org/mqto#endTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/mqto#endTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/mqto#endTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The timestamp when an activity or time-bound entity concluded. General-purpose temporal property applicable to various execution contexts including ProcessExecution, CountermeasureExecution, and time windows."@en .
+<https://w3id.org/mqto#endTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The timestamp when an activity or time-bound entity concluded. General-purpose temporal property applicable to various execution contexts including MethodExecution, CountermeasureExecution, and time windows."@en .
 <https://w3id.org/mqto#endTime> <http://www.w3.org/2000/01/rdf-schema#label> "end time"@en .
 # 
 # https://w3id.org/mqto#identifier
@@ -439,7 +447,7 @@
 # https://w3id.org/mqto#startTime
 <https://w3id.org/mqto#startTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/mqto#startTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/mqto#startTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The timestamp when an activity or time-bound entity began. General-purpose temporal property applicable to various execution contexts including ProcessExecution, CountermeasureExecution, and time windows."@en .
+<https://w3id.org/mqto#startTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The timestamp when an activity or time-bound entity began. General-purpose temporal property applicable to various execution contexts including MethodExecution, CountermeasureExecution, and time windows."@en .
 <https://w3id.org/mqto#startTime> <http://www.w3.org/2000/01/rdf-schema#label> "start time"@en .
 # 
 # https://w3id.org/mqto#timeWindowSize
@@ -497,7 +505,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/mqto#ActualIshikawaItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/mqto#ActualIshikawaItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Actual> .
 <https://w3id.org/mqto#ActualIshikawaItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/FeatureOfInterest> .
-<https://w3id.org/mqto#ActualIshikawaItem> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract superclass for actual/instance layer counterparts of IshikawaItem. Integrates SOSA: each ActualIshikawaItem is a FeatureOfInterest whose observations, properties, and failure occurrences are constrained at the subclass level. MQTO defines three concrete subclasses: PhysicalMachine (implements Machine), PhysicalMaterial (implements Material), and ProcessExecution (implements Method). Actual-layer counterparts for Manpower and Measurement are not defined in MQTO; domain-specific ontologies are expected to provide them."@en .
+<https://w3id.org/mqto#ActualIshikawaItem> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract superclass for actual/instance layer counterparts of IshikawaItem. Integrates SOSA: each ActualIshikawaItem is a FeatureOfInterest whose observations, properties, and failure occurrences are constrained at the subclass level. MQTO defines three concrete subclasses: PhysicalMachine (implements Machine), PhysicalMaterial (implements Material), and MethodExecution (implements Method). Actual-layer counterparts for Manpower and Measurement are not defined in MQTO; domain-specific ontologies are expected to provide them."@en .
 <https://w3id.org/mqto#ActualIshikawaItem> <http://www.w3.org/2000/01/rdf-schema#label> "Actual Ishikawa Item"@en .
 # 
 # https://w3id.org/mqto#Actuation
@@ -513,7 +521,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/mqto#Countermeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Specified> .
 <https://w3id.org/mqto#Countermeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pko#Procedure> .
 <https://w3id.org/mqto#Countermeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
-_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#List> .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#CountermeasureStepList> .
 _:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#hasStepList> .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#Countermeasure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
@@ -535,7 +543,7 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 _:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#FailureMode> .
 _:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#mitigates> .
 _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mqto#Countermeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "A remediation procedure that mitigates one or more Failure Modes. Countermeasures are structured as ordered sequences of CountermeasureSteps, represented via the mqto:List pattern for reusability. As a subclass of pko:Procedure, countermeasures align with the Procedural Knowledge Ontology's procedure modeling patterns while maintaining integration with the LIS specified/actual architecture."@en .
+<https://w3id.org/mqto#Countermeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "A remediation procedure that mitigates one or more Failure Modes. Countermeasures are structured as ordered sequences of CountermeasureSteps, represented via the mqto:CountermeasureStepList pattern for reusability. As a subclass of pko:Procedure, countermeasures align with the Procedural Knowledge Ontology's procedure modeling patterns while maintaining integration with the LIS specified/actual architecture."@en .
 <https://w3id.org/mqto#Countermeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Countermeasure"@en .
 # 
 # https://w3id.org/mqto#CountermeasureExecution
@@ -549,7 +557,7 @@ _:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/
 _:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#CountermeasureExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
 _:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#FailureOccurrence> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#mitigated> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#mitigatedOccurrence> .
 _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#CountermeasureExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
 _:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#FailureOccurrence> .
@@ -559,7 +567,7 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#CountermeasureStepExecution> .
 _:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/pko#includesStepExecution> .
 _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mqto#CountermeasureExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "The actual execution of a Countermeasure procedure, performed to mitigate one or more FailureOccurrences. As a subclass of both lis:Activity and lis:Actual, it is a concrete temporal event that implements a Countermeasure specification. Links to the Countermeasure via lis:implements, records mitigated FailureOccurrences via mqto:mitigated, and tracks constituent steps via pko:includesStepExecution. Step sequencing uses pko:nextStepExecution and pko:previousStepExecution inherited from pko:ProcedureExecution. As a subclass of pko:ProcedureExecution, countermeasure executions align with PKO's procedure execution model."@en .
+<https://w3id.org/mqto#CountermeasureExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "The actual execution of a Countermeasure procedure, performed to mitigate one or more FailureOccurrences. As a subclass of both lis:Activity and lis:Actual, it is a concrete temporal event that implements a Countermeasure specification. Links to the Countermeasure via lis:implements, records mitigated FailureOccurrences via mqto:mitigatedOccurrence, and tracks constituent steps via pko:includesStepExecution. Step sequencing uses pko:nextStepExecution and pko:previousStepExecution inherited from pko:ProcedureExecution. As a subclass of pko:ProcedureExecution, countermeasure executions align with PKO's procedure execution model."@en .
 <https://w3id.org/mqto#CountermeasureExecution> <http://www.w3.org/2000/01/rdf-schema#label> "Countermeasure Execution"@en .
 # 
 # https://w3id.org/mqto#CountermeasureStep
@@ -567,7 +575,7 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/mqto#CountermeasureStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/p-plan#Step> .
 <https://w3id.org/mqto#CountermeasureStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Activity> .
 <https://w3id.org/mqto#CountermeasureStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Specified> .
-<https://w3id.org/mqto#CountermeasureStep> <http://www.w3.org/2000/01/rdf-schema#comment> "A reusable specification of a single step within a Countermeasure procedure. Because the same step (e.g. 'clean the mould') may occur in multiple Countermeasures, ordering is not encoded in the step itself but in the mqto:List that references it. As a subclass of p-plan:Step, countermeasure steps align with the P-PLAN ontology for plan-based activity modeling."@en .
+<https://w3id.org/mqto#CountermeasureStep> <http://www.w3.org/2000/01/rdf-schema#comment> "A reusable specification of a single step within a Countermeasure procedure. Because the same step (e.g. 'clean the mould') may occur in multiple Countermeasures, ordering is not encoded in the step itself but in the mqto:CountermeasureStepList that references it. As a subclass of p-plan:Step, countermeasure steps align with the P-PLAN ontology for plan-based activity modeling."@en .
 <https://w3id.org/mqto#CountermeasureStep> <http://www.w3.org/2000/01/rdf-schema#label> "Countermeasure Step"@en .
 # 
 # https://w3id.org/mqto#CountermeasureStepExecution
@@ -579,8 +587,14 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#CountermeasureStep> .
 _:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> .
 _:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mqto#CountermeasureStepExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "The actual, single execution of one CountermeasureStep. Each execution implements a specific CountermeasureStep from the specified layer via lis:implements. Step sequencing uses pko:nextStepExecution and pko:previousStepExecution from PKO, contrasting with the specified layer where mqto:List enables step reuse across procedures. As a subclass of both lis:Activity and lis:Actual, it is a concrete temporal activity. As a subclass of pko:StepExecution, countermeasure step executions align with PKO's step execution model."@en .
+<https://w3id.org/mqto#CountermeasureStepExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "The actual, single execution of one CountermeasureStep. Each execution implements a specific CountermeasureStep from the specified layer via lis:implements. Step sequencing uses pko:nextStepExecution and pko:previousStepExecution from PKO, contrasting with the specified layer where mqto:CountermeasureStepList enables step reuse across procedures. As a subclass of both lis:Activity and lis:Actual, it is a concrete temporal activity. As a subclass of pko:StepExecution, countermeasure step executions align with PKO's step execution model."@en .
 <https://w3id.org/mqto#CountermeasureStepExecution> <http://www.w3.org/2000/01/rdf-schema#label> "Countermeasure Step Execution"@en .
+# 
+# https://w3id.org/mqto#CountermeasureStepList
+<https://w3id.org/mqto#CountermeasureStepList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mqto#CountermeasureStepList> <http://www.w3.org/2000/01/rdf-schema#comment> "An ordered, reusable container of CountermeasureSteps within the specified layer. Implements an OWL-native linked list pattern (mqto:first / mqto:rest) inspired by RDF Collections, but using explicit OWL class and property definitions for better reasoner compatibility. Standard rdf:List creates known issues with OWL reasoners due to blank node handling and recursive structure reasoning. This approach ensures compatibility with standard reasoners such as HermiT and Pellet while maintaining the core benefit: step order is external to the step instances, allowing steps to be shared across different Countermeasure procedures without embedding ordering information in the steps themselves. The list is terminated by mqto:nil. See OWL 2 Primer Section 4.2 on structural specification limitations with blank nodes."@en .
+<https://w3id.org/mqto#CountermeasureStepList> <http://www.w3.org/2000/01/rdf-schema#label> "Countermeasure Step List"@en .
+<https://w3id.org/mqto#CountermeasureStepList> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/TR/owl2-primer/> .
 # 
 # https://w3id.org/mqto#DataEvent
 <https://w3id.org/mqto#DataEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -653,12 +667,6 @@ _:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/mqto#IshikawaItem> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract superclass for the five categories of root causes in an Ishikawa (fishbone) diagram: Machine, Manpower, Material, Measurement, and Method. Domain-specific ontologies can specialize these concepts for their manufacturing domain."@en .
 <https://w3id.org/mqto#IshikawaItem> <http://www.w3.org/2000/01/rdf-schema#label> "Ishikawa Item"@en .
 # 
-# https://w3id.org/mqto#List
-<https://w3id.org/mqto#List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/mqto#List> <http://www.w3.org/2000/01/rdf-schema#comment> "An ordered, reusable container of CountermeasureSteps within the specified layer. Implements an OWL-native linked list pattern (mqto:first / mqto:rest) inspired by RDF Collections, but using explicit OWL class and property definitions for better reasoner compatibility. Standard rdf:List creates known issues with OWL reasoners due to blank node handling and recursive structure reasoning. This approach ensures compatibility with standard reasoners such as HermiT and Pellet while maintaining the core benefit: step order is external to the step instances, allowing steps to be shared across different Countermeasure procedures without embedding ordering information in the steps themselves. The list is terminated by mqto:nil. See OWL 2 Primer Section 4.2 on structural specification limitations with blank nodes."@en .
-<https://w3id.org/mqto#List> <http://www.w3.org/2000/01/rdf-schema#label> "List"@en .
-<https://w3id.org/mqto#List> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/TR/owl2-primer/> .
-# 
 # https://w3id.org/mqto#Machine
 <https://w3id.org/mqto#Machine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/mqto#Machine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact> .
@@ -725,47 +733,57 @@ _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/mqto#Method> <http://www.w3.org/2000/01/rdf-schema#comment> "A manufacturing process or procedure (the 'M' in Ishikawa's Method). Represents the specified activities and steps in manufacturing. This includes operations and procedures specific to the manufacturing domain. Methods can be decomposed into sub-methods and have Machines, Materials, and Manpower as participants."@en .
 <https://w3id.org/mqto#Method> <http://www.w3.org/2000/01/rdf-schema#label> "Method"@en .
 # 
+# https://w3id.org/mqto#MethodExecution
+<https://w3id.org/mqto#MethodExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/mqto#MethodExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mqto#ActualIshikawaItem> .
+<https://w3id.org/mqto#MethodExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
+_:genid37 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#Method> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mqto#MethodExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "Actual execution of a Method, the instance-layer counterpart of Method. This represents actual production operations with specific machines, material batches, timestamps, and observation data. Note: MethodExecution does not subclass lis:Activity (lis:Temporal) because it subclasses ActualIshikawaItem, which inherits sosa:FeatureOfInterest (lis:Object). In LIS, lis:Temporal and lis:Object are disjoint top-level categories, so both superclasses together would make the class unsatisfiable. As a consequence, lis:hasParticipant and lis:hasActivityPart cannot be used on MethodExecution (their domain is lis:Activity). Participant links are expressed instead via the inverse: PhysicalMachine and PhysicalMaterial carry lis:participantIn restrictions pointing to MethodExecution. The temporal character is expressed through mqto:startTime / mqto:endTime. This asymmetry is expected to be resolved once the SOSA/SSN update and the SOSA-IDO alignment are published."@en .
+<https://w3id.org/mqto#MethodExecution> <http://www.w3.org/2000/01/rdf-schema#label> "Method Execution"@en .
+# 
 # https://w3id.org/mqto#Metric
 <https://w3id.org/mqto#Metric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/mqto#Metric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Specified> .
-<https://w3id.org/mqto#Metric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid37 .
-_:genid37 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#IshikawaItem> .
-_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#metricBelongsTo> .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#Metric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid38 .
-_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#FailureMode> .
-_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#metricReferredBy> .
+_:genid38 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#IshikawaItem> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#metricBelongsTo> .
 _:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#Metric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid39 .
-_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#Signal> .
-_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#readsFrom> .
+_:genid39 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#FailureMode> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#metricReferredBy> .
 _:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mqto#Metric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
+_:genid40 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#Signal> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#readsFrom> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#Metric> <http://www.w3.org/2000/01/rdf-schema#comment> "A specified calculation or key performance indicator (KPI) that bridges quantitative sensor data and qualitative failure detection. Reads from one or more Signals, applies an assessment method over a time window, and compares results against threshold bounds to detect anomalies. Belongs to an IshikawaItem and is referred to by Failure Modes. The actual-layer counterpart is MetricAssessment."@en .
 <https://w3id.org/mqto#Metric> <http://www.w3.org/2000/01/rdf-schema#label> "Metric"@en .
 # 
 # https://w3id.org/mqto#MetricAssessment
 <https://w3id.org/mqto#MetricAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/mqto#MetricAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Actual> .
-<https://w3id.org/mqto#MetricAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid40 .
-_:genid40 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#Metric> .
-_:genid40 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#MetricAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid41 .
-_:genid41 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#ActualIshikawaItem> .
-_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#calculatedFor> .
+_:genid41 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#Metric> .
+_:genid41 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> .
 _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#MetricAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
-_:genid42 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#DataEvent> .
-_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#basedOn> .
+_:genid42 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#ActualIshikawaItem> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#calculatedFor> .
 _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#MetricAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid43 .
-_:genid43 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#Property> .
-_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#evaluatesProperty> .
+_:genid43 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#DataEvent> .
+_:genid43 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#basedOn> .
 _:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#MetricAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid44 .
-_:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#FailureOccurrence> .
-_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#raised> .
+_:genid44 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#Property> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#evaluatesProperty> .
 _:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mqto#MetricAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
+_:genid45 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#FailureOccurrence> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#raised> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#MetricAssessment> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance-layer evaluation that implements a Metric specification by computing a value from actual Observations or Actuations and comparing it against threshold bounds. Calculated for an ActualIshikawaItem at a specific time, based on DataEvents (Observations or Actuations) within a time window. Produces both a calculatedValue (quantitative result) and assessmentValue (boolean pass/fail). When threshold violations are detected, raises FailureOccurrences."@en .
 <https://w3id.org/mqto#MetricAssessment> <http://www.w3.org/2000/01/rdf-schema#label> "Metric Assessment"@en .
 <https://w3id.org/mqto#MetricAssessment> <http://www.w3.org/2004/02/skos/core#example> "ex:MA_001  a mqto:MetricAssessment ;\n    lis:implements       ex:TemperatureMetric ;\n    mqto:calculatedFor   ex:Machine4115 ;\n    mqto:calculatedValue 718.3 ;\n    mqto:assessmentValue true ;\n    mqto:calculatedTime  \"2026-04-14T08:15:00\"^^xsd:dateTime .\n    # calculatedValue was read from Result.ex:temperature via resultProperty"@en .
@@ -788,13 +806,9 @@ _:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/mqto#PhysicalMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/mqto#PhysicalMachine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalArtefact> .
 <https://w3id.org/mqto#PhysicalMachine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mqto#ActualIshikawaItem> .
-<https://w3id.org/mqto#PhysicalMachine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid45 .
-_:genid45 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#Machine> .
-_:genid45 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#PhysicalMachine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid46 .
-_:genid46 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#ProcessExecution> .
-_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> .
+_:genid46 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#Machine> .
+_:genid46 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> .
 _:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#PhysicalMachine> <http://www.w3.org/2000/01/rdf-schema#comment> "Actual machine instance, the instance-layer counterpart of Machine. Represents specific physical equipment with serial numbers, operational history, and sensor data. Examples include specific manufacturing equipment with serial numbers, furnaces, and robots with concrete observation data."@en .
 <https://w3id.org/mqto#PhysicalMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Machine"@en .
@@ -807,51 +821,25 @@ _:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 _:genid47 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#Material> .
 _:genid47 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> .
 _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mqto#PhysicalMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
-_:genid48 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#ProcessExecution> .
-_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#PhysicalMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Actual material instance, the instance-layer counterpart of Material. Represents specific batches, lots, or quantities of material with identifiers, composition data, and quality measurements. Examples include specific material batches with batch numbers, chemical composition, and quality measurements."@en .
 <https://w3id.org/mqto#PhysicalMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Material"@en .
-# 
-# https://w3id.org/mqto#ProcessExecution
-<https://w3id.org/mqto#ProcessExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/mqto#ProcessExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/mqto#ActualIshikawaItem> .
-<https://w3id.org/mqto#ProcessExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
-_:genid49 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#Method> .
-_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mqto#ProcessExecution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
-_:genid50 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid51 .
-_:genid51 <http://www.w3.org/2002/07/owl#unionOf> _:genid53 .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid52 .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mqto#PhysicalMaterial> .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/mqto#PhysicalMachine> .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mqto#ProcessExecution> <http://www.w3.org/2000/01/rdf-schema#comment> "Actual execution of a Method, the instance-layer counterpart of Method. Links to concrete PhysicalMachines and PhysicalMaterials as participants. This represents actual production operations with specific machines, material batches, timestamps, and observation data. Note: ProcessExecution does not subclass lis:Activity (lis:Temporal) because it subclasses ActualIshikawaItem, which inherits sosa:FeatureOfInterest (lis:Object). In LIS, lis:Temporal and lis:Object are disjoint top-level categories, so both superclasses together would make the class unsatisfiable. The temporal character of a process execution is expressed instead through mqto:startTime / mqto:endTime properties and the sosa:Observations for which it serves as feature of interest."@en .
-<https://w3id.org/mqto#ProcessExecution> <http://www.w3.org/2000/01/rdf-schema#label> "Process Execution"@en .
 # 
 # https://w3id.org/mqto#Property
 <https://w3id.org/mqto#Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/mqto#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Actual> .
 <https://w3id.org/mqto#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/ssn/Property> .
-<https://w3id.org/mqto#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid54 .
-_:genid54 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#Signal> .
-_:genid54 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> .
-_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mqto#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid55 .
-_:genid55 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#ActualIshikawaItem> .
-_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/isPropertyOf> .
-_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mqto#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid56 .
-_:genid56 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#MetricAssessment> .
-_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#evaluatedBy> .
-_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mqto#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid48 .
+_:genid48 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/mqto#Signal> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mqto#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid49 .
+_:genid49 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#ActualIshikawaItem> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/ns/ssn/isPropertyOf> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mqto#Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid50 .
+_:genid50 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#MetricAssessment> .
+_:genid50 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#evaluatedBy> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#Property> <http://www.w3.org/2000/01/rdf-schema#comment> "Actual-layer counterpart of Signal. Represents a property (observable or actuable) of an ActualIshikawaItem that implements a Signal specification from the specified layer. While Signal defines the data channel metadata (identifier, unit, sampling rate, direction), Property represents the actual measured or actuated quality of a specific feature of interest. This class serves as the abstract superclass for both ObservableProperty (for sensing/measurement) and ActuableProperty (for actuation/control)."@en .
 <https://w3id.org/mqto#Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property"@en .
 # 
@@ -865,14 +853,14 @@ _:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/mqto#Signal
 <https://w3id.org/mqto#Signal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/mqto#Signal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rds.posccaesar.org/ontology/lis14/rdl/Specified> .
-<https://w3id.org/mqto#Signal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid57 .
-_:genid57 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#Metric> .
-_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#readBy> .
-_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://w3id.org/mqto#Signal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid58 .
-_:genid58 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#IshikawaItem> .
-_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#signalProvidedBy> .
-_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mqto#Signal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid51 .
+_:genid51 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#Metric> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#readBy> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/mqto#Signal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid52 .
+_:genid52 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/mqto#IshikawaItem> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/mqto#signalProvidedBy> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/mqto#Signal> <http://www.w3.org/2000/01/rdf-schema#comment> "A specified data channel in the electrical-engineering sense: a named, typed signal such as a PLC variable, an analog voltage line, a fieldbus message, or a time-series data stream. A Signal may carry measurement data (sensor/output signals), control data (actuator/input signals), or both simultaneously — a setpoint, for instance, is written as a command to an actuator and can equally be read back as an observable value. It describes the metadata of the channel (identifier, unit, sampling rate, direction, etc.) rather than any particular observation or sensor device. It sits in the specified layer as the concrete data-source or data-sink binding for an abstract Metric, and is thereby distinct from sosa:ObservableProperty (which characterises an observable quality of a feature of interest in the actual layer) and from sosa:Sensor (which is the physical observing device)."@en .
 <https://w3id.org/mqto#Signal> <http://www.w3.org/2000/01/rdf-schema#label> "Signal"@en .
 # 
@@ -910,7 +898,7 @@ _:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/mqto#nil
 <https://w3id.org/mqto#nil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/mqto#nil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto#nil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStepList> .
 <https://w3id.org/mqto#nil> <http://www.w3.org/2000/01/rdf-schema#label> "nil"@en .
 # 
 # 

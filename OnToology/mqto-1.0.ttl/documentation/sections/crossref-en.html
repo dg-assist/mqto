@@ -28,6 +28,9 @@ This section provides details for each class and property defined by Manufacturi
             title="https://w3id.org/mqto#CountermeasureStepExecution">Countermeasure Step Execution</a>
       </li>
       <li>
+         <a href="#CountermeasureStepList" title="https://w3id.org/mqto#CountermeasureStepList">Countermeasure Step List</a>
+      </li>
+      <li>
          <a href="#DataEvent" title="https://w3id.org/mqto#DataEvent">Data Event</a>
       </li>
       <li>
@@ -38,9 +41,6 @@ This section provides details for each class and property defined by Manufacturi
       </li>
       <li>
          <a href="#IshikawaItem" title="https://w3id.org/mqto#IshikawaItem">Ishikawa Item</a>
-      </li>
-      <li>
-         <a href="#List" title="https://w3id.org/mqto#List">List</a>
       </li>
       <li>
          <a href="#Machine" title="https://w3id.org/mqto#Machine">Machine</a>
@@ -56,6 +56,9 @@ This section provides details for each class and property defined by Manufacturi
       </li>
       <li>
          <a href="#Method" title="https://w3id.org/mqto#Method">Method</a>
+      </li>
+      <li>
+         <a href="#MethodExecution" title="https://w3id.org/mqto#MethodExecution">Method Execution</a>
       </li>
       <li>
          <a href="#Metric" title="https://w3id.org/mqto#Metric">Metric</a>
@@ -74,9 +77,6 @@ This section provides details for each class and property defined by Manufacturi
       </li>
       <li>
          <a href="#PhysicalMaterial" title="https://w3id.org/mqto#PhysicalMaterial">Physical Material</a>
-      </li>
-      <li>
-         <a href="#ProcessExecution" title="https://w3id.org/mqto#ProcessExecution">Process Execution</a>
       </li>
       <li>
          <a href="#Property" title="https://w3id.org/mqto#Property">Property</a>
@@ -117,7 +117,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#ActualIshikawaItem</p>
       <div class="comment">
-         <span class="markdown">Abstract superclass for actual/instance layer counterparts of IshikawaItem. Integrates SOSA: each ActualIshikawaItem is a FeatureOfInterest whose observations, properties, and failure occurrences are constrained at the subclass level. MQTO defines three concrete subclasses: PhysicalMachine (implements Machine), PhysicalMaterial (implements Material), and ProcessExecution (implements Method). Actual-layer counterparts for Manpower and Measurement are not defined in MQTO; domain-specific ontologies are expected to provide them.</span>
+         <span class="markdown">Abstract superclass for actual/instance layer counterparts of IshikawaItem. Integrates SOSA: each ActualIshikawaItem is a FeatureOfInterest whose observations, properties, and failure occurrences are constrained at the subclass level. MQTO defines three concrete subclasses: PhysicalMachine (implements Machine), PhysicalMaterial (implements Material), and MethodExecution (implements Method). Actual-layer counterparts for Manpower and Measurement are not defined in MQTO; domain-specific ontologies are expected to provide them.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -130,9 +130,9 @@ This section provides details for each class and property defined by Manufacturi
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#PhysicalMachine" title="https://w3id.org/mqto#PhysicalMachine">Physical Machine</a>
+            <a href="#MethodExecution" title="https://w3id.org/mqto#MethodExecution">Method Execution</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#PhysicalMachine" title="https://w3id.org/mqto#PhysicalMachine">Physical Machine</a>
             <sup class="type-c" title="class">c</sup>, <a href="#PhysicalMaterial" title="https://w3id.org/mqto#PhysicalMaterial">Physical Material</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#ProcessExecution" title="https://w3id.org/mqto#ProcessExecution">Process Execution</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
          <dt>is in range of</dt>
@@ -171,7 +171,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#Countermeasure</p>
       <div class="comment">
-         <span class="markdown">A remediation procedure that mitigates one or more Failure Modes. Countermeasures are structured as ordered sequences of CountermeasureSteps, represented via the mqto:List pattern for reusability. As a subclass of pko:Procedure, countermeasures align with the Procedural Knowledge Ontology's procedure modeling patterns while maintaining integration with the LIS specified/actual architecture.</span>
+         <span class="markdown">A remediation procedure that mitigates one or more Failure Modes. Countermeasures are structured as ordered sequences of CountermeasureSteps, represented via the mqto:CountermeasureStepList pattern for reusability. As a subclass of pko:Procedure, countermeasures align with the Procedural Knowledge Ontology's procedure modeling patterns while maintaining integration with the LIS specified/actual architecture.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -205,7 +205,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#CountermeasureExecution</p>
       <div class="comment">
-         <span class="markdown">The actual execution of a Countermeasure procedure, performed to mitigate one or more FailureOccurrences. As a subclass of both lis:Activity and lis:Actual, it is a concrete temporal event that implements a Countermeasure specification. Links to the Countermeasure via lis:implements, records mitigated FailureOccurrences via mqto:mitigated, and tracks constituent steps via pko:includesStepExecution. Step sequencing uses pko:nextStepExecution and pko:previousStepExecution inherited from pko:ProcedureExecution. As a subclass of pko:ProcedureExecution, countermeasure executions align with PKO's procedure execution model.</span>
+         <span class="markdown">The actual execution of a Countermeasure procedure, performed to mitigate one or more FailureOccurrences. As a subclass of both lis:Activity and lis:Actual, it is a concrete temporal event that implements a Countermeasure specification. Links to the Countermeasure via lis:implements, records mitigated FailureOccurrences via mqto:mitigatedOccurrence, and tracks constituent steps via pko:includesStepExecution. Step sequencing uses pko:nextStepExecution and pko:previousStepExecution inherited from pko:ProcedureExecution. As a subclass of pko:ProcedureExecution, countermeasure executions align with PKO's procedure execution model.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -220,14 +220,15 @@ This section provides details for each class and property defined by Manufacturi
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#mitigated" title="https://w3id.org/mqto#mitigated">mitigated</a>
+            <a href="#mitigatedOccurrence" title="https://w3id.org/mqto#mitigatedOccurrence">mitigated occurrence</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#score" title="https://w3id.org/mqto#score">score</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#suggestedBy" title="https://w3id.org/mqto#suggestedBy">suggested by</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#suggested" title="https://w3id.org/mqto#suggested">suggested</a>
+            <a href="#mitigatedByExecution" title="https://w3id.org/mqto#mitigatedByExecution">mitigated by execution</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#suggested" title="https://w3id.org/mqto#suggested">suggested</a>
             <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
@@ -240,7 +241,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#CountermeasureStep</p>
       <div class="comment">
-         <span class="markdown">A reusable specification of a single step within a Countermeasure procedure. Because the same step (e.g. 'clean the mould') may occur in multiple Countermeasures, ordering is not encoded in the step itself but in the mqto:List that references it. As a subclass of p-plan:Step, countermeasure steps align with the P-PLAN ontology for plan-based activity modeling.</span>
+         <span class="markdown">A reusable specification of a single step within a Countermeasure procedure. Because the same step (e.g. 'clean the mould') may occur in multiple Countermeasures, ordering is not encoded in the step itself but in the mqto:CountermeasureStepList that references it. As a subclass of p-plan:Step, countermeasure steps align with the P-PLAN ontology for plan-based activity modeling.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -268,7 +269,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#CountermeasureStepExecution</p>
       <div class="comment">
-         <span class="markdown">The actual, single execution of one CountermeasureStep. Each execution implements a specific CountermeasureStep from the specified layer via lis:implements. Step sequencing uses pko:nextStepExecution and pko:previousStepExecution from PKO, contrasting with the specified layer where mqto:List enables step reuse across procedures. As a subclass of both lis:Activity and lis:Actual, it is a concrete temporal activity. As a subclass of pko:StepExecution, countermeasure step executions align with PKO's step execution model.</span>
+         <span class="markdown">The actual, single execution of one CountermeasureStep. Each execution implements a specific CountermeasureStep from the specified layer via lis:implements. Step sequencing uses pko:nextStepExecution and pko:previousStepExecution from PKO, contrasting with the specified layer where mqto:CountermeasureStepList enables step reuse across procedures. As a subclass of both lis:Activity and lis:Actual, it is a concrete temporal activity. As a subclass of pko:StepExecution, countermeasure step executions align with PKO's step execution model.</span>
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
@@ -285,6 +286,36 @@ This section provides details for each class and property defined by Manufacturi
          <dd>
             <a href="#completionTime" title="https://w3id.org/mqto#completionTime">completion time</a>
             <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="CountermeasureStepList">
+      <h3>Countermeasure Step List<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#CountermeasureStepList</p>
+      <div class="comment">
+         <span class="markdown">An ordered, reusable container of CountermeasureSteps within the specified layer. Implements an OWL-native linked list pattern (mqto:first / mqto:rest) inspired by RDF Collections, but using explicit OWL class and property definitions for better reasoner compatibility. Standard rdf:List creates known issues with OWL reasoners due to blank node handling and recursive structure reasoning. This approach ensures compatibility with standard reasoners such as HermiT and Pellet while maintaining the core benefit: step order is external to the step instances, allowing steps to be shared across different Countermeasure procedures without embedding ordering information in the steps themselves. The list is terminated by mqto:nil. See OWL 2 Primer Section 4.2 on structural specification limitations with blank nodes.</span>
+      </div>
+      <dl class="description">
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#first" title="https://w3id.org/mqto#first">first</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#rest" title="https://w3id.org/mqto#rest">rest</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasStepList" title="https://w3id.org/mqto#hasStepList">has step list</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#rest" title="https://w3id.org/mqto#rest">rest</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+         <dt>has members</dt>
+         <dd>
+            <a href="#nil" title="https://w3id.org/mqto#nil">nil</a>
+            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -374,6 +405,7 @@ This section provides details for each class and property defined by Manufacturi
          <dt>is in domain of</dt>
          <dd>
             <a href="#appearedOn" title="https://w3id.org/mqto#appearedOn">appeared on</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#mitigatedByExecution" title="https://w3id.org/mqto#mitigatedByExecution">mitigated by execution</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#occurrenceTime" title="https://w3id.org/mqto#occurrenceTime">occurrence time</a>
             <sup class="type-dp" title="data property">dp</sup>, <a href="#raisedBy" title="https://w3id.org/mqto#raisedBy">raised by</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#suggested" title="https://w3id.org/mqto#suggested">suggested</a>
@@ -381,7 +413,7 @@ This section provides details for each class and property defined by Manufacturi
          </dd>
          <dt>is in range of</dt>
          <dd>
-            <a href="#mitigated" title="https://w3id.org/mqto#mitigated">mitigated</a>
+            <a href="#mitigatedOccurrence" title="https://w3id.org/mqto#mitigatedOccurrence">mitigated occurrence</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#raised" title="https://w3id.org/mqto#raised">raised</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#suggestedBy" title="https://w3id.org/mqto#suggestedBy">suggested by</a>
             <sup class="type-op" title="object property">op</sup>
@@ -427,36 +459,6 @@ This section provides details for each class and property defined by Manufacturi
             <sup class="type-op" title="object property">op</sup>, <a href="#metricBelongsTo" title="https://w3id.org/mqto#metricBelongsTo">metric belongs to</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#signalProvidedBy" title="https://w3id.org/mqto#signalProvidedBy">signal provided by</a>
             <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="List">
-      <h3>List<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/mqto#List</p>
-      <div class="comment">
-         <span class="markdown">An ordered, reusable container of CountermeasureSteps within the specified layer. Implements an OWL-native linked list pattern (mqto:first / mqto:rest) inspired by RDF Collections, but using explicit OWL class and property definitions for better reasoner compatibility. Standard rdf:List creates known issues with OWL reasoners due to blank node handling and recursive structure reasoning. This approach ensures compatibility with standard reasoners such as HermiT and Pellet while maintaining the core benefit: step order is external to the step instances, allowing steps to be shared across different Countermeasure procedures without embedding ordering information in the steps themselves. The list is terminated by mqto:nil. See OWL 2 Primer Section 4.2 on structural specification limitations with blank nodes.</span>
-      </div>
-      <dl class="description">
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#first" title="https://w3id.org/mqto#first">first</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#rest" title="https://w3id.org/mqto#rest">rest</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#hasStepList" title="https://w3id.org/mqto#hasStepList">has step list</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#rest" title="https://w3id.org/mqto#rest">rest</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>has members</dt>
-         <dd>
-            <a href="#nil" title="https://w3id.org/mqto#nil">nil</a>
-            <sup class="type-ni" title="named individual">ni</sup>
          </dd>
       </dl>
    </div>
@@ -557,6 +559,24 @@ This section provides details for each class and property defined by Manufacturi
             <sup class="type-c" title="class">c</sup>, <a href="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"
                target="_blank"
                title="http://rds.posccaesar.org/ontology/lis14/rdl/Activity">activity</a>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="MethodExecution">
+      <h3>Method Execution<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#MethodExecution</p>
+      <div class="comment">
+         <span class="markdown">Actual execution of a Method, the instance-layer counterpart of Method. This represents actual production operations with specific machines, material batches, timestamps, and observation data. Note: MethodExecution does not subclass lis:Activity (lis:Temporal) because it subclasses ActualIshikawaItem, which inherits sosa:FeatureOfInterest (lis:Object). In LIS, lis:Temporal and lis:Object are disjoint top-level categories, so both superclasses together would make the class unsatisfiable. As a consequence, lis:hasParticipant and lis:hasActivityPart cannot be used on MethodExecution (their domain is lis:Activity). Participant links are expressed instead via the inverse: PhysicalMachine and PhysicalMaterial carry lis:participantIn restrictions pointing to MethodExecution. The temporal character is expressed through mqto:startTime / mqto:endTime. This asymmetry is expected to be resolved once the SOSA/SSN update and the SOSA-IDO alignment are published.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ActualIshikawaItem" title="https://w3id.org/mqto#ActualIshikawaItem">Actual Ishikawa Item</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
@@ -728,24 +748,6 @@ This section provides details for each class and property defined by Manufacturi
          </dd>
       </dl>
    </div>
-   <div class="entity" id="ProcessExecution">
-      <h3>Process Execution<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/mqto#ProcessExecution</p>
-      <div class="comment">
-         <span class="markdown">Actual execution of a Method, the instance-layer counterpart of Method. Links to concrete PhysicalMachines and PhysicalMaterials as participants. This represents actual production operations with specific machines, material batches, timestamps, and observation data. Note: ProcessExecution does not subclass lis:Activity (lis:Temporal) because it subclasses ActualIshikawaItem, which inherits sosa:FeatureOfInterest (lis:Object). In LIS, lis:Temporal and lis:Object are disjoint top-level categories, so both superclasses together would make the class unsatisfiable. The temporal character of a process execution is expressed instead through mqto:startTime / mqto:endTime properties and the sosa:Observations for which it serves as feature of interest.</span>
-      </div>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#ActualIshikawaItem" title="https://w3id.org/mqto#ActualIshikawaItem">Actual Ishikawa Item</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="Property">
       <h3>Property<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -912,10 +914,13 @@ This section provides details for each class and property defined by Manufacturi
          <a href="#metricReferredBy" title="https://w3id.org/mqto#metricReferredBy">metric referred by</a>
       </li>
       <li>
-         <a href="#mitigated" title="https://w3id.org/mqto#mitigated">mitigated</a>
+         <a href="#mitigatedBy" title="https://w3id.org/mqto#mitigatedBy">mitigated by</a>
       </li>
       <li>
-         <a href="#mitigatedBy" title="https://w3id.org/mqto#mitigatedBy">mitigated by</a>
+         <a href="#mitigatedByExecution" title="https://w3id.org/mqto#mitigatedByExecution">mitigated by execution</a>
+      </li>
+      <li>
+         <a href="#mitigatedOccurrence" title="https://w3id.org/mqto#mitigatedOccurrence">mitigated occurrence</a>
       </li>
       <li>
          <a href="#mitigates" title="https://w3id.org/mqto#mitigates">mitigates</a>
@@ -962,7 +967,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#appearedOn</p>
       <div class="comment">
-         <span class="markdown">Links a FailureOccurrence to the specific ActualIshikawaItem where it manifested. In MQTO, ActualIshikawaItems are PhysicalMachine, PhysicalMaterial, and ProcessExecution; domain-specific ontologies may add actual-layer counterparts for Manpower and Measurement. Establishes the concrete location or context of the failure event in the actual layer.</span>
+         <span class="markdown">Links a FailureOccurrence to the specific ActualIshikawaItem where it manifested. In MQTO, ActualIshikawaItems are PhysicalMachine, PhysicalMaterial, and MethodExecution (actual-layer counterpart of Method); domain-specific ontologies may add actual-layer counterparts for Manpower and Measurement. Establishes the concrete location or context of the failure event in the actual layer.</span>
       </div>
       <div class="description">
          <dl>
@@ -1047,7 +1052,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#calculatedFor</p>
       <div class="comment">
-         <span class="markdown">Links a MetricAssessment to the specific ActualIshikawaItem it evaluates. In MQTO, ActualIshikawaItems are PhysicalMachine, PhysicalMaterial, and ProcessExecution; domain-specific ontologies may add actual-layer counterparts for Manpower and Measurement. Establishes which concrete entity the metric calculation applies to in the actual layer.</span>
+         <span class="markdown">Links a MetricAssessment to the specific ActualIshikawaItem it evaluates. In MQTO, ActualIshikawaItems are PhysicalMachine, PhysicalMaterial, and MethodExecution (actual-layer counterpart of Method); domain-specific ontologies may add actual-layer counterparts for Manpower and Measurement. Establishes which concrete entity the metric calculation applies to in the actual layer.</span>
       </div>
       <div class="description">
          <dl>
@@ -1392,7 +1397,7 @@ This section provides details for each class and property defined by Manufacturi
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#List" title="https://w3id.org/mqto#List">List</a>
+               <a href="#CountermeasureStepList" title="https://w3id.org/mqto#CountermeasureStepList">Countermeasure Step List</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
@@ -1471,7 +1476,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#hasStepList</p>
       <div class="comment">
-         <span class="markdown">Links a Countermeasure to its ordered list of steps (mqto:List). The indirection via mqto:List enables the same CountermeasureStep to be referenced in multiple Countermeasure definitions (reuse across procedures). Named hasStepList rather than hasStep to distinguish it from pko:hasStep, which links directly to step instances rather than to a list container.</span>
+         <span class="markdown">Links a Countermeasure to its ordered list of steps (mqto:CountermeasureStepList). The indirection via mqto:CountermeasureStepList enables the same CountermeasureStep to be referenced in multiple Countermeasure definitions (reuse across procedures). Named hasStepList rather than hasStep to distinguish it from pko:hasStep, which links directly to step instances rather than to a list container.</span>
       </div>
       <div class="description">
          <dl>
@@ -1482,7 +1487,7 @@ This section provides details for each class and property defined by Manufacturi
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#List" title="https://w3id.org/mqto#List">List</a>
+               <a href="#CountermeasureStepList" title="https://w3id.org/mqto#CountermeasureStepList">Countermeasure Step List</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -1548,31 +1553,6 @@ This section provides details for each class and property defined by Manufacturi
          </dl>
       </div>
    </div>
-   <div class="entity" id="mitigated">
-      <h3>mitigated<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/mqto#mitigated</p>
-      <div class="comment">
-         <span class="markdown">A countermeasure execution mitigated a failure occurrence. Note: this is the actual-layer forward property (past participle). The specified-layer equivalent uses mqto:mitigates (active voice). The naming difference is intentional: 'mitigated' records a completed fact at instance level, while 'mitigates' expresses a general capability at schema level.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#CountermeasureExecution" title="https://w3id.org/mqto#CountermeasureExecution">Countermeasure Execution</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#FailureOccurrence" title="https://w3id.org/mqto#FailureOccurrence">Failure Occurrence</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
    <div class="entity" id="mitigatedBy">
       <h3>mitigated by<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1581,7 +1561,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#mitigatedBy</p>
       <div class="comment">
-         <span class="markdown">Links a Failure Mode to a Countermeasure that can remediate or reduce it (specified layer). Establishes which remediation procedures are applicable for addressing specific failure types. Inverse of mitigates. The actual-layer counterpart is mqto:mitigated (domain: CountermeasureExecution, range: FailureOccurrence), which uses a distinct property to avoid range conflicts between the two layers.</span>
+         <span class="markdown">Links a Failure Mode to a Countermeasure that can remediate or reduce it (specified layer). Establishes which remediation procedures are applicable for addressing specific failure types. Inverse of mitigates. The actual-layer counterparts are mqto:mitigatedOccurrence (domain: CountermeasureExecution, range: FailureOccurrence) and its inverse mqto:mitigatedByExecution.</span>
       </div>
       <div class="description">
          <dl>
@@ -1603,6 +1583,66 @@ This section provides details for each class and property defined by Manufacturi
          </dl>
       </div>
    </div>
+   <div class="entity" id="mitigatedByExecution">
+      <h3>mitigated by execution<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#mitigatedByExecution</p>
+      <div class="comment">
+         <span class="markdown">Links a FailureOccurrence to the CountermeasureExecution that addressed it (actual layer). Inverse of mitigatedOccurrence. The specified-layer counterpart is mqto:mitigatedBy (domain: FailureMode, range: Countermeasure).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#FailureOccurrence" title="https://w3id.org/mqto#FailureOccurrence">Failure Occurrence</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#CountermeasureExecution" title="https://w3id.org/mqto#CountermeasureExecution">Countermeasure Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#mitigatedOccurrence" title="https://w3id.org/mqto#mitigatedOccurrence">mitigated occurrence</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="mitigatedOccurrence">
+      <h3>mitigated occurrence<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/mqto#mitigatedOccurrence</p>
+      <div class="comment">
+         <span class="markdown">Links a CountermeasureExecution to the FailureOccurrence it addressed (actual layer). Inverse of mitigatedByExecution. The specified-layer counterpart is mqto:mitigates (domain: Countermeasure, range: FailureMode).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#CountermeasureExecution" title="https://w3id.org/mqto#CountermeasureExecution">Countermeasure Execution</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#FailureOccurrence" title="https://w3id.org/mqto#FailureOccurrence">Failure Occurrence</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>is inverse of</dt>
+            <dd>
+               <a href="#mitigatedByExecution" title="https://w3id.org/mqto#mitigatedByExecution">mitigated by execution</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="mitigates">
       <h3>mitigates<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1611,7 +1651,7 @@ This section provides details for each class and property defined by Manufacturi
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#mitigates</p>
       <div class="comment">
-         <span class="markdown">Links a Countermeasure to the Failure Mode(s) it can remediate or reduce (specified layer). Establishes which failure types a remediation procedure addresses. Inverse of mitigatedBy. The actual-layer equivalent links CountermeasureExecution to FailureOccurrence.</span>
+         <span class="markdown">Links a Countermeasure to the Failure Mode(s) it can remediate or reduce (specified layer). Establishes which failure types a remediation procedure addresses. Inverse of mitigatedBy. The actual-layer counterparts are mqto:mitigatedOccurrence and mqto:mitigatedByExecution.</span>
       </div>
       <div class="description">
          <dl>
@@ -1827,12 +1867,12 @@ This section provides details for each class and property defined by Manufacturi
          <dl>
             <dt>has domain</dt>
             <dd>
-               <a href="#List" title="https://w3id.org/mqto#List">List</a>
+               <a href="#CountermeasureStepList" title="https://w3id.org/mqto#CountermeasureStepList">Countermeasure Step List</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
             <dd>
-               <a href="#List" title="https://w3id.org/mqto#List">List</a>
+               <a href="#CountermeasureStepList" title="https://w3id.org/mqto#CountermeasureStepList">Countermeasure Step List</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
          </dl>
@@ -2182,7 +2222,7 @@ At query time: SELECT ?value WHERE { ?metric mqto:resultProperty ?prop . ?result
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#endTime</p>
       <div class="comment">
-         <span class="markdown">The timestamp when an activity or time-bound entity concluded. General-purpose temporal property applicable to various execution contexts including ProcessExecution, CountermeasureExecution, and time windows.</span>
+         <span class="markdown">The timestamp when an activity or time-bound entity concluded. General-purpose temporal property applicable to various execution contexts including MethodExecution, CountermeasureExecution, and time windows.</span>
       </div>
       <div class="description">
          <dl>
@@ -2338,7 +2378,7 @@ At query time: SELECT ?value WHERE { ?metric mqto:resultProperty ?prop . ?result
       <p>
          <strong>IRI:</strong> https://w3id.org/mqto#startTime</p>
       <div class="comment">
-         <span class="markdown">The timestamp when an activity or time-bound entity began. General-purpose temporal property applicable to various execution contexts including ProcessExecution, CountermeasureExecution, and time windows.</span>
+         <span class="markdown">The timestamp when an activity or time-bound entity began. General-purpose temporal property applicable to various execution contexts including MethodExecution, CountermeasureExecution, and time windows.</span>
       </div>
       <div class="description">
          <dl>
@@ -2535,7 +2575,7 @@ At query time: SELECT ?value WHERE { ?metric mqto:resultProperty ?prop . ?result
       <dl class="description">
          <dt>belongs to</dt>
          <dd>
-            <a href="#List" title="https://w3id.org/mqto#List">List</a>
+            <a href="#CountermeasureStepList" title="https://w3id.org/mqto#CountermeasureStepList">Countermeasure Step List</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
