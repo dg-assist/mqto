@@ -30,7 +30,7 @@
                          dcterms:creator <https://orcid.org/0000-0001-9521-8907> ;
                          dcterms:description "A generalised ontology for manufacturing quality troubleshooting, applicable across different manufacturing domains. Covers both the specified (schema-level) and actual (instance-level) layers of a manufacturing process, with a focus on root cause analysis, failure diagnosis, and countermeasure recommendation."@en ;
                          dcterms:license <http://www.apache.org/licenses/LICENSE-2.0> ;
-                         dcterms:modified "2026-04-21"^^xsd:date ;
+                         dcterms:modified "2026-04-22"^^xsd:date ;
                          dcterms:publisher <https://github.com/dg-assist> ;
                          dcterms:rights "Copyright 2026 DG Assist. Licensed under the Apache License, Version 2.0."@en ;
                          dcterms:subject "Industry 4.0"@en ,
@@ -770,16 +770,8 @@ mqto:MethodExecution rdf:type owl:Class ;
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty lis:implements ;
                                        owl:someValuesFrom mqto:Method
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty lis:hasParticipant ;
-                                       owl:allValuesFrom [ rdf:type owl:Class ;
-                                                           owl:unionOf ( mqto:PhysicalMachine
-                                                                         mqto:PhysicalMaterial
-                                                                       )
-                                                         ]
                                      ] ;
-                     rdfs:comment "Actual execution of a Method, the instance-layer counterpart of Method. Links to concrete PhysicalMachines and PhysicalMaterials as participants. This represents actual production operations with specific machines, material batches, timestamps, and observation data. Note: MethodExecution does not subclass lis:Activity (lis:Temporal) because it subclasses ActualIshikawaItem, which inherits sosa:FeatureOfInterest (lis:Object). In LIS, lis:Temporal and lis:Object are disjoint top-level categories, so both superclasses together would make the class unsatisfiable. The temporal character of a method execution is expressed instead through mqto:startTime / mqto:endTime properties and the sosa:Observations for which it serves as feature of interest."@en ;
+                     rdfs:comment "Actual execution of a Method, the instance-layer counterpart of Method. This represents actual production operations with specific machines, material batches, timestamps, and observation data. Note: MethodExecution does not subclass lis:Activity (lis:Temporal) because it subclasses ActualIshikawaItem, which inherits sosa:FeatureOfInterest (lis:Object). In LIS, lis:Temporal and lis:Object are disjoint top-level categories, so both superclasses together would make the class unsatisfiable. As a consequence, lis:hasParticipant and lis:hasActivityPart cannot be used on MethodExecution (their domain is lis:Activity). Participant links are expressed instead via the inverse: PhysicalMachine and PhysicalMaterial carry lis:participantIn restrictions pointing to MethodExecution. The temporal character is expressed through mqto:startTime / mqto:endTime. This asymmetry is expected to be resolved once the SOSA/SSN update and the SOSA-IDO alignment are published."@en ;
                      rdfs:label "Method Execution"@en .
 
 
@@ -859,10 +851,6 @@ mqto:PhysicalMachine rdf:type owl:Class ;
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty lis:implements ;
                                        owl:someValuesFrom mqto:Machine
-                                     ] ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty lis:participantIn ;
-                                       owl:allValuesFrom mqto:MethodExecution
                                      ] ;
                      rdfs:comment "Actual machine instance, the instance-layer counterpart of Machine. Represents specific physical equipment with serial numbers, operational history, and sensor data. Examples include specific manufacturing equipment with serial numbers, furnaces, and robots with concrete observation data."@en ;
                      rdfs:label "Physical Machine"@en .
@@ -875,10 +863,6 @@ mqto:PhysicalMaterial rdf:type owl:Class ;
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty lis:implements ;
                                         owl:someValuesFrom mqto:Material
-                                      ] ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty lis:participantIn ;
-                                        owl:allValuesFrom mqto:MethodExecution
                                       ] ;
                       rdfs:comment "Actual material instance, the instance-layer counterpart of Material. Represents specific batches, lots, or quantities of material with identifiers, composition data, and quality measurements. Examples include specific material batches with batch numbers, chemical composition, and quality measurements."@en ;
                       rdfs:label "Physical Material"@en .
