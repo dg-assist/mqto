@@ -29,8 +29,8 @@ These queries demonstrate the queryability of the MQTO ontology. They are refere
 ### Example with Jena ARQ:
 
 ```bash
-# Execute a query against an RDF dataset
-sparql --data=../mqto-1.0.ttl --query=CQ-02-metrics-failures.rq
+# Execute a query against the example dataset
+sparql --data=example-data.ttl --query=CQ-02-metrics-failures.rq
 ```
 
 ### Example with SPARQL endpoint:
