@@ -36,6 +36,10 @@
 <http://rds.posccaesar.org/ontology/lis14/rdl/implements> rdf:type owl:AnnotationProperty .
 
 
+###  http://rds.posccaesar.org/ontology/lis14/rdl/participantIn
+<http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/ns/sosa/actsOnProperty
 <http://www.w3.org/ns/sosa/actsOnProperty> rdf:type owl:AnnotationProperty .
 
@@ -184,12 +188,12 @@
 <https://w3id.org/mqto#metricBelongsTo> rdf:type owl:AnnotationProperty .
 
 
-###  https://w3id.org/mqto#mitigated
-<https://w3id.org/mqto#mitigated> rdf:type owl:AnnotationProperty .
-
-
 ###  https://w3id.org/mqto#mitigatedBy
 <https://w3id.org/mqto#mitigatedBy> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mqto#mitigatedOccurrence
+<https://w3id.org/mqto#mitigatedOccurrence> rdf:type owl:AnnotationProperty .
 
 
 ###  https://w3id.org/mqto#mitigates
@@ -340,16 +344,16 @@ xsd:duration rdf:type rdfs:Datatype .
 <https://w3id.org/mqto#CountermeasureStepExecution> rdf:type owl:Class .
 
 
+###  https://w3id.org/mqto#CountermeasureStepList
+<https://w3id.org/mqto#CountermeasureStepList> rdf:type owl:Class .
+
+
 ###  https://w3id.org/mqto#FailureMode
 <https://w3id.org/mqto#FailureMode> rdf:type owl:Class .
 
 
 ###  https://w3id.org/mqto#FailureOccurrence
 <https://w3id.org/mqto#FailureOccurrence> rdf:type owl:Class .
-
-
-###  https://w3id.org/mqto#List
-<https://w3id.org/mqto#List> rdf:type owl:Class .
 
 
 ###  https://w3id.org/mqto#Machine
@@ -370,6 +374,10 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/mqto#Method
 <https://w3id.org/mqto#Method> rdf:type owl:Class .
+
+
+###  https://w3id.org/mqto#MethodExecution
+<https://w3id.org/mqto#MethodExecution> rdf:type owl:Class .
 
 
 ###  https://w3id.org/mqto#Metric
@@ -394,10 +402,6 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/mqto#PhysicalMaterial
 <https://w3id.org/mqto#PhysicalMaterial> rdf:type owl:Class .
-
-
-###  https://w3id.org/mqto#ProcessExecution
-<https://w3id.org/mqto#ProcessExecution> rdf:type owl:Class .
 
 
 ###  https://w3id.org/mqto#Result
@@ -442,21 +446,21 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/mqto/example#AdjustMeltTemp_List1
 <https://w3id.org/mqto/example#AdjustMeltTemp_List1> rdf:type owl:NamedIndividual ,
-                                                              <https://w3id.org/mqto#List> ;
+                                                              <https://w3id.org/mqto#CountermeasureStepList> ;
                                                      <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#CheckCurrentTemp> ;
                                                      <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#AdjustMeltTemp_List2> .
 
 
 ###  https://w3id.org/mqto/example#AdjustMeltTemp_List2
 <https://w3id.org/mqto/example#AdjustMeltTemp_List2> rdf:type owl:NamedIndividual ,
-                                                              <https://w3id.org/mqto#List> ;
+                                                              <https://w3id.org/mqto#CountermeasureStepList> ;
                                                      <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#AdjustFurnaceSetpoint> ;
                                                      <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#AdjustMeltTemp_List3> .
 
 
 ###  https://w3id.org/mqto/example#AdjustMeltTemp_List3
 <https://w3id.org/mqto/example#AdjustMeltTemp_List3> rdf:type owl:NamedIndividual ,
-                                                              <https://w3id.org/mqto#List> ;
+                                                              <https://w3id.org/mqto#CountermeasureStepList> ;
                                                      <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#VerifyNewTemp> ;
                                                      <https://w3id.org/mqto#rest> <https://w3id.org/mqto#nil> .
 
@@ -471,6 +475,8 @@ xsd:duration rdf:type rdfs:Datatype .
 <https://w3id.org/mqto/example#AlBatch2026_0042> rdf:type owl:NamedIndividual ,
                                                           <https://w3id.org/mqto#PhysicalMaterial> ;
                                                  <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#AluminiumAlloy> ;
+                                                 <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> <https://w3id.org/mqto/example#Process1234> ,
+                                                                                                              <https://w3id.org/mqto/example#Process1235> ;
                                                  rdfs:label "Aluminium batch AL-2026-0042"@en ;
                                                  <https://w3id.org/mqto#identifier> "AL-2026-0042" .
 
@@ -479,6 +485,7 @@ xsd:duration rdf:type rdfs:Datatype .
 <https://w3id.org/mqto/example#AlBatch2026_0043> rdf:type owl:NamedIndividual ,
                                                           <https://w3id.org/mqto#PhysicalMaterial> ;
                                                  <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#AluminiumAlloy> ;
+                                                 <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> <https://w3id.org/mqto/example#Process1236> ;
                                                  rdfs:label "Aluminium batch AL-2026-0043"@en ;
                                                  <https://w3id.org/mqto#identifier> "AL-2026-0043" .
 
@@ -516,7 +523,7 @@ xsd:duration rdf:type rdfs:Datatype .
                                                 <https://w3id.org/mqto#CountermeasureExecution> ;
                                        <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#AdjustMeltTemp> ;
                                        <https://w3id.org/mqto#endTime> "2026-03-15T11:20:00"^^xsd:dateTime ;
-                                       <https://w3id.org/mqto#mitigated> <https://w3id.org/mqto/example#FO_001> ;
+                                       <https://w3id.org/mqto#mitigatedOccurrence> <https://w3id.org/mqto/example#FO_001> ;
                                        <https://w3id.org/mqto#score> 0.92 ;
                                        <https://w3id.org/mqto#startTime> "2026-03-15T10:30:00"^^xsd:dateTime ;
                                        <https://w3id.org/mqto#suggestedBy> <https://w3id.org/mqto/example#FO_001> ;
@@ -758,14 +765,14 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/mqto/example#IncreaseSlowShot_List1
 <https://w3id.org/mqto/example#IncreaseSlowShot_List1> rdf:type owl:NamedIndividual ,
-                                                                <https://w3id.org/mqto#List> ;
+                                                                <https://w3id.org/mqto#CountermeasureStepList> ;
                                                        <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#ReviewInjectionProfile> ;
                                                        <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#IncreaseSlowShot_List2> .
 
 
 ###  https://w3id.org/mqto/example#IncreaseSlowShot_List2
 <https://w3id.org/mqto/example#IncreaseSlowShot_List2> rdf:type owl:NamedIndividual ,
-                                                                <https://w3id.org/mqto#List> ;
+                                                                <https://w3id.org/mqto#CountermeasureStepList> ;
                                                        <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#AdjustSlowShotDuration> ;
                                                        <https://w3id.org/mqto#rest> <https://w3id.org/mqto#nil> .
 
@@ -902,6 +909,9 @@ xsd:duration rdf:type rdfs:Datatype .
 <https://w3id.org/mqto/example#Machine4115> rdf:type owl:NamedIndividual ,
                                                      <https://w3id.org/mqto#PhysicalMachine> ;
                                             <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#DieCastingCell> ;
+                                            <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> <https://w3id.org/mqto/example#Process1234> ,
+                                                                                                         <https://w3id.org/mqto/example#Process1235> ,
+                                                                                                         <https://w3id.org/mqto/example#Process1236> ;
                                             rdfs:label "Machine 4115"@en ;
                                             <https://w3id.org/mqto#identifier> "4115" .
 
@@ -1107,9 +1117,7 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/mqto/example#Process1234
 <https://w3id.org/mqto/example#Process1234> rdf:type owl:NamedIndividual ,
-                                                     <https://w3id.org/mqto#ProcessExecution> ;
-                                            <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#AlBatch2026_0042> ,
-                                                                                                          <https://w3id.org/mqto/example#Machine4115> ;
+                                                     <https://w3id.org/mqto#MethodExecution> ;
                                             <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#DieCastingProcess> ;
                                             rdfs:label "Process execution 1234"@en ;
                                             <https://w3id.org/mqto#endTime> "2026-03-15T16:00:00"^^xsd:dateTime ;
@@ -1118,9 +1126,7 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/mqto/example#Process1235
 <https://w3id.org/mqto/example#Process1235> rdf:type owl:NamedIndividual ,
-                                                     <https://w3id.org/mqto#ProcessExecution> ;
-                                            <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#AlBatch2026_0042> ,
-                                                                                                          <https://w3id.org/mqto/example#Machine4115> ;
+                                                     <https://w3id.org/mqto#MethodExecution> ;
                                             <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#DieCastingProcess> ;
                                             rdfs:label "Process execution 1235"@en ;
                                             <https://w3id.org/mqto#endTime> "2026-03-16T16:00:00"^^xsd:dateTime ;
@@ -1129,9 +1135,7 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/mqto/example#Process1236
 <https://w3id.org/mqto/example#Process1236> rdf:type owl:NamedIndividual ,
-                                                     <https://w3id.org/mqto#ProcessExecution> ;
-                                            <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#AlBatch2026_0043> ,
-                                                                                                          <https://w3id.org/mqto/example#Machine4115> ;
+                                                     <https://w3id.org/mqto#MethodExecution> ;
                                             <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#DieCastingProcess> ;
                                             rdfs:label "Process execution 1236"@en ;
                                             <https://w3id.org/mqto#endTime> "2026-03-17T16:00:00"^^xsd:dateTime ;
@@ -1151,21 +1155,21 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/mqto/example#ReplaceAlloyBatch_List1
 <https://w3id.org/mqto/example#ReplaceAlloyBatch_List1> rdf:type owl:NamedIndividual ,
-                                                                 <https://w3id.org/mqto#List> ;
+                                                                 <https://w3id.org/mqto#CountermeasureStepList> ;
                                                         <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#CheckCurrentTemp> ;
                                                         <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#ReplaceAlloyBatch_List2> .
 
 
 ###  https://w3id.org/mqto/example#ReplaceAlloyBatch_List2
 <https://w3id.org/mqto/example#ReplaceAlloyBatch_List2> rdf:type owl:NamedIndividual ,
-                                                                 <https://w3id.org/mqto#List> ;
+                                                                 <https://w3id.org/mqto#CountermeasureStepList> ;
                                                         <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#SwapAlloyBatch> ;
                                                         <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#ReplaceAlloyBatch_List3> .
 
 
 ###  https://w3id.org/mqto/example#ReplaceAlloyBatch_List3
 <https://w3id.org/mqto/example#ReplaceAlloyBatch_List3> rdf:type owl:NamedIndividual ,
-                                                                 <https://w3id.org/mqto#List> ;
+                                                                 <https://w3id.org/mqto#CountermeasureStepList> ;
                                                         <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#VerifyNewTemp> ;
                                                         <https://w3id.org/mqto#rest> <https://w3id.org/mqto#nil> .
 
@@ -1308,21 +1312,21 @@ xsd:duration rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/mqto/example#VerifyThermocouple_List1
 <https://w3id.org/mqto/example#VerifyThermocouple_List1> rdf:type owl:NamedIndividual ,
-                                                                  <https://w3id.org/mqto#List> ;
+                                                                  <https://w3id.org/mqto#CountermeasureStepList> ;
                                                          <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#CheckCurrentTemp> ;
                                                          <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#VerifyThermocouple_List2> .
 
 
 ###  https://w3id.org/mqto/example#VerifyThermocouple_List2
 <https://w3id.org/mqto/example#VerifyThermocouple_List2> rdf:type owl:NamedIndividual ,
-                                                                  <https://w3id.org/mqto#List> ;
+                                                                  <https://w3id.org/mqto#CountermeasureStepList> ;
                                                          <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#InspectThermocouple> ;
                                                          <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#VerifyThermocouple_List3> .
 
 
 ###  https://w3id.org/mqto/example#VerifyThermocouple_List3
 <https://w3id.org/mqto/example#VerifyThermocouple_List3> rdf:type owl:NamedIndividual ,
-                                                                  <https://w3id.org/mqto#List> ;
+                                                                  <https://w3id.org/mqto#CountermeasureStepList> ;
                                                          <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#CalibrateIfNeeded> ;
                                                          <https://w3id.org/mqto#rest> <https://w3id.org/mqto#nil> .
 
