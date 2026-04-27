@@ -39,11 +39,11 @@ MQTO is designed as a **domain-independent connector ontology** applicable acros
 MQTO follows a **two-level architecture**:
 
 **Specified level** (schema-level, reusable knowledge):
-- `IshikawaItem` → `FailureMode` → `Metric` → `Signal` (data channel)
+- `FailureSourceCategory` → `FailureMode` → `Metric` → `Signal` (data channel)
 - `Countermeasure` → `CountermeasureStep` (with externalized `CountermeasureStepList` ordering)
 
 **Actual level** (instance-level, runtime data):
-- `ActualIshikawaItem` → `FailureOccurrence` → `MetricAssessment` → `Observation` (SOSA)
+- `FailureSource` → `FailureOccurrence` → `MetricAssessment` → `Observation` (SOSA)
 - `CountermeasureExecution` → `CountermeasureStepExecution` (PROV)
 
 The **Signal concept** is central: it represents a specific data channel (PLC variable, sensor reading, control signal) that bridges the specified level (Metric calculations read from Signals) and the actual level (Observations measure ObservableProperties).
