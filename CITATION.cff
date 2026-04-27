@@ -11,7 +11,15 @@ authors:
   - family-names: Rötzer
     given-names: Florian
     orcid: https://orcid.org/0000-0003-2661-5575
-date-released: 2026-03-17
+  - family-names: Xavier Parreira
+    given-names: Josiane
+    orcid: https://orcid.org/0000-0002-3050-159X
+    affiliation: Siemens AG Österreich
+  - family-names: Filtz
+    given-names: Erwin
+    orcid: https://orcid.org/0000-0003-3445-0504
+    affiliation: Siemens AG Österreich
+date-released: 2026-04-27
 url: https://w3id.org/mqto/1.0
 repository-code: https://github.com/dg-assist/mqto
 license: Apache-2.0
