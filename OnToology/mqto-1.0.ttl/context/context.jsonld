@@ -65,6 +65,9 @@
     "Material" : {
       "@id" : "https://w3id.org/mqto#Material"
     },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued"
+    },
     "abortedReason" : {
       "@id" : "https://w3id.org/mqto#abortedReason",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
@@ -105,6 +108,9 @@
       "@id" : "https://w3id.org/mqto#refersToMetric",
       "@type" : "@id"
     },
+    "assessmentMethod" : {
+      "@id" : "https://w3id.org/mqto#assessmentMethod"
+    },
     "resultProperty" : {
       "@id" : "https://w3id.org/mqto#resultProperty",
       "@type" : "@id"
@@ -121,9 +127,6 @@
     },
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
-    },
-    "method" : {
-      "@id" : "https://w3id.org/mqto#method"
     },
     "MethodExecution" : {
       "@id" : "https://w3id.org/mqto#MethodExecution"
@@ -154,9 +157,6 @@
     "causedByModerately" : {
       "@id" : "https://w3id.org/mqto#causedByModerately",
       "@type" : "@id"
-    },
-    "IshikawaItem" : {
-      "@id" : "https://w3id.org/mqto#IshikawaItem"
     },
     "suggested" : {
       "@id" : "https://w3id.org/mqto#suggested",
@@ -263,6 +263,9 @@
       "@id" : "https://w3id.org/mqto#causesStrongly",
       "@type" : "@id"
     },
+    "FailureSourceCategory" : {
+      "@id" : "https://w3id.org/mqto#FailureSourceCategory"
+    },
     "activityPartOf" : {
       "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/activityPartOf",
       "@type" : "@id"
@@ -272,6 +275,12 @@
     },
     "Countermeasure" : {
       "@id" : "https://w3id.org/mqto#Countermeasure"
+    },
+    "editorialNote" : {
+      "@id" : "http://www.w3.org/2004/02/skos/core#editorialNote"
+    },
+    "FailureSource" : {
+      "@id" : "https://w3id.org/mqto#FailureSource"
     },
     "mitigatedBy" : {
       "@id" : "https://w3id.org/mqto#mitigatedBy",
@@ -332,10 +341,6 @@
     },
     "logo" : {
       "@id" : "http://schema.org/logo"
-    },
-    "isPropertyOf" : {
-      "@id" : "http://www.w3.org/ns/ssn/isPropertyOf",
-      "@type" : "@id"
     },
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
@@ -405,9 +410,6 @@
     },
     "CountermeasureStep" : {
       "@id" : "https://w3id.org/mqto#CountermeasureStep"
-    },
-    "ActualIshikawaItem" : {
-      "@id" : "https://w3id.org/mqto#ActualIshikawaItem"
     },
     "preferredNamespaceUri" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
