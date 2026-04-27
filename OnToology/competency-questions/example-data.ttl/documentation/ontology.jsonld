@@ -23,6 +23,9 @@
   "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/implements",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/participantIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://www.w3.org/2001/XMLSchema#duration",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
@@ -74,13 +77,13 @@
   "@id" : "https://w3id.org/mqto#CountermeasureStepExecution",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
+  "@id" : "https://w3id.org/mqto#CountermeasureStepList",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "https://w3id.org/mqto#FailureMode",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/mqto#FailureOccurrence",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/mqto#List",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/mqto#Machine",
@@ -96,6 +99,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/mqto#Method",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "https://w3id.org/mqto#MethodExecution",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/mqto#Metric",
@@ -114,9 +120,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/mqto#PhysicalMaterial",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/mqto#ProcessExecution",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/mqto#Result",
@@ -212,10 +215,10 @@
   "@id" : "https://w3id.org/mqto#metricBelongsTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://w3id.org/mqto#mitigated",
+  "@id" : "https://w3id.org/mqto#mitigatedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://w3id.org/mqto#mitigatedBy",
+  "@id" : "https://w3id.org/mqto#mitigatedOccurrence",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://w3id.org/mqto#mitigates",
@@ -329,7 +332,7 @@
   "@id" : "https://w3id.org/mqto/example#AdjustMeltTemp_List1",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/mqto#List"
+    "@id" : "https://w3id.org/mqto#CountermeasureStepList"
   } ],
   "https://w3id.org/mqto#first" : [ {
     "@id" : "https://w3id.org/mqto/example#CheckCurrentTemp"
@@ -341,7 +344,7 @@
   "@id" : "https://w3id.org/mqto/example#AdjustMeltTemp_List2",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/mqto#List"
+    "@id" : "https://w3id.org/mqto#CountermeasureStepList"
   } ],
   "https://w3id.org/mqto#first" : [ {
     "@id" : "https://w3id.org/mqto/example#AdjustFurnaceSetpoint"
@@ -353,7 +356,7 @@
   "@id" : "https://w3id.org/mqto/example#AdjustMeltTemp_List3",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/mqto#List"
+    "@id" : "https://w3id.org/mqto#CountermeasureStepList"
   } ],
   "https://w3id.org/mqto#first" : [ {
     "@id" : "https://w3id.org/mqto/example#VerifyNewTemp"
@@ -377,6 +380,11 @@
   "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
     "@id" : "https://w3id.org/mqto/example#AluminiumAlloy"
   } ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/participantIn" : [ {
+    "@id" : "https://w3id.org/mqto/example#Process1234"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#Process1235"
+  } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/mqto#PhysicalMaterial"
   } ],
@@ -392,6 +400,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
     "@id" : "https://w3id.org/mqto/example#AluminiumAlloy"
+  } ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/participantIn" : [ {
+    "@id" : "https://w3id.org/mqto/example#Process1236"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/mqto#PhysicalMaterial"
@@ -476,7 +487,7 @@
     "@type" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "@value" : "2026-03-15T11:20:00"
   } ],
-  "https://w3id.org/mqto#mitigated" : [ {
+  "https://w3id.org/mqto#mitigatedOccurrence" : [ {
     "@id" : "https://w3id.org/mqto/example#FO_001"
   } ],
   "https://w3id.org/mqto#score" : [ {
@@ -999,7 +1010,7 @@
   "@id" : "https://w3id.org/mqto/example#IncreaseSlowShot_List1",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/mqto#List"
+    "@id" : "https://w3id.org/mqto#CountermeasureStepList"
   } ],
   "https://w3id.org/mqto#first" : [ {
     "@id" : "https://w3id.org/mqto/example#ReviewInjectionProfile"
@@ -1011,7 +1022,7 @@
   "@id" : "https://w3id.org/mqto/example#IncreaseSlowShot_List2",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/mqto#List"
+    "@id" : "https://w3id.org/mqto#CountermeasureStepList"
   } ],
   "https://w3id.org/mqto#first" : [ {
     "@id" : "https://w3id.org/mqto/example#AdjustSlowShotDuration"
@@ -1333,6 +1344,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
     "@id" : "https://w3id.org/mqto/example#DieCastingCell"
+  } ],
+  "http://rds.posccaesar.org/ontology/lis14/rdl/participantIn" : [ {
+    "@id" : "https://w3id.org/mqto/example#Process1234"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#Process1235"
+  }, {
+    "@id" : "https://w3id.org/mqto/example#Process1236"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
     "@id" : "https://w3id.org/mqto#PhysicalMachine"
@@ -1785,16 +1803,11 @@
 }, {
   "@id" : "https://w3id.org/mqto/example#Process1234",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant" : [ {
-    "@id" : "https://w3id.org/mqto/example#AlBatch2026_0042"
-  }, {
-    "@id" : "https://w3id.org/mqto/example#Machine4115"
-  } ],
   "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
     "@id" : "https://w3id.org/mqto/example#DieCastingProcess"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/mqto#ProcessExecution"
+    "@id" : "https://w3id.org/mqto#MethodExecution"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1811,16 +1824,11 @@
 }, {
   "@id" : "https://w3id.org/mqto/example#Process1235",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant" : [ {
-    "@id" : "https://w3id.org/mqto/example#AlBatch2026_0042"
-  }, {
-    "@id" : "https://w3id.org/mqto/example#Machine4115"
-  } ],
   "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
     "@id" : "https://w3id.org/mqto/example#DieCastingProcess"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/mqto#ProcessExecution"
+    "@id" : "https://w3id.org/mqto#MethodExecution"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1837,16 +1845,11 @@
 }, {
   "@id" : "https://w3id.org/mqto/example#Process1236",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
-  "http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant" : [ {
-    "@id" : "https://w3id.org/mqto/example#AlBatch2026_0043"
-  }, {
-    "@id" : "https://w3id.org/mqto/example#Machine4115"
-  } ],
   "http://rds.posccaesar.org/ontology/lis14/rdl/implements" : [ {
     "@id" : "https://w3id.org/mqto/example#DieCastingProcess"
   } ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/mqto#ProcessExecution"
+    "@id" : "https://w3id.org/mqto#MethodExecution"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1889,7 +1892,7 @@
   "@id" : "https://w3id.org/mqto/example#ReplaceAlloyBatch_List1",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/mqto#List"
+    "@id" : "https://w3id.org/mqto#CountermeasureStepList"
   } ],
   "https://w3id.org/mqto#first" : [ {
     "@id" : "https://w3id.org/mqto/example#CheckCurrentTemp"
@@ -1901,7 +1904,7 @@
   "@id" : "https://w3id.org/mqto/example#ReplaceAlloyBatch_List2",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/mqto#List"
+    "@id" : "https://w3id.org/mqto#CountermeasureStepList"
   } ],
   "https://w3id.org/mqto#first" : [ {
     "@id" : "https://w3id.org/mqto/example#SwapAlloyBatch"
@@ -1913,7 +1916,7 @@
   "@id" : "https://w3id.org/mqto/example#ReplaceAlloyBatch_List3",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/mqto#List"
+    "@id" : "https://w3id.org/mqto#CountermeasureStepList"
   } ],
   "https://w3id.org/mqto#first" : [ {
     "@id" : "https://w3id.org/mqto/example#VerifyNewTemp"
@@ -2190,7 +2193,7 @@
   "@id" : "https://w3id.org/mqto/example#VerifyThermocouple_List1",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/mqto#List"
+    "@id" : "https://w3id.org/mqto#CountermeasureStepList"
   } ],
   "https://w3id.org/mqto#first" : [ {
     "@id" : "https://w3id.org/mqto/example#CheckCurrentTemp"
@@ -2202,7 +2205,7 @@
   "@id" : "https://w3id.org/mqto/example#VerifyThermocouple_List2",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/mqto#List"
+    "@id" : "https://w3id.org/mqto#CountermeasureStepList"
   } ],
   "https://w3id.org/mqto#first" : [ {
     "@id" : "https://w3id.org/mqto/example#InspectThermocouple"
@@ -2214,7 +2217,7 @@
   "@id" : "https://w3id.org/mqto/example#VerifyThermocouple_List3",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
-    "@id" : "https://w3id.org/mqto#List"
+    "@id" : "https://w3id.org/mqto#CountermeasureStepList"
   } ],
   "https://w3id.org/mqto#first" : [ {
     "@id" : "https://w3id.org/mqto/example#CalibrateIfNeeded"

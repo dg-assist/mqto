@@ -60,9 +60,6 @@
     "refersToMetric" : {
       "@id" : "https://w3id.org/mqto#refersToMetric"
     },
-    "ProcessExecution" : {
-      "@id" : "https://w3id.org/mqto#ProcessExecution"
-    },
     "resultProperty" : {
       "@id" : "https://w3id.org/mqto#resultProperty"
     },
@@ -83,6 +80,9 @@
     },
     "method" : {
       "@id" : "https://w3id.org/mqto#method"
+    },
+    "MethodExecution" : {
+      "@id" : "https://w3id.org/mqto#MethodExecution"
     },
     "calculatedFor" : {
       "@id" : "https://w3id.org/mqto#calculatedFor"
@@ -125,6 +125,9 @@
     },
     "occurrenceTime" : {
       "@id" : "https://w3id.org/mqto#occurrenceTime"
+    },
+    "participantIn" : {
+      "@id" : "http://rds.posccaesar.org/ontology/lis14/rdl/participantIn"
     },
     "MetricAssessment" : {
       "@id" : "https://w3id.org/mqto#MetricAssessment"
@@ -180,6 +183,9 @@
     "usedProcedure" : {
       "@id" : "http://www.w3.org/ns/sosa/usedProcedure"
     },
+    "mitigatedOccurrence" : {
+      "@id" : "https://w3id.org/mqto#mitigatedOccurrence"
+    },
     "Metric" : {
       "@id" : "https://w3id.org/mqto#Metric"
     },
@@ -195,11 +201,11 @@
     "metricBelongsTo" : {
       "@id" : "https://w3id.org/mqto#metricBelongsTo"
     },
+    "CountermeasureStepList" : {
+      "@id" : "https://w3id.org/mqto#CountermeasureStepList"
+    },
     "itemWindowSize" : {
       "@id" : "https://w3id.org/mqto#itemWindowSize"
-    },
-    "List" : {
-      "@id" : "https://w3id.org/mqto#List"
     },
     "upperBound" : {
       "@id" : "https://w3id.org/mqto#upperBound"
@@ -209,9 +215,6 @@
     },
     "observedProperty" : {
       "@id" : "http://www.w3.org/ns/sosa/observedProperty"
-    },
-    "mitigated" : {
-      "@id" : "https://w3id.org/mqto#mitigated"
     },
     "unit" : {
       "@id" : "http://qudt.org/schema/qudt/unit"

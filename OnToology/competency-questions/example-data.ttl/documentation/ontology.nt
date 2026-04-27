@@ -26,6 +26,9 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # http://rds.posccaesar.org/ontology/lis14/rdl/implements
 <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
+# http://rds.posccaesar.org/ontology/lis14/rdl/participantIn
+<http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://www.w3.org/ns/sosa/actsOnProperty
 <http://www.w3.org/ns/sosa/actsOnProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -137,11 +140,11 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/mqto#metricBelongsTo
 <https://w3id.org/mqto#metricBelongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# https://w3id.org/mqto#mitigated
-<https://w3id.org/mqto#mitigated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # https://w3id.org/mqto#mitigatedBy
 <https://w3id.org/mqto#mitigatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mqto#mitigatedOccurrence
+<https://w3id.org/mqto#mitigatedOccurrence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # https://w3id.org/mqto#mitigates
 <https://w3id.org/mqto#mitigates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -273,14 +276,14 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # https://w3id.org/mqto#CountermeasureStepExecution
 <https://w3id.org/mqto#CountermeasureStepExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
+# https://w3id.org/mqto#CountermeasureStepList
+<https://w3id.org/mqto#CountermeasureStepList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # https://w3id.org/mqto#FailureMode
 <https://w3id.org/mqto#FailureMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/mqto#FailureOccurrence
 <https://w3id.org/mqto#FailureOccurrence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
-# https://w3id.org/mqto#List
-<https://w3id.org/mqto#List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/mqto#Machine
 <https://w3id.org/mqto#Machine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -296,6 +299,9 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/mqto#Method
 <https://w3id.org/mqto#Method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/mqto#MethodExecution
+<https://w3id.org/mqto#MethodExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/mqto#Metric
 <https://w3id.org/mqto#Metric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -314,9 +320,6 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/mqto#PhysicalMaterial
 <https://w3id.org/mqto#PhysicalMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-# 
-# https://w3id.org/mqto#ProcessExecution
-<https://w3id.org/mqto#ProcessExecution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 # 
 # https://w3id.org/mqto#Result
 <https://w3id.org/mqto#Result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -360,19 +363,19 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/mqto/example#AdjustMeltTemp_List1
 <https://w3id.org/mqto/example#AdjustMeltTemp_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/mqto/example#AdjustMeltTemp_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#AdjustMeltTemp_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStepList> .
 <https://w3id.org/mqto/example#AdjustMeltTemp_List1> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#CheckCurrentTemp> .
 <https://w3id.org/mqto/example#AdjustMeltTemp_List1> <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#AdjustMeltTemp_List2> .
 # 
 # https://w3id.org/mqto/example#AdjustMeltTemp_List2
 <https://w3id.org/mqto/example#AdjustMeltTemp_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/mqto/example#AdjustMeltTemp_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#AdjustMeltTemp_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStepList> .
 <https://w3id.org/mqto/example#AdjustMeltTemp_List2> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#AdjustFurnaceSetpoint> .
 <https://w3id.org/mqto/example#AdjustMeltTemp_List2> <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#AdjustMeltTemp_List3> .
 # 
 # https://w3id.org/mqto/example#AdjustMeltTemp_List3
 <https://w3id.org/mqto/example#AdjustMeltTemp_List3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/mqto/example#AdjustMeltTemp_List3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#AdjustMeltTemp_List3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStepList> .
 <https://w3id.org/mqto/example#AdjustMeltTemp_List3> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#VerifyNewTemp> .
 <https://w3id.org/mqto/example#AdjustMeltTemp_List3> <https://w3id.org/mqto#rest> <https://w3id.org/mqto#nil> .
 # 
@@ -385,6 +388,8 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/mqto/example#AlBatch2026_0042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/mqto/example#AlBatch2026_0042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#PhysicalMaterial> .
 <https://w3id.org/mqto/example#AlBatch2026_0042> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#AluminiumAlloy> .
+<https://w3id.org/mqto/example#AlBatch2026_0042> <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> <https://w3id.org/mqto/example#Process1234> .
+<https://w3id.org/mqto/example#AlBatch2026_0042> <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> <https://w3id.org/mqto/example#Process1235> .
 <https://w3id.org/mqto/example#AlBatch2026_0042> <http://www.w3.org/2000/01/rdf-schema#label> "Aluminium batch AL-2026-0042"@en .
 <https://w3id.org/mqto/example#AlBatch2026_0042> <https://w3id.org/mqto#identifier> "AL-2026-0042" .
 # 
@@ -392,6 +397,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/mqto/example#AlBatch2026_0043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/mqto/example#AlBatch2026_0043> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#PhysicalMaterial> .
 <https://w3id.org/mqto/example#AlBatch2026_0043> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#AluminiumAlloy> .
+<https://w3id.org/mqto/example#AlBatch2026_0043> <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> <https://w3id.org/mqto/example#Process1236> .
 <https://w3id.org/mqto/example#AlBatch2026_0043> <http://www.w3.org/2000/01/rdf-schema#label> "Aluminium batch AL-2026-0043"@en .
 <https://w3id.org/mqto/example#AlBatch2026_0043> <https://w3id.org/mqto#identifier> "AL-2026-0043" .
 # 
@@ -425,7 +431,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/mqto/example#CE_001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureExecution> .
 <https://w3id.org/mqto/example#CE_001> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#AdjustMeltTemp> .
 <https://w3id.org/mqto/example#CE_001> <https://w3id.org/mqto#endTime> "2026-03-15T11:20:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
-<https://w3id.org/mqto/example#CE_001> <https://w3id.org/mqto#mitigated> <https://w3id.org/mqto/example#FO_001> .
+<https://w3id.org/mqto/example#CE_001> <https://w3id.org/mqto#mitigatedOccurrence> <https://w3id.org/mqto/example#FO_001> .
 <https://w3id.org/mqto/example#CE_001> <https://w3id.org/mqto#score> "0.92"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/mqto/example#CE_001> <https://w3id.org/mqto#startTime> "2026-03-15T10:30:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
 <https://w3id.org/mqto/example#CE_001> <https://w3id.org/mqto#suggestedBy> <https://w3id.org/mqto/example#FO_001> .
@@ -642,13 +648,13 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/mqto/example#IncreaseSlowShot_List1
 <https://w3id.org/mqto/example#IncreaseSlowShot_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/mqto/example#IncreaseSlowShot_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#IncreaseSlowShot_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStepList> .
 <https://w3id.org/mqto/example#IncreaseSlowShot_List1> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#ReviewInjectionProfile> .
 <https://w3id.org/mqto/example#IncreaseSlowShot_List1> <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#IncreaseSlowShot_List2> .
 # 
 # https://w3id.org/mqto/example#IncreaseSlowShot_List2
 <https://w3id.org/mqto/example#IncreaseSlowShot_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/mqto/example#IncreaseSlowShot_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#IncreaseSlowShot_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStepList> .
 <https://w3id.org/mqto/example#IncreaseSlowShot_List2> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#AdjustSlowShotDuration> .
 <https://w3id.org/mqto/example#IncreaseSlowShot_List2> <https://w3id.org/mqto#rest> <https://w3id.org/mqto#nil> .
 # 
@@ -773,6 +779,9 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/mqto/example#Machine4115> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/mqto/example#Machine4115> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#PhysicalMachine> .
 <https://w3id.org/mqto/example#Machine4115> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#DieCastingCell> .
+<https://w3id.org/mqto/example#Machine4115> <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> <https://w3id.org/mqto/example#Process1234> .
+<https://w3id.org/mqto/example#Machine4115> <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> <https://w3id.org/mqto/example#Process1235> .
+<https://w3id.org/mqto/example#Machine4115> <http://rds.posccaesar.org/ontology/lis14/rdl/participantIn> <https://w3id.org/mqto/example#Process1236> .
 <https://w3id.org/mqto/example#Machine4115> <http://www.w3.org/2000/01/rdf-schema#label> "Machine 4115"@en .
 <https://w3id.org/mqto/example#Machine4115> <https://w3id.org/mqto#identifier> "4115" .
 # 
@@ -958,9 +967,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/mqto/example#Process1234
 <https://w3id.org/mqto/example#Process1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/mqto/example#Process1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#ProcessExecution> .
-<https://w3id.org/mqto/example#Process1234> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#AlBatch2026_0042> .
-<https://w3id.org/mqto/example#Process1234> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#Process1234> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#MethodExecution> .
 <https://w3id.org/mqto/example#Process1234> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#DieCastingProcess> .
 <https://w3id.org/mqto/example#Process1234> <http://www.w3.org/2000/01/rdf-schema#label> "Process execution 1234"@en .
 <https://w3id.org/mqto/example#Process1234> <https://w3id.org/mqto#endTime> "2026-03-15T16:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
@@ -968,9 +975,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/mqto/example#Process1235
 <https://w3id.org/mqto/example#Process1235> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/mqto/example#Process1235> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#ProcessExecution> .
-<https://w3id.org/mqto/example#Process1235> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#AlBatch2026_0042> .
-<https://w3id.org/mqto/example#Process1235> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#Process1235> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#MethodExecution> .
 <https://w3id.org/mqto/example#Process1235> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#DieCastingProcess> .
 <https://w3id.org/mqto/example#Process1235> <http://www.w3.org/2000/01/rdf-schema#label> "Process execution 1235"@en .
 <https://w3id.org/mqto/example#Process1235> <https://w3id.org/mqto#endTime> "2026-03-16T16:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
@@ -978,9 +983,7 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/mqto/example#Process1236
 <https://w3id.org/mqto/example#Process1236> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/mqto/example#Process1236> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#ProcessExecution> .
-<https://w3id.org/mqto/example#Process1236> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#AlBatch2026_0043> .
-<https://w3id.org/mqto/example#Process1236> <http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant> <https://w3id.org/mqto/example#Machine4115> .
+<https://w3id.org/mqto/example#Process1236> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#MethodExecution> .
 <https://w3id.org/mqto/example#Process1236> <http://rds.posccaesar.org/ontology/lis14/rdl/implements> <https://w3id.org/mqto/example#DieCastingProcess> .
 <https://w3id.org/mqto/example#Process1236> <http://www.w3.org/2000/01/rdf-schema#label> "Process execution 1236"@en .
 <https://w3id.org/mqto/example#Process1236> <https://w3id.org/mqto#endTime> "2026-03-17T16:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
@@ -998,19 +1001,19 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/mqto/example#ReplaceAlloyBatch_List1
 <https://w3id.org/mqto/example#ReplaceAlloyBatch_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/mqto/example#ReplaceAlloyBatch_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#ReplaceAlloyBatch_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStepList> .
 <https://w3id.org/mqto/example#ReplaceAlloyBatch_List1> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#CheckCurrentTemp> .
 <https://w3id.org/mqto/example#ReplaceAlloyBatch_List1> <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#ReplaceAlloyBatch_List2> .
 # 
 # https://w3id.org/mqto/example#ReplaceAlloyBatch_List2
 <https://w3id.org/mqto/example#ReplaceAlloyBatch_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/mqto/example#ReplaceAlloyBatch_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#ReplaceAlloyBatch_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStepList> .
 <https://w3id.org/mqto/example#ReplaceAlloyBatch_List2> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#SwapAlloyBatch> .
 <https://w3id.org/mqto/example#ReplaceAlloyBatch_List2> <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#ReplaceAlloyBatch_List3> .
 # 
 # https://w3id.org/mqto/example#ReplaceAlloyBatch_List3
 <https://w3id.org/mqto/example#ReplaceAlloyBatch_List3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/mqto/example#ReplaceAlloyBatch_List3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#ReplaceAlloyBatch_List3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStepList> .
 <https://w3id.org/mqto/example#ReplaceAlloyBatch_List3> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#VerifyNewTemp> .
 <https://w3id.org/mqto/example#ReplaceAlloyBatch_List3> <https://w3id.org/mqto#rest> <https://w3id.org/mqto#nil> .
 # 
@@ -1133,19 +1136,19 @@ _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/mqto/example#VerifyThermocouple_List1
 <https://w3id.org/mqto/example#VerifyThermocouple_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/mqto/example#VerifyThermocouple_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#VerifyThermocouple_List1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStepList> .
 <https://w3id.org/mqto/example#VerifyThermocouple_List1> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#CheckCurrentTemp> .
 <https://w3id.org/mqto/example#VerifyThermocouple_List1> <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#VerifyThermocouple_List2> .
 # 
 # https://w3id.org/mqto/example#VerifyThermocouple_List2
 <https://w3id.org/mqto/example#VerifyThermocouple_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/mqto/example#VerifyThermocouple_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#VerifyThermocouple_List2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStepList> .
 <https://w3id.org/mqto/example#VerifyThermocouple_List2> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#InspectThermocouple> .
 <https://w3id.org/mqto/example#VerifyThermocouple_List2> <https://w3id.org/mqto#rest> <https://w3id.org/mqto/example#VerifyThermocouple_List3> .
 # 
 # https://w3id.org/mqto/example#VerifyThermocouple_List3
 <https://w3id.org/mqto/example#VerifyThermocouple_List3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/mqto/example#VerifyThermocouple_List3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#List> .
+<https://w3id.org/mqto/example#VerifyThermocouple_List3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/mqto#CountermeasureStepList> .
 <https://w3id.org/mqto/example#VerifyThermocouple_List3> <https://w3id.org/mqto#first> <https://w3id.org/mqto/example#CalibrateIfNeeded> .
 <https://w3id.org/mqto/example#VerifyThermocouple_List3> <https://w3id.org/mqto#rest> <https://w3id.org/mqto#nil> .
 # 
