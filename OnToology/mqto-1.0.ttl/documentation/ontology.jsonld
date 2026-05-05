@@ -444,10 +444,22 @@
     "@id" : "https://www.siemens.at/"
   } ]
 }, {
+  "@id" : "https://orcid.org/0000-0002-5183-2486",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://xmlns.com/foaf/0.1/Person" ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Simon Steyskal"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "https://www.siemens.at/"
+  } ]
+}, {
   "@id" : "https://orcid.org/0000-0003-2661-5575",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://xmlns.com/foaf/0.1/Person" ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "Florian Rötzer"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "https://www.ait.ac.at/"
   } ]
 }, {
   "@id" : "https://orcid.org/0000-0003-3445-0504",
@@ -459,11 +471,20 @@
     "@id" : "https://www.siemens.at/"
   } ]
 }, {
+  "@id" : "https://orcid.org/0009-0009-9349-9683",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://xmlns.com/foaf/0.1/Person" ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Stephan Strommer"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "https://www.ait.ac.at/"
+  } ]
+}, {
   "@id" : "https://schema.org/affiliation",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://w3id.org/mqto",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@language" : "en",
     "@value" : "The Manufacturing Quality Troubleshooting Ontology (MQTO) provides a domain-independent semantic framework for modeling manufacturing quality inspection, failure diagnosis, and countermeasure recommendation. Building on the LIS (Lifecycle Information System) specified/actual pattern and integrating SOSA/SSN observation semantics, MQTO enables structured representation of Ishikawa (fishbone) root cause analysis across five categories: Machine, Manpower, Material, Measurement, and Method. The ontology supports both schema-level knowledge (failure types, metrics, countermeasure procedures) and instance-level data (actual observations, failure occurrences, executed remediation steps), making it applicable across diverse manufacturing domains including die-casting, injection molding, machining, and assembly processes."
@@ -2354,6 +2375,11 @@
 }, {
   "@id" : "https://w3id.org/pko#includesStepExecution",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://www.ait.ac.at/",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "AIT Austrian Institute of Technology GmbH"
+  } ]
 }, {
   "@id" : "https://www.siemens.at/",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {

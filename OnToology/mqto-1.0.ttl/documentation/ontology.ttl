@@ -1071,10 +1071,18 @@ rdf:Property rdf:type owl:Class .
                                         <https://schema.org/affiliation> <https://www.siemens.at/> .
 
 
+###  https://orcid.org/0000-0002-5183-2486
+<https://orcid.org/0000-0002-5183-2486> rdf:type owl:NamedIndividual ,
+                                                 <http://xmlns.com/foaf/0.1/Person> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Simon Steyskal" ;
+                                        <https://schema.org/affiliation> <https://www.siemens.at/> .
+
+
 ###  https://orcid.org/0000-0003-2661-5575
 <https://orcid.org/0000-0003-2661-5575> rdf:type owl:NamedIndividual ,
                                                  <http://xmlns.com/foaf/0.1/Person> ;
-                                        <http://xmlns.com/foaf/0.1/name> "Florian Rötzer" .
+                                        <http://xmlns.com/foaf/0.1/name> "Florian Rötzer" ;
+                                        <https://schema.org/affiliation> <https://www.ait.ac.at/> .
 
 
 ###  https://orcid.org/0000-0003-3445-0504
@@ -1082,6 +1090,17 @@ rdf:Property rdf:type owl:Class .
                                                  <http://xmlns.com/foaf/0.1/Person> ;
                                         <http://xmlns.com/foaf/0.1/name> "Erwin Filtz" ;
                                         <https://schema.org/affiliation> <https://www.siemens.at/> .
+
+
+###  https://orcid.org/0009-0009-9349-9683
+<https://orcid.org/0009-0009-9349-9683> rdf:type owl:NamedIndividual ,
+                                                 <http://xmlns.com/foaf/0.1/Person> ;
+                                        <http://xmlns.com/foaf/0.1/name> "Stephan Strommer" ;
+                                        <https://schema.org/affiliation> <https://www.ait.ac.at/> .
+
+
+###  https://w3id.org/mqto
+<https://w3id.org/mqto> rdf:type owl:NamedIndividual .
 
 
 ###  https://w3id.org/mqto#nil
@@ -1095,6 +1114,9 @@ rdf:Property rdf:type owl:Class .
 #################################################################
 #    Annotations
 #################################################################
+
+<https://www.ait.ac.at/> rdfs:label "AIT Austrian Institute of Technology GmbH" .
+
 
 <https://www.siemens.at/> rdfs:label "Siemens AG Österreich" .
 

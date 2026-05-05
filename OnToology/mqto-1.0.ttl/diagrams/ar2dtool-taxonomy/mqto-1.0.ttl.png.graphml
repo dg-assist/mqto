@@ -2259,7 +2259,7 @@
          </data>
          <data key="d1" />
       </node>
-    <edge id="eid_rdfs:subClassOf99" source="nid_mqto:Countermeasure" target="nid_pko:Procedure">
+    <edge id="eid_rdfs:subClassOf99" source="nid_mqto:Countermeasure" target="nid_lis:Specified">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />
@@ -2270,7 +2270,7 @@
          </data>
          <data key="d3" />
       </edge>
-    <edge id="eid_rdfs:subClassOf100" source="nid_mqto:Countermeasure" target="nid_lis:Specified">
+    <edge id="eid_rdfs:subClassOf100" source="nid_mqto:Countermeasure" target="nid_pko:Procedure">
          <data key="d2">
             <y:PolyLineEdge>
                <y:LineStyle color="black" type="line" width="1.0" />

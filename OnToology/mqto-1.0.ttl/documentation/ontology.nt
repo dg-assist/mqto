@@ -994,16 +994,32 @@ _:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://orcid.org/0000-0002-3050-159X> <http://xmlns.com/foaf/0.1/name> "Josiane Xavier Parreira" .
 <https://orcid.org/0000-0002-3050-159X> <https://schema.org/affiliation> <https://www.siemens.at/> .
 # 
+# https://orcid.org/0000-0002-5183-2486
+<https://orcid.org/0000-0002-5183-2486> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://orcid.org/0000-0002-5183-2486> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://orcid.org/0000-0002-5183-2486> <http://xmlns.com/foaf/0.1/name> "Simon Steyskal" .
+<https://orcid.org/0000-0002-5183-2486> <https://schema.org/affiliation> <https://www.siemens.at/> .
+# 
 # https://orcid.org/0000-0003-2661-5575
 <https://orcid.org/0000-0003-2661-5575> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://orcid.org/0000-0003-2661-5575> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
 <https://orcid.org/0000-0003-2661-5575> <http://xmlns.com/foaf/0.1/name> "Florian Rötzer" .
+<https://orcid.org/0000-0003-2661-5575> <https://schema.org/affiliation> <https://www.ait.ac.at/> .
 # 
 # https://orcid.org/0000-0003-3445-0504
 <https://orcid.org/0000-0003-3445-0504> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://orcid.org/0000-0003-3445-0504> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
 <https://orcid.org/0000-0003-3445-0504> <http://xmlns.com/foaf/0.1/name> "Erwin Filtz" .
 <https://orcid.org/0000-0003-3445-0504> <https://schema.org/affiliation> <https://www.siemens.at/> .
+# 
+# https://orcid.org/0009-0009-9349-9683
+<https://orcid.org/0009-0009-9349-9683> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://orcid.org/0009-0009-9349-9683> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://orcid.org/0009-0009-9349-9683> <http://xmlns.com/foaf/0.1/name> "Stephan Strommer" .
+<https://orcid.org/0009-0009-9349-9683> <https://schema.org/affiliation> <https://www.ait.ac.at/> .
+# 
+# https://w3id.org/mqto
+<https://w3id.org/mqto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 # 
 # https://w3id.org/mqto#nil
 <https://w3id.org/mqto#nil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1020,6 +1036,8 @@ _:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #
 # #################################################################
 # 
+# 
+<https://www.ait.ac.at/> <http://www.w3.org/2000/01/rdf-schema#label> "AIT Austrian Institute of Technology GmbH" .
 # 
 <https://www.siemens.at/> <http://www.w3.org/2000/01/rdf-schema#label> "Siemens AG Österreich" .
 # 
