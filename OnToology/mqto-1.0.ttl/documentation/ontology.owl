@@ -35,7 +35,7 @@
         <terms:description xml:lang="en">A connector ontology for manufacturing quality troubleshooting that bridges three manufacturing domains: quality management (FailureMode, Countermeasure, Metric), production context (FailureSourceCategory hierarchy, FailureSource hierarchy), and data infrastructure (Signal, Property, DataEvent). Applicable across manufacturing domains. Covers both the specified (schema-level) and actual (instance-level) levels, with a focus on root cause analysis, failure diagnosis, and countermeasure recommendation.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-27</terms:issued>
         <terms:license rdf:resource="http://www.apache.org/licenses/LICENSE-2.0"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-05</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-05-07</terms:modified>
         <terms:publisher rdf:resource="https://github.com/dg-assist"/>
         <terms:rights xml:lang="en">Copyright 2026 DG Assist. Licensed under the Apache License, Version 2.0.</terms:rights>
         <terms:subject xml:lang="en">Industry 4.0</terms:subject>
@@ -53,6 +53,7 @@
         <vann:preferredNamespaceUri>https://w3id.org/mqto#</vann:preferredNamespaceUri>
         <schema:codeRepository rdf:resource="https://github.com/dg-assist/mqto"/>
         <schema:funding rdf:resource="https://projekte.ffg.at/projekt/4641766"/>
+        <schema:image rdf:resource="https://dg-assist.github.io/mqto/class-diagram.svg"/>
         <schema:logo rdf:resource="https://dg-assist.github.io/mqto/logo.png"/>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/mqto/1.0"/>
         <rdfs:label xml:lang="en">Manufacturing Quality Troubleshooting Ontology</rdfs:label>
@@ -113,6 +114,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://schema.org/funding"/>
+    
+
+
+    <!-- http://schema.org/image -->
+
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/image"/>
     
 
 

@@ -35,7 +35,7 @@
                          dcterms:description "A connector ontology for manufacturing quality troubleshooting that bridges three manufacturing domains: quality management (FailureMode, Countermeasure, Metric), production context (FailureSourceCategory hierarchy, FailureSource hierarchy), and data infrastructure (Signal, Property, DataEvent). Applicable across manufacturing domains. Covers both the specified (schema-level) and actual (instance-level) levels, with a focus on root cause analysis, failure diagnosis, and countermeasure recommendation."@en ;
                          dcterms:issued "2026-04-27"^^xsd:date ;
                          dcterms:license <http://www.apache.org/licenses/LICENSE-2.0> ;
-                         dcterms:modified "2026-05-05"^^xsd:date ;
+                         dcterms:modified "2026-05-07"^^xsd:date ;
                          dcterms:publisher <https://github.com/dg-assist> ;
                          dcterms:rights "Copyright 2026 DG Assist. Licensed under the Apache License, Version 2.0."@en ;
                          dcterms:subject "Industry 4.0"@en ,
@@ -53,6 +53,7 @@
                          vann:preferredNamespaceUri "https://w3id.org/mqto#" ;
                          schema:codeRepository <https://github.com/dg-assist/mqto> ;
                          schema:funding <https://projekte.ffg.at/projekt/4641766> ;
+                         schema:image <https://dg-assist.github.io/mqto/class-diagram.svg> ;
                          schema:logo <https://dg-assist.github.io/mqto/logo.png> ;
                          rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
                          rdfs:label "Manufacturing Quality Troubleshooting Ontology"@en ;

@@ -22,7 +22,7 @@
                          <http://purl.org/dc/terms/description> "A connector ontology for manufacturing quality troubleshooting that bridges three manufacturing domains: quality management (FailureMode, Countermeasure, Metric), production context (FailureSourceCategory hierarchy, FailureSource hierarchy), and data infrastructure (Signal, Property, DataEvent). Applicable across manufacturing domains. Covers both the specified (schema-level) and actual (instance-level) levels, with a focus on root cause analysis, failure diagnosis, and countermeasure recommendation."@en ;
                          <http://purl.org/dc/terms/issued> "2026-04-27"^^xsd:date ;
                          <http://purl.org/dc/terms/license> <http://www.apache.org/licenses/LICENSE-2.0> ;
-                         <http://purl.org/dc/terms/modified> "2026-05-05"^^xsd:date ;
+                         <http://purl.org/dc/terms/modified> "2026-05-07"^^xsd:date ;
                          <http://purl.org/dc/terms/publisher> <https://github.com/dg-assist> ;
                          <http://purl.org/dc/terms/rights> "Copyright 2026 DG Assist. Licensed under the Apache License, Version 2.0."@en ;
                          <http://purl.org/dc/terms/subject> "Industry 4.0"@en ,
@@ -40,6 +40,7 @@
                          <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/mqto#" ;
                          <http://schema.org/codeRepository> <https://github.com/dg-assist/mqto> ;
                          <http://schema.org/funding> <https://projekte.ffg.at/projekt/4641766> ;
+                         <http://schema.org/image> <https://dg-assist.github.io/mqto/class-diagram.svg> ;
                          <http://schema.org/logo> <https://dg-assist.github.io/mqto/logo.png> ;
                          rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
                          rdfs:label "Manufacturing Quality Troubleshooting Ontology"@en ;
@@ -72,6 +73,10 @@
 
 ###  http://schema.org/funding
 <http://schema.org/funding> rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/image
+<http://schema.org/image> rdf:type owl:AnnotationProperty .
 
 
 ###  http://schema.org/logo

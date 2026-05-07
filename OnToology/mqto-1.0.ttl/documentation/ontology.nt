@@ -14,7 +14,7 @@
 <https://w3id.org/mqto> <http://purl.org/dc/terms/description> "A connector ontology for manufacturing quality troubleshooting that bridges three manufacturing domains: quality management (FailureMode, Countermeasure, Metric), production context (FailureSourceCategory hierarchy, FailureSource hierarchy), and data infrastructure (Signal, Property, DataEvent). Applicable across manufacturing domains. Covers both the specified (schema-level) and actual (instance-level) levels, with a focus on root cause analysis, failure diagnosis, and countermeasure recommendation."@en .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/issued> "2026-04-27"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/license> <http://www.apache.org/licenses/LICENSE-2.0> .
-<https://w3id.org/mqto> <http://purl.org/dc/terms/modified> "2026-05-05"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/mqto> <http://purl.org/dc/terms/modified> "2026-05-07"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/publisher> <https://github.com/dg-assist> .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/rights> "Copyright 2026 DG Assist. Licensed under the Apache License, Version 2.0."@en .
 <https://w3id.org/mqto> <http://purl.org/dc/terms/subject> "Industry 4.0"@en .
@@ -32,6 +32,7 @@
 <https://w3id.org/mqto> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/mqto#" .
 <https://w3id.org/mqto> <http://schema.org/codeRepository> <https://github.com/dg-assist/mqto> .
 <https://w3id.org/mqto> <http://schema.org/funding> <https://projekte.ffg.at/projekt/4641766> .
+<https://w3id.org/mqto> <http://schema.org/image> <https://dg-assist.github.io/mqto/class-diagram.svg> .
 <https://w3id.org/mqto> <http://schema.org/logo> <https://dg-assist.github.io/mqto/logo.png> .
 <https://w3id.org/mqto> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/mqto/1.0> .
 <https://w3id.org/mqto> <http://www.w3.org/2000/01/rdf-schema#label> "Manufacturing Quality Troubleshooting Ontology"@en .
@@ -63,6 +64,9 @@
 # 
 # http://schema.org/funding
 <http://schema.org/funding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://schema.org/image
+<http://schema.org/image> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://schema.org/logo
 <http://schema.org/logo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
