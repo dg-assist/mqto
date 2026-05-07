@@ -2,88 +2,69 @@
 
 <img src="logo.png" alt="MQTO Logo" width="400"/>
 
-**Version:** 1.0.0  
 **Namespace:** `https://w3id.org/mqto#`  
 **Prefix:** `mqto`  
-**Status:** Draft
+**Persistent URI:** <https://w3id.org/mqto/1.0>  
+**DOI:** [10.5281/zenodo.19571023](https://doi.org/10.5281/zenodo.19571023)
 
 ## Overview
 
-The Manufacturing Quality Troubleshooting Ontology (MQTO) is a domain-independent connector ontology for manufacturing quality troubleshooting. It bridges three manufacturing domains — quality management, production context, and data infrastructure — to support traceable root cause analysis, failure diagnosis, and countermeasure recommendation.
+The Manufacturing Quality Troubleshooting Ontology (MQTO) is a domain-independent **connector ontology** for manufacturing quality troubleshooting. It semantically links three disconnected information silos — quality management, quantitative data infrastructure, and production context — to enable traceable, queryable, and reusable cross-domain reasoning for root cause analysis, failure diagnosis, and countermeasure recommendation.
+
+MQTO was developed following the Linked Open Terms (LOT) methodology and driven by 13 competency questions and 10 additional requirements derived from an industrial die-casting use case at TCG Unitech GmbH. It generalises working domain-specific implementations into domain-independent connector patterns applicable across discrete manufacturing processes.
+
+## Architecture
 
 MQTO occupies the middle layer in a three-layer architecture:
-- **Upper layer:** LIS (Lifecycle Information System), SOSA/SSN (Sensor, Observation, Sample, Actuator)
-- **Middle layer:** MQTO (this ontology) — domain-independent troubleshooting patterns
-- **Lower layer:** Domain-specific ontologies (e.g., die-casting, injection molding)
 
-## Key Features
+- **Upper layer:** LIS/IDO (production context), SOSA/SSN (observations), PKO (procedural knowledge)
+- **Middle layer:** MQTO — domain-independent troubleshooting connector patterns
+- **Lower layer:** Domain-specific application ontologies (e.g., die-casting, injection molding, CNC machining)
 
-- **Cross-domain integration:** Connects quality management (failure modes, countermeasures, metrics), production context (machines, materials, methods), and data infrastructure (signals, observations, actuations)
-- **Ishikawa-based organization:** Structures root causes around all five M categories: Machine, Manpower, Material, Measurement, and Method
-- **Specified/Actual levels:** Maintains distinction between schema-level definitions (specified level) and instance-level data (actual level) following the LIS pattern
-- **Standards-based:** Built on LIS, SOSA/SSN, PKO (Procedural Knowledge Ontology), and P-PLAN
-- **Modular and extensible:** Designed for easy extension with domain-specific classes and properties
-
-## Core Concepts
-
-### Specified Level (Schema)
-- **IshikawaItem:** Root cause categories (Machine, Manpower, Material, Measurement, Method)
-- **FailureMode:** Failure mode definitions with causal relationships
-- **Metric:** Key performance indicators with threshold bounds
-- **Signal:** Data channel specifications (PLC variables, sensor readings)
-- **Countermeasure:** Remediation procedures with ordered steps
-
-### Actual Level (Instances)
-- **ActualIshikawaItem:** Physical machines, material batches, method executions
-- **FailureOccurrence:** Concrete failure events with timestamps
-- **MetricAssessment:** Calculated metric values and threshold violations
-- **Observation / Actuation:** Sensor readings and control events (SOSA)
-- **CountermeasureExecution:** Executed remediation actions with step tracking
+The central bridging role is played by the **Metric/MetricAssessment** concept, which connects quality management (failure modes, countermeasures) to the data infrastructure (signals, observations, actuations) under explicit production context (machines, materials, methods).
 
 ## Documentation
 
-- **Ontology IRI:** `https://w3id.org/mqto`
-- **HTML Documentation:** [https://w3id.org/mqto](https://w3id.org/mqto)
+- **HTML Documentation & WebVOWL:** <https://w3id.org/mqto> (content-negotiated)
+- **Source Repository:** <https://w3id.org/mqto/git>
 - **Turtle File:** [mqto-1.0.ttl](./mqto-1.0.ttl)
 
 ## Competency Questions
 
-MQTO is validated against 13 canonical competency questions. SPARQL query implementations and an example dataset that exercises every query are available in [`competency-questions/`](./competency-questions/).
+MQTO is validated against 13 canonical competency questions. SPARQL query implementations and an example dataset are available in [`competency-questions/`](./competency-questions/).
 
-To run a query against the example dataset (requires [Apache Jena](https://jena.apache.org/)):
-
-```bash
-sparql --data=competency-questions/example-data.ttl --query=competency-questions/CQ-02-metrics-failures.rq
-```
-
-## Installation & Usage
-
-### Import in Protégé
-
-1. Download [mqto-1.0.ttl](./mqto-1.0.ttl)
-2. Open in Protégé 5.5+
-3. Import as: `https://w3id.org/mqto#`
-
-### Validation
-
-**Tools required** for validation:
-- [Apache Jena](https://jena.apache.org/) (for SPARQL)
+To run a query (requires [Apache Jena](https://jena.apache.org/)):
 
 ```bash
-# Syntax validation
-rapper -i turtle -o ntriples mqto-1.0.ttl > /dev/null
-# or with Apache Jena
-riot --validate mqto-1.0.ttl
+sparql --data=competency-questions/example-data.ttl --query=competency-questions/CQ-10-metric-failures.rq
 ```
+
+## Extending MQTO
+
+Adaptation to other manufacturing domains (e.g., injection molding, CNC machining, additive manufacturing) requires:
+
+- Specialising `Machine`, `Material`, `Method` with domain-specific equipment types, material classes, and process operations
+- Defining domain-relevant `FailureMode` types, `Metric` specifications, and `Signal` channels
+- Creating `Countermeasure` libraries appropriate to the domain's remediation practices
+
+The core connector structure remains unchanged.
+
+## Acknowledgements
+
+This work was conducted within the Austrian research project DG Assist (FFG project number: FO999899053), funded by the Federal Ministry for Climate Protection, Environment, Energy, Mobility, Innovation and Technology (BMK), carried out as part of the Production of the Future programme.
+
+## Citation
+
+See [CITATION.cff](./CITATION.cff) for machine-readable citation metadata.
 
 ## License
 
-Apache License 2.0 (or specify your preferred license)
+[Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
-## Contact
+## Contributing
 
-For questions or contributions, please open an issue on GitHub.
+Community contributions are managed through GitHub Issues and Pull Requests. We welcome competency-question proposals, vocabulary alignment suggestions, and bug reports. The ontology follows semantic versioning: backwards-compatible additions are released as minor versions, while breaking changes require a new major version.
 
 ---
 
-**Generated with:** [OnToology](https://ontoology.linkeddata.es/) | [WIDOCO](https://github.com/dgarijo/Widoco)
+**Generated with:** [WIDOCO](https://github.com/dgarijo/Widoco) | [OnToology](https://ontoology.linkeddata.es/)

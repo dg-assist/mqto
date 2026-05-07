@@ -24,5 +24,5 @@ WHERE {
   OPTIONAL { ?metric mqto:timeWindowSize ?timeWindowSize }
   OPTIONAL { ?metric mqto:lowerBound ?lowerBound }
   OPTIONAL { ?metric mqto:upperBound ?upperBound }
-  OPTIONAL { ?metric mqto:method ?method }
+  OPTIONAL { ?metric mqto:assessmentMethod ?method }
 }

@@ -8,10 +8,14 @@
 	 dc:creator <https://orcid.org/0000-0001-9521-8907>;
 	 prov:wasAttributedTo <https://orcid.org/0000-0002-3050-159X>;
 	 dc:contributor <https://orcid.org/0000-0002-3050-159X>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0002-5183-2486>;
+	 dc:contributor <https://orcid.org/0000-0002-5183-2486>;
 	 prov:wasAttributedTo <https://orcid.org/0000-0003-2661-5575>;
 	 dc:contributor <https://orcid.org/0000-0003-2661-5575>;
 	 prov:wasAttributedTo <https://orcid.org/0000-0003-3445-0504>;
 	 dc:contributor <https://orcid.org/0000-0003-3445-0504>;
+	 prov:wasAttributedTo <https://orcid.org/0009-0009-9349-9683>;
+	 dc:contributor <https://orcid.org/0009-0009-9349-9683>;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 	 prov:wasGeneratedAt "2026-03-17";
 .

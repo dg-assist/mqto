@@ -16,7 +16,7 @@ WHERE {
 
   # Assessment method (e.g., "mean", "max", "stdev")
   OPTIONAL {
-    ?metric mqto:method ?method .
+    ?metric mqto:assessmentMethod ?method .
   }
 
   # Input signals

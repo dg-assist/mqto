@@ -444,10 +444,22 @@
     "@id" : "https://www.siemens.at/"
   } ]
 }, {
+  "@id" : "https://orcid.org/0000-0002-5183-2486",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://xmlns.com/foaf/0.1/Person" ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Simon Steyskal"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "https://www.siemens.at/"
+  } ]
+}, {
   "@id" : "https://orcid.org/0000-0003-2661-5575",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://xmlns.com/foaf/0.1/Person" ],
   "http://xmlns.com/foaf/0.1/name" : [ {
     "@value" : "Florian Rötzer"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "https://www.ait.ac.at/"
   } ]
 }, {
   "@id" : "https://orcid.org/0000-0003-3445-0504",
@@ -457,6 +469,15 @@
   } ],
   "https://schema.org/affiliation" : [ {
     "@id" : "https://www.siemens.at/"
+  } ]
+}, {
+  "@id" : "https://orcid.org/0009-0009-9349-9683",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual", "http://xmlns.com/foaf/0.1/Person" ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Stephan Strommer"
+  } ],
+  "https://schema.org/affiliation" : [ {
+    "@id" : "https://www.ait.ac.at/"
   } ]
 }, {
   "@id" : "https://schema.org/affiliation",
@@ -470,14 +491,18 @@
   } ],
   "http://purl.org/dc/terms/bibliographicCitation" : [ {
     "@language" : "en",
-    "@value" : "Bischof, S., Rötzer, F., Xavier Parreira, J., Filtz, E. (2026). Manufacturing Quality Troubleshooting Ontology (MQTO), Version 1.0. https://w3id.org/mqto/1.0"
+    "@value" : "Bischof, S., Rötzer, F., Xavier Parreira, J., Filtz, E., Steyskal, S., Strommer, S. (2026). Manufacturing Quality Troubleshooting Ontology (MQTO), Version 1.0. https://w3id.org/mqto/1.0"
   } ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@id" : "https://orcid.org/0000-0002-3050-159X"
   }, {
+    "@id" : "https://orcid.org/0000-0002-5183-2486"
+  }, {
     "@id" : "https://orcid.org/0000-0003-2661-5575"
   }, {
     "@id" : "https://orcid.org/0000-0003-3445-0504"
+  }, {
+    "@id" : "https://orcid.org/0009-0009-9349-9683"
   } ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -499,7 +524,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-04-27"
+    "@value" : "2026-05-05"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@id" : "https://github.com/dg-assist"
@@ -2354,6 +2379,11 @@
 }, {
   "@id" : "https://w3id.org/pko#includesStepExecution",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "https://www.ait.ac.at/",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "AIT Austrian Institute of Technology GmbH"
+  } ]
 }, {
   "@id" : "https://www.siemens.at/",
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
