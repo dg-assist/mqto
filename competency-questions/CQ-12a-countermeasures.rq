@@ -1,0 +1,17 @@
+# CQ-12a: Which countermeasures can resolve a given failure directly or indirectly?
+#
+# This query retrieves countermeasures for the failure and its causal root causes.
+
+PREFIX mqto: <https://w3id.org/mqto#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?countermeasure ?cmLabel
+WHERE {
+  # Bind the target failure to investigate
+  BIND(<https://w3id.org/mqto/example#Porosity> AS ?targetFailure)
+
+  # Follow the causal chain to find direct and indirect root causes
+  ?targetFailure mqto:causedBy* ?rootCause .
+  ?rootCause mqto:mitigatedBy ?countermeasure .
+  ?countermeasure rdfs:label ?cmLabel .
+}
