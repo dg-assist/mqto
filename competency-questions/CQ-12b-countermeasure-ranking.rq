@@ -1,0 +1,24 @@
+# CQ-12b: Which countermeasures are most likely to directly resolve a given failure?
+#
+# This query retrieves direct countermeasures for a failure, ordered by effectiveness weight.
+# Note: The ontology provides anchor weights but does not implement the ranking
+# algorithm itself (outside OWL reasoning scope).
+
+PREFIX mqto: <https://w3id.org/mqto#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?countermeasure ?cmLabel ?weight
+WHERE {
+  # Bind the target failure to investigate
+  BIND(<https://w3id.org/mqto/example#Porosity> AS ?targetFailure)
+
+  # Find countermeasures that mitigate this failure directly
+  ?targetFailure mqto:mitigatedBy ?countermeasure .
+  ?countermeasure rdfs:label ?cmLabel .
+
+  # Retrieve effectiveness weight (higher = more effective)
+  OPTIONAL {
+    ?countermeasure mqto:weight ?weight .
+  }
+}
+ORDER BY DESC(?weight)
