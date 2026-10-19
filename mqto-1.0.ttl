@@ -556,9 +556,13 @@ mqto:identifier rdf:type owl:DatatypeProperty ;
 
 ###  https://w3id.org/mqto#itemWindowSize
 mqto:itemWindowSize rdf:type owl:DatatypeProperty ;
-                    rdfs:domain mqto:Metric ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( mqto:Metric
+                                                mqto:FailureMode
+                                              )
+                                ] ;
                     rdfs:range xsd:integer ;
-                    rdfs:comment "The number of production items over which a Metric aggregates observations. Complements timeWindowSize for item-count-based windows."@en ;
+                    rdfs:comment "The number of production items considered by a Metric or FailureMode policy. Complements timeWindowSize for item-count-based windows."@en ;
                     rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
                     rdfs:label "item window size"@en ;
                     skos:example "last 10 shots, last 5 batches"@en .
@@ -603,12 +607,25 @@ mqto:startTime rdf:type owl:DatatypeProperty ;
 
 ###  https://w3id.org/mqto#timeWindowSize
 mqto:timeWindowSize rdf:type owl:DatatypeProperty ;
-                    rdfs:domain mqto:Metric ;
+                    rdfs:domain [ rdf:type owl:Class ;
+                                  owl:unionOf ( mqto:Metric
+                                                mqto:FailureMode
+                                              )
+                                ] ;
                     rdfs:range xsd:duration ;
-                    rdfs:comment "The duration over which a Metric aggregates observations, expressed as xsd:duration. Defines how far back in time to consider observation data."@en ;
+                    rdfs:comment "The duration considered by a Metric or FailureMode policy, expressed as xsd:duration. Defines how far back in time to consider observations or failure occurrences."@en ;
                     rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
                     rdfs:label "time window size"@en ;
                     skos:example "PT5M (5 minutes), PT1H (1 hour)"@en .
+
+
+###  https://w3id.org/mqto#threshold
+mqto:threshold rdf:type owl:DatatypeProperty ;
+               rdfs:domain mqto:FailureMode ;
+               rdfs:range xsd:int ;
+               rdfs:comment "The number of failure occurrences within the configured item or time window that triggers a FailureMode policy."@en ;
+               rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
+               rdfs:label "threshold"@en .
 
 
 ###  https://w3id.org/mqto#upperBound
