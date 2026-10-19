@@ -4,8 +4,9 @@
 
 **Namespace:** `https://w3id.org/mqto#`  
 **Prefix:** `mqto`  
-**Persistent URI:** <https://w3id.org/mqto/1.0>  
-**DOI:** [10.5281/zenodo.19571023](https://doi.org/10.5281/zenodo.19571023)
+**Version:** 1.1.0 (in preparation)<br>
+**Version URI:** `https://w3id.org/mqto/1.1` (publication pending)<br>
+**Previous release (1.0.0) DOI:** [10.5281/zenodo.19571023](https://doi.org/10.5281/zenodo.19571023)
 
 ## Overview
 
@@ -27,7 +28,19 @@ The central bridging role is played by the **Metric/MetricAssessment** concept, 
 
 - **HTML Documentation & WebVOWL:** <https://w3id.org/mqto> (content-negotiated)
 - **Source Repository:** <https://w3id.org/mqto/git>
-- **Turtle File:** [mqto-1.0.ttl](./mqto-1.0.ttl)
+- **Turtle File:** [mqto-1.1.ttl](./mqto-1.1.ttl)
+
+The 1.1.0 release is in preparation. Published HTML documentation and diagrams
+may still describe 1.0 until regenerated. Publication requires configuring
+the `/1.1` persistent URI, finalizing the release date and DOI, and marking
+the ontology as published. The stable namespace remains `https://w3id.org/mqto#`.
+The 1.0.0 source remains available at the
+[`v1.0.0` tag](https://github.com/dg-assist/mqto/tree/v1.0.0).
+
+- **Class diagram:** [class-diagram.drawio.svg](./class-diagram.drawio.svg)
+- **Module diagram:** [modules.drawio.svg](./modules.drawio.svg)
+
+Both diagrams are SVG images that can also be edited in draw.io.
 
 ## Competency Questions
 
