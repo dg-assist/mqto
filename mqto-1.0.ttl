@@ -520,7 +520,9 @@ mqto:calculatedTime rdf:type owl:DatatypeProperty ;
 ###  https://w3id.org/mqto#calculatedValue
 mqto:calculatedValue rdf:type owl:DatatypeProperty ;
                      rdfs:domain mqto:MetricAssessment ;
-                     rdfs:range xsd:double ;
+                     rdfs:range [ rdf:type rdfs:Datatype ;
+                                  owl:unionOf ( xsd:decimal xsd:double )
+                                ] ;
                      rdfs:comment "The computed numeric value of a MetricAssessment, preserving the quantitative result before threshold comparison."@en ;
                      rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
                      rdfs:label "calculated value"@en ;
@@ -571,11 +573,13 @@ mqto:itemWindowSize rdf:type owl:DatatypeProperty ;
 ###  https://w3id.org/mqto#lowerBound
 mqto:lowerBound rdf:type owl:DatatypeProperty ;
                 rdfs:domain mqto:Metric ;
-                rdfs:range xsd:double ;
+                rdfs:range [ rdf:type rdfs:Datatype ;
+                             owl:unionOf ( xsd:decimal xsd:double )
+                           ] ;
                 rdfs:comment "The minimum acceptable threshold value for a Metric. Values below the lowerBound indicate a threshold violation."@en ;
                 rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
                 rdfs:label "lower bound"@en ;
-                skos:editorialNote "Stored as dimensionless xsd:double; unit of measurement determined by the Metric's associated Signal."@en .
+                skos:editorialNote "Stored as dimensionless decimal or double values; unit of measurement determined by the Metric's associated Signal."@en .
 
 
 ###  https://w3id.org/mqto#occurrenceTime
@@ -590,7 +594,9 @@ mqto:occurrenceTime rdf:type owl:DatatypeProperty ;
 ###  https://w3id.org/mqto#score
 mqto:score rdf:type owl:DatatypeProperty ;
            rdfs:domain mqto:CountermeasureExecution ;
-           rdfs:range xsd:double ;
+           rdfs:range [ rdf:type rdfs:Datatype ;
+                        owl:unionOf ( xsd:decimal xsd:double )
+                      ] ;
            rdfs:comment "A numeric score or confidence value assigned to a CountermeasureExecution recommendation. Used by diagnostic systems to rank countermeasure suggestions."@en ;
            rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
            rdfs:label "score"@en ;
@@ -631,11 +637,13 @@ mqto:threshold rdf:type owl:DatatypeProperty ;
 ###  https://w3id.org/mqto#upperBound
 mqto:upperBound rdf:type owl:DatatypeProperty ;
                 rdfs:domain mqto:Metric ;
-                rdfs:range xsd:double ;
+                rdfs:range [ rdf:type rdfs:Datatype ;
+                             owl:unionOf ( xsd:decimal xsd:double )
+                           ] ;
                 rdfs:comment "The maximum acceptable threshold value for a Metric. Values above the upperBound indicate a threshold violation."@en ;
                 rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
                 rdfs:label "upper bound"@en ;
-                skos:editorialNote "Stored as dimensionless xsd:double; unit of measurement determined by the Metric's associated Signal."@en .
+                skos:editorialNote "Stored as dimensionless decimal or double values; unit of measurement determined by the Metric's associated Signal."@en .
 
 
 ###  https://w3id.org/mqto#weight
@@ -645,11 +653,13 @@ mqto:weight rdf:type owl:DatatypeProperty ;
                                         mqto:FailureMode
                                       )
                         ] ;
-            rdfs:range xsd:double ;
+            rdfs:range [ rdf:type rdfs:Datatype ;
+                         owl:unionOf ( xsd:decimal xsd:double )
+                       ] ;
             rdfs:comment "A relative ranking weight. For Failure Modes: severity or priority. For Countermeasures: effectiveness or preference. Provides anchor points for external ranking logic."@en ;
             rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
             rdfs:label "weight"@en ;
-            skos:editorialNote "The ontology does not prescribe the ranking algorithm itself; interpretation is application-specific."@en .
+            skos:editorialNote "Accepts decimal values (including existing integer weights) and double values. The ontology does not prescribe the ranking algorithm itself; interpretation is application-specific."@en .
 
 
 #################################################################

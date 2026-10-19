@@ -22,6 +22,30 @@ Each query file follows the naming convention: `CQ-{number}-{short-description}.
 12. **CQ-12a**: Which countermeasures can resolve a given failure directly or indirectly? **CQ-12b**: Which countermeasures are most likely to directly resolve a given failure?
 13. **CQ-13**: Which failure occurrences were dismissed, and which countermeasure or step executions were aborted?
 
+## Compatibility
+
+`CQ-12-countermeasure-ranking.rq` remains available for existing scripts, with
+its original result columns and behavior. New integrations should use
+`CQ-12a-countermeasures.rq` for direct and indirect discovery, or
+`CQ-12b-countermeasure-ranking.rq` for ranking direct countermeasures by weight.
+The legacy query's `causalStrength` column is not a general causal ranking;
+use CQ-01 to rank failure causes.
+
+`mqto:weight` accepts both `xsd:decimal` (including integer datatypes) and
+`xsd:double`. Existing integer weights do not need conversion.
+
+The window properties `mqto:itemWindowSize` and `mqto:timeWindowSize` now apply
+to either `mqto:Metric` or `mqto:FailureMode`. A window alone no longer entails
+that its subject is a `mqto:Metric`. Explicitly declare the intended type;
+existing explicitly typed metrics remain supported. This is an inference
+change for data that relied solely on the old property domains.
+
+`mqto:lowerBound`, `mqto:upperBound`, `mqto:calculatedValue`, and `mqto:score`
+also accept both `xsd:decimal` (including integer datatypes) and `xsd:double`.
+This preserves existing double-typed data while accepting the example data's
+original decimal literals without conversion. A Turtle literal such as `680.0`
+is an `xsd:decimal`, not an `xsd:double`.
+
 ## Usage
 
 These queries demonstrate the queryability of the MQTO ontology. They are referenced in the paper's evaluation section (Section 6) as evidence that the ontology successfully answers the requirements-driven competency questions.

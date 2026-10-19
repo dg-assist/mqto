@@ -1,0 +1,26 @@
+# CQ-12: Legacy entry point for direct countermeasure ranking.
+# Use CQ-12a for direct/indirect discovery and CQ-12b for direct ranking.
+# The original result columns, including causalStrength, are preserved.
+
+PREFIX mqto: <https://w3id.org/mqto#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?countermeasure ?cmLabel ?weight ?causalStrength
+WHERE {
+  BIND(<https://w3id.org/mqto/example#Porosity> AS ?targetFailure)
+
+  ?targetFailure mqto:mitigatedBy ?countermeasure .
+  ?countermeasure rdfs:label ?cmLabel .
+
+  OPTIONAL { ?countermeasure mqto:weight ?weight . }
+
+  OPTIONAL {
+    ?targetFailure mqto:causedBy ?rootCause .
+    ?rootCause mqto:mitigatedBy ?countermeasure .
+    OPTIONAL {
+      ?targetFailure mqto:causedByStrongly ?rootCause .
+      BIND("strong" AS ?causalStrength)
+    }
+  }
+}
+ORDER BY DESC(?weight) DESC(?causalStrength)
