@@ -620,7 +620,7 @@ mqto:weight rdf:type owl:DatatypeProperty ;
                                         mqto:FailureMode
                                       )
                         ] ;
-            rdfs:range xsd:int ;
+            rdfs:range xsd:double ;
             rdfs:comment "A relative ranking weight. For Failure Modes: severity or priority. For Countermeasures: effectiveness or preference. Provides anchor points for external ranking logic."@en ;
             rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
             rdfs:label "weight"@en ;
