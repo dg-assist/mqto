@@ -1,33 +1,22 @@
-# CQ-12: Which countermeasures are most likely to resolve a given failure?
-#
-# This query retrieves countermeasures for a failure, ordered by effectiveness weight.
-# Note: The ontology provides anchor weights but does not implement the ranking
-# algorithm itself (outside OWL reasoning scope).
+# CQ-12: Legacy entry point for direct countermeasure ranking.
+# Use CQ-12a for direct/indirect discovery and CQ-12b for direct ranking.
+# The original result columns, including causalStrength, are preserved.
 
 PREFIX mqto: <https://w3id.org/mqto#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 SELECT ?countermeasure ?cmLabel ?weight ?causalStrength
 WHERE {
-  # Bind the target failure to investigate
   BIND(<https://w3id.org/mqto/example#Porosity> AS ?targetFailure)
 
-  # Find countermeasures that mitigate this failure
   ?targetFailure mqto:mitigatedBy ?countermeasure .
   ?countermeasure rdfs:label ?cmLabel .
 
-  # Retrieve effectiveness weight (higher = more effective)
-  OPTIONAL {
-    ?countermeasure mqto:weight ?weight .
-  }
+  OPTIONAL { ?countermeasure mqto:weight ?weight . }
 
-  # Optional: Check if failure is caused by other failures, and whether
-  # the countermeasure addresses root causes
   OPTIONAL {
     ?targetFailure mqto:causedBy ?rootCause .
     ?rootCause mqto:mitigatedBy ?countermeasure .
-
-    # Determine causal strength
     OPTIONAL {
       ?targetFailure mqto:causedByStrongly ?rootCause .
       BIND("strong" AS ?causalStrength)

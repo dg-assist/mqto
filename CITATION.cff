@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this ontology, please cite it as below."
 title: "Manufacturing Quality Troubleshooting Ontology"
-version: 1.0.0
+version: 1.1.0
 type: dataset
 authors:
   - family-names: Bischof
@@ -28,8 +28,7 @@ authors:
     given-names: Stephan
     orcid: https://orcid.org/0009-0009-9349-9683
     affiliation: AIT Austrian Institute of Technology GmbH
-date-released: 2026-04-27
-url: https://w3id.org/mqto/1.0
+url: https://w3id.org/mqto/1.1
 repository-code: https://github.com/dg-assist/mqto
 license: Apache-2.0
 keywords:
@@ -57,7 +56,3 @@ abstract: >
   remediation steps), making it applicable across diverse manufacturing
   domains including die-casting, injection molding, machining, and assembly
   processes.
-identifiers:
-  - type: doi
-    value: 10.5281/zenodo.19571023
-    description: Zenodo archive
