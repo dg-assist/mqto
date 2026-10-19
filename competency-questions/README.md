@@ -19,7 +19,7 @@ Each query file follows the naming convention: `CQ-{number}-{short-description}.
 9. **CQ-09**: Which metrics have already been evaluated in a given context?
 10. **CQ-10**: Which metrics triggered which failures?
 11. **CQ-11**: How is a metric calculated?
-12. **CQ-12**: Which countermeasures are most likely to resolve a given failure?
+12. **CQ-12a**: Which countermeasures can resolve a given failure directly or indirectly? **CQ-12b**: Which countermeasures are most likely to directly resolve a given failure?
 13. **CQ-13**: Which failure occurrences were dismissed, and which countermeasure or step executions were aborted?
 
 ## Usage

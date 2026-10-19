@@ -17,22 +17,35 @@ WHERE {
 
   # Determine the causal strength
   OPTIONAL {
-    ?targetFailure mqto:causedByWeakly ?weakCause .
-    FILTER(?causeFailure = ?weakCause)
-    BIND("weak" AS ?strength)
+    ?targetFailure mqto:causedByWeakly ?causeFailure .
+    BIND(1 AS ?weakRank)
   }
   OPTIONAL {
-    ?targetFailure mqto:causedByModerately ?moderateCause .
-    FILTER(?causeFailure = ?moderateCause)
-    BIND("moderate" AS ?moderateStrength)
+    ?targetFailure mqto:causedByModerately ?causeFailure .
+    BIND(2 AS ?moderateRank)
   }
   OPTIONAL {
-    ?targetFailure mqto:causedByStrongly ?strongCause .
-    FILTER(?causeFailure = ?strongCause)
-    BIND("strong" AS ?strongStrength)
+    ?targetFailure mqto:causedByStrongly ?causeFailure .
+    BIND(3 AS ?strongRank)
   }
 
-  # Select the most specific strength, defaulting to "unspecified" if none found
-  BIND(COALESCE(?strongStrength, ?moderateStrength, ?strength, "unspecified") AS ?causalStrength)
+  # Select the strongest rank, defaulting to 0 when no strength is specified
+  BIND(
+    COALESCE(
+      ?strongRank,
+      ?moderateRank,
+      ?weakRank,
+      0
+    ) AS ?strengthRank
+  )
+  BIND(
+    IF(?strengthRank = 3, "strong",
+      IF(?strengthRank = 2, "moderate",
+        IF(?strengthRank = 1, "weak",
+          "unspecified"
+        )
+      )
+    ) AS ?causalStrength
+  )
 }
-ORDER BY DESC(?causalStrength)
+ORDER BY DESC(?strengthRank)
