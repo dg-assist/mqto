@@ -1,8 +1,7 @@
-# CQ-13: Was a suggested countermeasure or step execution aborted?
+# CQ-13: Which failure occurrences were dismissed, and which countermeasure or step executions were aborted?
 #
-# This query identifies countermeasure executions and step executions that were
-# aborted before completion, indicating inapplicable or unsuccessful remediation
-# attempts. Uses mqto:abortedTime and mqto:abortedReason to detect and explain aborts.
+# This query identifies dismissed failure occurrences and countermeasure or step
+# executions that were aborted before completion.
 
 PREFIX mqto: <https://w3id.org/mqto#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -10,6 +9,17 @@ PREFIX lis: <http://rds.posccaesar.org/ontology/lis14/rdl/>
 
 SELECT ?item ?itemType ?itemLabel ?abortedTime ?abortedReason
 WHERE {
+  {
+    # Dismissed failure occurrences
+    ?item a mqto:FailureOccurrence ;
+          mqto:abortedTime ?abortedTime .
+
+    BIND("FailureOccurrence" AS ?itemType)
+
+    OPTIONAL { ?item rdfs:label ?itemLabel . }
+    OPTIONAL { ?item mqto:abortedReason ?abortedReason . }
+  }
+  UNION
   {
     # Aborted countermeasure executions
     ?item a mqto:CountermeasureExecution ;

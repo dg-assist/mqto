@@ -321,7 +321,7 @@ mqto:mitigatedByExecution rdf:type owl:ObjectProperty ;
                           owl:inverseOf mqto:mitigatedOccurrence ;
                           rdfs:domain mqto:FailureOccurrence ;
                           rdfs:range mqto:CountermeasureExecution ;
-                          rdfs:comment "Links a FailureOccurrence to the CountermeasureExecution that addressed it (actual level). Specified-level counterpart: mitigatedBy."@en ;
+                          rdfs:comment "Links a FailureOccurrence to a CountermeasureExecution that mitigates it (actual level). Any such link means the occurrence is resolved; multiple executions may mitigate the same occurrence. Specified-level counterpart: mitigatedBy."@en ;
                           rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
                           rdfs:label "mitigated by execution"@en .
 
@@ -468,16 +468,24 @@ pko:includesStepExecution rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/mqto#abortedReason
 mqto:abortedReason rdf:type owl:DatatypeProperty ;
+                   rdfs:domain [
+                     rdf:type owl:Class ;
+                     owl:unionOf ( mqto:CountermeasureExecution mqto:CountermeasureStepExecution mqto:FailureOccurrence )
+                   ] ;
                    rdfs:range xsd:string ;
-                   rdfs:comment "Human-readable explanation of why a CountermeasureStepExecution or CountermeasureExecution was aborted before completion."@en ;
+                   rdfs:comment "Human-readable explanation of why a CountermeasureExecution or CountermeasureStepExecution was aborted, or why a FailureOccurrence was dismissed."@en ;
                    rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
                    rdfs:label "aborted reason"@en .
 
 
 ###  https://w3id.org/mqto#abortedTime
 mqto:abortedTime rdf:type owl:DatatypeProperty ;
+                 rdfs:domain [
+                   rdf:type owl:Class ;
+                   owl:unionOf ( mqto:CountermeasureExecution mqto:CountermeasureStepExecution mqto:FailureOccurrence )
+                 ] ;
                  rdfs:range xsd:dateTime ;
-                 rdfs:comment "The timestamp when a CountermeasureStepExecution or CountermeasureExecution was aborted before normal completion."@en ;
+                 rdfs:comment "The timestamp when a CountermeasureExecution or CountermeasureStepExecution was aborted, or when a FailureOccurrence was dismissed."@en ;
                  rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
                  rdfs:label "aborted time"@en .
 
@@ -803,6 +811,39 @@ mqto:FailureOccurrence rdf:type owl:Class ;
                        rdfs:comment "A specific quality defect or operational problem detected during production. Implements a FailureMode specification and is raised by MetricAssessments."@en ;
                        rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
                        rdfs:label "Failure Occurrence"@en .
+
+
+###  https://w3id.org/mqto#ResolvedFailureOccurrence
+mqto:ResolvedFailureOccurrence rdf:type owl:Class ;
+                 rdfs:subClassOf mqto:FailureOccurrence ;
+                 rdfs:comment "A FailureOccurrence that was dismissed or addressed by a CountermeasureExecution. Inferred when the occurrence has an abortedTime or is linked to a CountermeasureExecution through mitigatedByExecution."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/mqto/1.0> ;
+                 rdfs:label "Resolved Failure Occurrence"@en ;
+                 skos:editorialNote "The stated conditions are sufficient, not exhaustive: other evidence may establish that an occurrence is resolved. Dismissal and mitigation are represented by anonymous class expressions for now; dedicated named subclasses are deferred. An exhaustive disjoint union with UnresolvedFailureOccurrence is also deferred until that status partition is agreed."@en .
+
+[
+  rdf:type owl:Class ;
+  owl:intersectionOf (
+    mqto:FailureOccurrence
+    [
+      rdf:type owl:Restriction ;
+      owl:onProperty mqto:mitigatedByExecution ;
+      owl:someValuesFrom mqto:CountermeasureExecution
+    ]
+  )
+] rdfs:subClassOf mqto:ResolvedFailureOccurrence .
+
+[
+  rdf:type owl:Class ;
+  owl:intersectionOf (
+    mqto:FailureOccurrence
+    [
+      rdf:type owl:Restriction ;
+      owl:onProperty mqto:abortedTime ;
+      owl:someValuesFrom xsd:dateTime
+    ]
+  )
+] rdfs:subClassOf mqto:ResolvedFailureOccurrence .
 
 
 ###  https://w3id.org/mqto#FailureSource

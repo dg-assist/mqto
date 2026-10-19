@@ -615,7 +615,9 @@ ex:FO_003 a mqto:FailureOccurrence ;
     lis:implements ex:Porosity ;
     mqto:appearedOn ex:Machine4115 ;
     mqto:raisedBy ex:MA_006 ;
-    mqto:occurrenceTime "2026-03-17T11:01:00"^^xsd:dateTime .
+    mqto:occurrenceTime "2026-03-17T11:01:00"^^xsd:dateTime ;
+    mqto:abortedTime "2026-03-17T12:00:00"^^xsd:dateTime ;
+    mqto:abortedReason "Verification found the thermocouple within calibration limits; the failure occurrence was dismissed without adjustment." .
 
 ex:FO_004 a mqto:FailureOccurrence ;
     lis:implements ex:ColdShut ;
@@ -628,6 +630,9 @@ ex:FO_005 a mqto:FailureOccurrence ;
     mqto:appearedOn ex:AlBatch2026_0043 ;
     mqto:raisedBy ex:MA_007 ;
     mqto:occurrenceTime "2026-03-17T07:30:00"^^xsd:dateTime .
+
+# FO_001 is inferred as resolved through CE_001's mitigatedOccurrence link.
+# FO_003 is inferred as resolved because it was dismissed after verification.
 
 # --- Countermeasure Executions ------------------------------------------------
 
